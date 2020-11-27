@@ -12,7 +12,7 @@
             <div class="form">
                 <h2> Entrar</h2><!--fecha h2-->
                 
-                <form>
+                <form method="POST" action="conexao.php">
                         <div class="input-cont">
                             
                             <input type="text" name="nome" required placeholder="Usuario"/> 
