@@ -1,20 +1,134 @@
 *{
-	margin: 0;
+	margin: 0 ;
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'Open Sans';
 }
 html,body{
-	height: 100%;
-}
-.limpa{
-	clear: both;
+    height: 100%;
+   /* background-color: rgba(66, 245, 84,0.5);*/
 }
 
 
 .center{
 	width: 100%;
 	margin: 0 auto;
-	max-width: 1280px;
+    max-width: 1280px;
+    
+}
+main{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(66, 245, 84,0.5);
+}
+
+div.form{
+    max-width: 420px;
+   margin: 300px auto;
+    width: 100%;
+    padding: 20px;
+    text-align:  center;
+    border-width: 12px;
+	border: 8px solid rgba(120,120,120,0.5);
+	background-color: rgb(255, 255, 255);
+	background-clip:  padding-box; 
+	border-style: solid;
+}
+
+div.input-cont{
+   display: block;
+}
+
+.form h2{
+
+	color:grey;
+	font-size: 27px;
+}
+
+.input-cont{
+	margin-top: 20px;
 
 }
+
+
+.form p{
+	display: inline-block;
+	width: 100%;
+	color:grey;
+	font-size: 17px;
+	margin: 20px 0;
+
+}
+
+
+.input-cont input[type=text], input[type=password]{
+	padding: 10px;
+  text-transform: uppercase;
+  width: 150px;
+  border: 1px solid #ccc;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  margin: 10px auto;
+  display: block;
+  border-radius: 5px;
+}
+
+.input-cont input[type=text]:focus , input[type=password]:focus {
+    box-shadow: 0 0 5px #ccc;;
+    width: 250px;
+    outline: 0;
+
+}
+.form .input-submit{
+	text-align: center;
+}
+
+.form input[type=submit]{
+	border-radius: 5px;
+	color:grey;
+	font-size: 25px;
+	width: 200px;
+	height: 56px;
+    display: inline-block;
+	background-color:  #1cbe2c80;
+	border-right: 0;
+	border-top: 0;
+	border-left: 0; 
+	cursor: pointer;
+	border-bottom: 5px solid rgba(66, 245, 84,0.5);;
+}
+
+.form input[type=submit]:hover{
+	background-color: rgba(2, 74, 20,0.5);;
+}
+
+
+::-webkit-input-placeholder {
+    color:rgba(120,120,120,0.5);
+    /*font: 8px verdana, arial, sans-serif;*/
+    opacity: 1;
+ }
+ 
+ :-moz-placeholder {
+    color:rgba(120,120,120,0.5);
+    font-style: italic;
+   /* font: 8px verdana, arial, sans-serif;*/
+    opacity: 1;
+ }
+ 
+ ::-moz-placeholder {
+    color:rgba(120,120,120,0.5);
+    font-style: italic;
+    /*font: 8px verdana, arial, sans-serif;*/
+    opacity: 1;
+ }
+ 
+ :-ms-input-placeholder {  
+   
+    color:rgba(120,120,120,0.5);
+    font-style: italic;
+   /* font: 8px verdana, arial, sans-serif;*/
+    opacity: 1;
+ }
