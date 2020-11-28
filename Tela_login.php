@@ -9,23 +9,23 @@
     <body> 
     <main>
        <!-- <div class="center">-->
-            <div class="form">
+            <div class="form" action="conexap.php">
                 <h2> Entrar</h2><!--fecha h2-->
                 
-                <form method="POST" action="conexao.php">
+                <form method="POST" action="back_end/login.php" >
                         <div class="input-cont">
                             
-                            <input type="text" name="nome" required placeholder="Usuario"/> 
+                            <input type="text" name="usuario" id="usuario" required placeholder="Usuario"/> 
                         </div><!-- fecha input-cont-->
 
                         <div class="input-cont">
-                            <input type="password" name="senha" placeholder="Senha"/> 
+                            <input type="password" name="senha" id="senha" placeholder="Senha"/> 
                         </div><!-- fecha input-cont-->
 
                         <div class="input-submit">
-                            <input type="submit" name="acao" value="Enviar">
+                            <input type="submit" name="acao" id="enviar" value="Enviar">
                         </div><!--input-submit-->
-                    </form><!-- fecha form-->
+                </form><!-- fecha form-->
                 
             </div><!--bg1-->
        <!--</div>bg1--> 

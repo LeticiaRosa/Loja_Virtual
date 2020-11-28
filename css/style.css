@@ -65,8 +65,7 @@ div.input-cont{
 
 
 .input-cont input[type=text], input[type=password]{
-	padding: 10px;
-  text-transform: uppercase;
+  padding: 10px;
   width: 150px;
   border: 1px solid #ccc;
   -webkit-transition: all 300ms ease-in-out;
