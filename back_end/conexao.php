@@ -1,4 +1,5 @@
 <?php
+
 if (empty ($_POST['usuario'])|| empty ($_POST['senha'])) {
     header('Location:/Loja_Virtual/Tela_login.php');
 

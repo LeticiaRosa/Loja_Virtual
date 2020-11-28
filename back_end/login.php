@@ -18,7 +18,7 @@
             $_SESSION['usuarioId'] = $resultado['id_usuario'];
             $_SESSION['usuarioNome'] = $resultado['nome_usuario'];
             $_SESSION['login'] = $resultado['login'];
-            header("Location:/Loja_Virtual/Tela_inicial.php");
+            header("Location:/Loja_Virtual/Tela_inicial_1.php");
             
         //Não foi encontrado um usuario na tabela usuário com os mesmos dados digitado no formulário
         //redireciona o usuario para a página de login
@@ -32,4 +32,6 @@
         $_SESSION['loginErro'] = "Usuário ou senha inválido";
         header("Location: Location:/Loja_Virtual/Tela_login.php");
     }
+
+  
 ?>
