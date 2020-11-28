@@ -1,8 +1,7 @@
 <?php
+session_start();
 
-
-    $login_cookie = $_COOKIE['usuario'];
-    echo("Bem vindo! '$login_cookie' <br>");
+print_r($_SESSION);
 
 
 
