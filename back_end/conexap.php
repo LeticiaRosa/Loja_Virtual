@@ -1,7 +1,7 @@
 <?php
 include('Tela_login.php');
 if (empty ($_POST['usuario'])|| empty ($_POST['senha'])) {
-    header('Location: ../Tela_login.php');
+    header('Location:/Loja_Virtual/Tela_login.php');
     exit();
 }
 
