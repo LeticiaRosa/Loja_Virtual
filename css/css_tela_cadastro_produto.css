@@ -3,9 +3,14 @@ body,
 .sub-menu {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Dosis', sans-serif;
   display: block;
 } 
+.menu ul{
+  z-index: 1;
+  position: absolute;
+ 
+}
 .clearfix:after{
   content: '.';
   display: block;
@@ -20,6 +25,7 @@ body,
 .sub-menu {
   list-style: none;
   background:black;
+ 
 }
 .sub-menu {
   background: black;
@@ -29,7 +35,7 @@ body,
   display: block;
   padding: 10px;
   color: #fff;
-  font-family: sans-serif;
+  font-family: 'Dosis', sans-serif;
   font-size: 14px;
   /*text-transform: uppercase;*/
   font-weight: 700;
@@ -82,3 +88,6 @@ h11 {
 .panel-heading{
   font-size:150%;
 }
+
+
+

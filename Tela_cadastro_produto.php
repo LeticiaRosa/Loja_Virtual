@@ -1,16 +1,18 @@
 <?php
 session_start();
 ?>
-<link href="bootstrap-4.0.0-dist/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
-<script src="bootstrap-4.5.3-dist/jquery-1.11.1.min.js"></script>
+
 <!DOCTYPE html>
 <html>
 <head>
+  <link href="bootstrap-4.0.0-dist/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
+<script src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+<script src="bootstrap-4.5.3-dist/jquery-1.11.1.min.js"></script>
     <title>Menu</title>
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/css_tela_inicial.css">
+    <meta name= "viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel= "stylesheet" type="text/css" href="css/css_tela_cadastro_produto.css">
 </head>
 
 <body> 
@@ -76,63 +78,63 @@ session_start();
 </div> <!--menu-->
 
       
+<div class = "conteiner">
 
-<div>
-<form class="form-horizontal">
-
-<div class="panel panel-primary">
-    <div class="panel-heading">Cadastro de Produto</div>
-    
-<div class="panel-body">
-<div class="form-group">
-<div class="col-md-11 control-label">
-        <p class="help-block"><h11>*</h11> Campo Obrigatório </p>
-</div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-2 control-label" for="Nome">Descrição <h11>*</h11></label>  
-  <div class="col-md-5">
-  <input id="Nome" name="Nome" placeholder="" class="form-control input-md" required="" type="text">
-  </div>
-  
-  <label class="col-md-2 control-label" for="Nome">Data do Cadastro<h11>*</h11></label>  
-  <div class="col-md-2">
-  <input id="dtnasc" name="dtnasc" placeholder="DD/MM/AAAA" class="form-control input-md" required="" type="text" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
-  </div>
-</div>
+  <h1> <p> Cadastro de Produtos </p></h1>
 
 
-<div class="form-group">
-  <label class="col-md-2 control-label" for="prependedtext">Email <h11>*</h11></label>
-  <div class="col-md-5">
-    <div class="input-group">
-      <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-      <input id="prependedtext" name="prependedtext" class="form-control" placeholder="email@email.com" required="" type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" >
+  <div class="row justify-content-md-center">
+<form class="form col-md-10">
+  <div class="form-row col-md-10">
+    <div class="form-group col-md-4">
+      <label for="inputEmail4">Email</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputPassword4">Senha</label>
+      <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputCity">Cidade</label>
+      <input type="text" class="form-control" id="inputCity">
     </div>
   </div>
-</div>
-
-</div>
-
-<!-- Button (Double) -->
-<div class="form-group">
-  <label class="col-md-2 control-label" for="Cadastrar"></label>
-  <div class="col-md-8">
-    <button id="Cadastrar" name="Cadastrar" class="btn btn-success" type="Submit">Cadastrar</button>
-    <button id="Cancelar" name="Cancelar" class="btn btn-danger" type="Reset">Cancelar</button>
+  <div class="form-group col-md-10">
+    <label for="inputAddress">Endereço</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="Rua dos Bobos, nº 0">
   </div>
-</div>
-
-</div>
-</div>
-
-
+  <div class="form-group col-md-10">
+    <label for="inputAddress2">Endereço 2</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartamento, hotel, casa, etc.">
+  </div>
+  <div class="form-row col-md-10">
+   
+    <div class="form-group col-md-4">
+      <label for="inputEstado">Estado</label>
+      <select id="inputEstado" class="form-control">
+        <option selected>Escolher...</option>
+        <option>...</option>
+      </select>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputCEP">CEP</label>
+      <input type="text" class="form-control" id="inputCEP">
+    </div>
+  </div>
+  <div class="form-group col-md-10">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Clique em mim
+      </label>
+    </div>
+  </div>
+  <div class="form-group col-md-10">
+  <button type="submit" class="btn btn-primary">Entrar</button>
+  </div>
 </form>
 
-
-</div> 
+</div>
 
 </body>
 </html>    
