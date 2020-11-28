@@ -1,3 +1,8 @@
+<?php
+	//Inicializado primeira a sessão para posteriormente recuperar valores das variáveis globais. 
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,11 +13,11 @@
 
     <body> 
     <main>
-       <!-- <div class="center">-->
-            <div class="form" action="conexap.php">
+        <div class="center">
+            <div class="form">
                 <h2> Entrar</h2><!--fecha h2-->
                 
-                <form method="POST" action="back_end/login.php" >
+                <form method="POST" action="back_end/login.php">
                         <div class="input-cont">
                             
                             <input type="text" name="usuario" id="usuario" required placeholder="Usuario"/> 
@@ -28,7 +33,27 @@
                 </form><!-- fecha form-->
                 
             </div><!--bg1-->
-       <!--</div>bg1--> 
+       <section class="Erro">
+       <div class="center">
+       <p>
+            <?php 
+			//Recuperando o valor da variável global, os erro de login.
+			if(isset($_SESSION['loginErro'])){
+                echo $_SESSION['loginErro'];
+                unset($_SESSION['loginErro']);
+            }?>
+            </p>
+            <p>
+                <?php 
+                //Recuperando o valor da variável global, deslogado com sucesso.
+                if(isset($_SESSION['logindeslogado'])){
+                    echo $_SESSION['logindeslogado'];
+                    unset($_SESSION['logindeslogado']);
+                }
+                ?>
+            </p>
+        </div><!--center-->
+        </section>
 </main>  
 
     </body>
