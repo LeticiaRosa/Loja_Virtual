@@ -12,7 +12,7 @@
 </head>
 
     <body> 
-    <main>
+    <main >
         <div class="center">
             <div class="form">
                 <h2> Entrar</h2><!--fecha h2-->

@@ -143,3 +143,75 @@ div.input-cont{
 
 
  }
+ header{
+    height: 100%;
+    display: flex;
+    background-color: rgba(66, 245, 84,0.5);
+    padding: 20px;
+    
+ }
+ div.inconi-menu{
+     display: flex;
+     justify-content: right;
+     width: 45px;
+     height: 45px;
+     background-color: black;
+     cursor: pointer;
+     border-radius: 10px;
+ }
+
+
+
+ .menu,
+.sub-menu {
+    margin: 0;
+    padding: 0;
+}
+.clearfix:after{
+    content: '.';
+    display: flex;
+    flex-direction: column ;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+.menu,
+.sub-menu {
+    list-style: none;
+    background: #000;
+}
+.sub-menu {
+    background: #444;
+}
+.menu a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.menu li {
+    position: relative;
+}
+.menu > li {
+    float: left;
+}
+.menu > li:hover {
+    background: #444;
+}
+.menu li:hover > .sub-menu {
+    display: block;
+}
+.sub-menu {
+    display: none;
+    position: absolute;
+    min-width: 150px;
+}
+.sub-menu li:hover {
+    background: #555;
+}
