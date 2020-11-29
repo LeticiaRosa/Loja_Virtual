@@ -62,7 +62,7 @@
       </li>
     <li>
       
-      <li class = "sair" ><a href="/Loja_Virtual/Tela_login.php">Sair</a></li>
+      <li class = "sair" ><a href="/Loja_Virtual/Tela_login_nova.php">Sair</a></li>
       <li class = "ajuda"><a href="#">Ajuda</a></li>
       <li class = "configurações"><a href="#">Configurações</a></li>
       <li class = "welcome"><a href="#">Bem vindo! <?php echo $_SESSION['login']; ?> </a> </li>
