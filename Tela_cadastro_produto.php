@@ -72,18 +72,19 @@ session_start();
       
     </li>
     
- 
-    </ul>
     
+    </ul>
+    <div class="clear"></div>
 </div> <!--menu-->
+ 
 
-      
-<div class = "conteiner">
 
+  
+
+<div class="center">
+  <div class="row justify-content-md-center">
   <h1> <p> Cadastro de Produtos </p></h1>
 
-
-  <div class="row justify-content-md-center">
 <form class="form col-md-10">
   <div class="form-row col-md-10">
     <div class="form-group col-md-4">
@@ -134,7 +135,6 @@ session_start();
   </div>
 </form>
 
-</div>
-
+<div class="center">
 </body>
 </html>    
