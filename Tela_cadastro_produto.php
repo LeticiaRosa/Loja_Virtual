@@ -6,7 +6,7 @@ session_start();
 <html>
 <head>
   <link href="bootstrap-4.0.0-dist/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
+
 <script src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
 <script src="bootstrap-4.5.3-dist/jquery-1.11.1.min.js"></script>
     <title>Menu</title>
