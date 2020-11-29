@@ -25,12 +25,12 @@
         }else{    
             //Váriavel global recebendo a mensagem de erro
             $_SESSION['loginErro'] = "Usuário ou senha Inválido";
-            header("Location:/Loja_Virtual/Tela_login.php");
+            header("Location:/Loja_Virtual/Tela_login_nova.php");
         }
     //O campo usuário e senha não preenchido entra no else e redireciona o usuário para a página de login
     }else{
         $_SESSION['loginErro'] = "Usuário ou senha inválido";
-        header("Location: Location:/Loja_Virtual/Tela_login.php");
+        header("Location: Location:/Loja_Virtual/Tela_login_nova.php");
     }
 
   
