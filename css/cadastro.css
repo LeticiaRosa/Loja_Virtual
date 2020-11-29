@@ -3,7 +3,8 @@
 *{
 	margin: 0 ;
 	padding: 0;
-	box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Dosis", sans-serif;
 	
 }
 html,body{
@@ -26,7 +27,7 @@ margin: auto;
 .sub-menu {
   margin: 0;
   padding: 0;
-  font-family: 'Dosis', sans-serif;
+
   display: block;
 } 
 .menu ul{
@@ -60,7 +61,7 @@ margin: auto;
   display: block;
   padding: 10px;
   color: #fff;
-  font-family: 'Dosis', sans-serif;
+ 
   font-size: 14px;
   /*text-transform: uppercase;*/
   font-weight: 700;
