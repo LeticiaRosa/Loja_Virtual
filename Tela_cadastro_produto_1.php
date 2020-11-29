@@ -80,27 +80,59 @@
 		  			  	<h1>Cadastro de Produtos</h1>
 		  			  	<form>
 		  			  		<div class="form-wraper">
-                   <p>Nome do Produto*</p>
-                      
-		  			  			<input  type="text" name="nome" required placeholder="Nome">
-		  			  	
-		  			  			<p>Descrição</p>
-		  			  			<input type="text" name="descricao" required placeholder="Descrição">
-		  			  		
-		  			  			<p>Categoria:*</p>
-		  			  			<input type="text" name="telefone" required placeholder="Categoria">
+
+                    <div class="col">
+                      <p>Nome do Produto*</p>
+                      <input  type="text" name="nome" required placeholder="Nome">
+                    </div> 
+
+                    <div class="col">
+		  			  			  <p>Descrição</p>
+                      <input type="text" name="descricao" required placeholder="Descrição">
+                    </div>  
+
+                    <div class="col">
+                      <p>Categoria:*</p>
+                      <input type="text" name="categoria" required placeholder="Categoria">
                     </div>
-                    <!--
-		  			  			<p>Categoria:*</p>
-		  			  			<input type="text" name="telefone" required placeholder="Categoria">
-                   
-		  			  			<p>Categoria:*</p>
-                    <input type="text" name="telefone" required placeholder="Categoria">
-                   
-		  			  		  <input type="submit" name="acao" value="Envair" />
+
+                    <div class="col">
+                      <p>SubCategoria:*</p>
+                      <input type="text" name="subcategoria" required placeholder="SubCategoria">
+                    </div>
+
+                    <div class="col">
+                      <p>Observação:*</p>
+                      <input type="text" name="Observacao" required placeholder="Observação">
+                    </div>
+
+                    <div class="col">
+                      <p>Observação:*</p>
+                      <input type="text" name="Observacao" required placeholder="Observação">
+                    </div>
+
+                    <div class="col">
+                      <p>Observação:*</p>
+                      <input type="text" name="Observacao" required placeholder="Observação">
+                    </div>
+
+                    <div class="col">
+                      <p>Categoria:*</p>
+                      <input type="text" name="telefone" required placeholder="Categoria">
+                    </div>
+
+
+
+                    </div>
+
+
+                  
+                    <div class="enviar">
+		  			  		  <input type="submit" name="acao" value="Cadastrar" />
 		  			  		  <p>*campos obrigatorios</p>
                     </div>
-bg-->
+                    
+
 		  			  	</form>
 		  			
 		  			
