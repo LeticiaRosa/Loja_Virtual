@@ -22,10 +22,7 @@
       <input type="text" name="usuario" id="usuario" required placeholder="Usuario"/>
       <input type="password" name="senha" id="senha" placeholder="Senha"/>
       <button type="submit" name="acao" id="enviar" value="Enviar">login</button>
-    </form>
-  </div>
-</div>
-<section class="Erro">
+      <section class="Erro">
        <div class="center">
        <p>
             <?php 
@@ -46,6 +43,10 @@
             </p>
         </div><!--center-->
 </section>
+    </form>
+  </div>
+</div>
+
 </main>  
 
 </body>

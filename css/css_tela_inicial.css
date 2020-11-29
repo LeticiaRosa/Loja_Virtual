@@ -39,10 +39,10 @@ body,
 .menu,
 .sub-menu {
   list-style: none;
-  background:black;
+  background-color:  rgb(71, 92, 71);
 }
 .sub-menu {
-  background: black;
+  background-color:  rgb(71, 92, 71);
 }
 .menu a {
   text-decoration: none;
@@ -60,7 +60,7 @@ body,
   float: left;
 }
 .menu > li:hover {
-  background:black;
+  background-color: rgb(71, 92, 71);
 }
 .menu li:hover > .sub-menu {
   display: block; /* faz o menu aparecer quando o mouse passa por cima*/
@@ -73,7 +73,7 @@ body,
 }
 
 .sub-menu li:hover {
-  background: rgb(71, 92, 71); /* fazer a cor verde aparecer nos sub-menus*/
+  background: gray; /* fazer a cor verde aparecer nos sub-menus*/
 }
 
 .sub-menu .sub-menu {
