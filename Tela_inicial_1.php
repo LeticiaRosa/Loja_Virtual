@@ -21,7 +21,7 @@ session_start();
           <li>
             <a href="#">Produto</a>
             <ul class="sub-menu">
-              <li><a href="/Loja_Virtual/Tela_cadastro_produto.php">Cadastro de Produto</a></li>
+              <li><a href="/Loja_Virtual/Tela_cadastro_produto_1.php">Cadastro de Produto</a></li>
               <li><a href="#">Cadastro de Categoria</a></li>
               <li><a href="#">Sub Sub</a></li>
             </ul>

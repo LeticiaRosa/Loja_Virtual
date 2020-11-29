@@ -95,12 +95,14 @@
                       <p>Categoria:*</p>
                       <input type="text" name="categoria" required placeholder="Categoria">
                     </div>
+                    </div>
 
+                  <div class="form-wraper">
                     <div class="col">
                       <p>SubCategoria:*</p>
                       <input type="text" name="subcategoria" required placeholder="SubCategoria">
                     </div>
-
+                      
                     <div class="col">
                       <p>Observação:*</p>
                       <input type="text" name="Observacao" required placeholder="Observação">
@@ -110,17 +112,14 @@
                       <p>Observação:*</p>
                       <input type="text" name="Observacao" required placeholder="Observação">
                     </div>
-
+                    </div>
+                    <div class="form-wraper">
                     <div class="col">
                       <p>Observação:*</p>
                       <input type="text" name="Observacao" required placeholder="Observação">
                     </div>
 
-                    <div class="col">
-                      <p>Categoria:*</p>
-                      <input type="text" name="telefone" required placeholder="Categoria">
-                    </div>
-
+                    
 
 
                     </div>
