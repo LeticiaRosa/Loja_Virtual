@@ -57,6 +57,7 @@ body,
   display: none;
   position: absolute;
   min-width: 150px;
+  
 }
 
 .sub-menu li:hover {
