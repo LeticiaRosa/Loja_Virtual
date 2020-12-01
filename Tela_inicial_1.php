@@ -12,7 +12,7 @@ session_start();
 </head>
 
 <body> 
-  
+    
 <?php include("menu.php"); ?> 
         
 </body>

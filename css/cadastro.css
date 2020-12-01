@@ -1,117 +1,31 @@
 @import url(https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap);
-
 *{
 	margin: 0 ;
 	padding: 0;
   box-sizing: border-box;
   font-family: "Dosis", sans-serif;
-	
 }
 html,body{
-
-    width: 100%;
-    height: 100%;
-  	background-color: rgb(235, 237, 240);
+  width: 100%;
+  height: 100%;
+  background-color: rgb(235, 237, 240);
 }
-
 .limpa{
   clear: both;
 } 
 .center{
-width: 100%;
-margin: auto;
+  width: 100%;
+  margin: auto;
   max-width: 1280px;
-  
 }
-
-.menu,
-.sub-menu {
-  margin: 0;
-  padding: 0;
-
-  display: block;
-} 
-.menu ul{
-  z-index: 1;
-  position: absolute;
- 
-}
-.clearfix:after{
-  content: '.';
-  display: block;
-  clear: both;
-  height: 0;
-  line-height: 0;
-  font-size: 0;
-  visibility: hidden;
-  overflow: hidden;
-}
-.menu,
-.sub-menu {
-  list-style: none;
-  background-color: rgba(71, 92, 71);
- 
- 
-}
-.sub-menu {
-  background-color: rgba(71, 92, 71);
-}
-
-.menu a {
-  text-decoration: none;
-  display: block;
-  padding: 10px;
-  color: #fff;
- 
-  font-size: 14px;
-  /*text-transform: uppercase;*/
-  font-weight: 700;
-}
-.menu li {
-  position: relative;
-}
-.menu > li {
-  float: left;
-  
-}
-.menu > li:hover {
-  background-color: rgba(71, 92, 71);
-}
-.menu li:hover > .sub-menu {
-  display: block; /* faz o menu aparecer quando o mouse passa por cima*/
-}
-
-.sub-menu {
-  display: none;
-  position: absolute;
-  min-width: 150px;
-}
-
-.sub-menu li:hover {
-  background-color:gray;  /* fazer a cor verde aparecer nos sub-menus*/
-}
-
-.sub-menu .sub-menu {
-  top: 0;
-  left: 100%;
-  
-}
-
-.menu .welcome, .menu .ajuda, .menu .configurações, .menu .sair{
-    float: right; 
-}
-.welcome a{
-  cursor: default; 
-}
-
 
 #logo {
-    width:50%;
-    height:50%;
+  width:50%;
+  height:50%;
 }
 
 .panel-heading{
-font-size:150%;
+  font-size:150%;
 }
 
 /**** section */
@@ -120,14 +34,8 @@ section.cover-form{
   display: flex;
   width: 100%; 
   padding: 50px;
-  
-
 }
-
-
-
 .form-container{
-  
   text-align: center;
   align-items: center;
   width: 100%;
@@ -138,7 +46,6 @@ section.cover-form{
 }
 
 .form-container h1{
-
    width: 100%;
    font-weight: normal;
    padding:20px 10px;
@@ -150,7 +57,6 @@ section.cover-form{
   padding: 15px;  
   width: 100%;
 }
-
 .form-wraper{
   display: flex;
   flex-direction: row;
@@ -163,21 +69,17 @@ section.cover-form{
   flex-wrap: wrap;
   width: 100%;
 }
-
-
 .form-wraper  p{
   font-size: 14px;
   text-align: left;
   color: #525252;
   width: 100%;
 }
-
 .enviar  p{
   font-size: 14px;
   color: #525252;
   width: 100%;
 }
-
 .form-wraper:not( :first-child){
   margin-top:15px;
 }
@@ -189,10 +91,8 @@ section.cover-form{
 	border: 1px solid #ccc;
 	height: 35px;
 	line-height: 45px;
-	padding-left: 10px;
-	
+	padding-left: 10px;	
 }
-
 .enviar{
   display: flex;
   flex-direction: column;
@@ -207,7 +107,6 @@ section.cover-form{
   color: #525252;
   width: 100%;
 }
-
 .form-container form input[type="submit"]{
   background-color: rgba(71, 92, 71,0.8); 
 	text-transform: uppercase;
@@ -219,20 +118,14 @@ section.cover-form{
   border: 0;
   border-radius: 10px;
 }
-
 @media screen and (max-width: 900px){
-  .form-container form .form-wraper 
-  {
-
+  .form-container form .form-wraper {
     padding: 0px;
     flex-wrap: wrap;
   }
 }
-
 @media screen and (max-width: 768px){
-  .form-container form .form-wraper 
-  {
-
+  .form-container form .form-wraper {
     padding: 0px;
     flex-wrap: wrap;
   }

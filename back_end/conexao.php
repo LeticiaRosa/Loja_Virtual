@@ -1,7 +1,8 @@
 <?php
+session_start();
 
 if (empty ($_POST['usuario'])|| empty ($_POST['senha'])) {
-    header('Location:/Loja_Virtual/_nova.php');
+    header('Location:/Loja_Virtual/Tela_login_nova.php');
 
     exit();
 }
