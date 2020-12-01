@@ -1,6 +1,7 @@
 <?php
 	//Inicializado primeira a sessão para posteriormente recuperar valores das variáveis globais. 
     session_start();
+    header("Pragma: no-cache");
     
 ?>
 
@@ -19,8 +20,6 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   
 
-	
- 
 </head>
 <html>
 <body>
@@ -37,54 +36,54 @@
 
                     <div class="col">
                       <p>Nome do Produto*</p>
-                      <input  type="text" name="nome" id="nome" required placeholder= "Nome">
+                      <input  type="text" name="nome" id="nome" required placeholder= "Nome" autocomplete="off" >
                     </div> 
 
                     <div class="col">
 		  			  			  <p>Descrição</p>
-                      <input type="text" name="descricao" id="descricao" required placeholder="Descrição">
+                      <input type="text" name="descricao" id="descricao" required placeholder="Descrição" autocomplete="off" >
                     </div>  
 
                     <div class="col">
                       <p>Categoria:*</p>
-                      <input type="text" name="id_categoria" id="id_categoria" required placeholder="Categoria">
+                      <input type="text" name="id_categoria" id="id_categoria" required placeholder="Categoria" autocomplete="off" >
                     </div>
                     </div>
 
                   <div class="form-wraper">
                     <div class="col">
                       <p>SubCategoria:*</p>
-                      <input type="text" name="quantidade" id="quantidade"  required placeholder="Quantidade">
+                      <input type="text" name="quantidade" id="quantidade"  required placeholder="Quantidade" autocomplete="off" > 
                     </div>
                       
                     <div class="col">
                       <p>Observação:*</p>
-                      <input type="text" name= "observacao" id="observacao"  placeholder="Observação">
+                      <input type="text" name= "observacao" id="observacao"  placeholder="Observação" autocomplete="off" >
                     </div>
 
                     <div class="col">
                       <p>Observação:*</p>
-                      <input type="text" name=""  placeholder="Observação">
+                      <input type="text" name=""  placeholder="Observação" autocomplete="off" >
                     </div>
                     </div>
                     <div class="form-wraper">
                     <div class="col">
                       <p>Observação:*</p>
-                      <input type="text" name=""  placeholder="Observação">
+                      <input type="text" name=""  placeholder="Observação" autocomplete="off" >
+                      <input type="reset" value="Limpar">
                     </div>
                     </div>
                     <div class="enviar">
                     <input type="submit" name="acao" value="Cadastrar"/>
                     <?php 
-                    inserirProduto( $_POST['nome'] , $_POST['descricao'] , $_POST['id_categoria'] , $_POST['quantidade'] , $_POST['observacao'] , $_SESSION['usuarioId']);
+                    if ( (isset($_POST['nome'])) && (isset($_POST['descricao']))  && (isset($_POST['id_categoria']))  && (isset($_POST['quantidade'])) ){
+                        inserirProduto( $_POST['nome'] , $_POST['descricao'] , $_POST['id_categoria'] , $_POST['quantidade'] , $_POST['observacao'] , $_SESSION['usuarioId']);
+                    }
                     ?>
 		  			  		  <p>*campos obrigatorios</p>
                     </div>
 		  			  	</form>
 		  		</div><!--container bg-->
     </section><!--cover-form-->
-
-    <?php  echo teste("LETÍCIA"); ?>
-
 
 </body>
