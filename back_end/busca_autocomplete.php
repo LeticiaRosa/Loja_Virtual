@@ -1,8 +1,29 @@
-<?php
-require_once("conexao.php");
-$dados=$conexao->query("select id_categoria,nome from categoria ");
- echo json_encode($dados->fetch_all(PDO::FETCH_ASSOC));
- $obj =json_decode($dados);
- echo $obj;
-?>
+<?php 
+// Dados da conexão com o banco de dados
+define("HOST","25.107.219.2");
+define("USUARIO","Gabriel");
+define("SENHA","Gb@30173572");
+define("DB","Loja");
+
+// Recebe os parâmetros enviados via GET
+$acao = (isset($_GET['acao'])) ? $_GET['acao'] : '';
+$parametro = (isset($_GET['parametro'])) ? $_GET['parametro'] : '';
+
+// Configura uma conexão com o banco de dados
+$opcoes = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES UTF8');
+$conexao = new PDO("mysql:host=".HOST."; dbname=".DB, USUARIO, SENHA, $opcoes);
+
+// Verifica se foi solicitado uma consulta para o autocomplete
+if($acao == 'autocomplete'):
+	$where = (!empty($parametro)) ? 'WHERE nome LIKE ?' : '';
+	$sql = "SELECT nome FROM produto " . $where;
+
+	$stm = $conexao->prepare($sql);
+	$stm->bindValue(1, '%'.$parametro.'%');
+	$stm->execute();
+	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
+
+	$json = json_encode($dados);
+	echo $json;
+endif;
 
