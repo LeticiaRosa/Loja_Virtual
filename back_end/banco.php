@@ -1,5 +1,6 @@
 <?php
-include_once("conexao.php");   
+session_start();
+ 
 
 function teste($nome){
     return "NOME: $nome ";

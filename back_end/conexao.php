@@ -1,4 +1,5 @@
 <?php
+/*
 session_start();
 
 if (empty ($_POST['usuario'])|| empty ($_POST['senha'])) {
@@ -6,7 +7,7 @@ if (empty ($_POST['usuario'])|| empty ($_POST['senha'])) {
 
     exit();
 }
-
+*/
 define("HOST","25.107.219.2");
 define("USUARIO","Gabriel");
 define("SENHA","Gb@30173572");
