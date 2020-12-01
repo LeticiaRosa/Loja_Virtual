@@ -84,11 +84,7 @@
 		  		</div><!--container bg-->
     </section><!--cover-form-->
 
-<<<<<<< HEAD
     <?php  echo teste("LETÍCIA"); ?>
 
-    
 
-=======
->>>>>>> bab6da635a799d30be9f95bc4095a7b53d699769
 </body>
