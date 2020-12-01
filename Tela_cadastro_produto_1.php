@@ -16,61 +16,63 @@
 <html>
 <body>
  
-<?php include_once("menu.php"); 
-    include_once("back_end/banco.php");
+<?php 
+   include_once("menu.php"); 
+   include_once("back_end/banco.php");
 ?>
     <section class="cover-form">
 		  			<div class="form-container">
 		  			  	<h1>Cadastro de Produtos</h1>
-		  			  	<form>
+		  			  	<form  method="POST" >
 		  			  		<div class="form-wraper">
 
                     <div class="col">
                       <p>Nome do Produto*</p>
-                      <input  type="text" name="nome" required placeholder="Nome">
+                      <input  type="text" name="nome" id="nome" required placeholder= "Nome">
                     </div> 
 
                     <div class="col">
 		  			  			  <p>Descrição</p>
-                      <input type="text" name="descricao" required placeholder="Descrição">
+                      <input type="text" name="descricao" id="descricao" required placeholder="Descrição">
                     </div>  
 
                     <div class="col">
                       <p>Categoria:*</p>
-                      <input type="text" name="id_categoria" required placeholder="Categoria">
+                      <input type="text" name="id_categoria" id="id_categoria" required placeholder="Categoria">
                     </div>
                     </div>
 
                   <div class="form-wraper">
                     <div class="col">
                       <p>SubCategoria:*</p>
-                      <input type="text" name="quantidade" required placeholder="Quantidade">
+                      <input type="text" name="quantidade" id="quantidade"  required placeholder="Quantidade">
                     </div>
                       
                     <div class="col">
                       <p>Observação:*</p>
-                      <input type="text" name="Observacao" required placeholder="Observação">
+                      <input type="text" name= "observacao" id="observacao"  placeholder="Observação">
                     </div>
 
                     <div class="col">
                       <p>Observação:*</p>
-                      <input type="text" name="" required placeholder="Observação">
+                      <input type="text" name=""  placeholder="Observação">
                     </div>
                     </div>
                     <div class="form-wraper">
                     <div class="col">
                       <p>Observação:*</p>
-                      <input type="text" name="" required placeholder="Observação">
+                      <input type="text" name=""  placeholder="Observação">
                     </div>
                     </div>
                     <div class="enviar">
-		  			  		  <input type="submit" name="acao" value="Cadastrar" method="POST" action="back_end/banco.php" />
+                    <input type="submit" name="acao" value="Cadastrar"/>
+                    <?php 
+                    inserirProduto( $_POST['nome'] , $_POST['descricao'] , $_POST['id_categoria'] , $_POST['quantidade'] , $_POST['observacao'] , $_SESSION['usuarioId']);
+                    ?>
 		  			  		  <p>*campos obrigatorios</p>
                     </div>
 		  			  	</form>
 		  		</div><!--container bg-->
     </section><!--cover-form-->
-
-    <?php  echo teste("LETÍCIA"); ?>
 
 </body>

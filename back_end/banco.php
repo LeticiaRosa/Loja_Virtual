@@ -1,13 +1,12 @@
 <?php
-include_once("conexao.php");   
-
-function teste($nome){
-    return "NOME: $nome ";
-}
 
 function inserirProduto($nome, $descricao, $id_categoria, $quantidade, $observacao, $id_usuario){
-    $query = "insert into produtos (nome, descricao, id_categoria, quantidade, observacao, id_usuario) values ($nome, $descricao, $id_categoria, $quantidade, $observacao, $id_usuario)";
-    return true;
+    require_once ("conexao.php");
+    $query = "insert into produto (nome, descricao, id_categoria, quantidade, observacao, id_usuario) values ('$nome', '$descricao', '$id_categoria', '$quantidade', '$observacao', '$id_usuario')";
+    echo $query ;
+    $teste = mysqli_query($conexao, $query );
+    mysqli_close($conexao);
+    return  $query ;
 }
 
 
