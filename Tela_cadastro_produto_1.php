@@ -12,12 +12,9 @@
     <link rel="stylesheet" type="text/css" href="css/cadastro.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-    <script type="text/javascript" src="js/auto_complete.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+    
+    
 
 	
  
@@ -47,7 +44,7 @@
 
                     <div class="col">
                       <p>Categoria:*</p>
-                      <input type="text" name="id_categoria" id="id_categoria" required placeholder="Categoria">
+                      <input type="text" name="id_categoria"   id="categoria" required placeholder="Categoria">
                     </div>
                     </div>
 
@@ -75,9 +72,9 @@
                     </div>
                     <div class="enviar">
                     <input type="submit" name="acao" value="Cadastrar"/>
-                    <?php 
+                  <!-- <?php 
                     inserirProduto( $_POST['nome'] , $_POST['descricao'] , $_POST['id_categoria'] , $_POST['quantidade'] , $_POST['observacao'] , $_SESSION['usuarioId']);
-                    ?>
+                    ?>-->
 		  			  		  <p>*campos obrigatorios</p>
                     </div>
 		  			  	</form>
@@ -85,6 +82,8 @@
     </section><!--cover-form-->
 
     <?php  echo teste("LETÍCIA"); ?>
-
-
+    <script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/auto_complete.js"></script>
 </body>
+</html>

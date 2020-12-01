@@ -12,18 +12,18 @@ $parametro = (isset($_GET['parametro'])) ? $_GET['parametro'] : '';
 // Configura uma conexão com o banco de dados
 $opcoes = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES UTF8');
 $conexao = new PDO("mysql:host=".HOST."; dbname=".DB, USUARIO, SENHA, $opcoes);
-
+ echo ($parametro);
 // Verifica se foi solicitado uma consulta para o autocomplete
 if($acao == 'autocomplete'):
-	$where = (!empty($parametro)) ? 'WHERE nome LIKE ?' : '';
-	$sql = "SELECT nome FROM produto " . $where;
-
+	
+	$sql = "SELECT nome FROM categoria where nome like ? limit 10";
 	$stm = $conexao->prepare($sql);
 	$stm->bindValue(1, '%'.$parametro.'%');
 	$stm->execute();
 	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
-
+	
 	$json = json_encode($dados);
+	
 	echo $json;
 endif;
 
