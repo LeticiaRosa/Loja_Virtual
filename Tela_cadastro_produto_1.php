@@ -85,8 +85,7 @@ function ClearForm(){
                     </div>
 
                     <div class="enviar">
-                    <input type="submit" type="reset" name="acao" value="Cadastrar"/>
-                    
+                    <input type="submit" name="acao" onclick="limpaCampos()" id="clicar" value="Cadastrar"/>
                     <?php 
                     
                     if ( (isset($_POST['nome'])) && (isset($_POST['descricao']))  && (isset($_POST['id_categoria']))  && (isset($_POST['preco_venda'])) && (isset($_POST['preco_custo']))&& (isset($_POST['quantidade'])) && (isset($_POST['id_fornecedor'])) && (isset($_POST['observacao']))  ){
