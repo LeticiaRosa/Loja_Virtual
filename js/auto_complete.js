@@ -1,6 +1,7 @@
 $(async function() {
 	   // Atribui evento e função para limpeza dos campos
-	   $('#id_categoria').on('input', limpaCampos);
+	// $('#clicar').on('input', limpaCampos);
+	   
 	var nomes = [];
 	await $.ajax({
 		url: "back_end/busca_autocomplete.php",
@@ -19,10 +20,10 @@ $( "#id_categoria" ).autocomplete({
 	  });
 	} );
 	
-	
+	/*
 	  // Função para limpar os campos caso a busca esteja vazia
 	  function limpaCampos(){
-		var nome = $('#nome').val();
+		var nome = $('#nome').val('');
 		var descricao = $('#descricao').val();
 		var id_categoria = $('#id_categoria').val();
 		var preco_venda = $('#preco_venda').val();
@@ -31,11 +32,17 @@ $( "#id_categoria" ).autocomplete({
 		var id_fornecedor = $('#id_fornecedor').val();
 		var observacao = $('#observacao').val();
 	
-		if(id_categoria == ""){
-		$('#id_categoria').val('');
+		
 		  
-		}
-	 }
+		
+	 }*/
+
+	 $( "#clicar" ).submit(function() {
+		//$('#form').trigger("reset");
+		
+		$('#form')[0].reset();
+		console.log($('#form')[0]);
+	  });
 ;
 
 

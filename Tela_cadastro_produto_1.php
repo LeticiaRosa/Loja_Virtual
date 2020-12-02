@@ -1,14 +1,3 @@
-<?php
-	//Inicializado primeira a sessão para posteriormente recuperar valores das variáveis globais. 
-    session_start();
-    header("Pragma: no-cache");
-    
-?>
-<script type="text/javascript" language="javascript"> 
-function ClearForm(){
-       document.Form_login.reset(); 
-  }
-</script>
 
 <!DOCTYPE html>
 <html>
@@ -28,12 +17,12 @@ function ClearForm(){
  
 <?php 
    include_once("menu.php"); 
-   include_once("back_end/banco.php");
+   
 ?>
     <section class="cover-form">
 		  			<div class="form-container">
 		  			  	<h1>Cadastro de Produtos</h1>
-		  			  	<form  method="POST" >
+		  			  	<form  method="POST" id="Form_login" class="Form_login" action="back_end/banco.php" >
 		  			  		<div class="form-wraper">
 
                     <div class="col">
@@ -85,14 +74,8 @@ function ClearForm(){
                     </div>
 
                     <div class="enviar">
-                    <input type="submit" name="acao" onclick="limpaCampos()" id="clicar" value="Cadastrar"/>
-                    <?php 
-                    
-                    if ( (isset($_POST['nome'])) && (isset($_POST['descricao']))  && (isset($_POST['id_categoria']))  && (isset($_POST['preco_venda'])) && (isset($_POST['preco_custo']))&& (isset($_POST['quantidade'])) && (isset($_POST['id_fornecedor'])) && (isset($_POST['observacao']))  ){
-                         inserirProduto( $_POST['nome'] , $_POST['descricao'] , $_POST['id_categoria'] , $_POST['preco_venda'], $_POST['preco_custo'], $_POST['quantidade'], $_POST['id_fornecedor'] , $_POST['observacao'] , $_SESSION['usuarioId']);                          
-                      }
-                     
-                    ?>
+                    <input type="submit" name="acao"  id="clicar" value="Cadastrar"  />
+                 
 		  			  		  <p>*campos obrigatorios</p>
                     </div>
 		  			  	</form>
