@@ -27,3 +27,16 @@ if($acao == 'autocomplete'):
 	echo $json;
 endif;
 
+
+if($acao == 'autocomplete_forne'):
+	
+	$sql = "SELECT nome FROM fornecedor where nome like ? limit 10";
+	$stm = $conexao->prepare($sql);
+	$stm->bindValue(1, '%'.$parametro.'%');
+	$stm->execute();
+	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
+	
+	$json = json_encode($dados);
+	
+	echo $json;
+endif;

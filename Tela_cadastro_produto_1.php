@@ -71,7 +71,7 @@
                     </div>
                     </div>
                     <div class="enviar">
-                    <input type="submit" name="acao" value="Cadastrar"/>
+                    <input type="submit" name="acao" onclick="limpaCampos()" id="clicar" value="Cadastrar"/>
                     <?php 
                     if ( (isset($_POST['nome'])) && (isset($_POST['descricao']))  && (isset($_POST['id_categoria']))  && (isset($_POST['quantidade'])) ){
                         inserirProduto( $_POST['nome'] , $_POST['descricao'] , $_POST['id_categoria'] , $_POST['quantidade'] , $_POST['observacao'] , $_SESSION['usuarioId']);
