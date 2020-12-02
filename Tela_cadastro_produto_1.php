@@ -4,6 +4,11 @@
     header("Pragma: no-cache");
     
 ?>
+<script type="text/javascript" language="javascript"> 
+function ClearForm(){
+       document.Form_login.reset(); 
+  }
+</script>
 
 <!DOCTYPE html>
 <html>
@@ -35,47 +40,59 @@
                       <p>Nome do Produto*</p>
                       <input  type="text" name="nome" id="nome" required placeholder= "Nome" autocomplete="off" >
                     </div> 
-
                     <div class="col">
 		  			  			  <p>Descrição</p>
-                      <input type="text" name="descricao" id="descricao" required placeholder="Descrição" autocomplete="off" >
+                      <input type="text" name="descricao" id="descricao" placeholder="Descrição" autocomplete="off" >
                     </div>  
-
-                    <div class="col">
-                      <p>Categoria:*</p>
-                      <input type="text" name="id_categoria" id="id_categoria" required placeholder="Categoria" autocomplete="off" >
-                    </div>
                     </div>
 
                   <div class="form-wraper">
-                    <div class="col">
-                      <p>SubCategoria:*</p>
-                      <input type="text" name="quantidade" id="quantidade"  required placeholder="Quantidade" autocomplete="off" > 
+
+                    
+                  <div class="col">
+                      <p>Categoria:*</p>
+                      <input type="text" name="id_categoria" id="id_categoria" required placeholder="Categoria" autocomplete="off" >
                     </div>
                       
                     <div class="col">
-                      <p>Observação:*</p>
-                      <input type="text" name= "observacao" id="observacao"  placeholder="Observação" autocomplete="off" >
+                      <p>Preço de Venda:*</p>
+                      <input type="text" name= "preco_venda" id="preco_venda" required placeholder="Preço de Venda" autocomplete="off" >
                     </div>
 
                     <div class="col">
-                      <p>Observação:*</p>
-                      <input type="text" name=""  placeholder="Observação" autocomplete="off" >
+                      <p>Preço de Custo:*</p>
+                      <input type="text" name="preco_custo"  id="preco_custo" required placeholder="Preço de Custo" autocomplete="off" >
+                    </div>
+                    
+                    <div class="col">
+                      <p>Quantidade:*</p>
+                      <input type="text" name="quantidade" id="quantidade"  required placeholder="Quantidade" autocomplete="off" > 
+                    </div>
+
+                    </div>
+                    <div class="form-wraper">
+                    <div class="col-1">
+                      <p>Fornecedor:*</p>
+                      <input type="text" name="id_fornecedor" id="id_fornecedor" required placeholder="Fornecedor" autocomplete="off" >
                     </div>
                     </div>
+
                     <div class="form-wraper">
                     <div class="col">
                       <p>Observação:*</p>
-                      <input type="text" name=""  placeholder="Observação" autocomplete="off" >
-                      <input type="reset" value="Limpar">
+                      <input type="text" name="observacao" id="observacao" placeholder="Observação" autocomplete="off" >
                     </div>
                     </div>
+
                     <div class="enviar">
-                    <input type="submit" name="acao" value="Cadastrar"/>
+                    <input type="submit" type="reset" name="acao" value="Cadastrar"/>
+                    
                     <?php 
-                    if ( (isset($_POST['nome'])) && (isset($_POST['descricao']))  && (isset($_POST['id_categoria']))  && (isset($_POST['quantidade'])) ){
-                        inserirProduto( $_POST['nome'] , $_POST['descricao'] , $_POST['id_categoria'] , $_POST['quantidade'] , $_POST['observacao'] , $_SESSION['usuarioId']);
-                    }
+                    
+                    if ( (isset($_POST['nome'])) && (isset($_POST['descricao']))  && (isset($_POST['id_categoria']))  && (isset($_POST['preco_venda'])) && (isset($_POST['preco_custo']))&& (isset($_POST['quantidade'])) && (isset($_POST['id_fornecedor'])) && (isset($_POST['observacao']))  ){
+                         inserirProduto( $_POST['nome'] , $_POST['descricao'] , $_POST['id_categoria'] , $_POST['preco_venda'], $_POST['preco_custo'], $_POST['quantidade'], $_POST['id_fornecedor'] , $_POST['observacao'] , $_SESSION['usuarioId']);                          
+                      }
+                     
                     ?>
 		  			  		  <p>*campos obrigatorios</p>
                     </div>

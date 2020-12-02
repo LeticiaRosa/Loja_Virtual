@@ -73,6 +73,15 @@ section.cover-form{
   flex-wrap: wrap;
   width: 100%;
 }
+
+.col-1{
+  display: flex;
+  flex-direction: column;
+  padding: 15px ;
+  flex-wrap: wrap;
+  width: 50%;
+}
+
 .form-wraper  p{
   font-size: 14px;
   text-align: left;
@@ -127,10 +136,18 @@ section.cover-form{
     padding: 0px;
     flex-wrap: wrap;
   }
+  .col-1{
+    width: 100%;
+  }
+  
+
 }
 @media screen and (max-width: 768px){
   .form-container form .form-wraper {
     padding: 0px;
     flex-wrap: wrap;
+  }
+  .col-1{
+    width: 100%;
   }
 }
