@@ -28,7 +28,7 @@ if($acao == 'autocomplete'):
 endif;
 
 
-if($acao == 'autocomplete_forne'):
+if($acao == 'autocomplete_fornecedor'):
 	
 	$sql = "SELECT nome FROM fornecedor where nome like ? limit 10";
 	$stm = $conexao->prepare($sql);

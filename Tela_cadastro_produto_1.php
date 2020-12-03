@@ -60,25 +60,49 @@
 
                     </div>
                     <div class="form-wraper">
-                    <div class="col-1">
+                    <div class="col">
                       <p>Fornecedor:*</p>
                       <input type="text" name="id_fornecedor" id="id_fornecedor" required placeholder="Fornecedor" autocomplete="off" >
                     </div>
+                    <div class="col">
+                      <p>Marca:</p>
+                      <input type="text" name="marca" id="marca" placeholder="Marca" autocomplete="off" >
+                    </div>
+                    <div class="col-1">
+                      <p>Unidade de medida:</p>
+                      <select name="unidade_medida" id="unidade_medida" placeholder="Unidade de Medida">
+                      <option selected disabled value="">Selecione</option> 
+                         
+                          <option value="Tamanho" >Tamanho</option> 
+                          <option value="Peso em KG" >Peso em KG</option>
+                          <option value="Mililitros (ml)">Ml</option>
+                          <option value="" >Nenhum</option> 
+                      </select>
+                    </div>
+
+                    <div class="col-2">
+                      <p>Valor Medida:</p>
+                      <input type="text" name="valor_medida" id="valor_medida" placeholder="Valor Medida" autocomplete="off" >
+                    </div>
+
                     </div>
 
                     <div class="form-wraper">
                     <div class="col">
-                      <p>Observação:*</p>
+                      <p>Observação:</p>
                       <input type="text" name="observacao" id="observacao" placeholder="Observação" autocomplete="off" >
                     </div>
+
                     </div>
 
                     <div class="enviar">
-                    <input type="submit" name="acao"  id="clicar" value="Cadastrar"  />
+                    <input type="submit" name="acao"  id="clicar" value="Cadastrar" onclick=""/>
                  
 		  			  		  <p>*campos obrigatorios</p>
                     </div>
-		  			  	</form>
+  
+                </form>
+
 		  		</div><!--container bg-->
     </section><!--cover-form-->
 
