@@ -68,8 +68,8 @@
                       <p>Marca:</p>
                       <input type="text" name="marca" id="marca" placeholder="Marca" autocomplete="off" >
                     </div>
-                    <div class="col-1">
-                      <p>Unidade de medida:</p>
+                    <div class="col-1" >
+                      <p >Unidade de medida:</p>
                       <select name="unidade_medida" id="unidade_medida"  placeholder="Unidade de Medida">
                       <option selected disabled value="">Selecione</option> 
                          <option value="Tamanho" >Tamanho</option> 
@@ -79,7 +79,7 @@
                       </select>
                     </div>
 
-                    <div class="col-2">
+                    <div class="col-2" id="valor_medida">
                       <p>Valor Medida:</p>
                       <input type="text" name="valor_medida" id="valor_medida" placeholder="Valor Medida" autocomplete="off" >
                     </div>
