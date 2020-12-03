@@ -22,7 +22,7 @@
     <section class="cover-form">
 		  			<div class="form-container">
 		  			  	<h1>Cadastro de Produtos</h1>
-		  			  	<form  method="POST" id="Form_login" class="Form_login" action="back_end/banco.php" >
+		  			  	<form  method="POST"  name="form" action="back_end/banco.php" onSubmit="return enviardados();" >
 		  			  		<div class="form-wraper">
 
                     <div class="col">
@@ -70,10 +70,9 @@
                     </div>
                     <div class="col-1">
                       <p>Unidade de medida:</p>
-                      <select name="unidade_medida" id="unidade_medida" placeholder="Unidade de Medida">
+                      <select name="unidade_medida" id="unidade_medida"  placeholder="Unidade de Medida">
                       <option selected disabled value="">Selecione</option> 
-                         
-                          <option value="Tamanho" >Tamanho</option> 
+                         <option value="Tamanho" >Tamanho</option> 
                           <option value="Peso em KG" >Peso em KG</option>
                           <option value="Mililitros (ml)">Ml</option>
                           <option value="" >Nenhum</option> 
@@ -107,6 +106,7 @@
     </section><!--cover-form-->
 
     <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/valida_lista.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/auto_complete.js"></script>
 </body>
