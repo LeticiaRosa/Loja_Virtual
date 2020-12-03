@@ -1,6 +1,5 @@
 
 <!DOCTYPE html>
-<html>
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
@@ -17,19 +16,14 @@
  
 <?php 
 
-<script>
-  window.onload = "teste($sucesso)";
-</script>
    include_once("menu.php"); 
-   $sucesso = $_SESSION['sucesso'];
-   $_SESSION['sucesso'] = null;
-   echo($sucesso);
+
 
 ?>
     <section class="cover-form">
 		  			<div class="form-container">
 		  			  	<h1>Cadastro de Produtos</h1>
-		  			  	<form  method="POST"  name="form" action="back_end/banco.php" onSubmit="return enviardados();" >
+		  			  	<form  method="POST"  name="form" action="back_end/banco.php"  >
 		  			  		<div class="form-wraper">
 
                     <div class="col">
@@ -106,17 +100,30 @@
                  
 		  			  		  <p>*campos obrigatorios</p>
                     </div>
-<input type="text" name="acao"  id="sucess" value="<?php echo  $_SESSION['sucesso'];?>" />
-<!--
-<script  >
-  window.onload = teste();
-  </script>
-<!-->
 
                 </form>
 
 		  		</div><!--container bg-->
     </section><!--cover-form-->
+    <p>
+            <?php 
+			//Recuperando o valor da variável global, os erro de login.
+			if(isset($_SESSION['sucesso_cadastro'])){
+                echo $_SESSION['sucesso_cadastro'];
+                unset($_SESSION['sucesso_cadastro']);
+            }?>
+            </p>
+            <p>
+                <?php 
+                //Recuperando o valor da variável global, deslogado com sucesso.
+                if(isset($_SESSION['erro_cadastro'])){
+                    echo $_SESSION['erro_cadastro'];
+                    unset($_SESSION['erro_cadastro']);
+                }
+                ?>
+            </p>
+
+
 
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/valida_lista.js"></script>

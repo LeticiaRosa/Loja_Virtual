@@ -24,7 +24,7 @@ $valor_medida = $_POST['valor_medida'];
 $observacao=$_POST['observacao'];
 $id_usuario=$_SESSION['usuarioId'];
 
-$query = "select id_categoria from categoria where nome = '$id_categoria'";
+ $query = "select id_categoria from categoria where nome = '$id_categoria'";
     $query_1 = "select id_fornecedor from fornecedor where nome = '$id_fornecedor'";
     $categoria = mysqli_query($conexao, $query );
     $fornecedor = mysqli_query($conexao, $query_1 );
@@ -35,13 +35,19 @@ $query = "select id_categoria from categoria where nome = '$id_categoria'";
     $produto= mysqli_query($conexao, $query_2);
     ECHO  $produto;
         if($produto==1){
-            $_SESSION['sucesso'] = "1";
+            $_SESSION['sucesso_cadastro'] = "Produto inserido com sucesso";
             header("Location:/Loja_Virtual/Tela_cadastro_produto_1.php");
-            return $_SESSION['sucesso'];
+           
             
+        }else {
+            $_SESSION['erro_cadastro'] = "Produto Não cadastrado";
+            header("Location:/Loja_Virtual/Tela_cadastro_produto_1.php");
         }
    
 
+}else {
+
+    header("Location:/Loja_Virtual/Tela_cadastro_produto_1.php");
 }
 
 ?>
