@@ -1,3 +1,7 @@
+
+
+
+
 //Para buscar produto
 $(async function() {
 	   // Atribui evento e função para limpeza dos campos
@@ -42,6 +46,19 @@ $( "#id_categoria" ).autocomplete({
 		 source: nomes
 	   });
 	 } );
- 
 
+function teste($a) {
+	//var teste =  document.getElementById('sucess').value;
+	var teste = $a
+	console.log(teste);
+	
+	if (teste  == 1 ) {
+		
+  alert('Email enviado com Sucesso!');
+  "<?php echo $_SESSION['sucesso'] = 0 ;?>";
+  window.location='/Loja_Virtual/Tela_cadastro_produto_1.php';
+  teste = 0;
+  }
+  
+};
 

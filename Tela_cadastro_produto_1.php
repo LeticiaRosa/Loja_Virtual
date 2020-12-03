@@ -5,7 +5,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/cadastro.css">
-
+   
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
     
@@ -16,8 +16,15 @@
 <body>
  
 <?php 
+
+<script>
+  window.onload = "teste($sucesso)";
+</script>
    include_once("menu.php"); 
-   
+   $sucesso = $_SESSION['sucesso'];
+   $_SESSION['sucesso'] = null;
+   echo($sucesso);
+
 ?>
     <section class="cover-form">
 		  			<div class="form-container">
@@ -99,7 +106,13 @@
                  
 		  			  		  <p>*campos obrigatorios</p>
                     </div>
-  
+<input type="text" name="acao"  id="sucess" value="<?php echo  $_SESSION['sucesso'];?>" />
+<!--
+<script  >
+  window.onload = teste();
+  </script>
+<!-->
+
                 </form>
 
 		  		</div><!--container bg-->
@@ -108,6 +121,6 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/valida_lista.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="js/auto_complete.js"></script>
+  <script type="text/javascript" src="js/auto_complete.js"></script>
 </body>
 </html>
