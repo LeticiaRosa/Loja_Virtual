@@ -21,7 +21,7 @@ session_start();
           <li>
             <a href="#">Produto</a>
             <ul class="sub-menu">
-              <li><a href="/Loja_Virtual/Tela_cadastro_produto_1.php">Cadastro de Produto</a></li>
+              <li><a href="Tela_cadastro_produto_1.php">Cadastro de Produto</a></li>
               <li><a href="#">Cadastro de Categoria</a></li>
               <li><a href="#">Sub Sub</a></li>
             </ul>
@@ -61,7 +61,7 @@ session_start();
       </li>
     <li>
       
-      <li class = "sair" ><a href="/Loja_Virtual/Tela_login_nova.php">Sair</a></li>
+      <li class = "sair" ><a href="Tela_login_nova.php">Sair</a></li>
       <li class = "ajuda"><a href="#">Ajuda</a></li>
       <li class = "configurações"><a href="#">Configurações</a>
       <ul class="sub-menu">

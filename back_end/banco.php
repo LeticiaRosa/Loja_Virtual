@@ -1,14 +1,5 @@
 <?php
-
-
-           
-        
-
-
 session_start();
-
-
-
 require_once ("conexao.php");
 if(isset($_POST['acao'])){
 $nome = $_POST['nome'];
@@ -36,18 +27,18 @@ $id_usuario=$_SESSION['usuarioId'];
     ECHO  $produto;
         if($produto==1){
             $_SESSION['sucesso_cadastro'] = "Produto inserido com sucesso";
-            header("Location:/Loja_Virtual/Tela_cadastro_produto_1.php");
+            header("Location:/Tela_cadastro_produto_1.php");
            
             
         }else {
             $_SESSION['erro_cadastro'] = "Produto Não cadastrado";
-            header("Location:/Loja_Virtual/Tela_cadastro_produto_1.php");
+            header("Location:/Tela_cadastro_produto_1.php");
         }
    
 
 }else {
 
-    header("Location:/Loja_Virtual/Tela_cadastro_produto_1.php");
+    header("Location:/Tela_cadastro_produto_1.php");
 }
 
 ?>
