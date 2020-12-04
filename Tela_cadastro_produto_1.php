@@ -105,6 +105,7 @@
 
 		  		</div><!--container bg-->
     </section><!--cover-form-->
+    <section class="botao">
     <p>
             <?php 
 			//Recuperando o valor da variável global, os erro de login.
@@ -122,7 +123,8 @@
                 }
                 ?>
             </p>
-
+            <input type="submit" value="ok">
+    </section>
 
 
     <script type="text/javascript" src="js/jquery.js"></script>

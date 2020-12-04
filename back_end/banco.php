@@ -27,18 +27,18 @@ $id_usuario=$_SESSION['usuarioId'];
     ECHO  $produto;
         if($produto==1){
             $_SESSION['sucesso_cadastro'] = "Produto inserido com sucesso";
-            header("Location:/Tela_cadastro_produto_1.php");
+            header("Location:/loja_virtual/Tela_cadastro_produto_1.php");
            
             
         }else {
             $_SESSION['erro_cadastro'] = "Produto Não cadastrado";
-            header("Location:/Tela_cadastro_produto_1.php");
+            header("Location:/loja_virtual/Tela_cadastro_produto_1.php");
         }
    
 
 }else {
 
-    header("Location:/Tela_cadastro_produto_1.php");
+    header("Location:/loja_virtual/Tela_cadastro_produto_1.php");
 }
 
 ?>

@@ -19,19 +19,19 @@
             $_SESSION['usuarioId'] = $resultado['id_usuario'];
             $_SESSION['usuarioNome'] = $resultado['nome_usuario'];
             $_SESSION['login'] = $resultado['login'];
-            header("Location:/Tela_inicial_1.php");
+            header("Location:/loja_virtualTela_inicial_1.php");
             
         //Não foi encontrado um usuario na tabela usuário com os mesmos dados digitado no formulário
         //redireciona o usuario para a página de login
         }else{    
             //Váriavel global recebendo a mensagem de erro
             $_SESSION['loginErro'] = "Usuário ou senha Inválido";
-            header("Location:/Tela_login_nova.php");
+            header("Location:/loja_virtual/Tela_login_nova.php");
         }
     //O campo usuário e senha não preenchido entra no else e redireciona o usuário para a página de login
     }else{
         $_SESSION['loginErro'] = "Usuário ou senha inválido";
-        header("Location: Location:/Tela_login_nova.php");
+        header("Location: Location:/loja_virtualTela_login_nova.php");
     }
 
   
