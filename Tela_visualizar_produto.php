@@ -24,8 +24,8 @@
 <div class="form-container">
 		<h1> Produtos</h1>
         <div class="container">
-        <div class="row">
-        <table class= "table" >
+        <div class="row" id="visualizarDados" onclick()="#openModal" >
+        <table class= "table" id= "table" >
             <thead>
             <tr>
                 <th > Nome <br/> </th>
@@ -40,7 +40,7 @@
                 <th class = "sumir-1"> Valor Medida </th>
                 <th class = "sumir"> Observação </th>
                 <th class = "sumir"> Usuário </th> 
-                <th class = "sumir-3"> Data do Cadastro </th>
+                <th class = "sumir"> Data do Cadastro </th>
             </tr>
             </thead>
             <tbody>
@@ -48,11 +48,11 @@
             <?php
              $sql = "select nome, descricao, id_categoria,preco_venda, preco_custo,quantidade, id_fornecedor, marca, unidade_medida, valor_medida, observacao,id_usuario , DATE_format(data_cadastro, '%d-%m-%Y') as data_cadastro from produto";
              $query= mysqli_query($conexao, $sql );
-        
+
             while ($row = mysqli_fetch_object ($query)) { 
-                echo '<div class = "linha">';
-                echo '</tr>';
-                echo '<td  >' . $row->nome . '</td>';
+               
+                echo '<tr> ';
+                echo '<td>' . $row->nome . '</td>';
                 echo '<td>' . $row->descricao . '  </td>';
                 echo '<td>' . $row->id_categoria . '</td>';
                 echo '<td>' . $row->preco_venda . '</td>';
@@ -65,20 +65,35 @@
                 echo '<td class = "sumir">' . $row->observacao . '</td>';
                 echo '<td class = "sumir">' . $row->id_usuario . '</td>';
                 echo '<td class = "sumir-3" >' . $row->data_cadastro . '</td>';
-                echo '</div>';
+                echo ' </tr> ';
+              
+             
             }
             mysqli_free_result($query);  
             ?>
            
             </tbody>
+            
         </table>
-        <!-- /.row -->
+        <!-- /.row 
+        <button id="visualizarDados">Visualizar Dados</button>--> 
         </div>
         </div>
    
     <!-- /.container -->                        
 </div><!--container bg-->
 </section><!--cover-form-->
+
+<div id="openModal" class="modalDialog">
+    <div><a href="#close" title="Close" class="close">X</a>    
+    <?php  include_once("Tela_alterar_produto.php");  ?>
+    </div>
+</div>
+
+
+
+
+<script type="text/javascript" src="js/seleciona_linha.js"></script>
 
 </body>
 </html> 
