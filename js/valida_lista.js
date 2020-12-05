@@ -25,6 +25,6 @@ $('#unidade_medida').on('change', function() {
   
 
   function fechamodal(){
-    $('#conteiner').css("display", "nome");
+    $('#conteiner').css("display", "none");
   }
 
