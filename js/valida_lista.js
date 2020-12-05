@@ -12,7 +12,7 @@ $('#unidade_medida').on('change', function() {
     }
     else if (tipo == ""){
         $('#valor_medida').prop("disabled", true);
- $('#valor_medida').css("display", "none");
+    $('#valor_medida').css("display", "none");
     }
   });
 
@@ -23,4 +23,8 @@ $('#unidade_medida').on('change', function() {
 
   }
   
+
+  function fechamodal(){
+    $('#conteiner').css("display", "nome");
+  }
 
