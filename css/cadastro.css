@@ -149,10 +149,76 @@ section.cover-form{
 	font-size: 25px;
   border: 0;
   border-radius: 10px;
+  
 }
-.
 
+
+.conteiner{
+  top: 0px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  
+  background-color: rgba(0,0, 0,0.5);
+  z-index: 2000;
+  display: none;
+}
+.couver{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  max-width: 300px;
+  padding: 40px;
+  background: white;
+  border: 10px solid gray;
+  align-items: center;
+  justify-content: center;
+}
+ .couver:last-child{
+  padding: 10px;
+ }
+.couver p{
+  padding: 10px;
+  font-size: 25px;
+  text-align: center;
+  color: #525252;
+  width: 100%;
+}
+
+.couver input[type="submit"]{
+  background-color: rgba(71, 92, 71,0.8); 
+	text-transform: uppercase;
+	color: white;
+  width: 150px;
+	height: 45px;
+	cursor: pointer;
+	font-size: 25px;
+  border: 0;
+  border-radius: 10px;
+  
+}
 @media screen and (max-width: 900px){
+  .botao{
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+flex-direction: column;
+align-items: center;
+  }
+  .center{
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+flex-direction: column;
+align-items: center;
+  }
+
   .form-container form .form-wraper {
     padding: 0px;
     flex-wrap: wrap;
@@ -161,9 +227,29 @@ section.cover-form{
     width: 100%;
   }
   
-
 }
+.pega {
+  display:none;
+}
+  
 @media screen and (max-width: 768px){
+  .botao{
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+flex-direction: column;
+align-items: center;
+  }
+  .center{
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+flex-direction: column;
+align-items: center;
+  }
   .form-container form .form-wraper {
     padding: 0px;
     flex-wrap: wrap;

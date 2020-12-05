@@ -15,3 +15,12 @@ $('#unidade_medida').on('change', function() {
  $('#valor_medida').css("display", "none");
     }
   });
+
+  var select = document.getElementById('pega').value;
+  if (select=="Produto inserido com sucesso"){
+    console.log(select);
+    $('#conteiner').css("display", "flex");
+
+  }
+  
+

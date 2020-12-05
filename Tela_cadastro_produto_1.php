@@ -105,26 +105,30 @@
 
 		  		</div><!--container bg-->
     </section><!--cover-form-->
-    <section class="botao">
-    <p>
-            <?php 
+    <div class="pega">
+    <input  id="pega" type="text" value="<?php if(isset($_SESSION['sucesso_cadastro'])) {echo $_SESSION['sucesso_cadastro']; }?>" >
+    </div>
+    <div class="conteiner" id="conteiner">
+      <div class="couver">
+            <p> <?php 
 			//Recuperando o valor da variável global, os erro de login.
 			if(isset($_SESSION['sucesso_cadastro'])){
-                echo $_SESSION['sucesso_cadastro'];
+              echo $_SESSION['sucesso_cadastro'];
                 unset($_SESSION['sucesso_cadastro']);
             }?>
             </p>
-            <p>
-                <?php 
+            <p> <?php 
                 //Recuperando o valor da variável global, deslogado com sucesso.
                 if(isset($_SESSION['erro_cadastro'])){
                     echo $_SESSION['erro_cadastro'];
                     unset($_SESSION['erro_cadastro']);
                 }
                 ?>
-            </p>
-            <input type="submit" value="ok">
-    </section>
+                </p>
+            <input type="submit" value="OK" onclick="fechamodal()"/>
+        </div>
+    </div>
+      
 
 
     <script type="text/javascript" src="js/jquery.js"></script>
