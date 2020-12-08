@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-
-
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
@@ -12,19 +10,15 @@
 <body>
  
 <?php 
-
    include_once("menu.php"); 
-   require_once("back_end/conexao.php");
-  
-   
-    
+   require_once("back_end/conexao.php"); 
 ?>
 
 <section class="cover-form">
 <div class="form-container">
 		<h1> Produtos</h1>
         <div class="container">
-        <div class="row" id="visualizarDados" onclick()="#openModal" >
+        <div class="row" id="visualizarDados" >
         <table class= "table" id= "table" >
             <thead>
             <tr>
@@ -43,14 +37,11 @@
                 <th class = "sumir"> Data do Cadastro </th>
             </tr>
             </thead>
-            <tbody>
-        
+            <tbody>    
             <?php
              $sql = "select nome, descricao, id_categoria,preco_venda, preco_custo,quantidade, id_fornecedor, marca, unidade_medida, valor_medida, observacao,id_usuario , DATE_format(data_cadastro, '%d-%m-%Y') as data_cadastro from produto";
              $query= mysqli_query($conexao, $sql );
-
             while ($row = mysqli_fetch_object ($query)) { 
-               
                 echo '<tr> ';
                 echo '<td>' . $row->nome . '</td>';
                 echo '<td>' . $row->descricao . '  </td>';
@@ -66,8 +57,6 @@
                 echo '<td class = "sumir">' . $row->id_usuario . '</td>';
                 echo '<td class = "sumir-3" >' . $row->data_cadastro . '</td>';
                 echo ' </tr> ';
-              
-             
             }
             mysqli_free_result($query);  
             ?>
@@ -75,8 +64,7 @@
             </tbody>
             
         </table>
-        <!-- /.row 
-        <button id="visualizarDados">Visualizar Dados</button>--> 
+        <!-- /.row --> 
         </div>
         </div>
    

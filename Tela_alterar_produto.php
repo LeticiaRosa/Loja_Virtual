@@ -11,14 +11,14 @@
 <html>
 <body>
 
-		  			<div class="form-container">
+		  			<div class="form-container" id ="modal" >
 		  			  	<h1>Editar Produto</h1>
-		  			  	<form  method="POST"  name="form" action="back_end/banco.php"  >
+		  			  	<form  method="POST"  name="form"  >
 		  			  		<div class="form-wraper">
 
                     <div class="col">
                       <p>Nome do Produto*</p>
-                      <input  type="text" name="nome" id="nome" required placeholder= "Nome" autocomplete="off" >
+                      <input  type="text" name="nome" id="nome" value = "" required placeholder= "Nome" autocomplete="off" >
                     </div> 
                     <div class="col">
 		  			  			  <p>Descrição</p>
@@ -70,9 +70,9 @@
                       </select>
                     </div>
 
-                    <div class="col-2" id="valor_medida">
+                    <div class="col-1" id="valor_medida">
                       <p>Valor Medida:</p>
-                      <input type="text" name="valor_medida" id="valor_medida" placeholder="Valor Medida" autocomplete="off" >
+                      <input type="text" name="valor_medida" value="" id="valor_medida-1" placeholder="Valor Medida" autocomplete="off" >
                     </div>
 
                     </div>
@@ -85,8 +85,8 @@
 
                     </div>
 
-                    <div class="enviar">
-                    <input type="submit" name="acao"  id="clicar" value="Salvar" onclick=""/>
+                    <div class="salvar">
+                    <input type="submit" value="Salvar" onclick="#close"/>
                  
 		  			  		  <p>*campos obrigatorios</p>
                     </div>
@@ -95,7 +95,6 @@
 
 		  		</div><!--container bg-->
   
-
 
 </body>
 </html> 
