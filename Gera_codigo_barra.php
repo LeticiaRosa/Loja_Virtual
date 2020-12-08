@@ -35,13 +35,10 @@
                 </div>
             </div>
              
+            
+            
             <div class="cod_barra" id="barcodeDiv">
-                   <div class="codigo_barras" >
-                    
-                   </div>
-                   <div class="codigo_barras_1">
-                   
-                   </div> 
+                
             </div>
 
 
