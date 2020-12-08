@@ -1,0 +1,58 @@
+@import url(https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap);
+
+*{
+	margin: 0 ;
+	padding: 0;
+	box-sizing: border-box;
+	
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    font-family: "Dosis", sans-serif;
+}
+
+.cod_barra{
+    
+    width: 8.7cm;
+    height: 4.6cm;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+   /* margin-top:0.3cm,0.1cm,0.3cm,0.1cm*/;
+    
+}
+.codigo_barras{
+    margin-top:0.3cm;
+    margin-bottom:0.3cm;
+    margin-left: 0.2cm;
+    margin-right: 0.4cm;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 4cm;
+    height: 4cm;
+    align-items: center;
+    justify-items: center;
+    ;
+}
+.codigo_barras h1{
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+    margin-top:0;
+}
+.codigo_barras_1{
+    margin-top:0.3cm;
+    margin-bottom:0.3cm;
+    margin-right: 0.2cm;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 4cm;
+    height: 4cm;
+    align-items: center;
+    justify-items: center;
+    background-color: green;}

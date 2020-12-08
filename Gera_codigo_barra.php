@@ -10,7 +10,7 @@
         <link href="http://leandrolisura.com.br/wp-content/uploads/2017/11/bootstrap.min_.css" rel="stylesheet">
         <!-- Custom styles for this template -->
         <link href="http://leandrolisura.com.br/wp-content/uploads/2017/12/starter-template.css" rel="stylesheet">
-  
+        <link rel="stylesheet" type="text/css" href="css/css_codigo_barras.css">
     </head>
     <body>
         <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar">
@@ -35,9 +35,15 @@
                 </div>
             </div>
              
-            <div id="barcodeDiv">
-  
+            
+            
+            <div class="cod_barra" id="barcodeDiv">
+                
             </div>
+
+
+
+
         </div>
         <!-- /.container -->
         <!-- Bootstrap core JavaScript -->
