@@ -7,14 +7,24 @@ $(document).ready(function () {
 function generateRange(numberBegin, numberEnd){
     html = "";
     for (i = numberBegin; i <= numberEnd; i++) {
-        html += '<div class="row" style="margin-top: 20px;">';
-        for (j = 0; j < 2; j++) {
-            html +=
-                '    <div class="col-xs-6" style="width: 50%; display: inline; margin-top: 40px;">' +
+        html += '<div class="cod_barra" style ="width: 8.7cm;height: 4.6cm;display: flex; flex-direction: row;align-items: center;justify-items: center;justify-content: space-between;margin-top:-5px  " >'
+                for (j = 0; j < 2; j++) {
+            html += '<div class="codigo_barras"  style =" justify-content: center;    display: flex;    flex-direction:column;    width: 4cm;    height: 4cm;    align-items: center;    justify-items: center;"> '+
+            '<h1 style =" font-size: 10px;color: black;font-weight: bold;margin-top:0px;">Produto:</h1>'+
+            '<h1 style ="font-size: 10px;color: black;font-weight: bold;margin-top:0px;">Valor Produto:</h1>'+
                 '        <img id="barcodeImage_' + i + '" class="codeBarImage" />' +
-                '    </div>';
-            i++;
-        }
+                '</div>';
+                i++;    
+            }
+              /*for (j = 0; j < 1; j++) {   
+                html +=   '<div class="codigo_barras_1"  style ="margin-top:0px;    justify-content: center;    display: flex;    flex-direction: column;    width: 4cm;    height: 4cm;    align-items: center;    justify-items: center;    "> '+
+                '<h1 style =" font-size: 10px;color: black;font-weight: bold;margin-top:0px;">Produto:</h1>'+
+                '<h1 style ="font-size: 10px;color: black;font-weight: bold;margin-top:0px;">Valor Produto</h1>'+
+                '        <img id="barcodeImage_' + i + '" class="codeBarImage" />' +
+                '</div>';
+                i++;
+          
+        }*/
         i--;
         html += '</div>';
     }
