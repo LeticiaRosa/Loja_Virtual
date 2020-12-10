@@ -3,14 +3,16 @@ $(document).ready(function () {
         generateRange($('#number_begin').val(), $('#number_end').val());
     });
 });
- 
+var produto = document.getElementById('number_begin');
+document.getElementById('nome').value = produto;
+console.log(produto);
 function generateRange(numberBegin, numberEnd){
     html = "";
     for (i = numberBegin; i <= numberEnd; i++) {
         html += '<div class="cod_barra" style ="margin-top:-1px;page-break-after:always;width: 8.7cm;height: 4cm;display: flex; flex-direction: row;align-items: center;justify-items: center;justify-content: space-between;" >'
                 for (j = 0; j < 1; j++) {
             html += '<div class="codigo_barras"  style ="justify-content: center;   margin-right: 0.9cm; display: flex;    flex-direction:column;    width: 4cm;    height: 4cm;    align-items: center;    justify-items: center;"> '+
-            '<h1 style =" font-size: 10px;color: black;font-weight: bold;">Produto:</h1>'+
+            '<h1 style =" font-size: 10px;color: black;font-weight: bold;">Produto:' + produto+ '</h1>'+
             '<h1 style ="font-size: 10px;color: black;font-weight: bold;">Valor Produto:</h1>'+
                 '        <img  id="barcodeImage_' + i + '" class="codeBarImage" />' +
                 '</div>';

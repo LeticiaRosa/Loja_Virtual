@@ -49,7 +49,6 @@
         <!-- Bootstrap core JavaScript -->
         <!-- Placed at the end of the document so the pages load faster -->
         <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/valida_lista.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
   <script type="text/javascript" src="js/bytescoutbarcode128_1.00.07.js"></script>
   <script type="text/javascript" src="js/gerador.js"></script>

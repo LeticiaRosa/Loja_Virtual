@@ -23,7 +23,7 @@
     <section class="cover-form">
 		  			<div class="form-container">
 		  			  	<h1>Cadastro de Produtos</h1>
-		  			  	<form  method="POST"  name="form" action="back_end/banco.php"  >
+		  			  	<form  method="POST"  name="form" action="back_end/banco.php" >
 		  			  		<div class="form-wraper">
 
                     <div class="col">
@@ -125,14 +125,17 @@
                 }
                 ?>
                 </p>
-            <input type="submit" value="OK" onclick="fechamodal()"/>
+            <input type="submit" value="OK" onclick="fechamodal()"/> </p>
+            <input type="submit" value="Gerar codigos de Barras" action = "js/gerador.js"  onclick="window.open('Gera_codigo_barra.php');"/>
         </div>
     </div>
       
 
 
     <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/valida_lista.js"></script>
+    <script type="text/javascript" src="js/gerador.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
   <script type="text/javascript" src="js/auto_complete.js"></script>
 </body>
