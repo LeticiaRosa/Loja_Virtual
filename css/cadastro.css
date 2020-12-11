@@ -91,6 +91,37 @@ section.cover-form{
   width: 100%;
 }
 
+.col-3{
+  padding: 5px ;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 40%;
+  font-size: 14px;
+  text-align: left;
+  color: #525252;
+}
+.col-3 input[type="radio"]{
+  padding: 5px;
+  margin-left: 15px;
+}
+.col-4{
+  flex-direction: row;
+}
+
+.col-4 input[type="text"]{
+  padding: 5px ;
+  flex-direction: row;
+  font-size: 14px;
+  text-align: left;
+  color: #525252;
+}
+
+.barra{
+  margin-left: 5px;
+}
+
+
 .col-1 select{
   width: 100%; 
   display: flex;

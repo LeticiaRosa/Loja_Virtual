@@ -88,6 +88,18 @@
                     </div>
 
                     <div class="form-wraper">
+                      <div class="col-3"> 
+                        Deseja gerar codigo de barra automático? 
+                        <input type="radio" id="sim" name="barra" value="S" checked = "checked"> <div class = "barra"> Sim </div>
+                        <input type="radio" id="não" name="barra" value="N"> <div class = "barra"> Não </div>
+                      </div>
+                    <div class="col-4" id="gerar_codigo">
+                       Código: <input type="text" name="gerar_codigo" id="gerar_codigo" placeholder="Código" autocomplete="off" >
+                    </div>
+                    </div>
+
+
+                    <div class="form-wraper">
                     <div class="col">
                       <p>Observação:</p>
                       <input type="text" name="observacao" id="observacao" placeholder="Observação" autocomplete="off" >
