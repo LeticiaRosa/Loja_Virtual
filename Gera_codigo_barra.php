@@ -3,7 +3,6 @@
     <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/cadastro.css">   
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">      
     <link rel="stylesheet" type="text/css" href="css/css_codigo_barras.css">
     <title>Gerar Codigo De Barras</title>
@@ -21,33 +20,36 @@
                 <div class="conter">
                     <div class="col">
                         <p>ID_PRODUTO:</p>
-                         <input  type="text" name="Id" id="Id" autocomplete="off" >
+                         <input  type="text" name="Id" id="Id" disabled>
                     </div>
 
                     <div class="col">
                         <p>PRODUTO:</p>
-                        <input  type="text" name="produto" id="produto" autocomplete="off" >
+                        <input  type="text" name="produto" id="produto" disabled >
                     </div>
 
                     <div class="col">
-                        <p>VALOR_PRODUTO:</p>
-                        <input  type="text" name="valor_produto" id="valor_produto" autocomplete="off" >
+                        <p>VALOR PRODUTO:</p>
+                        <input  type="text" name="valor_produto" id="valor_produto" disabled>
                     </div>
+
+                    <div class="col">
+                        <p>QUANTIDADE EM ESTOQUE:</p>
+                        <input  type="text" name="qtd_estoque" id="qtd_estoque"disabled  >
+                    </div>
+
+
                 </div> 
-                <div class="conter">
-                    <div class="col">
-                        <p>QUANTIDADE INICIAL:</p>
-                        <input  type="text" name="qtd_inicial" id="qtd_inicial" require autocomplete="off" >
-                    </div>
+                <div class="conter-1">
 
-                    <div class="col">
-                        <p>QUANTIDADE FINAL:</p>
-                        <input  type="text" name="qtd_final" id="qtd_final" require autocomplete="off" >
+                    <div class="col-1">
+                        <p>QUANTIDADE DE ETIQUETAS:</p>
+                        <input  type="text" name="qtd_etiquetas" id="qtd_etiquetas" require autocomplete="OFF" >
                     </div>
                 </div>
                 <div class="conter">
-                <div class="col">
-                <input type="submit" name="acao"  id="clicar" value="Gerar">
+                    <div class="enviar">
+                        <input type="submit" name="acao"  id="clicar" value="Gerar">
                     </div>
                 </div>   
             </div>

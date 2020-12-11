@@ -65,8 +65,8 @@ $( "#id_categoria" ).autocomplete({
 		   console.log(quantidate);
 		   console.log(valor);
 		   document.getElementById('Id').value = id;
-		   document.getElementById('valor_produto').value = valor;
-		   document.getElementById('qtd_final').value = quantidate;
+		   document.getElementById('valor_produto').value = valor+',00';
+		   document.getElementById('qtd_estoque').value = quantidate;
 		   document.getElementById('produto').value = nome;
 
 		 }

@@ -4,12 +4,11 @@
 	margin: 0 ;
 	padding: 0;
 	box-sizing: border-box;
-	
+  font-family: "Dosis", sans-serif;
 }
 html,body{
     width: 100%;
     height: 100%;
-    font-family: "Dosis", sans-serif;
     background-color: rgb(235, 237, 240);
 }
 
@@ -47,14 +46,29 @@ nav.menu{
 }
 
 .corpo .col{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 5px ;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 5px ;
+  flex-wrap: wrap;
+  width: 100%;
   }
 
+.conter-1{
+    display: flex;
+    flex-direction: row;
+    padding: 5px ;
+
+    justify-items: center;
+    justify-content: center;
+    }
+.conter-1 .col-1{
+      width: 25%;  
+   
+      flex-direction: column;
+      align-items: center;
+      justify-items: center;
+     
+    }
 .corpo p{
     padding: 5px;
     font-size: 15px;
@@ -65,14 +79,14 @@ nav.menu{
 
 .corpo input[type="text"]{
     background-color: rgba(214, 226, 217, 0.8); 
-      text-transform: uppercase;
-      color: white;
-    width: 150px;
-      height: 45px;
-      cursor: pointer;
-      font-size: 25px;
+    text-transform: uppercase;
+    width: 100%;
+    height: 45px;
+    cursor: pointer;
+    font-size: 25px;
     border: 0;
     border-radius: 10px;
+    text-align: center;
     }
 
     .corpo input[type="submit"]{
@@ -86,6 +100,16 @@ nav.menu{
       border: 0;
       border-radius: 10px;
       
+    }
+
+    .enviar{
+      display: flex;
+      flex-direction: column;
+      padding: 15px;
+      width:100%;
+      align-items: center;
+      text-align: center;
+      justify-content:center ;
     }
     @media screen and (max-width: 900px){
         .corpo {
