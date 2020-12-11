@@ -10,18 +10,16 @@
     </head>
     <body>
 
-    <?php 
+<?php 
 
-   include_once("menu.php"); 
-
-
+   include_once("menu.php");
 ?>
         <nav class="menu" id="menu">
-            <h1>Gerador De Codigos</h1>
-               <div class="corpo">
-           
-                <div class="campos">
-                     <div class="col">
+            <div class="corpo">
+                <h1>Gerador De Codigos</h1>
+               
+                <div class="conter">
+                    <div class="col">
                         <p>ID_PRODUTO:</p>
                          <input  type="text" name="Id" id="Id" autocomplete="off" >
                     </div>
@@ -33,10 +31,26 @@
 
                     <div class="col">
                         <p>VALOR_PRODUTO:</p>
-                        <input  type="text" name="valor_produto" id="nome" autocomplete="off" >
+                        <input  type="text" name="valor_produto" id="valor_produto" autocomplete="off" >
+                    </div>
+                </div> 
+                <div class="conter">
+                    <div class="col">
+                        <p>QUANTIDADE INICIAL:</p>
+                        <input  type="text" name="qtd_inicial" id="qtd_inicial" require autocomplete="off" >
+                    </div>
+
+                    <div class="col">
+                        <p>QUANTIDADE FINAL:</p>
+                        <input  type="text" name="qtd_final" id="qtd_final" require autocomplete="off" >
                     </div>
                 </div>
-        </div>
+                <div class="conter">
+                <div class="col">
+                <input type="submit" name="acao"  id="clicar" value="Gerar">
+                    </div>
+                </div>   
+            </div>
        
         <div class="cod_barra" id="barcodeDiv">
                 
@@ -48,6 +62,7 @@
         
         
         <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/auto_complete.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
   <script type="text/javascript" src="js/bytescoutbarcode128_1.00.07.js"></script>
   <script type="text/javascript" src="js/gerador.js"></script>
