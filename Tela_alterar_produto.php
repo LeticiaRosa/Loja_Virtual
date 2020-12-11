@@ -86,7 +86,7 @@
                     </div>
 
                     <div class="salvar">
-                    <input type="submit" value="Salvar" onclick="#close"/>
+                    <input type="submit" value="Salvar" onclick=""/>
                  
 		  			  		  <p>*campos obrigatorios</p>
                     </div>

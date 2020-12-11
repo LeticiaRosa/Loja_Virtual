@@ -16,7 +16,7 @@
         <nav class="menu" id="menu">
             <div class="corpo">
                 <h1>Gerador De Codigos</h1>
-               
+                <form  method="POST"  name="form" action=" " >
                 <div class="conter">
                     <div class="col">
                         <p>ID_PRODUTO:</p>
@@ -51,7 +51,8 @@
                     <div class="enviar">
                         <input type="submit" name="acao"  id="clicar" value="Gerar">
                     </div>
-                </div>   
+                </div>  
+            </form> 
             </div>
        
         <div class="cod_barra" id="barcodeDiv">

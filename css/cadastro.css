@@ -92,13 +92,18 @@ section.cover-form{
 }
 
 .col-1 select{
-  width: 100%;
-  height: 33px; 
+  width: 100%; 
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   padding:8px 3px 3px 3px;      
   outline: none;
+  background-color: rgba(214, 226, 217, 0.8); 
+  height: 45px;
+  cursor: pointer;
+  font-size: 20px;
+  border: 0;
+  border-radius: 10px;
 }
 
 .form-wraper  p{
@@ -119,12 +124,15 @@ section.cover-form{
   margin-top:20px;
 }
 .form-container form input[type="text"]{
+  background-color: rgba(214, 226, 217, 0.8); 
   width: 100%;
-	border: 1px solid #ccc;
-	height: 35px;
-	line-height: 45px;
-	padding-left: 10px;	
-}
+  height: 45px;
+  cursor: pointer;
+  font-size: 20px;
+  border: 0;
+  border-radius: 10px;
+  text-align: left;
+  }
 .enviar{
   display: flex;
   flex-direction: column;

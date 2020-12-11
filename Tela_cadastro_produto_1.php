@@ -96,7 +96,7 @@
                     </div>
 
                     <div class="enviar">
-                    <input type="submit" name="Gerar"  id="gerar" value="gerar" onclick=""/>
+                    <input type="submit" name="acao"  id="clicar" value="Cadastrar" />
                  
                     </div>
 
@@ -125,7 +125,7 @@
                 ?>
                 </p>
             <input type="submit" value="OK" onclick="fechamodal()"/> </p>
-            <input type="submit" value="Gerar codigos de Barras" action = "js/gerador.js"  onclick="window.open('Gera_codigo_barra.php');"/>
+           <input type="submit" value="Gerar codigos de Barras"   onclick="window.open('Gera_codigo_barra.php');"/>
         </div>
     </div>
       
@@ -134,7 +134,6 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/valida_lista.js"></script>
-    <script type="text/javascript" src="js/gerador.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
   <script type="text/javascript" src="js/auto_complete.js"></script>
 </body>
