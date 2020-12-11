@@ -96,9 +96,8 @@
                     </div>
 
                     <div class="enviar">
-                    <input type="submit" name="acao"  id="clicar" value="Cadastrar" onclick=""/>
+                    <input type="submit" name="Gerar"  id="gerar" value="gerar" onclick=""/>
                  
-		  			  		  <p>*campos obrigatorios</p>
                     </div>
 
                 </form>
