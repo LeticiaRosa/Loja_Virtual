@@ -6,14 +6,14 @@ $('#valor_medida').prop("disabled", true);
 
 
 
- $('#radio').on('change', function() {
-  var select = document.getElementById('radio');
+ $('input[type=radio]').on('change', function() {
+  
   var tipo = getRadioValor('barras');
   console.log(tipo);
   if(tipo == "N") {
       $('#gerar_codigo').prop("disabled", false);
       $('#gerar_codigo').css("display", "flex");
-      document.form.valor_medida.focus();
+      document.form.gerar_codigo.focus();
       
   }
   else if (tipo == "S"){
@@ -55,9 +55,10 @@ $('#unidade_medida').on('change', function() {
 
   function getRadioValor(name){
     var rads = document.getElementsByName(name);
-    
-    for(var i = 0; i < rads.length; i++){
+    console.log(rads);
+    for(var i = 0; i <= rads.length; i++){
      if(rads[i].checked){
+      console.log(rads);
       return rads[i].value;
      }
     

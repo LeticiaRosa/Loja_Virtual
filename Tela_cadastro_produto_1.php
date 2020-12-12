@@ -90,7 +90,7 @@
                     <div class="form-wraper">
                       <div class="col-3"> 
                       <div class = "texto"> Deseja gerar codigo de barra automático? </div>
-                        <input type="radio" id="radio" name="barras" value="S" > <div class = "barra"> Sim </div>
+                        <input type="radio" id="radio" name="barras" value="S" checked = "checked"> <div class = "barra"> Sim </div>
                         <input type="radio" id="radio" name="barras" value="N" > <div class = "barra"> Não </div>
                       </div>
                       <div class="col-3" id="gerar_codigo">
