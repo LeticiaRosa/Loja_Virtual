@@ -22,8 +22,9 @@ session_start();
             <a href="#">Produto</a>
             <ul class="sub-menu">
               <li><a href="/loja_virtual/Tela_cadastro_produto_1.php">Cadastro de Produto</a></li>
-              <li><a href="#">Cadastro de Categoria</a></li>
-              <li><a href="/loja_virtual/Gera_codigo_barra.php">Gerar codig de barras</a></li>
+              <li><a href="/loja_virtual/Cadastro_categoria.php">Cadastro de Categoria</a></li>
+              <li><a href="/loja_virtual/Cadastro_Sub_Categoria.php">Cadastro de Sub Categoria</a></li>
+              <li><a href="/loja_virtual/Gera_codigo_barra.php">Gerar codigo de barras</a></li>
               <li><a href="/loja_virtual/Tela_visualizar_produto.php">Exibir</a></li>
 
             </ul>

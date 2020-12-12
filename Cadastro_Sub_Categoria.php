@@ -16,8 +16,8 @@
 
 <section class="cover-form">
 		  			<div class="form-container">
-		  			  	<h1>Cadastro de Categorias</h1>
-		  			  	<form  method="POST"  name="form" action="back_end/categorias.php" >
+		  			  	<h1>Cadastro de Sub Categorias</h1>
+		  			  	<form  method="POST"  name="form" action="back_end/sub_categoria.php" >
 		  			  		<div class="form-wraper">
 
                     <div class="col">
