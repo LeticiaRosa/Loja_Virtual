@@ -31,7 +31,7 @@ function generateRange(numberBegin, numberEnd){
     }
     $("#barcodeDiv").append(html);
     for (i = numberBegin; i <= numberEnd; i++) {
-        number = pad_with_zeroes($('#Id').val(), 3);
+        number = pad_with_zeroes($('#codigo').val(), 3);
         updateBarcode(number, '#barcodeImage_' + i);
     }
     var w = window.open();

@@ -60,6 +60,7 @@ $( "#id_categoria" ).autocomplete({
 		   id= data.map(d=>d.ID_PRODUTO); 
 		   quantidate= data.map(d=>d.quantidade); 
 		   valor= data.map(d=>d.PRECO_VENDA); 
+		   codigo=data.map(d=>d.codigo_barras)
 		   console.log(nome);
 		   console.log(id);
 		   console.log(quantidate);
@@ -68,6 +69,8 @@ $( "#id_categoria" ).autocomplete({
 		   document.getElementById('valor_produto').value = valor+',00';
 		   document.getElementById('qtd_estoque').value = quantidate;
 		   document.getElementById('produto').value = nome;
+		   document.getElementById('codigo').value = codigo;
+
 
 		 }
 	 });

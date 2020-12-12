@@ -44,7 +44,7 @@ endif;
 
 if($acao == 'teste'):
 	
-	$sql = "SELECT ID_PRODUTO,UPPER(nome)AS nome,quantidade, PRECO_VENDA FROM produto where id_produto=(select max(id_produto) from produto)";
+	$sql = "SELECT P.ID_PRODUTO,UPPER(P.nome)AS nome,P.quantidade, P.PRECO_VENDA, cg.codigo_barras FROM produto as p left outer join CODIGO_BARRAS as cg on cg.id_produto =p.id_produto where P.id_produto=(select max(id_produto) from produto)";
 	$stm = $conexao->prepare($sql);
 	$stm->execute();
 	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
