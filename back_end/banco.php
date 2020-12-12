@@ -14,6 +14,7 @@ $unidade_medida=$_POST['unidade_medida'];
 $valor_medida = $_POST['valor_medida'];
 $observacao=$_POST['observacao'];
 $id_usuario=$_SESSION['usuarioId'];
+    
 
  $query = "select id_categoria from categoria where nome = '$id_categoria'";
     $query_1 = "select id_fornecedor from fornecedor where nome = '$id_fornecedor'";
@@ -24,11 +25,25 @@ $id_usuario=$_SESSION['usuarioId'];
     $query_2 = "insert into produto (nome, descricao, id_categoria,preco_venda, preco_custo,quantidade, id_fornecedor, marca, unidade_medida, valor_medida, observacao,id_usuario ,data_cadastro) values ('$nome', '$descricao', '{$variavel['id_categoria']}','$preco_venda','$preco_custo' ,'$quantidade', '{$variavel_1['id_fornecedor']}', '$marca', '$unidade_medida', '$valor_medida' ,'$observacao','$id_usuario', now())";
     /*ECHO $query_2;*/
     $produto= mysqli_query($conexao, $query_2);
-    ECHO  $produto;
+    //ECHO  $produto;
         if($produto==1){
             $_SESSION['sucesso_cadastro'] = "Produto inserido com sucesso";
-            header("Location:/loja_virtual/Tela_cadastro_produto_1.php");
            
+            
+                $sql = "select max(id_produto) as id  from produto";
+                $id=mysqli_query($conexao, $sql );
+                $id2=mysqli_fetch_assoc($id);
+               // ECHO $_POST['barra'];
+                if($_POST['barra']=='S'){
+                    $cod_barras=$id2['id'];
+                }elseif($_POST['barra']=='N'){
+                    $cod_barras=$_POST['gerar_codigo'];
+                }
+               // ECHO $cod_barras;
+                $insert = "insert into CODIGO_BARRAS (ID_PRODUTO, id_usuario, CODIGO_BARRAS ,data_cadastro) values ('{$id2['id']}','$id_usuario','$cod_barras',  now())";
+              //  ECHO $insert;
+                mysqli_query($conexao, $insert);
+                header("Location:/loja_virtual/Tela_cadastro_produto_1.php");
             
         }else {
             $_SESSION['erro_cadastro'] = "Produto Não cadastrado";
@@ -38,7 +53,11 @@ $id_usuario=$_SESSION['usuarioId'];
 
 }else {
 
-    header("Location:/loja_virtual/Tela_cadastro_produto_1.php");
+   header("Location:/loja_virtual/Tela_cadastro_produto_1.php");
 }
+
+
+
+
 
 ?>
