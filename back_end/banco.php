@@ -18,6 +18,7 @@ $observacao=$_POST['observacao'];
 $id_usuario=$_SESSION['usuarioId'];
 $cod_barras = null;
 ECHO $cod_barras ;
+
     $query = "select id_categoria from categoria where nome = '$id_categoria'";
     $query_1 = "select id_fornecedor from fornecedor where nome = '$id_fornecedor'";
     $query_3 = "select id_sub_categoria from sub_categoria where nome = '$id_sub_categoria'";
@@ -29,13 +30,13 @@ ECHO $cod_barras ;
     $variavel_2 = mysqli_fetch_assoc($sub_categoria);
 
     if ( empty($variavel_2) ) {
-        $variavel_sub = null ;
+        $variavel_sub = "null" ;
     } else {
         $variavel_sub = "'{$variavel_2['id_sub_categoria']}'";
     }
-
+    
     $query_2 = "insert into produto (nome, descricao, id_categoria,id_sub_categoria, preco_venda, preco_custo,quantidade, id_fornecedor, marca, unidade_medida, valor_medida, observacao,id_usuario ,data_cadastro) values ('$nome', '$descricao', '{$variavel['id_categoria']}', $variavel_sub ,'$preco_venda','$preco_custo' ,'$quantidade', '{$variavel_1['id_fornecedor']}', '$marca', '$unidade_medida', '$valor_medida' ,'$observacao','$id_usuario', now())";
-   
+    echo $query_2;
     $produto= mysqli_query($conexao, $query_2);
     
     //ECHO  $produto;
@@ -58,7 +59,7 @@ ECHO $cod_barras ;
                 $insert = "insert into CODIGO_BARRAS (ID_PRODUTO, id_usuario, CODIGO_BARRAS ,data_cadastro) values ('{$id2['id']}','$id_usuario','$cod_barras',  now())";
               //  ECHO $insert;
                 mysqli_query($conexao, $insert);
-              //header("Location:/loja_virtual/Tela_cadastro_produto_1.php");
+            //  header("Location:/loja_virtual/Tela_cadastro_produto_1.php");
             
         }else {
             $_SESSION['erro_cadastro'] = "Produto Não cadastrado";
@@ -68,7 +69,7 @@ ECHO $cod_barras ;
 
 }else {
 
-   //header("Location:/loja_virtual/Tela_cadastro_produto_1.php");
+  // header("Location:/loja_virtual/Tela_cadastro_produto_1.php");
 }
 
 

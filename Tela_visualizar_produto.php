@@ -41,11 +41,12 @@
             <tbody>    
             <?php
             
-             $sql = "select p.nome, p.descricao, C.NOME AS NOME_CATEGORIA, CASE WHEN SB.NOME IS NULL THEN 'NAO POSSUI' ELSE SB.NOME END AS NOME_SUB_CATEGORIA ,p.preco_venda, p.preco_custo,p.quantidade, F.NOME AS FORNECEDOR, p.marca, p.unidade_medida, p.valor_medida, p.observacao,U.Nome_usuario AS USUARIO, DATE_format(p.data_cadastro, '%d-%m-%Y') as data_cadastro from produto p  left outer join fornecedor F ON P.ID_FORNECEDOR=F.ID_FORNECEDOR  LEFT OUTER JOIN categoria C ON C.ID_CATEGORIA=P.ID_CATEGORIA  LEFT OUTER JOIN usuario U ON U.ID_USUARIO=P.ID_USUARIO LEFT OUTER JOIN SUB_CATEGORIA SB ON SB.ID_SUB_CATEGORIA=P.ID_SUB_CATEGORIA";
+             $sql = "select p.id_produto, p.nome, p.descricao, C.NOME AS NOME_CATEGORIA, CASE WHEN SB.NOME IS NULL THEN 'NAO POSSUI' ELSE SB.NOME END AS NOME_SUB_CATEGORIA ,p.preco_venda, p.preco_custo,p.quantidade, F.NOME AS FORNECEDOR, p.marca, p.unidade_medida, p.valor_medida, p.observacao,U.Nome_usuario AS USUARIO, DATE_format(p.data_cadastro, '%d-%m-%Y') as data_cadastro,B.codigo_barras from produto p left outer join fornecedor F ON P.ID_FORNECEDOR=F.ID_FORNECEDOR LEFT OUTER JOIN categoria C ON C.ID_CATEGORIA=P.ID_CATEGORIA LEFT OUTER JOIN usuario U ON U.ID_USUARIO=P.ID_USUARIO  LEFT OUTER JOIN SUB_CATEGORIA SB ON SB.ID_SUB_CATEGORIA=P.ID_SUB_CATEGORIA LEFT OUTER JOIN CODIGO_BARRAS B ON B.ID_produto=P.ID_produto;";
              $query= mysqli_query($conexao, $sql );
              echo $conexao->error;
             while ($row = mysqli_fetch_object ($query)) { 
                 echo '<tr> ';
+                echo '<td class = "sumir-sempre" >' . $row->id_produto . '</td>';
                 echo '<td>' . $row->nome . '</td>';
                 echo '<td>' . $row->descricao . '  </td>';
                 echo '<td>' . $row->NOME_CATEGORIA . '</td>';
@@ -60,6 +61,7 @@
                 echo '<td class = "sumir">' . $row->observacao . '</td>';
                 echo '<td class = "sumir">' . $row->USUARIO . '</td>';
                 echo '<td class = "sumir-3" >' . $row->data_cadastro . '</td>';
+                echo '<td class = "sumir-sempre">' . $row->codigo_barras . '</td>';
                 echo ' </tr> ';
             }
             mysqli_free_result($query);  
