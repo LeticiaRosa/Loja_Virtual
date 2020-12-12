@@ -74,7 +74,7 @@
     </div>
       
     <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/categorias.js"></script>
+    <script type="text/javascript" src="js/modal.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
  
 

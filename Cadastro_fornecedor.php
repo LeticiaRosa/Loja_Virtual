@@ -1,33 +1,7 @@
 <!DOCTYPE html>
 
     <head>
-    <script type="text/javascript">
-function mascara(o,f){
-v_obj=o
-v_fun=f
-setTimeout("execmascara()",1)
-}
-function execmascara(){
-v_obj.value=v_fun(v_obj.value)
-}
-function mtel(v){
-v=v.replace(/\D/g,""); //Remove tudo o que não é dígito
-v=v.replace(/^(\d{2})(\d)/g,"($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
-v=v.replace(/(\d)(\d{4})$/,"$1-$2"); //Coloca hífen entre o quarto e o quinto dígitos
-return v;
-}
-function id( el){
-return document.getElementById( el );
-return document.getElementById( le );
-}
-window.onload = function(){
-id('celular').onkeyup = function(){
-mascara( this, mtel );
-
-}
-
-}</script>
-
+ 
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">      
@@ -42,7 +16,7 @@ mascara( this, mtel );
             <section class="cover-form">
 		  			<div class="form-container">
 		  			  	<h1>Cadastro de Fornecedor</h1>
-		  			  	<form  method="POST"  name="form" action="back_end/categorias.php" >
+		  			  	<form  method="POST"  name="form" action="back_end/fornecedor.php" >
 		  			  		<div class="form-wraper">
 
                     <div class="col">
@@ -57,7 +31,7 @@ mascara( this, mtel );
                     <div class="form-wraper">
                     <div class="col">
                       <p>CNPJ*:</p>
-                      <input type="text" name="observacao" id="CNPJ" required placeholder="Cnpj" autocomplete="off" >
+                      <input type="text" name="CNPJ" id="CNPJ" required placeholder="Cnpj" autocomplete="off" >
                     </div>
                     <div class="col">
                       <p>Telefone Fixo:</p>
@@ -138,10 +112,8 @@ mascara( this, mtel );
     
     <script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
-
-
-
- 
+    <script type="text/javascript" src="js/mascara_telefone.js"></script>
+    <script type="text/javascript" src="js/modal.js"></script>
 
 
     </body>
