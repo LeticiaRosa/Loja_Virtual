@@ -41,9 +41,11 @@ btnVisualizar.addEventListener("click", function(){
     dados += "Nome: " + selecionado[0].innerHTML + " - Descrição: " + selecionado[1].innerHTML + " - Categoria: " + selecionado[2].innerHTML + "\n";
   }
   console.log(dados);
-  console.log(selecionado[0].innerHTML)
+  console.log(selecionado[0].innerHTML);
   if (selecionado[0].innerHTML  !== null ){
   window.location.replace("#openModal");
+
+  
   document.getElementById('nome').value = selecionado[0].innerHTML;
   document.getElementById('descricao').value = selecionado[1].innerHTML;
   document.getElementById('id_categoria').value = selecionado[2].innerHTML;
@@ -57,3 +59,7 @@ btnVisualizar.addEventListener("click", function(){
   document.getElementById('observacao').value = selecionado[10].innerHTML;
   }
 });
+
+function fechamodal(){
+  $('#modal').css("display", "none");
+}

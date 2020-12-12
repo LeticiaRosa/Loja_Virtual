@@ -1,4 +1,4 @@
-//Para buscar produto
+//Para buscar categoria
 $(async function() {
 	   // Atribui evento e função para limpeza dos campos
 	// $('#clicar').on('input', limpaCampos);
@@ -20,6 +20,7 @@ $( "#id_categoria" ).autocomplete({
 		source: nomes
 	  });
 	} );
+
 //Para buscar fornecedor
 	$(async function() {
 		// Atribui evento e função para limpeza dos campos
@@ -39,6 +40,30 @@ $( "#id_categoria" ).autocomplete({
 		 }
 	 });
  $( "#id_fornecedor" ).autocomplete({
+		 source: nomes
+	   });
+	 } );
+
+
+	 //Para buscar sub_categoria
+	$(async function() {
+		// Atribui evento e função para limpeza dos campos
+	 // $('#clicar').on('input', limpaCampos);
+		
+	 var nomes = [];
+	 await $.ajax({
+		 url: "back_end/busca_autocomplete.php",
+		 dataType: "json",
+		 data: {
+			 acao: 'autocomplete_sub_categoria',
+			 parametro: $('#id_sub_categoria').val()
+		 },
+		 success: function(data) {
+		   nomes= data.map(d=>d.nome); 
+		   console.log(nomes);
+		 }
+	 });
+ $( "#id_sub_categoria" ).autocomplete({
 		 source: nomes
 	   });
 	 } );
