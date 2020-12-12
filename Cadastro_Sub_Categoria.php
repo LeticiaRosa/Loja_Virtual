@@ -78,6 +78,6 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/categorias.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
-  <script type="text/javascript" src="js/auto_complete.js"></script>
+
     </body>
     </html>
