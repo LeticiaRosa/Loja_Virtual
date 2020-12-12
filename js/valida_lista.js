@@ -1,5 +1,28 @@
 $('#valor_medida').prop("disabled", true);
  $('#valor_medida').css("display", "none");
+
+ $('#gerar_codigo').prop("disabled", true);
+ $('#gerar_codigo').css("display", "none");
+
+
+
+ $('#radio').on('change', function() {
+  var select = document.getElementById('radio');
+  var tipo = getRadioValor('barras');
+  console.log(tipo);
+  if(tipo == "N") {
+      $('#gerar_codigo').prop("disabled", false);
+      $('#gerar_codigo').css("display", "flex");
+      document.form.valor_medida.focus();
+      
+  }
+  else if (tipo == "S"){
+  $('#gerar_codigo').prop("disabled", true);
+  $('#gerar_codigo').css("display", "none");
+  }
+});
+
+
 $('#unidade_medida').on('change', function() {
     var select = document.getElementById('unidade_medida');
     var tipo = select.options[select.selectedIndex].value
@@ -27,4 +50,19 @@ $('#unidade_medida').on('change', function() {
   function fechamodal(){
     $('#conteiner').css("display", "none");
   }
+
+
+
+  function getRadioValor(name){
+    var rads = document.getElementsByName(name);
+    
+    for(var i = 0; i < rads.length; i++){
+     if(rads[i].checked){
+      return rads[i].value;
+     }
+    
+    }
+    
+    return null;
+   }
 

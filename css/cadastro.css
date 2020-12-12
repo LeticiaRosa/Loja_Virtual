@@ -35,7 +35,6 @@ html,body{
 /**** section */
 
 section.cover-form{
-  display: flex;
   width: 100%; 
   padding: 40px;
 }
@@ -63,8 +62,6 @@ section.cover-form{
 }
 .form-wraper{
   display: flex;
-  flex-direction: row;
-  padding: 5px;
 }
 .col{
   display: flex;
@@ -100,27 +97,30 @@ section.cover-form{
   font-size: 14px;
   text-align: left;
   color: #525252;
+  align-items: center;
 }
 .col-3 input[type="radio"]{
   padding: 5px;
   margin-left: 15px;
 }
-.col-4{
-  flex-direction: row;
-}
 
-.col-4 input[type="text"]{
-  padding: 5px ;
-  flex-direction: row;
-  font-size: 14px;
-  text-align: left;
-  color: #525252;
+
+.form-container form .col-3 .barra input[type="text"] {
+  padding: 5px;
+  background-color: rgba(214, 226, 217, 0.8); 
+  align-items: center;
+  height: 40px;
+  margin-bottom: 10x;
+  cursor: pointer;
+  font-size: 20px;
+  border: 0;
+  border-radius: 10px;
+ 
 }
 
 .barra{
   margin-left: 5px;
 }
-
 
 .col-1 select{
   width: 100%; 
@@ -143,11 +143,16 @@ section.cover-form{
   text-align: left;
   color: #525252;
   width: 100%;
+  text-transform: uppercase;
 }
 .enviar  p{
   font-size: 14px;
   color: #525252;
   width: 100%;
+  text-transform: uppercase;
+}
+.texto{
+  text-transform: uppercase;
 }
 .form-wraper:not( :first-child){
   margin-top:15px;
