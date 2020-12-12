@@ -16,7 +16,7 @@ $conexao = new PDO("mysql:host=".HOST."; dbname=".DB, USUARIO, SENHA, $opcoes);
 // Verifica se foi solicitado uma consulta para o autocomplete
 if($acao == 'autocomplete'):
 	
-	$sql = "SELECT nome FROM categoria where nome like ? limit 10";
+	$sql = "SELECT nome FROM categoria where nome like ? and status='S' limit 10 ";
 	$stm = $conexao->prepare($sql);
 	$stm->bindValue(1, '%'.$parametro.'%');
 	$stm->execute();
@@ -30,7 +30,7 @@ endif;
 
 if($acao == 'autocomplete_fornecedor'):
 	
-	$sql = "SELECT nome FROM fornecedor where nome like ? limit 10";
+	$sql = "SELECT nome FROM fornecedor where nome like ?  and status='S' limit 10 ";
 	$stm = $conexao->prepare($sql);
 	$stm->bindValue(1, '%'.$parametro.'%');
 	$stm->execute();
@@ -43,7 +43,7 @@ endif;
 
 if($acao == 'autocomplete_sub_categoria'):
 	
-	$sql = "SELECT nome FROM sub_categoria where nome like ? limit 10";
+	$sql = "SELECT nome FROM sub_categoria where nome like ? and status='S' limit 10 ";
 	$stm = $conexao->prepare($sql);
 	$stm->bindValue(1, '%'.$parametro.'%');
 	$stm->execute();
