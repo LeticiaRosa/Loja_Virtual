@@ -33,6 +33,6 @@
         $_SESSION['loginErro'] = "Usuário ou senha inválido";
         header("Location: Location:/loja_virtual/Tela_login_nova.php");
     }
-
+mysqli_close($conexao);
   
 ?>

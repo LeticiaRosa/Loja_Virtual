@@ -10,7 +10,7 @@ $id_usuario=$_SESSION['usuarioId'];
     $query_2 = "insert into sub_CATEGORIA (nome, descricao,  observacao,id_usuario ,data_cadastro) values ('$nome', '$descricao','$observacao','$id_usuario', now())";
     ECHO $query_2;
     $produto= mysqli_query($conexao, $query_2);
-
+    mysqli_close($conexao);
    
     if($produto==1){
         $_SESSION['sucesso_cadastro'] = "Produto inserido com sucesso";

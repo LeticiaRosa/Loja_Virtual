@@ -1,6 +1,8 @@
 <?php
+
 	//Inicializado primeira a sessão para posteriormente recuperar valores das variáveis globais. 
     session_start();
+    session_destroy();
 ?>
 
 <!DOCTYPE html>

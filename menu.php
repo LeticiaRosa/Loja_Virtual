@@ -1,5 +1,13 @@
 <?php
 session_start();
+  
+  
+if (empty ($_SESSION['login'])) {
+  header('Location:/Loja_Virtual/Tela_login_nova.php');
+
+  exit();
+
+}
 ?>
 
 <!DOCTYPE html>
@@ -64,7 +72,7 @@ session_start();
       </li>
     <li>
       
-      <li class = "sair" ><a href="/loja_virtual/Tela_login_nova.php">Sair</a></li>
+      <li class = "sair"  ><a href="/loja_virtual/Tela_login_nova.php">Sair  </a></li>
       <li class = "ajuda"><a href="#">Ajuda</a></li>
       <li class = "configurações"><a href="#">Configurações</a>
       <ul class="sub-menu">

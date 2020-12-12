@@ -29,6 +29,7 @@ $id_usuario=$_SESSION['usuarioId'];
     $query_2 = "insert into produto (nome, descricao, id_categoria,id_sub_categoria, preco_venda, preco_custo,quantidade, id_fornecedor, marca, unidade_medida, valor_medida, observacao,id_usuario ,data_cadastro) values ('$nome', '$descricao', '{$variavel['id_categoria']}', '{$variavel_2['id_sub_categoria']}','$preco_venda','$preco_custo' ,'$quantidade', '{$variavel_1['id_fornecedor']}', '$marca', '$unidade_medida', '$valor_medida' ,'$observacao','$id_usuario', now())";
     /*ECHO $query_2;*/
     $produto= mysqli_query($conexao, $query_2);
+    
     //ECHO  $produto;
         if($produto==1){
             $_SESSION['sucesso_cadastro'] = "Produto inserido com sucesso";
@@ -61,7 +62,7 @@ $id_usuario=$_SESSION['usuarioId'];
 }
 
 
-
+mysqli_close($conexao);
 
 
 ?>
