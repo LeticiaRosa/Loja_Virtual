@@ -14,8 +14,9 @@ if(isset($_POST['acao']))
     $endereco=$_POST['endereco'];
     $observacao=$_POST['observacao'];
     $id_usuario=$_SESSION['usuarioId'];
+    $CEP=$_POST['CEP'];
 
-    $query_2 = "INSERT INTO FORNECEDOR(NOME,RAZAO_SOCIAL,CONTRATO,CNPJ,TEL_CEL,TEL_FIXO,ENDERECO,CEP,E_MAIL,ID_USUARIO,OBSERVACAO,DATA_CADASTRO)VALUES('$nome','$Razao_Social','$cnpj','$fixo','$celular','$Contato','$E_MAIL','$endereco','$observacao','$id_usuario', now())";
+    $query_2 = "INSERT INTO FORNECEDOR(NOME,RAZAO_SOCIAL,CONTATO,CNPJ,TEL_CEL,TEL_FIXO,ENDERECO,CEP,E_MAIL,ID_USUARIO,OBSERVACAO,DATA_CADASTRO)VALUES('$nome','$Razao_Social','$cnpj','$fixo','$celular','$Contato','$E_MAIL','$endereco','$CEP','$id_usuario','$observacao', now())";
     ECHO $query_2;
     $produto= mysqli_query($conexao, $query_2);
     mysqli_close($conexao);
@@ -23,18 +24,18 @@ if(isset($_POST['acao']))
     if($produto==1){
         $_SESSION['sucesso_cadastro'] = "Produto inserido com sucesso";
 
-            
-            header("Location:/loja_virtual/Cadastro_fornecedor.php");
+          
+        header("Location:/loja_virtual/Cadastro_fornecedor.php");
         
     }else {
         $_SESSION['erro_cadastro'] = "Produto Não cadastrado";
-        header("Location:/loja_virtual/Cadastro_fornecedor.php");
+      header("Location:/loja_virtual/Cadastro_fornecedor.php");
     }
 
 
 }else {
 
-    header("Location:/loja_virtual/Cadastro_fornecedor.php");
+  header("Location:/loja_virtual/Cadastro_fornecedor.php");
 }
     
 ?>

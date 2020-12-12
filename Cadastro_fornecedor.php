@@ -60,7 +60,10 @@
                       <p>Endereço:</p>
                       <input type="text" name="endereco" id="endereco" placeholder="Endereço" autocomplete="off" >
                     </div>
-                    
+                    <div class="col">
+                      <p>CEP:</p>
+                      <input type="text" name="CEP" id="CEP" placeholder="CEP" autocomplete="off" >
+                    </div>
                     
 
                     </div>
