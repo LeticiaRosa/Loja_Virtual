@@ -46,7 +46,7 @@
 
                     <div class="col">
                       <p>Sub Categoria:*</p>
-                      <input type="text" name="id_sub_categoria" id="id_sub_categoria" required placeholder="Sub Categoria" autocomplete="off" >
+                      <input type="text" name="id_sub_categoria" id="id_sub_categoria"  placeholder="Sub Categoria" autocomplete="off" >
                     </div>
                       
                     <div class="col">
