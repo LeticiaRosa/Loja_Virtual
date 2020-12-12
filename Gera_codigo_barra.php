@@ -69,7 +69,7 @@
         
         
         <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/auto_complete.js"></script>
+    <script type="text/javascript" src="js/busca_dados_codigo.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
   <script type="text/javascript" src="js/bytescoutbarcode128_1.00.07.js"></script>
   <script type="text/javascript" src="js/gerador.js"></script>
