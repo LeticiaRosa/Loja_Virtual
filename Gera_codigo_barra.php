@@ -19,8 +19,12 @@
                 <form  method="POST"  name="form" action=" " >
                 <div class="conter">
                     <div class="col">
-                        <p>ID_PRODUTO:</p>
+                        <p>ID PRODUTO:</p>
                          <input  type="text" name="Id" id="Id" disabled>
+                    </div>
+                    <div class="col">
+                        <p>Codigo De barras:</p>
+                         <input  type="text" name="codigo" id="codigo" disabled>
                     </div>
 
                     <div class="col">
