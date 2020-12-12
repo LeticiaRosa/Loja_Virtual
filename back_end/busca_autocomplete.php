@@ -41,6 +41,19 @@ if($acao == 'autocomplete_fornecedor'):
 	echo $json;
 endif;
 
+if($acao == 'autocomplete_sub_categoria'):
+	
+	$sql = "SELECT nome FROM sub_categoria where nome like ? limit 10";
+	$stm = $conexao->prepare($sql);
+	$stm->bindValue(1, '%'.$parametro.'%');
+	$stm->execute();
+	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
+	
+	$json = json_encode($dados);
+	
+	echo $json;
+endif;
+
 
 if($acao == 'teste'):
 	

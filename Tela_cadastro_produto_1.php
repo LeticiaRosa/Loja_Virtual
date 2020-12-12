@@ -39,9 +39,14 @@
                   <div class="form-wraper">
 
                     
-                  <div class="col">
+                    <div class="col">
                       <p>Categoria:*</p>
                       <input type="text" name="id_categoria" id="id_categoria" required placeholder="Categoria" autocomplete="off" >
+                    </div>
+
+                    <div class="col">
+                      <p>Sub Categoria:*</p>
+                      <input type="text" name="id_sub_categoria" id="id_sub_categoria" required placeholder="Sub Categoria" autocomplete="off" >
                     </div>
                       
                     <div class="col">

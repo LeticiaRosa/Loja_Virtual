@@ -13,7 +13,7 @@
 
 		  			<div class="form-container" id ="modal" >
 		  			  	<h1>Editar Produto</h1>
-		  			  	<form  method="POST"  name="form"  >
+		  			  	<form  method="POST"  name="form" action="Tela_visualizar_produto.php" >
 		  			  		<div class="form-wraper">
 
                     <div class="col">
@@ -86,7 +86,7 @@
                     </div>
 
                     <div class="salvar">
-                    <input type="submit" value="Salvar" onclick=""/>
+                    <input type="submit" value="Salvar" />
                  
 		  			  		  <p>*campos obrigatorios</p>
                     </div>
@@ -95,6 +95,6 @@
 
 		  		</div><!--container bg-->
   
-
+          <script type="text/javascript" src="js/seleciona_linha.js"></script>
 </body>
 </html> 

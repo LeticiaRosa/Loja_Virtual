@@ -25,10 +25,11 @@
                 <th > Nome <br/> </th>
                 <th > Descricao</th>
                 <th > Categoria</th>
+                <th > Sub Categoria</th>
                 <th > Preço de Venda </th>
                 <th > Preço de Custo </th>
                 <th > Quantidade </th>
-                <th > Fornecedor </th>
+                <th class = "sumir-1"> Fornecedor </th>
                 <th class = "sumir-1"> Marca</th>
                 <th class = "sumir-1"> Unidade de Medida</th>
                 <th class = "sumir-1"> Valor Medida </th>
@@ -39,22 +40,25 @@
             </thead>
             <tbody>    
             <?php
-             $sql = "select nome, descricao, id_categoria,preco_venda, preco_custo,quantidade, id_fornecedor, marca, unidade_medida, valor_medida, observacao,id_usuario , DATE_format(data_cadastro, '%d-%m-%Y') as data_cadastro from produto";
+            
+             $sql = "select p.nome, p.descricao, C.NOME AS NOME_CATEGORIA, CASE WHEN SB.NOME IS NULL THEN 'NAO POSSUI' ELSE SB.NOME END AS NOME_SUB_CATEGORIA ,p.preco_venda, p.preco_custo,p.quantidade, F.NOME AS FORNECEDOR, p.marca, p.unidade_medida, p.valor_medida, p.observacao,U.Nome_usuario AS USUARIO, DATE_format(p.data_cadastro, '%d-%m-%Y') as data_cadastro from produto p  left outer join fornecedor F ON P.ID_FORNECEDOR=F.ID_FORNECEDOR  LEFT OUTER JOIN categoria C ON C.ID_CATEGORIA=P.ID_CATEGORIA  LEFT OUTER JOIN usuario U ON U.ID_USUARIO=P.ID_USUARIO LEFT OUTER JOIN SUB_CATEGORIA SB ON SB.ID_SUB_CATEGORIA=P.ID_SUB_CATEGORIA";
              $query= mysqli_query($conexao, $sql );
+             echo $conexao->error;
             while ($row = mysqli_fetch_object ($query)) { 
                 echo '<tr> ';
                 echo '<td>' . $row->nome . '</td>';
                 echo '<td>' . $row->descricao . '  </td>';
-                echo '<td>' . $row->id_categoria . '</td>';
+                echo '<td>' . $row->NOME_CATEGORIA . '</td>';
+                echo '<td>' . $row->NOME_SUB_CATEGORIA . '</td>';
                 echo '<td>' . $row->preco_venda . '</td>';
                 echo '<td>' . $row->preco_custo . '</td>';
                 echo '<td>' . $row->quantidade . '</td>';
-                echo '<td>' . $row->id_fornecedor . '</td>';
+                echo '<td class = "sumir-1" >' . $row->FORNECEDOR . '</td>';
                 echo '<td class = "sumir-1">' . $row->marca . '</td>';
                 echo '<td class = "sumir-1">' . $row->unidade_medida . '</td>'; 
                 echo '<td class = "sumir-1">' . $row->valor_medida . '</td>';
                 echo '<td class = "sumir">' . $row->observacao . '</td>';
-                echo '<td class = "sumir">' . $row->id_usuario . '</td>';
+                echo '<td class = "sumir">' . $row->USUARIO . '</td>';
                 echo '<td class = "sumir-3" >' . $row->data_cadastro . '</td>';
                 echo ' </tr> ';
             }
