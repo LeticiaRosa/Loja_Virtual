@@ -39,7 +39,7 @@ if (empty ($_SESSION['login'])) {
           </li>
           <li><a href="#">Fornecedor</a>
             <ul class="sub-menu">
-                <li><a href="#">Cadastro de Fornecedor</a></li>
+                <li><a href="/loja_virtual/Cadastro_fornecedor.php">Cadastro de Fornecedor</a></li>
                 <li><a href="#">Sub Sub</a></li>
             </ul>
         </li>

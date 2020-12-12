@@ -129,6 +129,7 @@ section.cover-form{
 
 
       .form-container form input[type="submit"]{
+          
         background-color: rgba(71, 92, 71,0.8); 
           text-transform: uppercase;
           color: white;
@@ -136,6 +137,21 @@ section.cover-form{
           height: 45px;
           cursor: pointer;
           font-size: 25px;
+        border: 0;
+        border-radius: 10px;
+        
+      }
+
+
+      .form-container form input[type="email"]{
+        padding: 5px;
+        width: 100%;
+        background-color: rgba(214, 226, 217, 0.8); 
+        align-items: center;
+        height: 40px;
+        margin-bottom: 10x;
+        cursor: pointer;
+        font-size: 20px;
         border: 0;
         border-radius: 10px;
         
@@ -192,8 +208,6 @@ section.cover-form{
         border-radius: 10px;
         
       }
-
-
       .enviar{
         display: flex;
         flex-direction: column;
