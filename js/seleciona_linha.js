@@ -2,9 +2,11 @@ var tabela = document.getElementById("table");
 var linhas = tabela.getElementsByTagName("tr");
 
 for(var i = 0; i < linhas.length; i++){
-	var linha = linhas[i];
+  var linha = linhas[i];
+  console.log(linha);
   linha.addEventListener("click", function(){
-  	//Adicionar ao atual
+    //Adicionar ao atual
+  
 		selLinha(this, false); //Selecione apenas um
     //selLinha(this, true); //Selecione quantos quiser
 	});
@@ -15,6 +17,7 @@ Caso passe true, você pode selecionar multiplas linhas.
 Caso passe false, você só pode selecionar uma linha por vez.
 **/
 function selLinha(linha, multiplos){
+  
 	if(!multiplos){
   	var linhas = linha.parentElement.getElementsByTagName("tr");
     for(var i = 0; i < linhas.length; i++){
@@ -43,7 +46,7 @@ btnVisualizar.addEventListener("click", function(){
 
   if (selecionado[0].innerHTML  !== null ){
   window.location.replace("#openModal");
-        
+  document.getElementById('id').value = selecionado[0].innerHTML;
   document.getElementById('nome').value = selecionado[1].innerHTML;
   document.getElementById('descricao').value = selecionado[2].innerHTML;
   document.getElementById('id_categoria').value = selecionado[3].innerHTML;
@@ -56,7 +59,8 @@ btnVisualizar.addEventListener("click", function(){
   document.getElementById('unidade_medida').value = selecionado[10].innerHTML;
   document.getElementById('valor_medida').value = selecionado[11].innerHTML;
   document.getElementById('observacao').value = selecionado[11].innerHTML;
-  document.getElementById('gerar_codigo').value = selecionado[15].innerHTML;
+  document.getElementById('gerar_codigo-1').value = selecionado[15].innerHTML;
+
   if (selecionado[0].innerHTML  !== selecionado[15].innerHTML ){
     document.getElementById('radio-2').checked = true;
   }

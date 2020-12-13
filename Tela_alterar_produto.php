@@ -13,9 +13,12 @@
 
 		  			<div class="form-container" id ="modal" >
 		  			  	<h1>Editar Produto</h1>
-		  			  	<form  method="POST"  name="form" action="Tela_visualizar_produto.php" >
-                                      <div class="form-wraper">
-
+		  			  	<form  method="POST"  name="form" action="back_end/banco.php">
+                    <div class="form-wraper">
+                      <div class="col" style = "  width: 25%; ">
+                        <p>ID_Produto</p>
+                        <input  type="text" name="nome" id="id" required placeholder= "id" autocomplete="off" disabled>
+                      </div> 
                       <div class="col">
                         <p>Nome do Produto*</p>
                         <input  type="text" name="nome" id="nome" required placeholder= "Nome" autocomplete="off" >
@@ -88,9 +91,9 @@
                           <input type="radio" id="radio-1" name="barras" value="S" > <div class = "barra"> Sim </div>
                           <input type="radio" id="radio-2" name="barras" value="N" > <div class = "barra"> Não </div>
                         </div>
-                        <div class="col-3" id="gerar_codigo-1">
-                        <div class = "texto">Código: </div>
-                          <div class = "barra"><input type="text" class = "gerar" name="gerar_codigo" id="gerar_codigo" placeholder="Código" autocomplete="off" ></div>
+                        <div class="col-3" id="gerar_codigo">
+                        <div class = "texto" id = "texto">Código: </div>
+                          <div class = "barra" id = "barra"><input type="text" class = "gerar" name="gerar_codigo-1" id="gerar_codigo-1" placeholder="Código" autocomplete="off" ></div>
                         </div>
                       </div>
 
@@ -112,8 +115,38 @@
 
                 </form>
 
-		  		</div><!--container bg-->
+          </div><!--container bg-->
+          
+
+    <div class="pega">
+    <input  id="pega" type="text" value="<?php if(isset($_SESSION['sucesso_cadastro'])) {echo $_SESSION['sucesso_cadastro']; }?>" >
+    </div>
+    <div class="conteiner" id="conteiner">
+      <div class="couver">
+            <p> <?php 
+			//Recuperando o valor da variável global, os erro de login.
+			if(isset($_SESSION['sucesso_cadastro'])){
+              echo $_SESSION['sucesso_cadastro'];
+                unset($_SESSION['sucesso_cadastro']);
+            }?>
+            </p>
+            <p> <?php 
+                //Recuperando o valor da variável global, deslogado com sucesso.
+                if(isset($_SESSION['erro_cadastro'])){
+                    echo $_SESSION['erro_cadastro'];
+                    unset($_SESSION['erro_cadastro']);
+                }
+                ?>
+                </p>
+            <input type="submit" value="OK" onclick="fechamodal()"/> </p>
+        </div>
+    </div>
+      
   
-          <script type="text/javascript" src="js/seleciona_linha.js"></script>
+  <script type="text/javascript" src="js/seleciona_linha.js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/valida_lista.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/auto_complete.js"></script>
 </body>
 </html> 
