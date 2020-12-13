@@ -15,21 +15,21 @@
         <section class="cover-form">
         <div class="form-container">
         <h1>Editar Categoria</h1>
-        <div class="form-wraper">
+        <div class="form-wraper" id="visualizarDados">
         <table id ="products-table">
         <thead>
             <tr>
                 <th>Nome</th>
                 <th >Descricao</th>
                 <th >Status</th>
-                <th >Observação</th>
-                <th> Usuario</th>
-                <th>Data Cadastro</th>
+                <th class="sumir">Observação</th>
+                <th class="sumir"> Usuario</th>
+                <th class="sumir">Data Cadastro</th>
                 
             </tr>
         </thead>
 <tbody>
- 
+
 
 </tbody>
 </table>
@@ -37,9 +37,17 @@
         </div>
         </div><!--container bg-->
     </section><!--cover-form-->
+
+ <div id="openModal" class="modalDialog">
+    <div><a href="#close" title="Close" class="close">X</a>    
+    <?php  include_once("Tela_altera_categoria.php");  ?>
+    </div>
+</div>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/lista_categorias.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    
+    
 
 </body>
     </html>

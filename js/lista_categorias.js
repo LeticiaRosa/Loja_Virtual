@@ -10,7 +10,7 @@ $(window).on("load",$(async function() {
          acao: 'categoria'
      },
      success: function(data) {
-       console.log(data);
+       
         nome= data.map(d=>d.NOME); 
        descricao= data.map(d=>d.DESCRICAO); 
        STATUS= data.map(d=>d.STATUS);          
@@ -24,9 +24,9 @@ $(window).on("load",$(async function() {
       cols += '<td>'+nome[i]+'</td>';
       cols += '<td>'+descricao[i]+'</td>';
       cols += '<td>'+STATUS[i]+'</td>';
-      cols += '<td>'+observacao[i]+'</td>';
-      cols += '<td>'+USUARIO[i]+'</td>';
-      cols += '<td>'+DATA_CADASTRO[i]+'</td>';
+      cols += '<td class="sumir">'+observacao[i]+'</td>';
+      cols += '<td class="sumir">'+USUARIO[i]+'</td>';
+      cols += '<td class="sumir">'+DATA_CADASTRO[i]+'</td>';
       
   
       newRow.append(cols);
@@ -38,3 +38,67 @@ $(window).on("load",$(async function() {
 
  } ));
 
+
+ $(window).on("click",(function() {
+
+var tabela = document.getElementById("products-table");
+var linhas = tabela.getElementsByTagName("tr");
+for(var i = 0; i < linhas.length; i++){
+    var linha = linhas[i];
+   
+  linha.addEventListener("click", function(){
+      //Adicionar ao atual
+     
+		selLinha(this, false); //Selecione apenas um
+    //selLinha(this, true); //Selecione quantos quiser
+	});
+}
+
+/**
+Caso passe true, você pode selecionar multiplas linhas.
+Caso passe false, você só pode selecionar uma linha por vez.
+**/
+function selLinha(linha, multiplos){
+    
+    if(!multiplos){
+  	var linhas = linha.parentElement.getElementsByTagName("tr");
+    for(var i = 0; i < linhas.length; i++){
+      var linha_ = linhas[i];
+      linha_.classList.remove("selecionado");    
+    }
+  }
+  linha.classList.toggle("selecionado");
+}
+
+/**
+Exemplo de como capturar os dados
+**/
+var btnVisualizar = document.getElementById("visualizarDados");
+
+var nome = "";
+btnVisualizar.addEventListener("click", function(){
+    var selecionados = tabela.getElementsByClassName("selecionado");
+    
+  //Verificar se está selecionado
+  
+  for(var i = 0; i < selecionados.length; i++){
+  	var selecionado = selecionados[i];
+    selecionado = selecionado.getElementsByTagName("td");
+    
+  }
+  if (selecionado[1].innerHTML  !== null ){
+  window.location.replace("#openModal");
+        
+  document.getElementById('nome').value = selecionado[1].innerHTML;
+  document.getElementById('descricao').value = selecionado[2].innerHTML;
+ document.getElementById('observacao').value = selecionado[3].innerHTML;
+  
+  
+}
+});
+
+function fechamodal(){
+  $('#modal').css("display", "none");
+}
+
+ }));
