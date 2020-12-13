@@ -49,24 +49,36 @@ section.cover-form{
     flex-direction: column;
     flex-wrap: wrap;
   }
+
+
+
   .col{
     padding: 5px;
   }
 
-  .col table{
+table {
     border-collapse: collapse;
     width: 100%;
-  }
+  
+}
 
-  .col  th ,td{
+tbody tr:nth-child(even){
+    background-color:rgba(214, 226, 217, 0.8); 
+}
+
+tbody tr:hover{
+    width: 100%;
+    border-collapse: collapse;
+    cursor: pointer;
+    background-color: rgb(200, 204, 198);
+
+}
+
+
+.col  th ,td{
+    border-collapse: collapse;
     padding: 8px;
     text-align: center;
     border-bottom: 1px solid #ddd;
      
-}
-
-
-tbody tr:hover{
-    cursor: pointer;
-    background-color: gray;
 }

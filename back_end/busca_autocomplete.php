@@ -66,3 +66,16 @@ if($acao == 'teste'):
 	
 	echo $json;
 endif;
+
+
+if($acao == 'categoria'):
+	
+	$sql = "SELECT UPPER(C.NOME) AS NOME ,UPPER(C.DESCRICAO ) AS DESCRICAO,CASE WHEN C.STATUS='S' THEN 'DISPONIVEL' ELSE'DESATIVADO' END AS STATUS,UPPER(U.NOME_USUARIO) AS USUARIO,DATE_format(C.data_cadastro, '%d-%m-%Y') AS DATA_CADASTRO,	UPPER(C.OBSERVACAO) OBSERVACAO  from CATEGORIA C    LEFT OUTER JOIN USUARIO U    ON U.ID_USUARIO=C.ID_USUARIO";
+	$stm = $conexao->prepare($sql);
+	$stm->execute();
+	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
+	
+	$json = json_encode($dados);
+	
+	echo $json;
+endif;

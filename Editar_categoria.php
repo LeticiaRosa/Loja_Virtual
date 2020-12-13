@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">      
     <link rel="stylesheet" type="text/css" href="css/css_editar_categoria.css">
-    <title>Cadastro</title>
+    <title>Editar Categoria</title>
     </head>
     <body>
 
@@ -16,40 +16,20 @@
         <div class="form-container">
         <h1>Editar Categoria</h1>
         <div class="form-wraper">
-        <table>
+        <table id ="products-table">
         <thead>
             <tr>
                 <th>Nome</th>
                 <th >Descricao</th>
+                <th >Status</th>
                 <th >Observação</th>
+                <th> Usuario</th>
+                <th>Data Cadastro</th>
                 
             </tr>
-</thead>
+        </thead>
 <tbody>
-  <tr>
-    <td>Bill Gates</td>
-    <td>55577854</td>
-    <td>55577855</td>
-    
-  </tr>
-  <tr>
-    <td>Bill Gates</td>
-    <td>55577854</td>
-    <td>55577855</td>
-    
-  </tr>
-  <tr>
-    <td>Bill Gates</td>
-    <td>55577854</td>
-    <td>55577855</td>
-    
-  </tr>
-  <tr>
-    <td>Bill Gates</td>
-    <td>55577854</td>
-    <td>55577855</td>
-    
-  </tr>
+ 
 
 </tbody>
 </table>
@@ -57,5 +37,9 @@
         </div>
         </div><!--container bg-->
     </section><!--cover-form-->
-    </body>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/lista_categorias.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+
+</body>
     </html>
