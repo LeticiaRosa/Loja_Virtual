@@ -14,7 +14,7 @@
 ?>          
         <section class="cover-form">
         <div class="form-container">
-        <h1>Editar Categoria</h1>
+        <h1>Categorias</h1>
         <div class="form-wraper" id="visualizarDados">
         <table id ="products-table">
         <thead>

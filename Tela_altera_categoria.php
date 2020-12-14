@@ -15,9 +15,9 @@
 
 <section class="cover-form">
 		  			<div class="form-container">
-		  			  	<h1>Cadastro de Categorias</h1>
+		  			  	<h1>Editar Categoria</h1>
 		  			  	<form  method="POST"  name="form" action="back_end/categorias.php" >
-		  			  		<div class="form-wraper">
+		  			<div class="form-wraper">
 
                     <div class="col">
                       <p>Nome Categoria*</p>
@@ -27,6 +27,7 @@
 		  			  			  <p>Descrição</p>
                       <input type="text" name="descricao" id="descricao" placeholder="Descrição" autocomplete="off" >
                     </div>  
+
                     </div>
                   
 
