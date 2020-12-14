@@ -3,7 +3,6 @@ var linhas = tabela.getElementsByTagName("tr");
 
 for(var i = 0; i < linhas.length; i++){
   var linha = linhas[i];
-  console.log(linha);
   linha.addEventListener("click", function(){
     //Adicionar ao atual
   

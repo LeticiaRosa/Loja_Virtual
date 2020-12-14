@@ -7,8 +7,10 @@
     <link rel="stylesheet" type="text/css" href="css/editar_produto_modal.css">
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+ 
 </head>
 <html>
+
 <body>
 
 		  			<div class="form-container" id ="modal" >
@@ -140,13 +142,16 @@
                 </p>
             <input type="submit" value="OK" onclick="fechamodal()"/> </p>
         </div>
-    </div>
-      
+    </div>      
   
   <script type="text/javascript" src="js/seleciona_linha.js"></script>
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/valida_lista.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
   <script type="text/javascript" src="js/auto_complete.js"></script>
+  <script src = "js / jquery.ui.core.js" type = "text / javascript" > </script>
+   <script src = "js / jquery.ui.widget.js" type = "text / javascript" > </script> 
+   <script src = "js / jquery.ui.button.js" type = "text / javascript" > </script>  
+
 </body>
 </html> 

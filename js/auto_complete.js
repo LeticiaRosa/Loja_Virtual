@@ -1,4 +1,5 @@
 //Para buscar categoria
+
 $(async function() {
 	   // Atribui evento e função para limpeza dos campos
 	// $('#clicar').on('input', limpaCampos);
@@ -13,11 +14,13 @@ $(async function() {
 		},
 		success: function(data) {
 		  nomes= data.map(d=>d.nome); 
-		  console.log(nomes);
+
 		}
 	});
 $( "#id_categoria" ).autocomplete({
+	
 		source: nomes
+		
 	  });
 	} );
 

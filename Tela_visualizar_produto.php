@@ -73,7 +73,7 @@
         <!-- /.row --> 
         </div>
         </div>
-   
+
     <!-- /.container -->                        
 </div><!--container bg-->
 </section><!--cover-form-->
