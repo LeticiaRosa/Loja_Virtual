@@ -51,11 +51,11 @@ section.cover-form {
     border-bottom: 1px solid #c5c9c1
 }
 
-tbody tr:nth-child(even) {
+.corpo:nth-child(even) {
     background-color: rgba(214, 226, 217, 0.8);
 }
 
-tbody tr:hover {
+.corpo:hover {
     width: 100%;
     border-collapse: collapse;
     cursor: pointer;
