@@ -33,6 +33,9 @@ $(window).on("load",$(async function() {
       $("#products-table").append(newRow);
 
     }
+    $(document).ready(function() {
+      $('#products-table').dataTable();
+} );
      }
  });
 
