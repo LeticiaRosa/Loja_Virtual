@@ -18,12 +18,15 @@
 
 <?php 
    include_once("menu.php");
-?>          
+?> 
+ <section class="cover-form">
+        <div class="form-container">
+        <h1>Categorias</h1>
        
-        <div class="form-wraper" id="visualizarDados">
-            
+        <div class="col">
+       
         <table id ="products-table">
-        <thead>
+        <thead class = "cabeça">
             <tr>
                 <th>Nome</th>
                 <th >Descricao</th>
@@ -40,6 +43,11 @@
 </tbody>
 </table>
 </div>
+        
+        
+        </div><!--container bg-->
+    </section><!--cover-form-->
+
 
       
 <div id="openModal" class="modalDialog">
