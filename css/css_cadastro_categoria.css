@@ -79,7 +79,7 @@ section.cover-form{
     text-transform: uppercase;
   }
 
-  .form-container form input[type="text"]{
+  .form-container  input[type="text"]{
     background-color: rgba(214, 226, 217, 0.8); 
     width: 100%;
     height: 40px;
