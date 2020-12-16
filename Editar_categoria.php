@@ -31,7 +31,7 @@
                     <table id="products-table">
                         <thead class="cabeça">
                             <tr>
-                                
+                                <th>Id</th>
                                 <th>Nome</th>
                                 <th>Descricao</th>
                                 <th>Status</th>

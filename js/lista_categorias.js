@@ -20,14 +20,14 @@ $(window).on("load", $(async function() {
             for (i = 0; i < data.length; i++) {
                 var newRow = $('<tr class = "corpo" >');
                 var cols = "";
-
+                cols += '<td>' + id[i] + '</td>';
                 cols += '<td>' + nome[i] + '</td>';
                 cols += '<td>' + descricao[i] + '</td>';
                 cols += '<td>' + STATUS[i] + '</td>';
                 cols += '<td class="sumir">' + observacao[i] + '</td>';
                 cols += '<td class="sumir">' + USUARIO[i] + '</td>';
                 cols += '<td class="sumir">' + DATA_CADASTRO[i] + '</td>';
-                cols += '<td class="sumir2">' + id[i] + '</td>';
+
                 newRow.append(cols);
                 $("#products-table").append(newRow);
 
