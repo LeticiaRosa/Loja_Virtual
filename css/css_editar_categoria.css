@@ -180,6 +180,6 @@ td {
 
 @media screen and (max-width: 768px) {
     .sumir {
-        visibility: collapse
+        display: none;
     }
 }
