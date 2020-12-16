@@ -31,7 +31,7 @@
                     <table id="products-table">
                         <thead class="cabeça">
                             <tr>
-                                <th class="sumir_p">Id</th>
+                                
                                 <th>Nome</th>
                                 <th>Descricao</th>
                                 <th>Status</th>
@@ -91,6 +91,8 @@
         <script type="text/javascript" src="js/jquery-ui.min.js"></script>
         <script type="text/javascript" src="js/lista_categorias.js"></script>
         <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+        
+        
 
     </body>
 

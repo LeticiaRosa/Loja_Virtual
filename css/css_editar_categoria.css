@@ -124,10 +124,6 @@ td {
     background: #00d9ff;
 }
 
-.sumir_p {
-    display: none;
-}
-
 .pega {
     display: none;
 }
@@ -180,6 +176,11 @@ td {
     font-size: 25px;
     border: 0;
     border-radius: 10px;
+}
+
+.sumir1,
+.sumir2 {
+    display: none;
 }
 
 @media screen and (max-width: 768px) {
