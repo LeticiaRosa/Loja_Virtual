@@ -1,7 +1,7 @@
 $(window).on("load", $(async function() {
     // Atribui evento e função para limpeza dos campos
     // $('#clicar').on('input', limpaCampos);
-
+    var id = [];
     var nomes = [];
     await $.ajax({
         url: "back_end/busca_autocomplete.php",
@@ -10,7 +10,7 @@ $(window).on("load", $(async function() {
             acao: 'categoria'
         },
         success: function(data) {
-
+            id = data.map(d => d.id_categoria);
             nome = data.map(d => d.NOME);
             descricao = data.map(d => d.DESCRICAO);
             STATUS = data.map(d => d.STATUS);
@@ -20,7 +20,7 @@ $(window).on("load", $(async function() {
             for (i = 0; i < data.length; i++) {
                 var newRow = $('<tr class = "corpo" >');
                 var cols = "";
-
+                cols += '<td class="sumir_p">' + id[i] + '</td>';
                 cols += '<td>' + nome[i] + '</td>';
                 cols += '<td>' + descricao[i] + '</td>';
                 cols += '<td>' + STATUS[i] + '</td>';
@@ -31,7 +31,9 @@ $(window).on("load", $(async function() {
 
                 newRow.append(cols);
                 $("#products-table").append(newRow);
+
             }
+
             $(document).ready(function() {
 
                 $('#products-table').dataTable({
@@ -142,10 +144,18 @@ $(window).on("click", (function() {
         }
         if (selecionado[1].innerHTML !== null) {
             window.location.replace("#openModal");
-
+            document.getElementById('id_categoria').value = selecionado[0].innerHTML;
             document.getElementById('nome').value = selecionado[1].innerHTML;
             document.getElementById('descricao').value = selecionado[2].innerHTML;
-            document.getElementById('observacao').value = selecionado[3].innerHTML;
+
+            if (selecionado[3].innerHTML == "DISPONIVEL") {
+
+                document.getElementById('status').value = document.getElementById('S').value;
+            } else {
+
+                document.getElementById('status').value = document.getElementById('N').value;
+            }
+            document.getElementById('observacao').value = selecionado[4].innerHTML;
 
 
         }
