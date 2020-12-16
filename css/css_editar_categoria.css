@@ -178,13 +178,8 @@ td {
     border-radius: 10px;
 }
 
-.sumir1,
-.sumir2 {
-    display: none;
-}
-
 @media screen and (max-width: 768px) {
     .sumir {
-        display: none;
+        visibility: collapse
     }
 }
