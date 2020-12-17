@@ -148,7 +148,7 @@
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/valida_lista.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
-  <script type="text/javascript" src="js/auto_complete.js"></script>
+ <!-- <script type="text/javascript" src="js/auto_complete.js"></script> -->
   <script src = "js / jquery.ui.core.js" type = "text / javascript" > </script>
    <script src = "js / jquery.ui.widget.js" type = "text / javascript" > </script> 
    <script src = "js / jquery.ui.button.js" type = "text / javascript" > </script>  

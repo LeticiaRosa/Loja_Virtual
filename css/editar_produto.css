@@ -1,124 +1,76 @@
 @import url(https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap);
-*{
-	margin: 0 ;
-	padding: 0;
-  box-sizing: border-box;
-  font-family: "Dosis", sans-serif;
-}
-html,body{
-  width: 100%;
-  height: 100%;
-  background-color: rgb(235, 237, 240);
-}
-.limpa{
-  clear: both;
-} 
-.center{
-  width: 100%;
-  margin: auto;
-  max-width: 1280px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Dosis", sans-serif;
 }
 
-#logo {
-  width:50%;
-  height:50%;
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(235, 237, 240);
 }
 
-.panel-heading{
-  font-size:150%;
+.limpa {
+    clear: both;
 }
 
-/**** section */
-
-section.cover-form{
-  display: flex;
-  width: 100%; 
-  padding: 50px;
-}
-.form-container{
-    min-width: 420px;
-  text-align: center;
-  align-items: center;
-  width: 100%;
-	-webkit-box-shadow: 2px 2px 5px 0px  rgb(71, 92, 71);
-	-moz-box-shadow: 2px 2px 5px 0px  rgb(71, 92, 71);
-	box-shadow: 2px 2px 5px 0px  rgb(71, 92, 71);
-	background-color: rgb(235, 237, 240);
+.center {
+    width: 100%;
+    margin: auto;
+    max-width: 1280px;
 }
 
+section.cover-form {
+    width: 100%;
+    padding: 40px;
+}
 
-.form-container h1{
-   width: 100%;
-   font-weight: normal;
-   padding:20px 10px;
-   font-size: 30px;
-   color: black;
-   background-color: rgba(71, 92, 71,0.5); 
- }
-
- .form-container table {
-
+.form-container {
     text-align: center;
-  align-items: center;
-  width: 100%;
-	-webkit-box-shadow: 2px 2px 5px 0px  rgb(71, 92, 71);
-	-moz-box-shadow: 2px 2px 5px 0px  rgb(71, 92, 71);
-	box-shadow: 2px 2px 5px 0px  rgb(71, 92, 71);
-	background-color: rgb(235, 237, 240);
- }  
-
-.sumir-3 {
-    white-space: nowrap;
+    align-items: center;
+    width: 100%;
+    -webkit-box-shadow: 2px 2px 5px 0px rgb(71, 92, 71);
+    -moz-box-shadow: 2px 2px 5px 0px rgb(71, 92, 71);
+    box-shadow: 2px 2px 5px 0px rgb(71, 92, 71);
+    background-color: rgb(235, 237, 240);
 }
 
-.sumir-sempre {
-  display: none;
+.form-container h1 {
+    width: 100%;
+    font-weight: normal;
+    padding: 20px 10px;
+    font-size: 30px;
+    color: black;
+    background-color: rgba(71, 92, 71, 0.5);
 }
 
+.cabeça {
+    border-bottom: 1px solid #c5c9c1
+}
 
-.table{
-    width:80%;
-    margin:0 auto;
-    border:0;
-    box-shadow: 0 5px 30px darkgrey;
-    border-spacing: 0;
-  }
-  
-  .table thead th{
-    font-weight: bold;
-    background-color: black;
-    color:white;
-    
-    padding:5px;
-  }
-  
-  .table tr td{
+.corpo:nth-child(even) {
+    background-color: rgba(214, 226, 217, 0.8);
+}
+
+.corpo:hover {
+    width: 100%;
+    border-collapse: collapse;
+    cursor: pointer;
+    background-color: rgb(200, 204, 198);
+}
+
+.col th,
+td {
+    border-collapse: collapse;
+    padding: 8px;
     text-align: center;
-    cursor: pointer; /**importante para não mostrar cursor de texto**/
-  }
-  
-  .table tr td:last-child{
-    text-align: right;
-  }
-  
-  /**Cores**/
-  .table tr:nth-child(odd){
-    background-color: #eee;
-  }
+    border-bottom: 1px solid #c5c9c1
+}
 
-/**Cor quando passar por cima**/
-.table tr:hover {
-    background-color: rgb(215, 217, 215);
-  }
-  
-  /**Cor quando selecisonado**/
-  .row tr.selecionado {
-    background-color:rgba(71, 92, 71,0.5); 
-  }
-  
-/**MODAL **/
-
-  .modalDialog {
+.modalDialog {
     position: fixed;
     font-family: Arial, Helvetica, sans-serif;
     top: 0;
@@ -127,18 +79,21 @@ section.cover-form{
     left: 0;
     padding: 50px;
     background: rgba(0, 0, 0, 0.8);
-    z-index: 99;
-    opacity:0;
+    z-index: 99999;
+    opacity: 0;
     -webkit-transition: opacity 400ms ease-in;
     -moz-transition: opacity 400ms ease-in;
     transition: opacity 400ms ease-in;
     pointer-events: none;
 }
+
 .modalDialog:target {
     opacity: 1;
     pointer-events: auto;
 }
-.modalDialog > div {
+
+.modalDialog>div {
+    width: 100%;
     padding: 5px 20px 13px 20px;
     border-radius: 10px;
     background: #fff;
@@ -146,6 +101,7 @@ section.cover-form{
     background: -webkit-linear-gradient(#fff, #999);
     background: -o-linear-gradient(#fff, #999);
 }
+
 .close {
     background: #606061;
     color: #FFFFFF;
@@ -163,28 +119,76 @@ section.cover-form{
     -webkit-box-shadow: 1px 1px 3px #000;
     box-shadow: 1px 1px 3px #000;
 }
+
 .close:hover {
     background: #00d9ff;
 }
 
+.pega {
+    display: none;
+}
 
-/**MODAL **/
-@media screen and (max-width: 1000px){
-    .sumir, .sumir-3 {
+.conteiner {
+    top: 0px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    display: none;
+}
+
+.couver {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    max-width: 300px;
+    padding: 40px;
+    background: white;
+    border: 10px solid gray;
+    align-items: center;
+    justify-content: center;
+}
+
+.couver:last-child {
+    padding: 10px;
+}
+
+.couver p {
+    padding: 10px;
+    font-size: 25px;
+    text-align: center;
+    color: #525252;
+    width: 100%;
+}
+
+.couver input[type="submit"] {
+    background-color: rgba(71, 92, 71, 0.8);
+    text-transform: uppercase;
+    color: white;
+    width: 150px;
+    height: 45px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 25px;
+    border: 0;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 1050px) {
+    .sumir {
         display: none;
     }
-    
-    .table thead th{
-        padding:1px;
-        }    
-  
-  }
-  @media screen and (max-width: 768px){
-    .sumir-1 {
+}
+
+@media screen and (max-width: 895px) {
+    .sumir1 {
         display: none;
     }
-
-    .table thead th{
-      padding:1px;
-      }
-  }
+    .sumir2 {
+        display: none;
+    }
+}
