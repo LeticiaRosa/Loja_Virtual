@@ -84,7 +84,7 @@
         <script type="text/javascript" src="js/modal.js"></script>
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="js/lista_categorias.js"></script>
+        <script type="text/javascript" src="js/lista_subcategoria.js"></script>
         <script type="text/javascript" src="DataTables/datatables.min.js"></script>
 
 

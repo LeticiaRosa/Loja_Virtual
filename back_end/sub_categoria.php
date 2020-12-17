@@ -38,7 +38,7 @@ $id_usuario=$_SESSION['usuarioId'];
         if ($produto == 1) {
                 $_SESSION['sucesso_cadastro'] = "Atualizado Com Sucesso";
 
-            header("Location:/loja_virtual/Editar_categoria.php");
+            header("Location:/loja_virtual/Tela_listar_subcategoria.php");
         } 
     } elseif ($status == "N") {
         $query_2 = "UPDATE sub_categoria SET nome='$nome', descricao='$descricao',  observacao='$observacao',id_usuario='$id_usuario' ,data_alteracao=now() ,STATUS='N' ,id_usuario_alterou='$id_usuario' WHERE ID_SUB_CATEGORIA='$id'";
@@ -48,7 +48,7 @@ $id_usuario=$_SESSION['usuarioId'];
         if ($produto == 1) {
             $_SESSION['sucesso_cadastro'] = "Atualizado Com Sucesso";
 
-            header("Location:/loja_virtual/Editar_categoria.php");
+            header("Location:/loja_virtual/Tela_listar_subcategoria.php");
         } 
     }
 }elseif (isset($_POST['excluir'])) {
@@ -68,12 +68,12 @@ $id_usuario=$_SESSION['usuarioId'];
         if ($produto == 1) {
             $_SESSION['sucesso_cadastro'] = "Excluido Com Sucesso";
 
-            header("Location:/loja_virtual/Editar_categoria.php");
+            header("Location:/loja_virtual/Tela_listar_subcategoria.php");
         } 
     
 } else {
 
- header("Location:/loja_virtual/Editar_categoria.php");
+ header("Location:/loja_virtual/Tela_listar_subcategoria.php");
 }
 
 ?>
