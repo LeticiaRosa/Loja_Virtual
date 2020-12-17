@@ -25,7 +25,8 @@
                     <thead class="cabeça">
 
                         <tr>
-                            <th> Nome <br /> </th>
+                            <th class = "sumir-sempre"> ID</th>
+                            <th> Nome </th>
                             <th class="sumir"> Descricao</th>
                             <th class="sumir2"> Categoria</th>
                             <th class="sumir2"> Sub Categoria</th>
@@ -36,6 +37,8 @@
                             <th class="sumir1"> Marca</th>
                             <th class="sumir"> Unidade de Medida</th>
                             <th class="sumir"> Valor Medida </th>
+                            <th class="sumir-sempre"> Observação</th>
+                            <th class="sumir-sempre"> Codigo de barras </th>
                         </tr>
                     </thead>
                     <tbody id="visualizarDados">

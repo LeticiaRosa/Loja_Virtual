@@ -25,24 +25,24 @@ $(window).on("load", $(async function() {
             USUARIO = data.map(d => d.USUARIO);
             data_cadastro = data.map(d => d.data_cadastro);
             codigo_barras = data.map(d => d.codigo_barras);
+
             for (i = 0; i < data.length; i++) {
                 var newRow = $('<tr class = "corpo" >');
                 var cols = "";
-
+                cols += '<td class= "sumir-sempre">' + id[i] + '</td>';
                 cols += '<td>' + nome[i] + '</td>';
                 cols += '<td class="sumir">' + descricao[i] + '</td>';
-                cols += '<td>' + NOME_CATEGORIA[i] + '</td>';
-                cols += '<td>' + NOME_SUB_CATEGORIA[i] + '</td>';
+                cols += '<td class="sumir2">' + NOME_CATEGORIA[i] + '</td>';
+                cols += '<td class="sumir2">' + NOME_SUB_CATEGORIA[i] + '</td>';
                 cols += '<td>' + preco_venda[i] + '</td>';
-                cols += '<td class = "sumir2">' + preco_custo[i] + '</td>';
-                cols += '<td class = "sumir2">' + quantidade[i] + '</td>';
+                cols += '<td>' + preco_custo[i] + '</td>';
+                cols += '<td>' + quantidade[i] + '</td>';
                 cols += '<td class="sumir1">' + FORNECEDOR[i] + '</td>';
                 cols += '<td class="sumir1">' + marca[i] + '</td>';
                 cols += '<td class="sumir">' + unidade_medida[i] + '</td>';
                 cols += '<td class="sumir">' + valor_medida[i] + '</td>';
-
-
-
+                cols += '<td class="sumir-sempre">' + observacao[i] + '</td>';
+                cols += '<td class="sumir-sempre">' + codigo_barras[i] + '</td>';
 
                 newRow.append(cols);
                 $("#products-table").append(newRow);
@@ -131,7 +131,7 @@ $(window).on("click", (function() {
 
         if (selecionado[1].innerHTML !== null) {
             window.location.replace("#openModal");
-            /* document.getElementById('id').value = selecionado[0].innerHTML; */
+            document.getElementById('id').value = selecionado[0].innerHTML;
             document.getElementById('nome').value = selecionado[1].innerHTML;
             document.getElementById('descricao').value = selecionado[2].innerHTML;
             document.getElementById('id_categoria').value = selecionado[3].innerHTML;
@@ -142,15 +142,15 @@ $(window).on("click", (function() {
             document.getElementById('id_fornecedor').value = selecionado[8].innerHTML;
             document.getElementById('marca').value = selecionado[9].innerHTML;
             document.getElementById('unidade_medida').value = selecionado[10].innerHTML;
-            /*document.getElementById('valor_medida').value = selecionado[11].innerHTML;
-            document.getElementById('observacao').value = selecionado[11].innerHTML;*/
-            /*document.getElementById('gerar_codigo-1').value = selecionado[15].innerHTML;
+            document.getElementById('valor_medida').value = selecionado[11].innerHTML;
+            document.getElementById('observacao').value = selecionado[12].innerHTML;
+            document.getElementById('gerar_codigo-1').value = selecionado[13].innerHTML;
 
-            if (selecionado[0].innerHTML !== selecionado[15].innerHTML) {
+            if (selecionado[0].innerHTML !== selecionado[13].innerHTML) {
                 document.getElementById('radio-2').checked = true;
             } else {
                 document.getElementById('radio-1').checked = true;
-            }*/
+            }
         }
     });
 
