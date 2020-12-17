@@ -4,10 +4,10 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/editar_produto_modal.css">
+   
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
- 
+    <link rel="stylesheet" type="text/css" href="css/editar_produto_modal.css">
 </head>
 <html>
 
@@ -95,7 +95,7 @@
                         </div>
                         <div class="col-3" id="gerar_codigo">
                         <div class = "texto" id = "texto">Código: </div>
-                          <div class = "barra" id = "barra"><input type="text" class = "gerar" name="gerar_codigo-1" id="gerar_codigo-1" placeholder="Código" autocomplete="off" ></div>
+                          <div class = "barra" id = "barra"><input type="text" class = "gerar" name="gerar_codigo-1" id="gerar_codigo" placeholder="Código" autocomplete="off" ></div>
                         </div>
                       </div>
 
@@ -145,13 +145,13 @@
     </div>      
   
  
-  <script type="text/javascript" src="js/jquery.js"></script>
-  <script type="text/javascript" src="js/valida_lista.js"></script>
-	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
- <!-- <script type="text/javascript" src="js/auto_complete.js"></script> -->
-  <script src = "js / jquery.ui.core.js" type = "text / javascript" > </script>
-   <script src = "js / jquery.ui.widget.js" type = "text / javascript" > </script> 
-   <script src = "js / jquery.ui.button.js" type = "text / javascript" > </script>  
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/auto_complete.js"></script>
+    <script type="text/javascript" src="js/valida_lista.js"></script>
+
+	
+
    
 
 </body>

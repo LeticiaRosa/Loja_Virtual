@@ -79,7 +79,7 @@ td {
     left: 0;
     padding: 50px;
     background: rgba(0, 0, 0, 0.8);
-    z-index: 99999;
+    z-index: 99;
     opacity: 0;
     -webkit-transition: opacity 400ms ease-in;
     -moz-transition: opacity 400ms ease-in;
@@ -137,7 +137,7 @@ td {
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 2000;
+    z-index: 99;
     display: none;
 }
 
@@ -176,6 +176,10 @@ td {
     font-size: 25px;
     border: 0;
     border-radius: 10px;
+}
+
+.sumir-sempre {
+    display: none;
 }
 
 @media screen and (max-width: 1050px) {
