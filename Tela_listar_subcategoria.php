@@ -7,14 +7,14 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
-    <link rel="stylesheet" type="text/css" href="css/css_editar_categoria.css">
+    <link rel="stylesheet" type="text/css" href="css/css_sub_categoria.css">
 
 </head>
 <html>
 
 <body>
 
-    <title>Exibir Categorias</title>
+    <title>Exibir Sub Categoria</title>
     </head>
 
     <body>
@@ -24,7 +24,7 @@
         ?>
         <section class="cover-form">
             <div class="form-container">
-                <h1>Categorias</h1>
+                <h1>Sub Categorias</h1>
 
                 <div class="form-wraper-1">
 
@@ -55,7 +55,7 @@
 
         <div id="openModal" class="modalDialog">
             <div><a href="#close" title="Close" class="close">X</a>
-                <?php include_once("Tela_altera_categoria.php");  ?>
+                <?php include_once("Tela_altera_subcategoria.php");  ?>
             </div>
         </div>
 

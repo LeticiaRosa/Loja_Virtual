@@ -34,7 +34,7 @@ if (empty($_SESSION['login'])) {
               <li><a href="/loja_virtual/Cadastro_categoria.php">Cadastro de Categoria</a>
                 <ul class="sub-menu">
                   <li><a href="/loja_virtual/Editar_categoria.php">Listar Categorias</a></li>
-                  <li><a href="#">Sub Sub</a></li>
+                  <li><a href="/loja_virtual/Tela_listar_subcategoria.php">Listar Sub Categorias</a></li>
                 </ul>
               </li>
               <li><a href="/loja_virtual/Cadastro_Sub_Categoria.php">Cadastro de Sub Categoria</a></li>

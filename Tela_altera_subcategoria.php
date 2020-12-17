@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/css_cadastro_categoria.css">
+  <title>Cadastro</title>
+</head>
+
+<body>
+
+  <?php
+  include_once("menu.php");
+  ?>
+
+  <section class="cover-form">
+    <div class="form-container">
+      <h1>Editar Sub Categoria</h1>
+      <form method="POST" name="form" action="back_end/sub_categoria.php">
+        <div class="form-wraper">
+          <div class="col3">
+            <p>Id Do Produto</p>
+            <input type="text" name="id_categoria" id="id_categoria" readonly="readonly">
+          </div>
+        </div>
+
+        <div class="form-wraper">
+
+          <div class="col">
+            <p>Nome Categoria*</p>
+            <input type="text" name="nome" id="nome" required placeholder="Nome" autocomplete="off">
+          </div>
+          <div class="col">
+            <p>Descrição</p>
+            <input type="text" name="descricao" id="descricao" placeholder="Descrição" autocomplete="off">
+          </div>
+          <div class="col-1">
+            <p>Status:</p>
+            <select name="status" id="status" placeholder="Status">
+              <option value="S" id="S">Disponível</option>
+              <option value="N" id="N">Indisponível</option>
+            </select>
+          </div>
+
+        </div>
+
+
+
+        <div class="form-wraper">
+          <div class="col">
+            <p>Observação:</p>
+            <input type="text" name="observacao" id="observacao" placeholder="Observação" autocomplete="off">
+          </div>
+
+        </div>
+
+        <div class="enviar">
+          <input type="submit" name="salvar" id="salvar" value="Salvar" />
+          <input type="submit" name="excluir" id="excluir" value="Excluir" />
+        </div>
+
+
+
+      </form>
+
+    </div>
+    <!--container bg-->
+  </section>
+  <!--cover-form-->
+
+
+  <script type="text/javascript" src="js/jquery.js"></script>
+  
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+
+
+</body>
+
+</html>

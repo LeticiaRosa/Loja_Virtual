@@ -18,16 +18,62 @@ $id_usuario=$_SESSION['usuarioId'];
             
             header("Location:/loja_virtual/Cadastro_sub_Categoria.php");
         
-    }else {
-        $_SESSION['erro_cadastro'] = "Produto Não cadastrado";
-        header("Location:/loja_virtual/Cadastro_sub_Categoria.php");
     }
 
 
-}else {
+}elseif (isset($_POST['salvar'])) {
 
-    header("Location:/loja_virtual/Cadastro_sub_Categoria.php");
+    $id = $_POST['id_categoria'];
+    echo  $id;
+    $nome = $_POST['nome'];
+    $descricao = $_POST['descricao'];
+    $observacao = $_POST['observacao'];
+    $status = $_POST['status'];
+    $id_usuario = $_SESSION['usuarioId'];
+    if ($status == "S") {
+        $query_2 = " UPDATE sub_categoria SET nome='$nome', descricao='$descricao',  observacao='$observacao',id_usuario='$id_usuario' ,data_alteracao=now() ,STATUS='S',id_usuario_alterou='$id_usuario' WHERE ID_SUB_CATEGORIA='$id'";
+        echo $query_2;
+        $produto = mysqli_query($conexao, $query_2);
+
+        if ($produto == 1) {
+                $_SESSION['sucesso_cadastro'] = "Atualizado Com Sucesso";
+
+            header("Location:/loja_virtual/Editar_categoria.php");
+        } 
+    } elseif ($status == "N") {
+        $query_2 = "UPDATE sub_categoria SET nome='$nome', descricao='$descricao',  observacao='$observacao',id_usuario='$id_usuario' ,data_alteracao=now() ,STATUS='N' ,id_usuario_alterou='$id_usuario' WHERE ID_SUB_CATEGORIA='$id'";
+        echo $query_2;
+        $produto = mysqli_query($conexao, $query_2);
+
+        if ($produto == 1) {
+            $_SESSION['sucesso_cadastro'] = "Atualizado Com Sucesso";
+
+            header("Location:/loja_virtual/Editar_categoria.php");
+        } 
+    }
+}elseif (isset($_POST['excluir'])) {
+
+    $id = $_POST['id_categoria'];
+    echo  $id;
+    $nome = $_POST['nome'];
+    $descricao = $_POST['descricao'];
+    $observacao = $_POST['observacao'];
+    $status = $_POST['status'];
+    $id_usuario = $_SESSION['usuarioId'];
+    
+        $query_2 = " delete from  sub_categoria WHERE ID_SUB_CATEGORIA='$id'";
+        echo $query_2;
+        $produto = mysqli_query($conexao, $query_2);
+
+        if ($produto == 1) {
+            $_SESSION['sucesso_cadastro'] = "Excluido Com Sucesso";
+
+            header("Location:/loja_virtual/Editar_categoria.php");
+        } 
+    
+} else {
+
+ header("Location:/loja_virtual/Editar_categoria.php");
 }
-
 
 ?>
