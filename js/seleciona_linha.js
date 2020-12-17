@@ -52,7 +52,7 @@ $(window).on("load", $(async function() {
         }
     });
     $(document).ready(function() {
-        $('#products-table').dataTable({
+        $('#products-table').DataTable({
             "autoWidth": false,
             "language": {
                 "sProcessing": "Procesando...",
