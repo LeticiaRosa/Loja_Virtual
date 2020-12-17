@@ -12,6 +12,7 @@
 <html>
 
 <body>
+  
 <section class="cover-form">
 		  			<div class="form-container" id ="modal" >
 		  			  	<h1>Editar Produto</h1>
@@ -19,7 +20,7 @@
                     <div class="form-wraper">
                       <div class="col" style = "  width: 25%; ">
                         <p>ID_Produto</p>
-                        <input  type="text" name="nome" id="id" required placeholder= "id" autocomplete="off" disabled>
+                        <input  type="text" name="nome" id="id"  placeholder= "id" autocomplete="off" >
                       </div> 
                       <div class="col">
                         <p>Nome do Produto*</p>
@@ -120,9 +121,7 @@
           </div><!--container bg-->
           </section>     
 
-    <div class="pega">
-    <input  id="pega" type="text" value="<?php if(isset($_SESSION['sucesso_cadastro'])) {echo $_SESSION['sucesso_cadastro']; }?>" >
-    </div>
+    
     <div class="conteiner" id="conteiner">
       <div class="couver">
             <p> <?php 
@@ -143,12 +142,10 @@
             <input type="submit" value="OK" onclick="fechamodal()"/> </p>
         </div>
     </div>      
-  
- 
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script> 
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script> 
     <script type="text/javascript" src="js/auto_complete.js"></script>
-    <script type="text/javascript" src="js/valida_lista.js"></script>
+  <script type="text/javascript" src="js/valida_lista.js"></script>
 
 	
 

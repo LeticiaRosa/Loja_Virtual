@@ -25,6 +25,7 @@
                     <thead class="cabeça">
 
                         <tr>
+                            <th class= "sumir-sempre"> Id <br /> </th>
                             <th> Nome <br /> </th>
                             <th class="sumir"> Descricao</th>
                             <th class="sumir2"> Categoria</th>
@@ -36,6 +37,8 @@
                             <th class="sumir1"> Marca</th>
                             <th class="sumir"> Unidade de Medida</th>
                             <th class="sumir"> Valor Medida </th>
+                            <th class="sumir-sempre"> Observacao</th>
+                            <th class="sumir-sempre"> Codigo Barras </th>
                         </tr>
                     </thead>
                     <tbody id="visualizarDados">
@@ -49,14 +52,19 @@
     </section>
     <!--cover-form-->
 
-
     <div id="openModal" class="modalDialog">
-        <div><a href="#close" title="Close" class="close">X</a>
-            <?php include_once("Tela_alterar_produto.php");  ?>
-        </div>
+    <div><a href="#close" title="Close" class="close">X</a>    
+             
+
     </div>
+</div>
 
+    <div class="pega">
+        <input id="pega" type="text" value="<?php if (isset($_SESSION['sucesso_cadastro'])) {
+                                                echo $_SESSION['sucesso_cadastro'];
+                                            } ?>">
 
+    </div>
 
     <div class="conteiner" id="conteiner">
         <div class="couver">
@@ -80,14 +88,11 @@
         </div>
     </div>
 
-
-
-    
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/modal.js"></script>
-    
-    <script type="text/javascript" src="js/seleciona_linha.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script> 
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script> 
+     <script type="text/javascript" src="js/seleciona_linha.js"></script>
+    <script type="text/javascript" src="DataTables/datatables.js"></script>
     
 
 </body>

@@ -52,7 +52,7 @@ $(window).on("load", $(async function() {
         }
     });
     $(document).ready(function() {
-        $('#products-table').DataTable({
+        $('#products-table').dataTable({
             "autoWidth": false,
             language: {
                 "sEmptyTable": "Nenhum registro encontrado",
@@ -130,6 +130,8 @@ $(window).on("click", (function() {
         }
 
         if (selecionado[1].innerHTML !== null) {
+
+            $("#openModal").load("Tela_alterar_produto.php");
             window.location.replace("#openModal");
             document.getElementById('id').value = selecionado[0].innerHTML;
             document.getElementById('nome').value = selecionado[1].innerHTML;
@@ -144,7 +146,7 @@ $(window).on("click", (function() {
             document.getElementById('unidade_medida').value = selecionado[10].innerHTML;
             document.getElementById('valor_medida').value = selecionado[11].innerHTML;
             document.getElementById('observacao').value = selecionado[12].innerHTML;
-            document.getElementById('gerar_codigo-1').value = selecionado[13].innerHTML;
+            document.getElementById('gerar_codigo').value = selecionado[13].innerHTML;
 
             if (selecionado[0].innerHTML !== selecionado[13].innerHTML) {
                 document.getElementById('radio-2').checked = true;
@@ -153,10 +155,6 @@ $(window).on("click", (function() {
             }
         }
     });
-
-    function fechamodal() {
-        $('#modal').css("display", "none");
-    }
 
 
 }));
