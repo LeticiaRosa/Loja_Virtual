@@ -1,4 +1,4 @@
-var select = document.getElementById('pega1').value;
+var select = document.getElementById('pega').value;
 
 
 if (select == "Atualizado Com Sucesso") {
