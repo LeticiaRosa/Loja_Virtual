@@ -12,7 +12,7 @@
 <html>
 
 <body>
-
+<section class="cover-form">
 		  			<div class="form-container" id ="modal" >
 		  			  	<h1>Editar Produto</h1>
 		  			  	<form  method="POST"  name="form" action="back_end/banco.php">
@@ -118,7 +118,7 @@
                 </form>
 
           </div><!--container bg-->
-          
+          </section>     
 
     <div class="pega">
     <input  id="pega" type="text" value="<?php if(isset($_SESSION['sucesso_cadastro'])) {echo $_SESSION['sucesso_cadastro']; }?>" >
