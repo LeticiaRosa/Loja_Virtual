@@ -51,6 +51,7 @@ function fechamodal() {
 
 
 
+
 function getRadioValor(name) {
     var rads = document.getElementsByName(name);
     //console.log(rads);

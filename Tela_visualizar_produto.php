@@ -10,7 +10,7 @@
 </head>
 <html>
 
-<body>
+<body onLoad= "fechamdal()" >
 
     <?php
     include_once("menu.php");
@@ -89,8 +89,8 @@
     <script type="text/javascript" src="js/jquery.js"></script> 
     <script type="text/javascript" src="js/jquery-ui.min.js"></script> 
      <script type="text/javascript" src="js/seleciona_linha.js"></script>
+     <script type="text/javascript" src="js/valida_lista.js"></script>
     <script type="text/javascript" src="DataTables/datatables.js"></script>
-    
 
 </body>
 

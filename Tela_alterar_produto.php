@@ -11,8 +11,8 @@
 </head>
 <html>
 
-<body>
-  
+<body > 
+
 <section class="cover-form">
 <div><a href="Tela_visualizar_produto.php" title="Close" class="close">X</a>   
 		  			<div class="form-container" id ="modal" >
@@ -21,7 +21,7 @@
                     <div class="form-wraper">
                       <div class="col" style = "  width: 25%; ">
                         <p>ID_Produto</p>
-                        <input  type="text" name="nome" id="id"  placeholder= "id" autocomplete="off" >
+                        <input  type="text" name="nome" id="id" value ="<?php $id = $_GET['id']; echo $id; ?>"placeholder= "id" autocomplete="off" >
                       </div> 
                       <div class="col">
                         <p>Nome do Produto*</p>
@@ -146,10 +146,9 @@
     <script type="text/javascript" src="js/jquery.js"></script> 
     <script type="text/javascript" src="js/jquery-ui.min.js"></script> 
     <script type="text/javascript" src="js/auto_complete.js"></script>
-    
   <script type="text/javascript" src="js/valida_lista.js"></script>
+  
 
-	
 
    
 
