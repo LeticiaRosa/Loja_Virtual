@@ -14,6 +14,7 @@
 <body>
   
 <section class="cover-form">
+<div><a href="Tela_visualizar_produto.php" title="Close" class="close">X</a>   
 		  			<div class="form-container" id ="modal" >
 		  			  	<h1>Editar Produto</h1>
 		  			  	<form  method="POST"  name="form" action="back_end/banco.php">
@@ -109,11 +110,11 @@
 
                       </div>
 
-
-                    <div class="salvar">
-                    <input type="submit" value="Salvar" />
-                 
-		  			  		  <p>*campos obrigatorios</p>
+                     
+                      <div class="enviar">
+                      <input type="submit" name="salvar" id="salvar" value="Salvar" />
+                      <input type="submit" name="excluir" id="excluir" value="Excluir" />
+		  			  		
                     </div>
 
                 </form>
@@ -145,6 +146,7 @@
     <script type="text/javascript" src="js/jquery.js"></script> 
     <script type="text/javascript" src="js/jquery-ui.min.js"></script> 
     <script type="text/javascript" src="js/auto_complete.js"></script>
+    
   <script type="text/javascript" src="js/valida_lista.js"></script>
 
 	

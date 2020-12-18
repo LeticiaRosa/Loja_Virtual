@@ -154,13 +154,6 @@ section.cover-form {
     text-transform: uppercase;
 }
 
-.enviar p {
-    font-size: 14px;
-    color: #525252;
-    width: 100%;
-    text-transform: uppercase;
-}
-
 .texto {
     text-transform: uppercase;
 }
@@ -183,22 +176,6 @@ section.cover-form {
     border: 0;
     border-radius: 10px;
     text-align: left;
-}
-
-.enviar {
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-    width: 100%;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-}
-
-.enviar p {
-    font-size: 14px;
-    color: #525252;
-    width: 100%;
 }
 
 .form-container form input[type="submit"] {

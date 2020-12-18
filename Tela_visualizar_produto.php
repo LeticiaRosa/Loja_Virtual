@@ -53,11 +53,8 @@
     <!--cover-form-->
 
     <div id="openModal" class="modalDialog">
-    <div><a href="#close" title="Close" class="close">X</a>    
-             
 
     </div>
-</div>
 
     <div class="pega">
         <input id="pega" type="text" value="<?php if (isset($_SESSION['sucesso_cadastro'])) {

@@ -13,7 +13,7 @@
          success: function(data) {
 
              nomes = data.map(d => d.nome);
-             console.log(nomes);
+
          }
      });
      $("#id_categoria").autocomplete({
@@ -38,7 +38,7 @@
          },
          success: function(data) {
              nomes = data.map(d => d.nome);
-             console.log(nomes);
+
          }
      });
      $("#id_fornecedor").autocomplete({
@@ -62,7 +62,7 @@
          },
          success: function(data) {
              nomes = data.map(d => d.nome);
-             console.log(nomes);
+
          }
      });
      $("#id_sub_categoria").autocomplete({
