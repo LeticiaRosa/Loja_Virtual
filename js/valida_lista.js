@@ -9,7 +9,7 @@ $('#gerar_codigo').css("display", "none");
 $('input[type=radio]').on('change', function() {
 
     var tipo = getRadioValor('barras');
-    // console.log(tipo);
+    console.log(tipo);
     if (tipo == "N") {
         $('#gerar_codigo').prop("disabled", false);
         $('#gerar_codigo').css("display", "flex");
