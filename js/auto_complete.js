@@ -75,8 +75,7 @@
  $(window).on("load", $(async function() {
      // Atribui evento e função para limpeza dos campos
      // $('#clicar').on('input', limpaCampos);
-     var id = $('#id').val();
-     console.log($('#id').val());
+
      var nomes = [];
      await $.ajax({
          url: "back_end/busca_autocomplete.php",
@@ -114,6 +113,7 @@
              document.getElementById('marca').value = marca;
              document.getElementById('unidade_medida').value = unidade_medida;
              document.getElementById('valor_medida').value = valor_medida;
+             document.getElementById('observacao').value = observacao;
              console.log(id);
              console.log(codigo_barras);
              if (id == codigo_barras) {
@@ -121,7 +121,8 @@
              } else {
                  document.getElementById('radio-2').checked = true;
              }
-             document.getElementById('gerar_codigo').value = codigo_barras;
+             document.getElementById('gerar_codigo_1').value = codigo_barras;
+
 
          }
 

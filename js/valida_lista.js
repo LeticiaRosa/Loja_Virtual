@@ -13,7 +13,7 @@ $('input[type=radio]').on('change', function() {
     if (tipo == "N") {
         $('#gerar_codigo').prop("disabled", false);
         $('#gerar_codigo').css("display", "flex");
-        document.form.gerar_codigo.focus();
+        document.form.gerar_codigo_1.focus();
 
     } else if (tipo == "S") {
         $('#gerar_codigo').prop("disabled", true);
