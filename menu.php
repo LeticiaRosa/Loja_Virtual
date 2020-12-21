@@ -27,12 +27,29 @@ if (empty($_SESSION['login'])) {
       <li>
         <label id="icone" for="check"><img src="imagens/icons8_menu_50px.png" width="35" height="35"> </label>
         <ul class="sub-menu clearfix">
+
+          <li>
+            <a href="#">Empresa</a>
+            <ul class="sub-menu">
+            <li><a href="/loja_virtual/Tela_cadastro_produto_1.php">Cadastro de Empresa</a>
+            <ul class="sub-menu">
+            <li><a href="/loja_virtual/Tela_cadastro_produto_1.php">Listar Empresas</a></li>
+            </ul>
+            </li>
+            </ul>
+          </li>
+
           <li>
             <a href="#">Produto</a>
             <ul class="sub-menu">
-              <li><a href="/loja_virtual/Tela_cadastro_produto_1.php">Cadastro de Produto</a></li>
+              <li><a href="/loja_virtual/Tela_cadastro_produto_1.php">Cadastro de Produto</a>
+              <ul class="sub-menu">
+              <li><a href="/loja_virtual/Tela_visualizar_produto.php">Listar Produtos</a></li>
+            </ul>
+              
+              </li>
               <li><a href="/loja_virtual/Cadastro_categoria.php">Cadastro de Categoria</a>
-                <ul class="sub-menu">
+              <ul class="sub-menu">
                   <li><a href="/loja_virtual/Editar_categoria.php">Listar Categorias</a></li>
                 
                 </ul>
@@ -43,7 +60,7 @@ if (empty($_SESSION['login'])) {
               </ul>
               </li>
               <li><a href="/loja_virtual/Gera_codigo_barra.php">Gerar codigo de barras</a></li>
-              <li><a href="/loja_virtual/Tela_visualizar_produto.php">Exibir</a></li>
+              
 
             </ul>
           </li>
