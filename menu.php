@@ -68,7 +68,7 @@ if (empty($_SESSION['login'])) {
             <ul class="sub-menu">
               <li><a href="/loja_virtual/Cadastro_fornecedor.php">Cadastro de Fornecedor</a>
               <ul class="sub-menu">
-              <li><a href="/loja_virtual/Tela _listar_fornecedor.php">Listar Fornecedores</a></li>
+              <li><a href="/loja_virtual/Tela_listar_fornecedor.php">Listar Fornecedores</a></li>
               </ul>
               </li>
               <li><a href="#">Sub Sub</a></li>

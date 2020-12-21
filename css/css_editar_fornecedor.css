@@ -258,7 +258,7 @@ section.cover-form {
 @media screen and (max-width: 1366px) {
     section.cover-form {
         width: 100%;
-        padding: 10px;
+        padding: 40px;
     }
     .form-container form {
         padding: 5px;
