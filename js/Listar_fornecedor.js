@@ -1,43 +1,54 @@
 $(window).on("load", $(async function() {
     // Atribui evento e função para limpeza dos campos
     // $('#clicar').on('input', limpaCampos);
-    var id = [];
-    var nomes = [];
+
     await $.ajax({
         url: "back_end/busca_autocomplete.php",
         dataType: "json",
         data: {
-            acao: 'categoria'
+            acao: 'lista_fornecedor'
         },
         success: function(data) {
-            id = data.map(d => d.id_categoria);
-            nome = data.map(d => d.NOME);
-            descricao = data.map(d => d.DESCRICAO);
-            STATUS = data.map(d => d.STATUS);
-            observacao = data.map(d => d.OBSERVACAO);
-            USUARIO = data.map(d => d.USUARIO);
-            DATA_CADASTRO = data.map(d => d.DATA_CADASTRO);
+            id = data.map(d => d.ID_FORNECEDOR);
+            nome = data.map(d => d.nome);
+            RAZAO_SOCIAL = data.map(d => d.RAZAO_SOCIAL);
+            STATUS = data.map(d => d.Status);
+            contato = data.map(d => d.contato);
+            CNPJ = data.map(d => d.CNPJ);
+            CELULAR = data.map(d => d.CELULAR);
+            fixo = data.map(d => d.fixo);
+            Endereco = data.map(d => d.Endereco);
+            CEP = data.map(d => d.CEP);
+            E_MAIL = data.map(d => d.E_MAIL);
+            Observacao = data.map(d => d.Observacao);
+            Nome_usuario = data.map(d => d.Nome_usuario);
+            data_cadastro = data.map(d => d.data_cadastro);
             for (i = 0; i < data.length; i++) {
                 var newRow = $('<tr class = "corpo" >');
                 var cols = "";
-                cols += '<td>' + id[i] + '</td>';
+                cols += '<td class="sumir_sempre">' + id[i] + '</td>';
                 cols += '<td>' + nome[i] + '</td>';
-                cols += '<td>' + descricao[i] + '</td>';
+                cols += '<td>' + RAZAO_SOCIAL[i] + '</td>';
                 cols += '<td>' + STATUS[i] + '</td>';
-                cols += '<td class="sumir">' + observacao[i] + '</td>';
-                cols += '<td class="sumir">' + USUARIO[i] + '</td>';
-                cols += '<td class="sumir">' + DATA_CADASTRO[i] + '</td>';
+                cols += '<td>' + contato[i] + '</td>';
+                cols += '<td>' + CNPJ[i] + '</td>';
+                cols += '<td>' + CELULAR[i] + '</td>';
+                cols += '<td>' + fixo[i] + '</td>';
+                cols += '<td>' + Endereco[i] + '</td>';
+                cols += '<td>' + E_MAIL[i] + '</td>';
+                cols += '<td class="sumir">' + CEP[i] + '</td>';
+                cols += '<td class="sumir">' + Observacao[i] + '</td>';
+                cols += '<td>' + Nome_usuario[i] + '</td>';
+                cols += '<td class="sumir">' + data_cadastro[i] + '</td>';
 
                 newRow.append(cols);
                 $("#products-table").append(newRow);
-
-
             }
 
         }
     });
     $(document).ready(function() {
-        $('#products-table').DataTable({
+        $('#products-table').dataTable({
             "autoWidth": false,
             language: {
                 "sEmptyTable": "Nenhum registro encontrado",
@@ -64,18 +75,13 @@ $(window).on("load", $(async function() {
             }
 
 
+
+
         });
 
 
     });
 }));
-
-
-
-
-
-
-
 
 
 
@@ -127,11 +133,11 @@ $(window).on("click", (function() {
 
         }
         if (selecionado[1].innerHTML !== null) {
-            window.location.replace("#openModal");
-            document.getElementById('id_categoria').value = selecionado[0].innerHTML;
-            document.getElementById('nome').value = selecionado[1].innerHTML;
-            document.getElementById('descricao').value = selecionado[2].innerHTML;
 
+            window.location.replace("#openModal");
+            document.getElementById('id_fornecedor').value = selecionado[0].innerHTML;
+            document.getElementById('nome').value = selecionado[1].innerHTML;
+            document.getElementById('Razao_Social').value = selecionado[2].innerHTML;
             if (selecionado[3].innerHTML == "DISPONIVEL") {
 
                 document.getElementById('status').value = document.getElementById('S').value;
@@ -139,7 +145,14 @@ $(window).on("click", (function() {
 
                 document.getElementById('status').value = document.getElementById('N').value;
             }
-            document.getElementById('observacao').value = selecionado[4].innerHTML;
+            document.getElementById('Contato').value = selecionado[4].innerHTML;
+            document.getElementById('CNPJ').value = selecionado[5].innerHTML;
+            document.getElementById('celular').value = selecionado[6].innerHTML;
+            document.getElementById('fixo').value = selecionado[7].innerHTML;
+            document.getElementById('endereco').value = selecionado[8].innerHTML;
+            document.getElementById('E-MAIL').value = selecionado[9].innerHTML;
+            document.getElementById('CEP').value = selecionado[10].innerHTML;
+            document.getElementById('observacao').value = selecionado[11].innerHTML;
 
 
         }

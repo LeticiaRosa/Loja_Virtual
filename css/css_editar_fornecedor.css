@@ -229,3 +229,39 @@ section.cover-form {
     text-align: center;
     justify-content: space-between;
 }
+
+.col-1 {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    flex-wrap: wrap;
+    width: 50%;
+    overflow: hidden;
+}
+
+.col-1 select {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 8px 3px 3px 3px;
+    outline: none;
+    background-color: rgba(214, 226, 217, 0.8);
+    height: 40px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    border: 0;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 1366px) {
+    section.cover-form {
+        width: 100%;
+        padding: 10px;
+    }
+    .form-container form {
+        padding: 5px;
+        width: 100%;
+    }
+}

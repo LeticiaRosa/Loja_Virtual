@@ -117,3 +117,18 @@ if ($acao == 'busca') :
 	echo $json;
 
 endif;
+
+
+if ($acao == 'lista_fornecedor') :
+	
+	$sql = "SELECT f.ID_FORNECEDOR,f.nome,f.RAZAO_SOCIAL,case when f.status='S' then'Disponível' ELSE 'Indisponível' END AS Status,f.contato,f.CNPJ,F.TEL_CEL AS CELULAR,f.TEL_FIXO as fixo,F.Endereco,F.CEP,F.E_MAIL,f.Observacao,U.Nome_usuario, DATE_format(F.data_cadastro, '%d-%m-%Y') as data_cadastro FROM  fornecedor F LEFT OUTER JOIN usuario U ON U.ID_USUARIO=f.ID_USUARIO";
+	$stm = $conexao->prepare($sql);
+	$stm->bindValue(1, $parametro);
+	$stm->execute();
+	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
+
+	$json = json_encode($dados);
+
+	echo $json;
+
+endif;
