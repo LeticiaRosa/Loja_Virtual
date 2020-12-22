@@ -85,7 +85,7 @@ if (empty($_SESSION['login'])) {
 
             </ul>
           </li>
-
+          
           <li><a href="#">Usuário</a>
             <ul class="sub-menu">
               <li><a href="#">Cadastro</a></li>
@@ -102,7 +102,7 @@ if (empty($_SESSION['login'])) {
         </ul>
       </li>
       <li>
-
+      
       <li class="sair"><a href="/loja_virtual/Tela_login_nova.php">Sair </a></li>
       <li class="ajuda"><a href="#">Ajuda</a></li>
       <li class="configurações"><a href="#">Configurações</a>
@@ -113,7 +113,12 @@ if (empty($_SESSION['login'])) {
         </ul>
       </li>
       <li class="welcome"><a href="#">Bem vindo! <?php echo $_SESSION['login']; ?> </a> </li>
-
+      <li class="notificacao"><a href="#">Notificações</a>
+      <span class="contador" id="contador"></span>
+            <ul class="sub-menu" id="notifica">
+                
+            </ul>
+          </li>
       </li>
 
 
@@ -123,7 +128,9 @@ if (empty($_SESSION['login'])) {
   <!--menu-->
 
 
-
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/notificar.js"></script>
 
 </body>
 

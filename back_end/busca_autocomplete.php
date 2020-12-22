@@ -187,3 +187,25 @@ if ($acao == 'Busca_ult_produto_p') :
 	echo $json;
 endif;
 
+if ($acao == 'contar_notificacao') :
+
+	$sql = "SELECT count(1) as quant FROM  trasferencia as t  where t.status='N' ";
+	$stm = $conexao->prepare($sql);
+	$stm->execute();
+	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
+
+	$json = json_encode($dados);
+
+	echo $json;
+endif;
+if ($acao == 'Busca_notificacao') :
+
+	$sql = "SELECT u.id_trasferencia, es.nome AS EMPRESA,e.nome AS EMPRESA_TRASFERENCIA, u.nome_usuario,t.qtd_trasfere FROM  trasferencia as t LEFT OUTER JOIN USUARIO AS U on u.id_usuario=t.id_usuario left outer join empresa as es on  es.id_empresa= t.id_empresa left outer join empresa as e on  e.id_empresa= t.id_empresa_tras where t.status='N' ";
+	$stm = $conexao->prepare($sql);
+	$stm->execute();
+	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
+
+	$json = json_encode($dados);
+
+	echo $json;
+endif;

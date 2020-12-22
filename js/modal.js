@@ -13,6 +13,10 @@ if (select == "Atualizado Com Sucesso") {
     $('#conteiner').css("display", "flex");
 
 
+} else if (select == "Trasferencia Criada") {
+    $('#conteiner').css("display", "flex");
+
+
 }
 
 
