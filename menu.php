@@ -77,7 +77,7 @@ if (empty($_SESSION['login'])) {
           <li><a href="#">Estoque</a>
             <ul class="sub-menu">
               <li><a href="#">Controle de Estoque</a></li>
-              <li><a href="#">Sub Sub</a></li>
+              <li><a href="/loja_virtual/Tela_listar_trafere.php">Trasferencia de Produtos</a></li>
             </ul>
           </li>
           <li><a href="#">Relatórios</a>

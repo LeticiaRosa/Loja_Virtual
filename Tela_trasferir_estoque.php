@@ -8,23 +8,18 @@
     <title>Cadastro</title>
 </head>
 
-<body>
-
-    <?php
-    include_once("menu.php");
-    ?>
-
-
-
+<body >
 
     <section class="cover-form">
+    <div><a href="Tela_listar_trafere.php" title="Close" class="close">X</a>
         <div class="form-container">
             <h1>Trasferencia</h1>
             <form method="POST" name="form" action="back_end/trasferir.php">
             <div class="col3">
                     <div class="col">
                         <p>ID PRODUTO</p>
-                        <input type="text" name="id_produto" id="id_produto" readonly="readonly" autocomplete="off">
+                        <input type="text" name="id_produto" id="id_produto" value="<?php $id = $_GET['id'];
+                                                            echo $id; ?>" readonly="readonly" autocomplete="off">
                     </div>
                 </div>
             <div class="form-wraper">
@@ -47,6 +42,10 @@
                         <p>Quantidade que deseja Trasferir:</p>
                         <input type="text" name="Qtd_tras" id="Qtd_tras"  placeholder="Quantidade"require autocomplete="OFF">
                     </div>
+                    <div class="col-1">
+                        <p>Empresa que deseja Trasferir:</p>
+                        <input type="text" name="empresa" id="empresa"  placeholder="empresa"require autocomplete="OFF">
+                    </div>
                 </div>
 
 
@@ -62,8 +61,8 @@
     <!--cover-form-->
 
     <script type="text/javascript" src="js/jquery.js"></script> 
-    <script type="text/javascript" src="js/jquery-ui.min.js"></script> 
-    <script type="text/javascript" src="js/Trasferir_estoque.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/lista_trasfere.js"></script>  
 </body>
 
 </html>

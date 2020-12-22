@@ -163,7 +163,7 @@ endif;
 
 if ($acao == 'Busca_ult_produto') :
 
-	$sql = "SELECT P.ID_PRODUTO,UPPER(P.nome)AS nome,P.quantidade, e.NOME as nome_empresa FROM produto as p left outer join empresa as e on e.id_empresa=p.id_empresa where P.id_produto=(select max(id_produto) from produto)	";
+	$sql = "SELECT P.ID_PRODUTO,UPPER(P.nome)AS nome,P.quantidade, e.NOME as nome_empresa FROM produto as p left outer join empresa as e on e.id_empresa=p.id_empresa ";
 	$stm = $conexao->prepare($sql);
 	$stm->execute();
 	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
@@ -173,9 +173,10 @@ if ($acao == 'Busca_ult_produto') :
 	echo $json;
 endif;
 
-if ($acao == 'Busca_ult_produto_b') :
 
-	$sql = "SELECT P.ID_PRODUTO,UPPER(P.nome)AS nome,P.quantidade, e.NOME as nome_empresa FROM produto as p left outer join empresa as e on e.id_empresa=p.id_empresa where P.id_produto=(select max(id_produto) from produto)	";
+if ($acao == 'Busca_ult_produto_p') :
+
+	$sql = "SELECT P.ID_PRODUTO,UPPER(P.nome)AS nome,P.quantidade, e.NOME as nome_empresa FROM produto as p left outer join empresa as e on e.id_empresa=p.id_empresa where p.id_produto=? ";
 	$stm = $conexao->prepare($sql);
 	$stm->bindValue(1, $parametro);
 	$stm->execute();
@@ -184,5 +185,5 @@ if ($acao == 'Busca_ult_produto_b') :
 	$json = json_encode($dados);
 
 	echo $json;
-
 endif;
+

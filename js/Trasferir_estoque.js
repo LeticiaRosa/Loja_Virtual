@@ -11,45 +11,129 @@ $(async function() {
         success: function(data) {
             id = data.map(d => d.ID_PRODUTO);
             nome = data.map(d => d.nome);
-            quantidate = data.map(d => d.quantidade);
             nome_empresa = data.map(d => d.nome_empresa);
-            document.getElementById('id_produto').value = id;
-            document.getElementById('nome').value = nome_empresa;
-            document.getElementById('produto').value = nome;
-            document.getElementById('Quantidade').value = quantidate;
+            quantidate = data.map(d => d.quantidade);
 
 
+
+            for (i = 0; i < data.length; i++) {
+                var newRow = $('<tr class = "corpo" >');
+                var cols = "";
+                cols += '<td class="sumir-sempre">' + id[i] + '</td>';
+                cols += '<td>' + nome[i] + '</td>';
+                cols += '<td>' + nome_empresa[i] + '</td>';
+                cols += '<td>' + quantidate[i] + '</td>';
+
+
+                newRow.append(cols);
+                $("#products-table").append(newRow);
+            }
 
         }
     });
+    $(document).ready(function() {
+        $('#products-table').dataTable({
+            "autoWidth": false,
+            language: {
+                "sEmptyTable": "Nenhum registro encontrado",
+                "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
+                "sInfoEmpty": "Mostrando 0 até 0 de 0 registros",
+                "sInfoFiltered": "(Filtrados de _MAX_ registros)",
+                "sInfoPostFix": "",
+                "sInfoThousands": ".",
+                "sLengthMenu": "_MENU_ resultados por página",
+                "sLoadingRecords": "Carregando...",
+                "sProcessing": "Processando...",
+                "sZeroRecords": "Nenhum registro encontrado",
+                "sSearch": "Pesquisar",
+                "oPaginate": {
+                    "sNext": "Próximo",
+                    "sPrevious": "Anterior",
+                    "sFirst": "Primeiro",
+                    "sLast": "Último"
+                },
+                "oAria": {
+                    "sSortAscending": ": Ordenar colunas de forma ascendente",
+                    "sSortDescending": ": Ordenar colunas de forma descendente"
+                }
+            }
 
+
+
+
+        });
+
+
+    });
 });
 
 
 
-$(async function() {
-    // Atribui evento e função para limpeza dos campos
-    // $('#clicar').on('input', limpaCampos);
+$(window).on("click", (function() {
 
-    await $.ajax({
-        url: "back_end/busca_autocomplete.php",
-        dataType: "json",
-        data: {
-            acao: 'Busca_ult_produto_b'
-        },
-        success: function(data) {
-            id = data.map(d => d.ID_PRODUTO);
-            nome = data.map(d => d.nome);
-            quantidate = data.map(d => d.quantidade);
-            nome_empresa = data.map(d => d.nome_empresa);
-            document.getElementById('id_produto').value = id;
-            document.getElementById('nome').value = nome_empresa;
-            document.getElementById('produto').value = nome;
-            document.getElementById('Quantidade').value = quantidate;
+    var tabela = document.getElementById("products-table");
+    var linhas = tabela.getElementsByTagName("tr");
+    for (var i = 0; i < linhas.length; i++) {
+        var linha = linhas[i];
 
+        linha.addEventListener("click", function() {
+            //Adicionar ao atual
 
+            selLinha(this, false); //Selecione apenas um
+            //selLinha(this, true); //Selecione quantos quiser
+        });
+    }
+
+    /**
+    Caso passe true, você pode selecionar multiplas linhas.
+    Caso passe false, você só pode selecionar uma linha por vez.
+    **/
+    function selLinha(linha, multiplos) {
+
+        if (!multiplos) {
+            var linhas = linha.parentElement.getElementsByTagName("tr");
+            for (var i = 0; i < linhas.length; i++) {
+                var linha_ = linhas[i];
+                linha_.classList.remove("selecionado");
+            }
+        }
+        linha.classList.toggle("selecionado");
+    }
+
+    /**
+    Exemplo de como capturar os dados
+    **/
+    var btnVisualizar = document.getElementById("visualizarDados");
+
+    var nome = "";
+    btnVisualizar.addEventListener("click", function() {
+        var selecionados = tabela.getElementsByClassName("selecionado");
+
+        //Verificar se está selecionado
+
+        for (var i = 0; i < selecionados.length; i++) {
+            var selecionado = selecionados[i];
+            selecionado = selecionado.getElementsByTagName("td");
+
+        }
+        if (selecionado[1].innerHTML !== null) {
+
+            window.location.replace("#openModal");
+            $("#openModal").load("Tela_trasferir_estoque.php?id=" + selecionado[0].innerHTML);
 
         }
     });
 
-});
+
+
+}));
+
+function fechamdal() {
+    $('#openModal').css("display", "none");
+}
+
+
+function abremodal() {
+    $('#openModal').css("display", "inline-block");
+
+}

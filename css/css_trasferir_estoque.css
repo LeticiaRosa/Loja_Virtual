@@ -98,6 +98,7 @@ section.cover-form {
     display: flex;
     flex-direction: row;
     padding: 5px;
+    align-items: center;
     justify-items: center;
     justify-content: center;
 }
@@ -107,6 +108,7 @@ section.cover-form {
     flex-direction: column;
     align-items: center;
     justify-items: center;
+    justify-content: center;
 }
 
 .enviar {
