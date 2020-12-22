@@ -15,6 +15,7 @@ $(window).on("load", $(async function() {
             id = data.map(d => d.id_produto);
             nome = data.map(d => d.nome);
             descricao = data.map(d => d.descricao);
+            empresa = data.map(d => d.empresa);
             NOME_CATEGORIA = data.map(d => d.NOME_CATEGORIA);
             NOME_SUB_CATEGORIA = data.map(d => d.NOME_SUB_CATEGORIA);
             preco_venda = data.map(d => d.preco_venda);

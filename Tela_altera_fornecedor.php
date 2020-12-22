@@ -14,7 +14,7 @@
     <?php
     include_once("menu.php");
     ?>
-    <section class="cover-form">
+    <section class="cover-form-1">
         <div class="form-container">
             <h1>Editar Fornecedor</h1>
             <form method="POST" name="form" action="back_end/fornecedor.php">

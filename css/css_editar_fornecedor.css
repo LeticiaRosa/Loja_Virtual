@@ -39,9 +39,9 @@ body {
 
 /**** section */
 
-section.cover-form {
+section.cover-form-1 {
     width: 100%;
-    padding: 40px;
+    padding: 5px;
 }
 
 .form-container {
@@ -253,15 +253,4 @@ section.cover-form {
     font-size: 20px;
     border: 0;
     border-radius: 10px;
-}
-
-@media screen and (max-width: 1366px) {
-    section.cover-form {
-        width: 100%;
-        padding: 40px;
-    }
-    .form-container form {
-        padding: 5px;
-        width: 100%;
-    }
 }

@@ -28,6 +28,7 @@
                             <th class= "sumir-sempre"> Id <br /> </th>
                             <th> Nome <br /> </th>
                             <th class="sumir"> Descricao</th>
+                            <th> Empresa</th>
                             <th class="sumir2"> Categoria</th>
                             <th class="sumir2"> Sub Categoria</th>
                             <th> Preço de Venda </th>
@@ -85,12 +86,13 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="js/modal.js"></script>
+   
     <script type="text/javascript" src="js/jquery.js"></script> 
     <script type="text/javascript" src="js/jquery-ui.min.js"></script> 
      <script type="text/javascript" src="js/seleciona_linha.js"></script>
      <script type="text/javascript" src="js/valida_lista.js"></script>
     <script type="text/javascript" src="DataTables/datatables.js"></script>
+    <script type="text/javascript" src="js/modal.js"></script>
 
 </body>
 
