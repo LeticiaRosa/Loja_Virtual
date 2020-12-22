@@ -12,7 +12,7 @@
 <html>
 
 <body>
-
+<div class = "tudo">
   <section class="cover-form">
     <div><a href="Tela_visualizar_produto.php" title="Close" class="close">X</a>
       <div class="form-container" id="modal">
@@ -21,7 +21,7 @@
           <div class="form-wraper">
             <div class="col" style="  width: 25%; ">
               <p>ID_Produto</p>
-              <input type="text" name="nome" id="id" value="<?php $id = $_GET['id'];
+              <input type="text" name="id" id="id" value="<?php $id = $_GET['id'];
                                                             echo $id; ?>" placeholder="id" autocomplete="off">
             </div>
             <div class="col">
@@ -31,6 +31,10 @@
             <div class="col">
               <p>Descrição</p>
               <input type="text" name="descricao" id="descricao" placeholder="Descrição" autocomplete="off">
+            </div>
+            <div class="col" style="  width: 80%; ">
+                  <p>Empresa</p>
+                  <input type="text" name="empresa" id="empresa" value="" placeholder="Empresa" autocomplete="off" required>
             </div>
           </div>
 
@@ -44,7 +48,7 @@
 
             <div class="col">
               <p>Sub Categoria:*</p>
-              <input type="text" name="id_sub_categoria" id="id_sub_categoria" placeholder="Sub Categoria" autocomplete="off">
+              <input type="text" name="id_sub_categoria" id="id_sub_categoria" required placeholder="Sub Categoria" autocomplete="off">
             </div>
 
             <div class="col">
@@ -66,7 +70,7 @@
           <div class="form-wraper">
             <div class="col">
               <p>Fornecedor:*</p>
-              <input type="text" name="id_fornecedor" id="id_fornecedor" required placeholder="Fornecedor" autocomplete="off">
+              <input type="text" name="id_fornecedor" id="id_fornecedor" required required placeholder="Fornecedor" autocomplete="off">
             </div>
             <div class="col">
               <p>Marca:</p>
@@ -115,8 +119,8 @@
 
 
           <div class="enviar">
-            <input type="submit" name="salvar" id="salvar" value="Salvar" />
-            <input type="submit" name="excluir" id="excluir" value="Excluir" />
+            <input type="submit" name="Salvar" id="Salvar" value="Salvar" />
+            <input type="submit" name="Excluir" id="Excluir" value="Excluir" />
 
           </div>
 
@@ -126,27 +130,6 @@
       <!--container bg-->
   </section>
 
-
-  <div class="conteiner" id="conteiner">
-    <div class="couver">
-      <p> <?php
-          //Recuperando o valor da variável global, os erro de login.
-          if (isset($_SESSION['sucesso_cadastro'])) {
-            echo $_SESSION['sucesso_cadastro'];
-            unset($_SESSION['sucesso_cadastro']);
-          } ?>
-      </p>
-      <p> <?php
-          //Recuperando o valor da variável global, deslogado com sucesso.
-          if (isset($_SESSION['erro_cadastro'])) {
-            echo $_SESSION['erro_cadastro'];
-            unset($_SESSION['erro_cadastro']);
-          }
-          ?>
-      </p>
-      <input type="submit" value="OK" onclick="fechamodal()" /> </p>
-    </div>
-  </div>
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/jquery-ui.min.js"></script>
   <script type="text/javascript" src="js/valida_lista.js"></script>
@@ -156,7 +139,7 @@
 
 
 
-
+</div>
 </body>
 
 </html>

@@ -51,7 +51,7 @@ if (isset($_POST['acao'])) {
       $_SESSION['sucesso_cadastro'] = "Atualizado Com Sucesso";
 
 
-      header("Location:/loja_virtual/Tela _listar_fornecedor.php");
+      header("Location:/loja_virtual/Tela_listar_fornecedor.php");
     }
     mysqli_close($conexao);
   } elseif ($Status == "N") {
@@ -62,7 +62,7 @@ if (isset($_POST['acao'])) {
       $_SESSION['sucesso_cadastro'] = "Atualizado Com Sucesso";
 
 
-      header("Location:/loja_virtual/Tela _listar_fornecedor.php");
+      header("Location:/loja_virtual/Tela_listar_fornecedor.php");
     }
     mysqli_close($conexao);
   }
@@ -75,11 +75,11 @@ if (isset($_POST['acao'])) {
 
   if ($produto == 1) {
     $_SESSION['sucesso_cadastro'] = "Excluido Com Sucesso";
-    header("Location:/loja_virtual/Tela _listar_fornecedor.php");
+    header("Location:/loja_virtual/Tela_listar_fornecedor.php");
   }
   mysqli_close($conexao);
 } else {
 
-  header("Location:/loja_virtual/Tela _listar_fornecedor.php");
+  header("Location:/loja_virtual/Tela_listar_fornecedor.php");
 }
 ?>

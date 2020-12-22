@@ -25,7 +25,7 @@
 		  			  	<h1>Cadastro de Produtos</h1>
 		  			  	<form  method="POST"  name="form" action="back_end/banco.php" >
 		  			  		<div class="form-wraper">
-
+                  
                     <div class="col">
                       <p>Nome do Produto*</p>
                       <input  type="text" name="nome" id="nome" required placeholder= "Nome" autocomplete="off" >
@@ -34,7 +34,12 @@
 		  			  			  <p>Descrição</p>
                       <input type="text" name="descricao" id="descricao" placeholder="Descrição" autocomplete="off" >
                     </div>  
+                    <div class="col" style="  width: 80%; ">
+                  <p>Empresa</p>
+                  <input type="text" name="empresa" id="empresa" value="" placeholder="Empresa" autocomplete="off" required>
+                </div>
                     </div>
+
 
                   <div class="form-wraper">
 
@@ -46,7 +51,7 @@
 
                     <div class="col">
                       <p>Sub Categoria:*</p>
-                      <input type="text" name="id_sub_categoria" id="id_sub_categoria"  placeholder="Sub Categoria" autocomplete="off" >
+                      <input type="text" name="id_sub_categoria" id="id_sub_categoria"  required placeholder="Sub Categoria" autocomplete="off" >
                     </div>
                       
                     <div class="col">

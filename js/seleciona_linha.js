@@ -12,6 +12,7 @@ $(window).on("load", $(async function() {
             id = data.map(d => d.id_produto);
             nome = data.map(d => d.nome);
             descricao = data.map(d => d.descricao);
+            empresa = data.map(d => d.empresa);
             NOME_CATEGORIA = data.map(d => d.NOME_CATEGORIA);
             NOME_SUB_CATEGORIA = data.map(d => d.NOME_SUB_CATEGORIA);
             preco_venda = data.map(d => d.preco_venda);
@@ -26,12 +27,14 @@ $(window).on("load", $(async function() {
             data_cadastro = data.map(d => d.data_cadastro);
             codigo_barras = data.map(d => d.codigo_barras);
 
+
             for (i = 0; i < data.length; i++) {
                 var newRow = $('<tr class = "corpo" >');
                 var cols = "";
                 cols += '<td class= "sumir-sempre">' + id[i] + '</td>';
                 cols += '<td>' + nome[i] + '</td>';
                 cols += '<td class="sumir">' + descricao[i] + '</td>';
+                cols += '<td>' + empresa[i] + '</td>';
                 cols += '<td class="sumir2">' + NOME_CATEGORIA[i] + '</td>';
                 cols += '<td class="sumir2">' + NOME_SUB_CATEGORIA[i] + '</td>';
                 cols += '<td>' + preco_venda[i] + '</td>';
@@ -43,6 +46,7 @@ $(window).on("load", $(async function() {
                 cols += '<td class="sumir">' + valor_medida[i] + '</td>';
                 cols += '<td class="sumir-sempre">' + observacao[i] + '</td>';
                 cols += '<td class="sumir-sempre">' + codigo_barras[i] + '</td>';
+
 
                 newRow.append(cols);
                 $("#products-table").append(newRow);
@@ -138,27 +142,6 @@ $(window).on("click", (function() {
 
         window.location.replace("#openModal");
         $("#openModal").load("Tela_alterar_produto.php?id=" + selecionado[0].innerHTML);
-        /*document.getElementById('id').value = selecionado[0].innerHTML;
-        document.getElementById('nome').value = selecionado[1].innerHTML;
-        document.getElementById('descricao').value = selecionado[2].innerHTML;
-        document.getElementById('id_categoria').value = selecionado[3].innerHTML;
-        document.getElementById('id_sub_categoria').value = selecionado[4].innerHTML;
-        document.getElementById('preco_venda').value = selecionado[5].innerHTML;
-        document.getElementById('preco_custo').value = selecionado[6].innerHTML;
-        document.getElementById('quantidade').value = selecionado[7].innerHTML;
-        document.getElementById('id_fornecedor').value = selecionado[8].innerHTML;
-        document.getElementById('marca').value = selecionado[9].innerHTML;
-        document.getElementById('unidade_medida').value = selecionado[10].innerHTML;
-        document.getElementById('valor_medida').value = selecionado[11].innerHTML;
-        document.getElementById('observacao').value = selecionado[12].innerHTML;
-        document.getElementById('gerar_codigo').value = selecionado[13].innerHTML;
-
-        if (selecionado[0].innerHTML !== selecionado[13].innerHTML) {
-            document.getElementById('radio-2').checked = true;
-        } else {
-            document.getElementById('radio-1').checked = true;
-        }*/
-
     });
 
 
