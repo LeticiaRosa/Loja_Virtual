@@ -13,29 +13,6 @@ body {
     background-color: rgb(235, 237, 240);
 }
 
-.limpa {
-    clear: both;
-}
-
-.center {
-    width: 100%;
-    margin: auto;
-    max-width: 1280px;
-}
-
-#logo {
-    width: 50%;
-    height: 50%;
-}
-
-.panel-heading {
-    font-size: 150%;
-}
-
-.testando {
-    font-size: 150%;
-}
-
 
 /**** section */
 
@@ -80,97 +57,12 @@ section.cover-form {
     width: 100%;
 }
 
-.col-1 {
-    display: flex;
-    flex-direction: column;
-    padding: 5px;
-    flex-wrap: wrap;
-    width: 50%;
-    overflow: hidden;
-}
-
-.col-2 {
-    display: flex;
-    flex-direction: column;
-    padding: 5px;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-.col-3 {
-    padding: 5px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 40%;
-    font-size: 14px;
-    text-align: left;
-    color: #525252;
-    align-items: center;
-}
-
-.col-3 input[type="radio"] {
-    padding: 5px;
-    margin-left: 15px;
-}
-
-.form-container form .col-3 .barra input[type="text"] {
-    padding: 5px;
-    background-color: rgba(214, 226, 217, 0.8);
-    align-items: center;
-    height: 40px;
-    margin-bottom: 10x;
-    cursor: pointer;
-    font-size: 20px;
-    border: 0;
-    border-radius: 10px;
-}
-
-.barra {
-    margin-left: 5px;
-}
-
-.col-1 select {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding: 8px 3px 3px 3px;
-    outline: none;
-    background-color: rgba(214, 226, 217, 0.8);
-    height: 40px;
-    padding: 5px;
-    cursor: pointer;
-    font-size: 20px;
-    border: 0;
-    border-radius: 10px;
-}
-
 .form-wraper p {
     font-size: 14px;
     text-align: left;
     color: #525252;
     width: 100%;
     text-transform: uppercase;
-}
-
-.enviar p {
-    font-size: 14px;
-    color: #525252;
-    width: 100%;
-    text-transform: uppercase;
-}
-
-.texto {
-    text-transform: uppercase;
-}
-
-.form-wraper:not( :first-child) {
-    margin-top: 15px;
-}
-
-.form-wraper:last-child {
-    margin-top: 20px;
 }
 
 .form-container form input[type="text"] {
@@ -185,20 +77,46 @@ section.cover-form {
     text-align: left;
 }
 
-.enviar {
+.col3 {
     display: flex;
     flex-direction: column;
-    padding: 15px;
-    width: 100%;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+    padding: 5px;
+    flex-wrap: wrap;
+    width: 25%;
 }
 
-.enviar p {
-    font-size: 14px;
-    color: #525252;
+.col-3 {
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     width: 100%;
+    font-size: 14px;
+    text-align: left;
+    color: #525252;
+    align-items: center;
+}
+
+.col-3 input[type="radio"] {
+    padding: 5px;
+    margin-left: 15px;
+}
+
+.form-container form .col-3 .barra input[type="text"] {
+    padding: 5px;
+    width: 100%;
+    background-color: rgba(214, 226, 217, 0.8);
+    align-items: center;
+    height: 40px;
+    margin-bottom: 10x;
+    cursor: pointer;
+    font-size: 20px;
+    border: 0;
+    border-radius: 10px;
+}
+
+.barra {
+    margin-left: 5px;
 }
 
 .form-container form input[type="submit"] {
@@ -211,6 +129,23 @@ section.cover-form {
     font-size: 25px;
     border: 0;
     border-radius: 10px;
+}
+
+.form-container form input[type="email"] {
+    padding: 5px;
+    width: 100%;
+    background-color: rgba(214, 226, 217, 0.8);
+    align-items: center;
+    height: 40px;
+    margin-bottom: 10x;
+    cursor: pointer;
+    font-size: 20px;
+    border: 0;
+    border-radius: 10px;
+}
+
+.pega {
+    display: none;
 }
 
 .conteiner {
@@ -262,60 +197,48 @@ section.cover-form {
     border-radius: 10px;
 }
 
-@media screen and (max-width: 900px) {
-    .botao {
-        width: 100%;
-        height: 100%;
-        padding: 0px;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-items: center;
-    }
-    .center {
-        padding: 0px;
-        width: 100%;
-        height: 100%;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-items: center;
-    }
-    .form-container form .form-wraper {
-        padding: 0px;
-        flex-wrap: wrap;
-    }
-    .col-1 {
-        width: 100%;
-    }
+.enviar {
+    padding: 15px;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
 }
 
-.pega {
-    display: none;
+.col-1 {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    flex-wrap: wrap;
+    width: 50%;
+    overflow: hidden;
 }
 
-@media screen and (max-width: 768px) {
-    .botao {
-        height: 100%;
+.col-1 select {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 8px 3px 3px 3px;
+    outline: none;
+    background-color: rgba(214, 226, 217, 0.8);
+    height: 40px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    border: 0;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 1366px) {
+    section.cover-form {
         width: 100%;
-        padding: 0px;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-items: center;
+        padding: 40px;
     }
-    .center {
-        padding: 0px;
-        width: 100%;
-        height: 100%;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-items: center;
-    }
-    .form-container form .form-wraper {
-        padding: 0px;
-        flex-wrap: wrap;
-    }
-    .col-1 {
+    .form-container form {
+        padding: 5px;
         width: 100%;
     }
 }
