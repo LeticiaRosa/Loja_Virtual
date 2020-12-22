@@ -56,7 +56,7 @@ if ($acao == 'autocomplete_sub_categoria') :
 endif;
 
 
-if ($acao == 'teste') :
+if ($acao == 'codigo_barras') :
 
 	$sql = "SELECT P.ID_PRODUTO,UPPER(P.nome)AS nome,P.quantidade, P.PRECO_VENDA, cg.codigo_barras FROM produto as p left outer join CODIGO_BARRAS as cg on cg.id_produto =p.id_produto where P.id_produto=(select max(id_produto) from produto)";
 	$stm = $conexao->prepare($sql);
@@ -137,6 +137,33 @@ if ($acao == 'lista_empresa') :
 	
 	$sql = "SELECT  E.ID_EMPRESA,E.NOME,E.RAZAO_SOCIAL,E.DESCRICAO,case when E.status='S' then'Disponível' ELSE 'Indisponível' END AS STATUS,E.CNPJ,E.ENDERECO,E.OBSERVACAO,DATE_format(E.data_cadastro, '%d-%m-%Y') as data_cadastro,U.NOME_USUARIO FROM EMPRESA AS E LEFT OUTER JOIN USUARIO AS U ON U.ID_USUARIO=E.ID_USUARIO";
 	$stm = $conexao->prepare($sql);
+	$stm->execute();
+	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
+
+	$json = json_encode($dados);
+
+	echo $json;
+
+endif;
+
+
+if ($acao == 'Busca_ult_produto') :
+
+	$sql = "SELECT P.ID_PRODUTO,UPPER(P.nome)AS nome,P.quantidade, e.NOME as nome_empresa FROM produto as p left outer join empresa as e on e.id_empresa=p.id_empresa where P.id_produto=(select max(id_produto) from produto)	";
+	$stm = $conexao->prepare($sql);
+	$stm->execute();
+	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
+
+	$json = json_encode($dados);
+
+	echo $json;
+endif;
+
+if ($acao == 'Busca_ult_produto_b') :
+
+	$sql = "SELECT P.ID_PRODUTO,UPPER(P.nome)AS nome,P.quantidade, e.NOME as nome_empresa FROM produto as p left outer join empresa as e on e.id_empresa=p.id_empresa where P.id_produto=(select max(id_produto) from produto)	";
+	$stm = $conexao->prepare($sql);
+	$stm->bindValue(1, $parametro);
 	$stm->execute();
 	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
 

@@ -83,6 +83,8 @@ section.cover-form {
     padding: 5px;
     flex-wrap: wrap;
     width: 25%;
+    text-align: center;
+    align-items: center;
 }
 
 .col-3 {
