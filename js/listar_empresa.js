@@ -6,40 +6,33 @@ $(window).on("load", $(async function() {
         url: "back_end/busca_autocomplete.php",
         dataType: "json",
         data: {
-            acao: 'lista_fornecedor'
+            acao: 'lista_empresa'
         },
         success: function(data) {
-            id = data.map(d => d.ID_FORNECEDOR);
-            nome = data.map(d => d.nome);
+            id = data.map(d => d.ID_EMPRESA);
+            NOME = data.map(d => d.NOME);
             RAZAO_SOCIAL = data.map(d => d.RAZAO_SOCIAL);
-            STATUS = data.map(d => d.Status);
-            contato = data.map(d => d.contato);
+            DESCRICAO = data.map(d => d.DESCRICAO);
+            STATUS = data.map(d => d.STATUS);
             CNPJ = data.map(d => d.CNPJ);
-            CELULAR = data.map(d => d.CELULAR);
-            fixo = data.map(d => d.fixo);
-            Endereco = data.map(d => d.Endereco);
-            CEP = data.map(d => d.CEP);
-            E_MAIL = data.map(d => d.E_MAIL);
-            Observacao = data.map(d => d.Observacao);
-            Nome_usuario = data.map(d => d.Nome_usuario);
+            ENDERECO = data.map(d => d.ENDERECO);
+            OBSERVACAO = data.map(d => d.OBSERVACAO);
             data_cadastro = data.map(d => d.data_cadastro);
+            NOME_USUARIO = data.map(d => d.NOME_USUARIO);
+
             for (i = 0; i < data.length; i++) {
                 var newRow = $('<tr class = "corpo" >');
                 var cols = "";
                 cols += '<td class="sumir_sempre">' + id[i] + '</td>';
-                cols += '<td>' + nome[i] + '</td>';
+                cols += '<td>' + NOME[i] + '</td>';
                 cols += '<td>' + RAZAO_SOCIAL[i] + '</td>';
+                cols += '<td>' + DESCRICAO[i] + '</td>';
                 cols += '<td>' + STATUS[i] + '</td>';
-                cols += '<td>' + contato[i] + '</td>';
                 cols += '<td>' + CNPJ[i] + '</td>';
-                cols += '<td>' + CELULAR[i] + '</td>';
-                cols += '<td>' + fixo[i] + '</td>';
-                cols += '<td>' + Endereco[i] + '</td>';
-                cols += '<td>' + E_MAIL[i] + '</td>';
-                cols += '<td class="sumir">' + CEP[i] + '</td>';
-                cols += '<td class="sumir">' + Observacao[i] + '</td>';
-                cols += '<td>' + Nome_usuario[i] + '</td>';
-                cols += '<td class="sumir">' + data_cadastro[i] + '</td>';
+                cols += '<td>' + ENDERECO[i] + '</td>';
+                cols += '<td>' + OBSERVACAO[i] + '</td>';
+                cols += '<td class="sumir">' + NOME_USUARIO[i] + '</td>';
+                cols += '<td>' + data_cadastro[i] + '</td>';
 
                 newRow.append(cols);
                 $("#products-table").append(newRow);
@@ -82,7 +75,6 @@ $(window).on("load", $(async function() {
 
     });
 }));
-
 
 
 $(window).on("click", (function() {
@@ -135,24 +127,21 @@ $(window).on("click", (function() {
         if (selecionado[1].innerHTML !== null) {
 
             window.location.replace("#openModal");
-            document.getElementById('id_fornecedor').value = selecionado[0].innerHTML;
+            document.getElementById('id_empresa').value = selecionado[0].innerHTML;
             document.getElementById('nome').value = selecionado[1].innerHTML;
             document.getElementById('Razao_Social').value = selecionado[2].innerHTML;
-            if (selecionado[3].innerHTML == "Disponível") {
+            document.getElementById('descricao').value = selecionado[3].innerHTML;
+            if (selecionado[4].innerHTML == "Disponível") {
 
                 document.getElementById('status').value = document.getElementById('S').value;
             } else {
 
                 document.getElementById('status').value = document.getElementById('N').value;
             }
-            document.getElementById('Contato').value = selecionado[4].innerHTML;
+
             document.getElementById('CNPJ').value = selecionado[5].innerHTML;
-            document.getElementById('celular').value = selecionado[6].innerHTML;
-            document.getElementById('fixo').value = selecionado[7].innerHTML;
-            document.getElementById('endereco').value = selecionado[8].innerHTML;
-            document.getElementById('E-MAIL').value = selecionado[9].innerHTML;
-            document.getElementById('CEP').value = selecionado[10].innerHTML;
-            document.getElementById('observacao').value = selecionado[11].innerHTML;
+            document.getElementById('endereco').value = selecionado[6].innerHTML;
+            document.getElementById('observacao').value = selecionado[7].innerHTML;
 
 
         }

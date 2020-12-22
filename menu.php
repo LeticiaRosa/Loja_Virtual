@@ -31,9 +31,9 @@ if (empty($_SESSION['login'])) {
           <li>
             <a href="#">Empresa</a>
             <ul class="sub-menu">
-            <li><a href="/loja_virtual/Tela_cadastro_produto_1.php">Cadastro de Empresa</a>
+            <li><a href="/loja_virtual/Tela_cadastro_empresa.php">Cadastro de Empresa</a>
             <ul class="sub-menu">
-            <li><a href="/loja_virtual/Tela_cadastro_produto_1.php">Listar Empresas</a></li>
+            <li><a href="/loja_virtual/Tela_listar_empresa.php">Listar Empresas</a></li>
             </ul>
             </li>
             </ul>

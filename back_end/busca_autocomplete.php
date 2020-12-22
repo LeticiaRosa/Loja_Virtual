@@ -146,4 +146,19 @@ if ($acao == 'lista_fornecedor') :
 
 endif;
 
+<<<<<<< HEAD
 
+=======
+if ($acao == 'lista_empresa') :
+	
+	$sql = "SELECT  E.ID_EMPRESA,E.NOME,E.RAZAO_SOCIAL,E.DESCRICAO,case when E.status='S' then'Disponível' ELSE 'Indisponível' END AS STATUS,E.CNPJ,E.ENDERECO,E.OBSERVACAO,DATE_format(E.data_cadastro, '%d-%m-%Y') as data_cadastro,U.NOME_USUARIO FROM EMPRESA AS E LEFT OUTER JOIN USUARIO AS U ON U.ID_USUARIO=E.ID_USUARIO";
+	$stm = $conexao->prepare($sql);
+	$stm->execute();
+	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
+
+	$json = json_encode($dados);
+
+	echo $json;
+
+endif;
+>>>>>>> fad17eee30493fac9bca9a958c1510323861c82d
