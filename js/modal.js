@@ -17,8 +17,10 @@ if (select == "Atualizado Com Sucesso") {
     $('#conteiner').css("display", "flex");
 
 
-}
+} else if (select == "Produto Não Salvo") {
+    $('#conteiner').css("display", "flex");
 
+}
 
 
 

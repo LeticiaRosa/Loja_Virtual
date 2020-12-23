@@ -32,12 +32,12 @@ $empresa = $_POST['empresa'];
     $variavel_2 = mysqli_fetch_assoc($sub_categoria);
     $variavel_3 = mysqli_fetch_assoc($id_empresa);
    
-    if ( empty($variavel_2) ) {
+    if ( empty($variavel_2) && empty($id_sub_categoria)) {
         $variavel_sub = "null" ;
     } else {
         $variavel_sub = "'{$variavel_2['id_sub_categoria']}'";
     }
-         ECHO "'{$variavel_3['id_empresa']}'";
+
 
 
 if(isset($_POST['acao'])){
@@ -68,24 +68,31 @@ if(isset($_POST['acao'])){
              header("Location:/loja_virtual/Tela_cadastro_produto_1.php");
             
         }else {
-            $_SESSION['erro_cadastro'] = "Produto Não cadastrado";
+        $_SESSION['erro_cadastro'] = "Produto Não cadastrado";
         header("Location:/loja_virtual/Tela_cadastro_produto_1.php");
         }
    
 
 } elseif (isset($_POST['Salvar'])) {
     $id = $_POST['id'];
- 
+    mysqli_report(MYSQLI_REPORT_STRICT|MYSQLI_REPORT_ERROR);
+
+    try {
     $query_2 = "UPDATE PRODUTO SET NOME='$nome', DESCRICAO='$descricao',ID_CATEGORIA='{$variavel['id_categoria']}',id_sub_categoria =  $variavel_sub ,PRECO_VENDA='$preco_venda',QUANTIDADE='$quantidade',ID_FORNECEDOR='{$variavel_1['id_fornecedor']}', MARCA='$marca',UNIDADE_MEDIDA='$unidade_medida',VALOR_MEDIDA='$valor_medida',OBSERVACAO='$observacao',ID_USUARIO_ALT='$id_usuario', DATA_ALTEROU=now(), id_empresa= '{$variavel_3['id_empresa']}' WHERE ID_PRODUTO='$id'";
-    echo $query_2;
     $produto = mysqli_query($conexao, $query_2);
-    ECHO $produto ;
+    echo $produto;
     if ($produto == 1) {
       $_SESSION['sucesso_cadastro'] = "Atualizado Com Sucesso";
       header("Location:/loja_virtual/Tela_visualizar_produto.php");
     }
     mysqli_close($conexao);
+    }catch(mysqli_sql_exception $e) {
+      
+        $_SESSION['erro_cadastro'] = "Produto Não Salvo";
+        header("Location:/loja_virtual/Tela_visualizar_produto.php");
+        exit;
 
+    }
 
 } elseif (isset($_POST['Excluir'])) {
     $id = $_POST['id'];
