@@ -20,6 +20,9 @@ if (select == "Atualizado Com Sucesso") {
 } else if (select == "Produto Não Salvo") {
     $('#conteiner').css("display", "flex");
 
+} else if (select == "Confirmação realizada Com Sucesso") {
+    $('#conteiner').css("display", "flex");
+
 }
 
 

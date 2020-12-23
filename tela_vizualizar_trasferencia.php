@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css" />
-
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="css/css_listar_trasferencias.css">
@@ -12,7 +11,7 @@
 </head>
 <html>
 
-<body>
+<body onload="fechamdal()">
 
     <title>Trasferencias</title>
     </head>
@@ -23,7 +22,7 @@
         include_once("menu.php");
         ?>
 
-<section class="cover-form">
+        <section class="cover-form">
             <div class="form-container">
                 <h1>Trasferencias</h1>
 
@@ -33,12 +32,13 @@
                         <thead class="cabeça">
                             <tr>
                                 <th class="sumir_sempre">Id</th>
-                                <th>Nome</th>
-                                <th>Descricao</th>
-                                <th>Status</th>
-                                <th class="sumir">Observação</th>
-                                <th class="sumir"> Usuario</th>
-                                <th class="sumir">Data Cadastro</th>
+                                <th>Produto</th>
+                                <th>Nome Empresa Origem</th>
+                                <th>Nome Empresa Destino</th>
+                                <th class="sumir">Status</th>
+                                <th class="sumir">Quantidade</th>
+                                
+
 
                             </tr>
                         </thead>
@@ -51,11 +51,12 @@
             </div>
             <!--container bg-->
         </section>
-        
+        <div id="openModal" class="modalDialog">
+        </div>
         <div class="pega">
             <input id="pega" type="text" value="<?php if (isset($_SESSION['sucesso_cadastro'])) {
-                                                        echo $_SESSION['sucesso_cadastro'];
-                                                    } ?>">
+                                                    echo $_SESSION['sucesso_cadastro'];
+                                                } ?>">
 
         </div>
         <div class="conteiner" id="conteiner">
@@ -68,16 +69,19 @@
                         unset($_SESSION['sucesso_cadastro']);
                     } ?>
                 </p>
-                
+
                 <input type="submit" value="OK" onclick="fechamodal()" /> </p>
 
             </div>
         </div>
-        <script type="text/javascript" src="js/modal.js"></script>
+
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/jquery-ui.min.js"></script>
         <script type="text/javascript" src="DataTables/datatables.min.js"></script>
-        <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+        <script type="text/javascript" src="js/listar_trasferencias.js"></script>
+        <script type="text/javascript" src="js/modal.js"></script>
+       
+
 
 
 

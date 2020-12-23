@@ -200,8 +200,21 @@ if ($acao == 'contar_notificacao') :
 endif;
 if ($acao == 'Busca_notificacao') :
 
-	$sql = "SELECT u.id_trasferencia, es.nome AS EMPRESA,e.nome AS EMPRESA_TRASFERENCIA, u.nome_usuario,t.qtd_trasfere FROM  trasferencia as t LEFT OUTER JOIN USUARIO AS U on u.id_usuario=t.id_usuario left outer join empresa as es on  es.id_empresa= t.id_empresa left outer join empresa as e on  e.id_empresa= t.id_empresa_tras where t.status='N' ";
+	$sql = "SELECT t.id_trasferencia, es.nome AS EMPRESA,e.nome AS EMPRESA_TRASFERENCIA, u.nome_usuario,t.qtd_trasfere ,p.nome as produto,CASE WHEN T.status='N' THEN 'Aguardando Confirmação'  ELSE 'Trasferencia Ja Confirmada' end as STATUS FROM  trasferencia as t LEFT OUTER JOIN USUARIO AS U on u.id_usuario=t.id_usuario left outer join empresa as es on  es.id_empresa= t.id_empresa left outer join empresa as e on  e.id_empresa= t.id_empresa_tras left outer join produto as p on p.ID_produto=t.id_produto ";
 	$stm = $conexao->prepare($sql);
+	$stm->execute();
+	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
+
+	$json = json_encode($dados);
+
+	echo $json;
+endif;
+
+if ($acao == 'Confirma_notificacao') :
+
+	$sql = "SELECT  es.nome AS EMPRESA,e.nome AS EMPRESA_TRASFERENCIA, u.nome_usuario,t.qtd_trasfere ,p.nome as produto FROM  trasferencia as t LEFT OUTER JOIN USUARIO AS U on u.id_usuario=t.id_usuario left outer join empresa as es on  es.id_empresa= t.id_empresa left outer join empresa as e on  e.id_empresa= t.id_empresa_tras left outer join produto as p on p.ID_produto=t.id_produto where  t.status='N' and t.id_trasferencia=?";
+	$stm = $conexao->prepare($sql);
+	$stm->bindValue(1, $parametro);
 	$stm->execute();
 	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
 
