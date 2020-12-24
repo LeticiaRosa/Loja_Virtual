@@ -15,7 +15,11 @@ $(window).on("load", $(async function() {
             nome_usuario = data.map(d => d.nome_usuario);
             qtd_trasfere = data.map(d => d.qtd_trasfere);
             produto = data.map(d => d.produto);
+            id_produto = data.map(d => d.id_produto);
+            CODIGO_REFERENCIA = data.map(d => d.CODIGO_REFERENCIA);
             console.log(data);
+            document.getElementById('cod_referencia').value = CODIGO_REFERENCIA;
+            document.getElementById('id_produto').value = id_produto;
             document.getElementById('nome').value = EMPRESA;
             document.getElementById('produto').value = produto;
             document.getElementById('Qtd_tras').value = qtd_trasfere;

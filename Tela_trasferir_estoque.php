@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/css_trasferir_estoque.css">
-    <title>Cadastro</title>
+    <title>Transferencia</title>
 </head>
 
 <body >
@@ -13,7 +13,7 @@
     <section class="cover-form">
     <div><a href="Tela_listar_trafere.php" title="Close" class="close">X</a>
         <div class="form-container">
-            <h1>Trasferencia</h1>
+            <h1>Transferencia</h1>
             <form method="POST" name="form" action="back_end/trasferir.php">
             <div class="col3">
                     <div class="col">

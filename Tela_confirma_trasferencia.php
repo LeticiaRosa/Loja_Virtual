@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/css_confirma_trasferencia.css">
-    <title>Confirmar Trasferencia</title>
+    <title>Confirmar Transferencia</title>
 </head>
 
 <body >
@@ -13,12 +13,20 @@
     <section class="cover-form">
     <div><a href="tela_vizualizar_trasferencia.php" title="Close" class="close">X</a>
         <div class="form-container">
-            <h1>Confirmar Trasferencia</h1>
+            <h1>Confirmar Transferencia</h1>
             <form method="POST" name="form" action="back_end/trasferir.php">
             <div class="col3">
                     <div class="col">
                         <label>ID TRASFERENCIA</label>
                         <input type="text" name="id_tras" id="id_tras" value="<?php $id = $_GET['id'];echo $id;?>" readonly="readonly" autocomplete="off">
+                    </div>
+                    <div class="col">
+                        <label>ID PRODUTO</label>
+                        <input type="text" name="id_produto" id="id_produto"  readonly="readonly" autocomplete="off">
+                    </div>
+                    <div class="col">
+                        <label>Codigo Referencia</label>
+                        <input type="text" name="cod_referencia" id="cod_referencia"  readonly="readonly" autocomplete="off">
                     </div>
                 </div>
             <div class="form-wraper">
@@ -47,6 +55,7 @@
                 <div class="enviar">
 
                     <input type="submit" name="Confirmar" id="Confirmar" value="Confirmar" />
+                    <input type="submit" name="Excluir" id="Excluir" value="Excluir" />
 
                 </div>
             </form>

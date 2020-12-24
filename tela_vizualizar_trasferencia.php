@@ -24,7 +24,7 @@
 
         <section class="cover-form">
             <div class="form-container">
-                <h1>Trasferencias</h1>
+                <h1>Transferencia</h1>
 
                 <div class="form-wraper-1">
 

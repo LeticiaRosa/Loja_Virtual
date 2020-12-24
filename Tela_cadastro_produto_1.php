@@ -38,6 +38,10 @@
                   <p>Empresa</p>
                   <input type="text" name="empresa" id="empresa" value="" placeholder="Empresa" autocomplete="off" required>
                 </div>
+                <div class="col">
+		  			  			  <p>Codigo Referencia</p>
+                      <input type="text" name="cod_referencia" id="cod_referencia" required placeholder="Codigo Referencia" autocomplete="off" >
+                    </div> 
                     </div>
 
 
@@ -51,7 +55,7 @@
 
                     <div class="col">
                       <p>Sub Categoria:*</p>
-                      <input type="text" name="id_sub_categoria" id="id_sub_categoria"  required placeholder="Sub Categoria" autocomplete="off" >
+                      <input type="text" name="id_sub_categoria" id="id_sub_categoria"   placeholder="Sub Categoria" autocomplete="off" >
                     </div>
                       
                     <div class="col">

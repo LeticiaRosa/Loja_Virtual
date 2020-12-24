@@ -18,6 +18,8 @@ $observacao=$_POST['observacao'];
 $id_usuario=$_SESSION['usuarioId'];
 $cod_barras = null;
 $empresa = $_POST['empresa'];
+$cod_referencia = $_POST['cod_referencia'];
+
 
     $query = "select id_categoria from categoria where nome = '$id_categoria'";
     $query_1 = "select id_fornecedor from fornecedor where nome = '$id_fornecedor'";
@@ -41,7 +43,7 @@ $empresa = $_POST['empresa'];
 
 
 if(isset($_POST['acao'])){
-    $query_2 = "insert into produto (nome, descricao, id_categoria,id_sub_categoria, preco_venda, preco_custo,quantidade, id_fornecedor, marca, unidade_medida, valor_medida, observacao,id_usuario ,data_cadastro, id_empresa) values ('$nome', '$descricao', '{$variavel['id_categoria']}', $variavel_sub ,'$preco_venda','$preco_custo' ,'$quantidade', '{$variavel_1['id_fornecedor']}', '$marca', '$unidade_medida', '$valor_medida' ,'$observacao','$id_usuario', now(), '{$variavel_3['id_empresa']}')";
+    $query_2 = "insert into produto (nome, descricao, id_categoria,id_sub_categoria, preco_venda, preco_custo,quantidade, id_fornecedor, marca, unidade_medida, valor_medida, observacao,id_usuario ,data_cadastro, id_empresa,CODIGO_REFERENCIA) values ('$nome', '$descricao', '{$variavel['id_categoria']}', $variavel_sub ,'$preco_venda','$preco_custo' ,'$quantidade', '{$variavel_1['id_fornecedor']}', '$marca', '$unidade_medida', '$valor_medida' ,'$observacao','$id_usuario', now(), '{$variavel_3['id_empresa']}','$cod_referencia')";
     ECHO  $query_2 ;
     $produto= mysqli_query($conexao, $query_2);
     
@@ -62,7 +64,7 @@ if(isset($_POST['acao'])){
                 }
                // ECHO $cod_barras;
                
-                $insert = "insert into CODIGO_BARRAS (ID_PRODUTO, id_usuario, CODIGO_BARRAS ,data_cadastro) values ('{$id2['id']}','$id_usuario','$cod_barras',  now())";
+                $insert = "insert into CODIGO_BARRAS (ID_PRODUTO, id_usuario, CODIGO_BARRAS ,data_cadastro,codigo_referencia) values ('{$id2['id']}','$id_usuario','$cod_barras',  now(),'$cod_referencia')";
               ECHO $insert;
                 mysqli_query($conexao, $insert);
              header("Location:/loja_virtual/Tela_cadastro_produto_1.php");
