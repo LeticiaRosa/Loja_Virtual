@@ -51,7 +51,7 @@
 
                 <div class="enviar">
 
-                    <input type="submit" name="trasferir" id="trasferir" value="Trasferir" />
+                    <input type="submit" name="trasferir" id="trasferir" value="Trasferir" onclick=" return validar()" />
 
                 </div>
             </form>
@@ -59,7 +59,14 @@
         <!--container bg-->
     </section>
     <!--cover-form-->
+    </div>
+    <div class="conteiner" id="conteiner">
+        <div class="couver">
+            <p >Transferencia Não pode ser para mesma empresa, gentileza verificar!!</p>
+            
+            <input type="submit" value="OK" onclick="fechamodal()" /> </p>
 
+        </div>
     <script type="text/javascript" src="js/jquery.js"></script> 
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/lista_trasfere.js"></script>  

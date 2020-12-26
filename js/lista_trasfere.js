@@ -49,3 +49,19 @@ $(window).on("load", $(async function() {
     });
 
 }));
+
+function validar() {
+    var nome = document.getElementById("nome");
+    var empresa = document.getElementById("empresa");
+    if (nome.value == empresa.value) {
+        $('#conteiner').css("display", "flex");
+        return false;
+    }
+}
+
+function fechamodal() {
+    $('#conteiner').css("display", "none");
+    var empresa = document.getElementById("empresa");
+    empresa.focus();
+
+}
