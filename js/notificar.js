@@ -20,17 +20,14 @@ $(async function BUSCA() {
                     $('#contador').html(quant);
                 }
             }
-
-
-
-
-
-
+        },
+        complete: function(data) {
+            setTimeout(BUSCA, 5000);
         }
 
     });
-    /* $(document).ready(function() {
-         setInterval(BUSCA, 1000);
-     })*/
+    $(document).ready(function() {
+        setTimeout(BUSCA, 5000);
+    })
 
 });
