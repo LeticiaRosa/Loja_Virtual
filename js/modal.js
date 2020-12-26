@@ -23,6 +23,9 @@ if (select == "Atualizado Com Sucesso") {
 } else if (select == "Confirmação realizada Com Sucesso") {
     $('#conteiner').css("display", "flex");
 
+} else if (select == "Cliente Cadastrado Com Sucesso") {
+    $('#conteiner').css("display", "flex");
+
 }
 
 

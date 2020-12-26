@@ -27,7 +27,12 @@ if (empty($_SESSION['login'])) {
       <li>
         <label id="icone" for="check"><img src="imagens/icons8_menu_50px.png" width="35" height="35"> </label>
         <ul class="sub-menu clearfix">
-
+        <li><a href="#">Clientes</a>
+            <ul class="sub-menu">
+              <li><a href="/loja_virtual/Cadastro_clientes.php">Cadastro De Clientes</a></li>
+              <li><a href="#">Vazio</a></li>
+            </ul>
+          </li>
           <li>
             <a href="#">Empresa</a>
             <ul class="sub-menu">

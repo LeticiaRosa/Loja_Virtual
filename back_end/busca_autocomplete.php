@@ -222,3 +222,14 @@ if ($acao == 'Confirma_notificacao') :
 
 	echo $json;
 endif;
+if ($acao == 'lista_cliente') :
+
+	$sql = "  SELECT id_cliente,nome,cpf,e_mail,fixo,celular,endereco,cep,observacao, DATE_format(data_cadastro, '%d-%m-%Y')as data_cadastro FROM CLIENTE as c";
+	$stm = $conexao->prepare($sql);
+	$stm->execute();
+	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
+
+	$json = json_encode($dados);
+
+	echo $json;
+endif;
