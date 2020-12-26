@@ -1,6 +1,4 @@
-setInterval(busca, 1000);
-
-$(async function busca() {
+$(async function BUSCA() {
     await $.ajax({
         url: "back_end/busca_autocomplete.php",
         dataType: "json",
@@ -31,5 +29,8 @@ $(async function busca() {
         }
 
     });
+    $(document).ready(function() {
+        setInterval(BUSCA, 1000);
+    })
 
 });
