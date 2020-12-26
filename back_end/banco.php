@@ -1,6 +1,11 @@
 <?php
 session_start();
 require_once ("conexao.php");
+if(isset($_POST['Salvar'])){
+    echo "teste";
+}else {
+    echo "não tem";
+};
 
 $nome = $_POST['nome'];
 $descricao= $_POST['descricao'];
@@ -109,9 +114,10 @@ if(isset($_POST['acao'])){
     }
     mysqli_close($conexao);
 
-}else {
+} 
+else {
 
-header("Location:/loja_virtual/Tela_cadastro_produto_1.php");
+header("Location:/loja_virtual/Tela_visualizar_produto.php");
 }
 
 

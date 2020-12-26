@@ -10,7 +10,7 @@
 </head>
 <html>
 
-<body onLoad= "fechamdal()" >
+<body onload="fechamdal()" >
 
     <?php
     include_once("menu.php");
@@ -88,6 +88,9 @@
 
         </div>
     </div>
+
+
+    
 
    
     <script type="text/javascript" src="js/jquery.js"></script> 

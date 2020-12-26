@@ -17,7 +17,7 @@
     <div><a href="Tela_visualizar_produto.php" title="Close" class="close">X</a>
       <div class="form-container" id="modal">
         <h1>Editar Produto</h1>
-        <form method="POST" name="form" action="back_end/banco.php">
+        <form method="POST" name="form" action="back_end/banco.php" id="teste">
           <div class="form-wraper">
             <div class="col" style="  width: 25%; ">
               <p>ID_Produto</p>
@@ -105,7 +105,7 @@
             <div class="col-3" id="gerar_codigo">
               <div class="texto" id="texto">Código: </div>
               <div class="barra" id="barra"><input type="text" class="gerar" name="gerar_codigo-1" id="gerar_codigo_1" placeholder="Código" autocomplete="off"></div>
-            </div>
+            </div>''
           </div>
 
 
@@ -119,16 +119,26 @@
 
 
           <div class="enviar">
-            <input type="submit" name="Salvar" id="Salvar" value="Salvar" />
-            <input type="submit" name="Excluir" id="Excluir" value="Excluir" />
+            <input type="submit" name="Salvar-1" id="Salvar-1" value="Salvar" onclick="return openConfirmacao('salvar')"/>
+            <input type="submit" name="Excluir" id="Excluir" value="Excluir"  onclick="return openConfirmacao('excluir')" />
 
           </div>
+          <div class="conteiner" id="conteiner">
+          <div class="couver">
+            <p class = "Texto" id = "Texto" >   </p>                                                                                                                                              
+            <input type="submit" value="OK" id="OK"   onclick="return confirma()" /> 
+           <input type="submit" value="CANCELAR" id="CANCELAR" name="CANCELAR"  onclick="fechamodal()" /> 
+
+        </div>
+        </div>
 
         </form>
 
-      </div>
+      </div>  
       <!--container bg-->
   </section>
+
+  
 
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/jquery-ui.min.js"></script>

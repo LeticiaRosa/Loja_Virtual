@@ -122,7 +122,8 @@ td {
     display: none;
 }
 
-.conteiner {
+.conteiner,
+.conteiner-1 {
     top: 0px;
     left: 0;
     width: 100vw;

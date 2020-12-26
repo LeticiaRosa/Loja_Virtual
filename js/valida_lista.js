@@ -65,3 +65,46 @@ function getRadioValor(name) {
 
     return null;
 }
+
+function openConfirmacao(tipo) {
+
+    $('#conteiner').css("display", "flex");
+    if (tipo == "salvar") {
+        $('#Texto').html(" Confirma alteração ? ");
+        return false;
+    } else if (tipo == "excluir") {
+        $('#Texto').html(" Confirma exclusão ? ");
+        return false;
+    }
+
+
+}
+
+
+function confirma() {
+
+    var texto = document.getElementById("Texto").innerHTML;
+
+
+
+    if (texto == " Confirma exclusão ? ") {
+        var OK = document.getElementById("teste").elements[19].name = "Execluir";;
+
+
+        console.log(document.getElementById("teste").elements[19]);
+
+        fechamodal();
+        return true;
+    } else if (texto == " Confirma alteração ? ") {
+        var OK = document.getElementById("teste").elements[19].name = "Salvar";
+
+
+        console.log(document.getElementById("teste").elements[19]);
+
+        fechamodal();
+        return true;
+    }
+
+
+
+}
