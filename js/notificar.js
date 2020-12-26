@@ -29,8 +29,8 @@ $(async function BUSCA() {
         }
 
     });
-    $(document).ready(function() {
-        setInterval(BUSCA, 1000);
-    })
+    /* $(document).ready(function() {
+         setInterval(BUSCA, 1000);
+     })*/
 
 });
