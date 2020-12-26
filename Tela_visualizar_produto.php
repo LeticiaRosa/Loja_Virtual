@@ -62,6 +62,7 @@
                                                 echo $_SESSION['sucesso_cadastro'];
                                             }else {
                                                 echo $_SESSION['erro_cadastro'];
+                                                
                                             } ?>">
                                     
     </div>

@@ -108,7 +108,7 @@ endif;
 
 if ($acao == 'produto') :
 
-	$sql = "SELECT p.id_produto, p.nome, p.descricao, E.NOME AS empresa, C.NOME AS NOME_CATEGORIA, CASE WHEN SB.NOME IS NULL THEN 'NAO POSSUI' ELSE SB.NOME END AS NOME_SUB_CATEGORIA ,p.preco_venda, p.preco_custo,p.quantidade, F.NOME AS FORNECEDOR, p.marca, p.unidade_medida, p.valor_medida, p.observacao,U.Nome_usuario AS USUARIO, DATE_format(p.data_cadastro, '%d-%m-%Y') as data_cadastro,B.codigo_barras from produto p left outer join fornecedor F ON P.ID_FORNECEDOR=F.ID_FORNECEDOR LEFT OUTER JOIN categoria C ON C.ID_CATEGORIA=P.ID_CATEGORIA LEFT OUTER JOIN usuario U ON U.ID_USUARIO=P.ID_USUARIO  LEFT OUTER JOIN SUB_CATEGORIA SB ON SB.ID_SUB_CATEGORIA=P.ID_SUB_CATEGORIA LEFT OUTER JOIN CODIGO_BARRAS B ON B.ID_produto=P.ID_produto LEFT OUTER JOIN EMPRESA E ON P.ID_EMPRESA = E.ID_EMPRESA";
+	$sql = "SELECT p.id_produto, p.nome, p.descricao, E.NOME AS empresa, C.NOME AS NOME_CATEGORIA, CASE WHEN SB.NOME IS NULL THEN '' ELSE SB.NOME END AS NOME_SUB_CATEGORIA ,p.preco_venda, p.preco_custo,p.quantidade, F.NOME AS FORNECEDOR, p.marca, p.unidade_medida, p.valor_medida, p.observacao,U.Nome_usuario AS USUARIO, DATE_format(p.data_cadastro, '%d-%m-%Y') as data_cadastro,B.codigo_barras from produto p left outer join fornecedor F ON P.ID_FORNECEDOR=F.ID_FORNECEDOR LEFT OUTER JOIN categoria C ON C.ID_CATEGORIA=P.ID_CATEGORIA LEFT OUTER JOIN usuario U ON U.ID_USUARIO=P.ID_USUARIO  LEFT OUTER JOIN SUB_CATEGORIA SB ON SB.ID_SUB_CATEGORIA=P.ID_SUB_CATEGORIA LEFT OUTER JOIN CODIGO_BARRAS B ON B.ID_produto=P.ID_produto LEFT OUTER JOIN EMPRESA E ON P.ID_EMPRESA = E.ID_EMPRESA";
 	$stm = $conexao->prepare($sql);
 	$stm->execute();
 	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
@@ -119,7 +119,7 @@ if ($acao == 'produto') :
 endif;
 if ($acao == 'busca') :
 	
-	$sql = "SELECT p.id_produto, p.nome, p.descricao, E.NOME AS empresa, C.NOME AS NOME_CATEGORIA, CASE WHEN SB.NOME IS NULL THEN 'NAO POSSUI' ELSE SB.NOME END AS NOME_SUB_CATEGORIA ,p.preco_venda, p.preco_custo,p.quantidade, F.NOME AS FORNECEDOR, p.marca, p.unidade_medida, p.valor_medida, p.observacao,U.Nome_usuario AS USUARIO, DATE_format(p.data_cadastro, '%d-%m-%Y') as data_cadastro,B.codigo_barras from produto p left outer join fornecedor F ON P.ID_FORNECEDOR=F.ID_FORNECEDOR LEFT OUTER JOIN categoria C ON C.ID_CATEGORIA=P.ID_CATEGORIA LEFT OUTER JOIN usuario U ON U.ID_USUARIO=P.ID_USUARIO  LEFT OUTER JOIN SUB_CATEGORIA SB ON SB.ID_SUB_CATEGORIA=P.ID_SUB_CATEGORIA LEFT OUTER JOIN CODIGO_BARRAS B ON B.ID_produto=P.ID_produto LEFT OUTER JOIN EMPRESA E ON P.ID_EMPRESA = E.ID_EMPRESA where p.id_produto =?";
+	$sql = "SELECT p.id_produto, p.nome, p.descricao, E.NOME AS empresa, C.NOME AS NOME_CATEGORIA, CASE WHEN SB.NOME IS NULL THEN '' ELSE SB.NOME END AS NOME_SUB_CATEGORIA ,p.preco_venda, p.preco_custo,p.quantidade, F.NOME AS FORNECEDOR, p.marca, p.unidade_medida, p.valor_medida, p.observacao,U.Nome_usuario AS USUARIO, DATE_format(p.data_cadastro, '%d-%m-%Y') as data_cadastro,B.codigo_barras from produto p left outer join fornecedor F ON P.ID_FORNECEDOR=F.ID_FORNECEDOR LEFT OUTER JOIN categoria C ON C.ID_CATEGORIA=P.ID_CATEGORIA LEFT OUTER JOIN usuario U ON U.ID_USUARIO=P.ID_USUARIO  LEFT OUTER JOIN SUB_CATEGORIA SB ON SB.ID_SUB_CATEGORIA=P.ID_SUB_CATEGORIA LEFT OUTER JOIN CODIGO_BARRAS B ON B.ID_produto=P.ID_produto LEFT OUTER JOIN EMPRESA E ON P.ID_EMPRESA = E.ID_EMPRESA where p.id_produto =?";
 	$stm = $conexao->prepare($sql);
 	$stm->bindValue(1, $parametro);
 	$stm->execute();
