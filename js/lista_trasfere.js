@@ -53,15 +53,24 @@ $(window).on("load", $(async function() {
 function validar() {
     var nome = document.getElementById("nome");
     var empresa = document.getElementById("empresa");
+    var Quantidade = document.getElementById("Quantidade");
+    var Qtd_tras = document.getElementById("Qtd_tras");
     if (nome.value == empresa.value) {
         $('#conteiner').css("display", "flex");
+        $('#texto').html("Transferencia Não pode ser para mesma empresa, gentileza verificar!!");
         return false;
+
+    }
+    if (Quantidade.value < Qtd_tras.value) {
+        $('#conteiner').css("display", "flex");
+        $('#texto').html("Quantidade informada para trasferencia e Maior que quantidade em estoque!!");
+        return false;
+
     }
 }
 
 function fechamodal() {
     $('#conteiner').css("display", "none");
-    var empresa = document.getElementById("empresa");
-    empresa.focus();
+
 
 }

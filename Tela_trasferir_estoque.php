@@ -59,13 +59,14 @@
         <!--container bg-->
     </section>
     <!--cover-form-->
-    </div>
+    
     <div class="conteiner" id="conteiner">
         <div class="couver">
-            <p >Transferencia Não pode ser para mesma empresa, gentileza verificar!!</p>
+            <p class="texto"id="texto"></p>
             
-            <input type="submit" value="OK" onclick="fechamodal()" /> </p>
+            <input type="submit" value="OK" onclick="fechamodal()" /> 
 
+        </div>
         </div>
     <script type="text/javascript" src="js/jquery.js"></script> 
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
