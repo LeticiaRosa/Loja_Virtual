@@ -24,7 +24,6 @@ $(window).on("load", $(async function() {
     // Atribui evento e função para limpeza dos campos
     // $('#clicar').on('input', limpaCampos);
 
-    var nomes = [];
     await $.ajax({
         url: "back_end/busca_autocomplete.php",
         dataType: "json",
