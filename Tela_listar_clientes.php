@@ -41,7 +41,7 @@
                                 <th>Celular</th>
                                 <th>Endereço</th>
                                 <th>Cep</th>
-                                <th>Obeservação</th>
+                                <th>Observação</th>
                                 <th>Data Cadastro</th>
 
                             </tr>
@@ -56,6 +56,14 @@
             <!--container bg-->
         </section>
         <!--cover-form-->
+
+        <div class="center">
+            <div id="openModal" class="modalDialog">
+                <div>
+                    <?php include_once("Tela_alterar_cliente.php");  ?>
+                </div>
+            </div>
+        </div>
 
         <div class="pega">
             <input id="pega" type="text" value="<?php if (isset($_SESSION['sucesso_cadastro'])) {
