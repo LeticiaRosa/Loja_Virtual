@@ -25,7 +25,7 @@
         ?>
         <section class="cover-form">
             <div class="form-container">
-                <h1>Fornecedores</h1>
+                <h1> Empresas</h1>
 
                 <div class="form-wraper-1">
 

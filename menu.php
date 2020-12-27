@@ -29,8 +29,11 @@ if (empty($_SESSION['login'])) {
         <ul class="sub-menu clearfix">
         <li><a href="#">Clientes</a>
             <ul class="sub-menu">
-              <li><a href="/loja_virtual/Cadastro_clientes.php">Cadastro De Clientes</a></li>
-              <li><a href="#">Vazio</a></li>
+              <li><a href="/loja_virtual/Cadastro_clientes.php">Cadastro De Clientes</a>
+              <ul class="sub-menu">
+              <li><a href="/loja_virtual/Tela_listar_clientes.php">Listar Clientes</a></li>
+              </ul>
+              </li>
             </ul>
           </li>
           <li>
@@ -82,7 +85,7 @@ if (empty($_SESSION['login'])) {
           <li><a href="#">Estoque</a>
             <ul class="sub-menu">
               <li><a href="#">Controle de Estoque</a></li>
-              <li><a href="/loja_virtual/Tela_listar_trafere.php">Trasferencia de Produtos</a></li>
+              <li><a href="/loja_virtual/Tela_listar_trafere.php">Transferencia de Produtos</a></li>
             </ul>
           </li>
           <li><a href="#">Relatórios</a>

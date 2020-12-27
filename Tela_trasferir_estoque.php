@@ -39,7 +39,7 @@
                 </div>
                 <div class="conter-1">
                 <div class="col-1">
-                        <p>Quantidade que deseja Trasferir:</p>
+                        <p>Quantidade que deseja Transferir:</p>
                         <input type="text" name="Qtd_tras" id="Qtd_tras"  placeholder="Quantidade"require autocomplete="OFF">
                     </div>
                     <div class="col-1">

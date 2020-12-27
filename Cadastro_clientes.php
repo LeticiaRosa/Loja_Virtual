@@ -16,7 +16,7 @@
 
     <section class="cover-form">
         <div class="form-container">
-            <h1>Cadastro de Clienetes</h1>
+            <h1>Cadastro de Clientes</h1>
             <form method="POST" name="form" action="back_end/cliente.php">
                 <div class="form-wraper">
 
