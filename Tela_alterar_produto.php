@@ -12,7 +12,6 @@
 <html>
 
 <body>
-<div class = "tudo">
   <section class="cover-form">
     <div><a href="Tela_visualizar_produto.php" title="Close" class="close">X</a>
       <div class="form-container" id="modal">
@@ -22,7 +21,7 @@
             <div class="col" style="  width: 25%; ">
               <p>ID_Produto</p>
               <input type="text" name="id" id="id" value="<?php $id = $_GET['id'];
-                                                            echo $id; ?>" placeholder="id" autocomplete="off">
+                                                          echo $id; ?>" placeholder="id" autocomplete="off">
             </div>
             <div class="col">
               <p>Nome do Produto*</p>
@@ -33,8 +32,8 @@
               <input type="text" name="descricao" id="descricao" placeholder="Descrição" autocomplete="off" maxlength="50">
             </div>
             <div class="col" style="  width: 80%; ">
-                  <p>Empresa</p>
-                  <input type="text" name="empresa" id="empresa" value="" placeholder="Empresa" autocomplete="off" required>
+              <p>Empresa</p>
+              <input type="text" name="empresa" id="empresa" value="" placeholder="Empresa" autocomplete="off" required>
             </div>
           </div>
 
@@ -48,7 +47,7 @@
 
             <div class="col">
               <p>Sub Categoria:*</p>
-              <input type="text" name="id_sub_categoria" id="id_sub_categoria"  placeholder="Sub Categoria" autocomplete="off">
+              <input type="text" name="id_sub_categoria" id="id_sub_categoria" placeholder="Sub Categoria" autocomplete="off">
             </div>
 
             <div class="col">
@@ -58,7 +57,7 @@
 
             <div class="col">
               <p>Preço de Custo:*</p>
-              <input type="text" name="preco_custo" id="preco_custo" required placeholder="Preço de Custo" autocomplete="off" maxlength="10"> 
+              <input type="text" name="preco_custo" id="preco_custo" required placeholder="Preço de Custo" autocomplete="off" maxlength="10">
             </div>
 
             <div class="col">
@@ -89,7 +88,7 @@
 
             <div class="col-2" id="valor_medida">
               <p>Valor Medida:</p>
-              <input type="text" name="valor_medida" id="valor_medida" placeholder="Valor Medida" autocomplete="off" maxlength="5"> 
+              <input type="text" name="valor_medida" id="valor_medida" placeholder="Valor Medida" autocomplete="off" maxlength="5">
             </div>
 
           </div>
@@ -119,26 +118,26 @@
 
 
           <div class="enviar">
-            <input type="submit" name="Salvar-1" id="Salvar-1" value="Salvar" onclick="return openConfirmacao('salvar')"/>
-            <input type="submit" name="Excluir" id="Excluir" value="Excluir"  onclick="return openConfirmacao('excluir')" />
+            <input type="submit" name="Salvar-1" id="Salvar-1" value="Salvar" onclick="return openConfirmacao('salvar')" />
+            <input type="submit" name="Excluir" id="Excluir" value="Excluir" onclick="return openConfirmacao('excluir')" />
 
           </div>
           <div class="conteiner" id="conteiner">
-          <div class="couver">
-            <p class = "Texto" id = "Texto" >   </p>                                                                                                                                              
-            <input type="submit" value="OK" id="OK"   onclick="return confirma()" /> 
-           <input type="submit" value="CANCELAR" id="CANCELAR" name="CANCELAR"  onclick="fechamodal()" /> 
+            <div class="couver">
+              <p class="Texto" id="Texto"> </p>
+              <input type="submit" value="OK" id="OK" onclick="return confirma()" />
+              <input type="submit" value="CANCELAR" id="CANCELAR" name="CANCELAR" onclick="fechamodal()" />
 
-        </div>
-        </div>
+            </div>
+          </div>
 
         </form>
 
-      </div>  
+      </div>
       <!--container bg-->
   </section>
 
-  
+
 
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/jquery-ui.min.js"></script>
@@ -149,7 +148,6 @@
 
 
 
-</div>
 </body>
 
 </html>
