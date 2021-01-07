@@ -1,6 +1,7 @@
 function busca_produto() {
     t1 = "";
     t2 = "";
+    valor = 0;
     existe_valor = -1;
     selecionado = '';
     $.ajax({
@@ -36,12 +37,15 @@ function busca_produto() {
                         selecionado = selecionado.getElementsByTagName("td");
                         if (selecionado[0].innerHTML == teste) {
                             existe_valor = j;
+
                         }
                     }
                     if (existe_valor > -1) {
                         selecionado = selecionados[existe_valor];
                         selecionado = selecionado.getElementsByTagName("td");
-                        selecionado[3].innerHTML = selecionado[3].innerHTML + 1;
+                        valor = selecionado[3].innerHTML;
+                        resultado = parseFloat(valor) + 1;
+                        selecionado[3].innerHTML = resultado;
                     } else {
                         newRow.append(cols);
                         $("#products-table").append(newRow);
