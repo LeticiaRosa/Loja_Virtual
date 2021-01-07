@@ -29,11 +29,11 @@
             <div class="form-wraper">
             <div class="col">
                     <p>Total Venda</p>
-                    <input type="text" name="venda" id="venda" required placeholder="codigo" autocomplete="off" >
+                    <input type="text" name="venda" id="venda" required placeholder="Total" autocomplete="off" >
                 </div>
                 <div class="col">
                     <p>Total De itens</p>
-                    <input type="text" name="itens" id="itens" required placeholder="codigo" autocomplete="off" >
+                    <input type="text" name="itens" id="itens" required placeholder="Itens" autocomplete="off" >
                 </div>
                 <div class="col1 tabela-container">
 
