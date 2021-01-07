@@ -245,3 +245,15 @@ if ($acao == 'lista_cliente_p') :
 
 	echo $json;
 endif;
+if ($acao == 'CAIXA') :
+
+	$sql = "SELECT P.ID_PRODUTO,P.NOME,P.PRECO_VENDA FROM produto AS P LEFT OUTER JOIN CODIGO_BARRAS AS COD ON COD.ID_PRODUTO=P.ID_PRODUTO WHERE P.ID_EMPRESA=1 AND COD.codigo_barras=?";
+	$stm = $conexao->prepare($sql);
+	$stm->bindValue(1, $parametro);
+	$stm->execute();
+	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
+
+	$json = json_encode($dados);
+
+	echo $json;
+endif;
