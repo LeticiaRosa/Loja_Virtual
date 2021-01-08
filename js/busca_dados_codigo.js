@@ -14,10 +14,7 @@ $(window).on("load", $(async function() {
             quantidate = data.map(d => d.quantidade);
             valor = data.map(d => d.PRECO_VENDA);
             codigo = data.map(d => d.codigo_barras)
-            console.log(nome);
-            console.log(id);
-            console.log(quantidate);
-            console.log(valor);
+
             document.getElementById('Id').value = id;
             document.getElementById('valor_produto').value = valor + ',00';
             document.getElementById('qtd_estoque').value = quantidate;

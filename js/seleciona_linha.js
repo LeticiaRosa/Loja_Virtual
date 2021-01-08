@@ -133,7 +133,6 @@ $(window).on("click", (function() {
         for (var i = 0; i < selecionados.length; i++) {
             var selecionado = selecionados[i];
             selecionado = selecionado.getElementsByTagName("td");
-            console.log(selecionado);
         }
 
 

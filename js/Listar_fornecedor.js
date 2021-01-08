@@ -121,7 +121,6 @@ $(window).on("click", (function() {
     **/
     var btnVisualizar = document.getElementById("visualizarDados");
 
-    var nome = "";
     btnVisualizar.addEventListener("click", function() {
         var selecionados = tabela.getElementsByClassName("selecionado");
 

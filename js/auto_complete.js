@@ -139,8 +139,7 @@
              document.getElementById('unidade_medida').value = unidade_medida;
              document.getElementById('valor_medida').value = valor_medida;
              document.getElementById('observacao').value = observacao;
-             console.log(id);
-             console.log(codigo_barras);
+
              if (id == codigo_barras) {
                  document.getElementById('radio-1').checked = true;
              } else {

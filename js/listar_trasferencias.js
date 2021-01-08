@@ -107,7 +107,6 @@
      **/
      var btnVisualizar = document.getElementById("visualizarDados");
 
-     var nome = "";
      btnVisualizar.addEventListener("click", function() {
          abremodal();
          var selecionados = tabela.getElementsByClassName("selecionado");
@@ -119,7 +118,6 @@
              selecionado = selecionado.getElementsByTagName("td");
 
          }
-         console.log(selecionado[0].innerHTML);
 
          window.location.replace("#openModal");
          $("#openModal").load("Tela_confirma_trasferencia.php?id=" + selecionado[0].innerHTML);
