@@ -238,6 +238,7 @@ if ($acao == 'lista_cliente_p') :
 
 	$sql = "  SELECT id_cliente,nome,cpf,e_mail,fixo,celular,endereco,cep,observacao, DATE_format(data_cadastro, '%d-%m-%Y')as data_cadastro FROM CLIENTE as c where id_cliente = ? ";
 	$stm = $conexao->prepare($sql);
+	$stm->bindValue(1, $parametro);
 	$stm->execute();
 	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
 

@@ -20,7 +20,7 @@
                  <div class="col" style="  width: 25%; ">
                 <p>ID_Produto</p>
                 <input type="text" name="id" id="id" value="<?php $id = $_GET['id'];
-                                                            echo $id; ?>" placeholder="id" autocomplete="off">
+                                                            echo $id; ?>" placeholder="id" autocomplete="off" readonly="readonly">
                 </div>
                 <div class="col">
                     <p>Nome*</p>
@@ -79,7 +79,7 @@
 
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="js/auto_complete.js"></script>
+    <script type="text/javascript" src="js/Altera_cliente.js"></script>
     
 
 

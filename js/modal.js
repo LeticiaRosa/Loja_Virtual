@@ -26,6 +26,12 @@ if (select == "Atualizado Com Sucesso") {
 } else if (select == "Cliente Cadastrado Com Sucesso") {
     $('#conteiner').css("display", "flex");
 
+} else if (select == "Cliente Atualizado Com Sucesso") {
+    $('#conteiner').css("display", "flex");
+
+} else if (select == "Cliente Excluido Com Sucesso") {
+    $('#conteiner').css("display", "flex");
+
 }
 
 
