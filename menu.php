@@ -27,23 +27,29 @@ if (empty($_SESSION['login'])) {
       <li>
         <label id="icone" for="check"><img src="imagens/icons8_menu_50px.png" width="35" height="35"> </label>
         <ul class="sub-menu clearfix">
-        <li><a href="#">Clientes</a>
+          <li><a href="#">Clientes</a>
             <ul class="sub-menu">
               <li><a href="/loja_virtual/Cadastro_clientes.php">Cadastro De Clientes</a>
-              <ul class="sub-menu">
-              <li><a href="/loja_virtual/Tela_listar_clientes.php">Listar Clientes</a></li>
-              </ul>
+                <ul class="sub-menu">
+                  <li><a href="/loja_virtual/Tela_listar_clientes.php">Listar Clientes</a></li>
+                </ul>
               </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Caixa</a>
+            <ul class="sub-menu">
+              <li><a href="/loja_virtual/Tela_caixa.php">Caixa</a> </li>
             </ul>
           </li>
           <li>
             <a href="#">Empresa</a>
             <ul class="sub-menu">
-            <li><a href="/loja_virtual/Tela_cadastro_empresa.php">Cadastro de Empresa</a>
-            <ul class="sub-menu">
-            <li><a href="/loja_virtual/Tela_listar_empresa.php">Listar Empresas</a></li>
-            </ul>
-            </li>
+              <li><a href="/loja_virtual/Tela_cadastro_empresa.php">Cadastro de Empresa</a>
+                <ul class="sub-menu">
+                  <li><a href="/loja_virtual/Tela_listar_empresa.php">Listar Empresas</a></li>
+                </ul>
+              </li>
             </ul>
           </li>
 
@@ -51,33 +57,33 @@ if (empty($_SESSION['login'])) {
             <a href="#">Produto</a>
             <ul class="sub-menu">
               <li><a href="/loja_virtual/Tela_cadastro_produto_1.php">Cadastro de Produto</a>
-              <ul class="sub-menu">
-              <li><a href="/loja_virtual/Tela_visualizar_produto.php">Listar Produtos</a></li>
-            </ul>
-              
+                <ul class="sub-menu">
+                  <li><a href="/loja_virtual/Tela_visualizar_produto.php">Listar Produtos</a></li>
+                </ul>
+
               </li>
               <li><a href="/loja_virtual/Cadastro_categoria.php">Cadastro de Categoria</a>
-              <ul class="sub-menu">
+                <ul class="sub-menu">
                   <li><a href="/loja_virtual/Editar_categoria.php">Listar Categorias</a></li>
-                
+
                 </ul>
               </li>
               <li><a href="/loja_virtual/Cadastro_Sub_Categoria.php">Cadastro de Sub Categoria</a>
-              <ul class="sub-menu">
-              <li><a href="/loja_virtual/Tela_listar_subcategoria.php">Listar Sub Categorias</a></li>
-              </ul>
+                <ul class="sub-menu">
+                  <li><a href="/loja_virtual/Tela_listar_subcategoria.php">Listar Sub Categorias</a></li>
+                </ul>
               </li>
               <li><a href="/loja_virtual/Gera_codigo_barra.php">Gerar codigo de barras</a></li>
-              
+
 
             </ul>
           </li>
           <li><a href="#">Fornecedor</a>
             <ul class="sub-menu">
               <li><a href="/loja_virtual/Cadastro_fornecedor.php">Cadastro de Fornecedor</a>
-              <ul class="sub-menu">
-              <li><a href="/loja_virtual/Tela_listar_fornecedor.php">Listar Fornecedores</a></li>
-              </ul>
+                <ul class="sub-menu">
+                  <li><a href="/loja_virtual/Tela_listar_fornecedor.php">Listar Fornecedores</a></li>
+                </ul>
               </li>
               <li><a href="#">Sub Sub</a></li>
             </ul>
@@ -93,10 +99,11 @@ if (empty($_SESSION['login'])) {
 
             </ul>
           </li>
-          
+
           <li><a href="#">Usuário</a>
             <ul class="sub-menu">
-              <li><a href="#">Cadastro</a></li>
+              <li><a href="/loja_virtual/Tela_cadastro_usuario.php">Cadastro</a></li>
+              <li><a href="/loja_virtual/Tela_listar_usuario.php">Cadastro</a></li>
               <li><a href="#">Permissões</a></li>
               <li><a href="#">LOG</a></li>
             </ul>
@@ -110,7 +117,7 @@ if (empty($_SESSION['login'])) {
         </ul>
       </li>
       <li>
-      
+
       <li class="sair"><a href="/loja_virtual/Tela_login_nova.php">Sair </a></li>
       <li class="ajuda"><a href="#">Ajuda</a></li>
       <li class="configurações"><a href="#">Configurações</a>
@@ -122,11 +129,11 @@ if (empty($_SESSION['login'])) {
       </li>
       <li class="welcome"><a href="#">Bem vindo! <?php echo $_SESSION['login']; ?> </a> </li>
       <li class="notificacao"><a href="#">Notificações</a>
-      <span class="contador" id="contador"></span>
-            <ul class="sub-menu" id="notifica">
-                
-            </ul>
-          </li>
+        <span class="contador" id="contador"></span>
+        <ul class="sub-menu" id="notifica">
+
+        </ul>
+      </li>
       </li>
 
 

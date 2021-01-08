@@ -32,7 +32,11 @@ if (select == "Atualizado Com Sucesso") {
 } else if (select == "Cliente Excluido Com Sucesso") {
     $('#conteiner').css("display", "flex");
 
+} else if (select == "Usuario Cadastrado Com Sucesso") {
+    $('#conteiner').css("display", "flex");
+
 }
+
 
 
 
