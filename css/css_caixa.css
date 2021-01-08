@@ -57,6 +57,12 @@ section.cover-form {
     display: flex;
 }
 
+.form-wraper1 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
 .col {
     display: flex;
     flex-direction: column;

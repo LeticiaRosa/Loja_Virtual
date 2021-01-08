@@ -27,13 +27,18 @@
                 </div>
             </div>
             <div class="form-wraper">
-            <div class="col">
-                    <p>Total Venda</p>
-                    <input type="text" name="venda" id="venda" required placeholder="Total" autocomplete="off" >
+                <div class="col2">
+                    <p>Produto *</p>
+                    <input type="text" name="produto" id="produto" required placeholder="produto" autocomplete="off" onchange="busca_produto();">
                 </div>
+            </div>
+            <div class="form-wraper1">
+            
+
                 <div class="col">
-                    <p>Total De itens</p>
-                    <input type="text" name="itens" id="itens" required placeholder="Itens" autocomplete="off" >
+                    <p>Codigo De Barras *</p>
+                    <input type="text" name="codigo" id="codigo" required placeholder="codigo" autocomplete="off" onchange="busca_produto();">
+
                 </div>
                 <div class="col1 tabela-container">
 
@@ -53,7 +58,18 @@
                     </tbody>
                 </table>
             </div>
+            
             </div>
+            <div class="form-wraper">
+            <div class="col">
+                    <p>Total Venda</p>
+                    <input type="text" name="venda" id="venda" required placeholder="Total" autocomplete="off" >
+                </div>
+                <div class="col">
+                    <p>Total De itens</p>
+                    <input type="text" name="itens" id="itens" required placeholder="Itens" autocomplete="off" >
+                </div>
+                </div>
             <div class="form-wraper">
 
                 <div class="enviar">

@@ -122,6 +122,19 @@ td {
     display: none;
 }
 
+.conteiner {
+    top: 0px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    display: none;
+}
+
 .couver {
     display: flex;
     flex-direction: column;
