@@ -258,3 +258,28 @@ if ($acao == 'CAIXA') :
 
 	echo $json;
 endif;
+if ($acao == 'lista_usuario') :
+
+	$sql = "SELECT U.id_usuario,U.Nome_usuario,U.LOGIN,U.permissao,E.NOME AS NOME_EMPRESA,DATE_format(u.data_cadastro, '%d-%m-%Y')as Data_cadastro FROM usuario  AS U LEFT OUTER JOIN EMPRESA AS E ON E.ID_EMPRESA=U.ID_EMPRESA";
+	$stm = $conexao->prepare($sql);
+	$stm->execute();
+	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
+
+	$json = json_encode($dados);
+
+	echo $json;
+endif;
+
+
+if ($acao == 'busca_dados_user') :
+
+	$sql = "SELECT U.id_usuario,U.Nome_usuario,U.LOGIN,U.permissao,E.NOME AS NOME_EMPRESA,DATE_format(u.data_cadastro, '%d-%m-%Y')as Data_cadastro FROM usuario  AS U LEFT OUTER JOIN EMPRESA AS E ON E.ID_EMPRESA=U.ID_EMPRESA where  u.id_usuario=?";
+	$stm = $conexao->prepare($sql);
+	$stm->bindValue(1, $parametro);
+	$stm->execute();
+	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
+
+	$json = json_encode($dados);
+
+	echo $json;
+endif;

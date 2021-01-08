@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 
 <head>
-
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/css_usuario.css">
     <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
-
-    <title>Cadastro De Usuario</title>
+    <link rel="stylesheet" type="text/css" href="css/css_editar_user.css">    
+    <title>Editar Usuario</title>
 </head>
 
 <body>
 
-    <?php
-    include_once("menu.php");
-    ?>
     <section class="cover-form">
-        <div class="form-container">
-            <h1>Cadastro de Usuario</h1>
+    <div><a href="Tela_listar_usuario.php" title="Close" class="close">X</a></div>
+      <div class="form-container" id="modal">
+            <h1>Editar de Usuario</h1>
             <form method="POST" name="form" action="back_end/usuario.php">
                 <div class="form-wraper">
-
+                    <div class="col" style="  width: 25%; ">
+                        <p>ID_Usuario</p>
+                        <input type="text" name="id" id="id" value="<?php $id = $_GET['id'];
+                                                                    echo $id; ?>" placeholder="id" autocomplete="off" readonly="readonly">
+                    </div>
                     <div class="col">
                         <p>Nome Usuario*</p>
                         <input type="text" name="nome" id="nome" required placeholder="Nome" autocomplete="off">
@@ -33,7 +33,7 @@
                     <div class="col">
                         <p>Senha*:</p>
 
-                        <input type="password" name="Senha" id="Senha" required placeholder="Senha" autocomplete="off">
+                        <input type="password" name="Senha" id="Senha"  placeholder="Senha" autocomplete="off">
 
                     </div>
                     <div class="olho" id="olho">
@@ -73,7 +73,8 @@
 
                 <div class="enviar">
 
-                    <input type="submit" name="acao" id="clicar" value="Cadastrar" />
+                    <input type="submit" name="salvar" id="salvar" value="Salvar" />
+                    <input type="submit" name="excluir" id="excluir" value="excluir" />
 
                 </div>
 
@@ -82,40 +83,10 @@
         </div>
         <!--container bg-->
     </section>
-    <!--cover-form-->
-    <div class="pega">
-        <input id="pega" type="text" value="<?php if (isset($_SESSION['sucesso_cadastro'])) {
-                                                echo $_SESSION['sucesso_cadastro'];
-                                            } ?>">
-    </div>
-    <div class="conteiner" id="conteiner">
-        <div class="couver">
-            <p> <?php
-                //Recuperando o valor da variável global, os erro de login.
-                if (isset($_SESSION['sucesso_cadastro'])) {
-                    echo $_SESSION['sucesso_cadastro'];
-                    unset($_SESSION['sucesso_cadastro']);
-                } ?>
-            </p>
-            <p> <?php
-                //Recuperando o valor da variável global, deslogado com sucesso.
-                if (isset($_SESSION['erro_cadastro'])) {
-                    echo $_SESSION['erro_cadastro'];
-                    unset($_SESSION['erro_cadastro']);
-                }
-                ?>
-            </p>
-            <input type="submit" value="OK" onclick="fechamodal()" /> </p>
-
-        </div>
-    </div>
-
 
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/usuario.js"></script>
-    <script type="text/javascript" src="js/modal.js"></script>
-
 
 </body>
 

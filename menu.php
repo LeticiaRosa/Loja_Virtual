@@ -102,8 +102,11 @@ if (empty($_SESSION['login'])) {
 
           <li><a href="#">Usuário</a>
             <ul class="sub-menu">
-              <li><a href="/loja_virtual/Tela_cadastro_usuario.php">Cadastro</a></li>
-              <li><a href="/loja_virtual/Tela_listar_usuario.php">Cadastro</a></li>
+              <li><a href="/loja_virtual/Tela_cadastro_usuario.php">Cadastro</a>
+              <ul  class="sub-menu">
+              <li><a href="/loja_virtual/Tela_listar_usuario.php">Listar Usuarios</a>
+              </ul>
+            </li>
               <li><a href="#">Permissões</a></li>
               <li><a href="#">LOG</a></li>
             </ul>
