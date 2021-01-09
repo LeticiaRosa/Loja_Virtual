@@ -18,7 +18,7 @@
     ?>
     <section class="cover-form">
         <div class="form-container">
-            <h1>Cadastro de Produtos</h1>
+            <h1>CAIXA</h1>
             <div class="form-wraper">
 
                 <div class="col">
@@ -44,7 +44,7 @@
                     </div>
 
                 </div>
-                <div class="col2 tabela-container">
+                <div class="tabela-container">
 
                     <table id="products-table" class="teste">
                         <thead class="cabeça">
@@ -67,7 +67,7 @@
                             <p>Total De itens</p>
                             <input type="text" name="itens" id="itens" autocomplete="off">
                         </div>
-                        <div class="col1">
+                        <div class="col2">
                             <p>Total Venda</p>
                             <input type="text" name="venda" id="venda"  autocomplete="off">
                         </div>
