@@ -11,7 +11,6 @@
              parametro: $('#id_categoria').val()
          },
          success: function(data) {
-
              nomes = data.map(d => d.nome);
 
          }
@@ -45,7 +44,25 @@
          source: nomes
      });
  });
+ //Para buscar EMPRESA
+ $(async function() {
+     var nomes = [];
+     await $.ajax({
+         url: "back_end/busca_autocomplete.php",
+         dataType: "json",
+         data: {
+             acao: 'autocomplete_empresa',
+             parametro: $('#empresa1').val()
+         },
+         success: function(data) {
+             nomes = data.map(d => d.nome);
 
+         }
+     });
+     $("#empresa1").autocomplete({
+         source: nomes
+     });
+ });
 
  //Para buscar sub_categoria
  $(async function() {
@@ -71,32 +88,11 @@
  });
 
 
- //Para buscar EMPRESA
+
+
+
+
  $(async function() {
-     // Atribui evento e função para limpeza dos campos
-     // $('#clicar').on('input', limpaCampos);
-
-     var nomes = [];
-     await $.ajax({
-         url: "back_end/busca_autocomplete.php",
-         dataType: "json",
-         data: {
-             acao: 'autocomplete_empresa',
-             parametro: $('#empresa').val()
-         },
-         success: function(data) {
-             nomes = data.map(d => d.nome);
-
-         }
-     });
-     $("#empresa").autocomplete({
-         source: nomes
-     });
- });
-
-
-
- $(window).on("load", $(async function() {
      // Atribui evento e função para limpeza dos campos
      // $('#clicar').on('input', limpaCampos);
 
@@ -152,4 +148,4 @@
 
      });
 
- }));
+ });
