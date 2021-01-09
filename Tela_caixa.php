@@ -45,8 +45,9 @@
 
                 </div>
                 <div class="tabela-container">
-
-                    <table id="products-table" class="teste">
+                <div class= "corpao">
+                    <table id="products-table" class="teste1">
+                    
                         <thead class="cabeça">
                             <tr>
                                 <th>Id</th>
@@ -56,11 +57,13 @@
 
                             </tr>
                         </thead>
+                       
                         <tbody id="visualizarDados" class="teste">
 
-
                         </tbody>
+                       
                     </table>
+                    </div>
                     <div class="form-wraper1">
                         
                         <div class="col1">
@@ -72,7 +75,6 @@
                             <input type="text" name="venda" id="venda"  autocomplete="off">
                         </div>
                     </div>
-
                 </div>
 
 
@@ -88,9 +90,15 @@
                 </div>
             </div>
     </section>
+
+
+    
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/produto_caixa.js"></script>
 </body>
+
+
+
 
 </html>
