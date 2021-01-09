@@ -28,6 +28,11 @@ $(async function BUSCA() {
 
 });
 
+function fechamdal() {
+    $('#conteiner').css("display", "none");
+}
+
+
 function pesquisaPermissoes(id_usuario) {
     $.ajax({
             url: "back_end/busca_autocomplete.php",
@@ -69,6 +74,6 @@ function pesquisaPermissoes(id_usuario) {
 
     );
     /*Administrador, Caixa, Estoque_caixa */
-
+    fechamdal();
 
 }

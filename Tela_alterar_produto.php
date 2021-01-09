@@ -11,7 +11,8 @@
 </head>
 <html>
 
-<body onload= "fechamdal()">
+<body>
+
   <section class="cover-form">
     <div><a href="Tela_visualizar_produto.php" title="Close" class="close">X</a>
       <div class="form-container" id="modal">

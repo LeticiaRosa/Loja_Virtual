@@ -1,4 +1,4 @@
-$(window).on("load", $(async function() {
+$(async function() {
     // Atribui evento e função para limpeza dos campos
     // $('#clicar').on('input', limpaCampos);
 
@@ -87,7 +87,7 @@ $(window).on("load", $(async function() {
 
 
     });
-}));
+});
 
 
 $(window).on("click", (function() {

@@ -57,7 +57,7 @@
         <!--cover-form-->
 
 
-        <div class="center">
+        <div class="center" id = "conteiner">
             <div id="openModal" class="modalDialog">
                 <div><a href="#close" title="Close" class="close">X</a>
                     <?php include_once("Tela_alterar_empresa.php");  ?>
