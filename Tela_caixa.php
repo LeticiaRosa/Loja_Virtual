@@ -27,49 +27,57 @@
                 </div>
             </div>
             <div class="form-wraper">
-                <div class="col2">
-                    <p>Produto *</p>
-                    <input type="text" name="produto" id="produto" required placeholder="produto" autocomplete="off" onchange="busca_produto();">
-                </div>
-            </div>
-            <div class="form-wraper1">
             
+                <div class="conter">
+                    <div class="col">
+                        <p>Produto *</p>
+                        <input type="text" name="produto" id="produto" required placeholder="produto" autocomplete="off">
+                    </div>
+                    <div class="col">
+                        <p>Vendedor</p>
+                        <input type="text" name="Vendedor" id="Vendedor" placeholder="Vendedor" autocomplete="off">
+                    </div>
+                    <div class="col">
+                        <p>Nome Cliente</p>
+                        <input type="text" name="cliente" id="cliente" placeholder="cliente" autocomplete="off">
 
-                <div class="col">
-                    <p>Codigo De Barras *</p>
-                    <input type="text" name="codigo" id="codigo" required placeholder="codigo" autocomplete="off" onchange="busca_produto();">
+                    </div>
 
                 </div>
-                <div class="col1 tabela-container">
+                <div class="col2 tabela-container">
 
-                <table id="products-table" class="teste">
-                    <thead class="cabeça">
-                        <tr>
-                            <th>Id</th>
-                            <th>Nome do produto</th>
-                            <th>Valor produto</th>
-                            <th>Quantidade</th>
+                    <table id="products-table" class="teste">
+                        <thead class="cabeça">
+                            <tr>
+                                <th>Id</th>
+                                <th>Nome do produto</th>
+                                <th>Valor produto</th>
+                                <th>Quantidade</th>
 
-                        </tr>
-                    </thead>
-                    <tbody id="visualizarDados" class="teste">
+                            </tr>
+                        </thead>
+                        <tbody id="visualizarDados" class="teste">
 
 
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                    <div class="form-wraper1">
+                        
+                        <div class="col1">
+                            <p>Total De itens</p>
+                            <input type="text" name="itens" id="itens" autocomplete="off">
+                        </div>
+                        <div class="col1">
+                            <p>Total Venda</p>
+                            <input type="text" name="venda" id="venda"  autocomplete="off">
+                        </div>
+                    </div>
+
+                </div>
+
+
             </div>
-            
-            </div>
-            <div class="form-wraper">
-            <div class="col">
-                    <p>Total Venda</p>
-                    <input type="text" name="venda" id="venda" required placeholder="Total" autocomplete="off" >
-                </div>
-                <div class="col">
-                    <p>Total De itens</p>
-                    <input type="text" name="itens" id="itens" required placeholder="Itens" autocomplete="off" >
-                </div>
-                </div>
+
             <div class="form-wraper">
 
                 <div class="enviar">
