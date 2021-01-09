@@ -28,6 +28,7 @@ section.cover-form {
 }
 
 .tabela-container {
+    max-height: 150px;
     margin-right: 10px;
     width: 100%;
     -webkit-box-shadow: 2px 2px 5px 0px rgb(71, 92, 71);
@@ -150,12 +151,13 @@ section.cover-form {
     padding: 5px;
 }
 
-.cabeça {
-    border-bottom: 1px solid #c5c9c1;
-}
-
 .corpo:nth-child(even) {
     background-color: rgba(214, 226, 217, 0.8);
+}
+
+.corpo {
+    max-height: 150px;
+    overflow: auto;
 }
 
 .corpo:hover {
@@ -165,10 +167,10 @@ section.cover-form {
     background-color: rgb(200, 204, 198);
 }
 
-.col th,
+th,
 td {
     border-collapse: collapse;
-    padding: 8px;
+    padding: 3px;
     text-align: center;
     border-bottom: 1px solid #c5c9c1
 }
