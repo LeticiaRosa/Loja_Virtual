@@ -27,15 +27,17 @@ section.cover-form {
     background-color: rgb(235, 237, 240);
 }
 
-.cabeça {
-    background: #0099FF;
+.cabeça th {
+    background-color: rgb(235, 237, 240);
+    width: 100%;
     position: sticky;
     top: 0;
 }
 
 .corpao {
-    max-height: 100px;
-    overflow-y: scroll;
+    width: 100%;
+    max-height: 400px;
+    overflow-y: auto;
 }
 
 .tabela-container {
@@ -47,7 +49,6 @@ section.cover-form {
     background-color: rgb(235, 237, 240);
     height: 100%;
     display: inline-block;
-    width: 100%;
     margin-top: 0px;
 }
 
@@ -65,6 +66,7 @@ section.cover-form {
 }
 
 .form-wraper {
+    width: 100%;
     display: flex;
     flex-direction: row;
 }
@@ -174,6 +176,7 @@ section.cover-form {
 
 th,
 td {
+    width: 100%;
     border-collapse: collapse;
     padding: 3px;
     text-align: center;
@@ -185,14 +188,12 @@ td {
     height: 100%;
     table-layout: fixed;
     box-sizing: border-box;
-    width: 500px;
 }
 
 .teste {
     width: 100%;
     height: 100%;
     overflow: scroll;
-    background-color: red;
 }
 
 .enviar {

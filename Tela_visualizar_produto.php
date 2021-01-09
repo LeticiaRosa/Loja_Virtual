@@ -10,7 +10,7 @@
 </head>
 <html>
 
-<body onload="fechamdal()" >
+<body >
 
     <?php
     include_once("menu.php");
