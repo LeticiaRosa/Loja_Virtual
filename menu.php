@@ -19,7 +19,8 @@ if (empty($_SESSION['login'])) {
   <link rel="stylesheet" type="text/css" href="css/css_menu.css">
 </head>
 
-<body>
+<body onload = "pesquisaPermissoes(<?php echo $_SESSION['usuarioId']?>)">
+
 
   <div class="menu-container">
     <!--menu-->
@@ -27,7 +28,7 @@ if (empty($_SESSION['login'])) {
       <li>
         <label id="icone" for="check"><img src="imagens/icons8_menu_50px.png" width="35" height="35"> </label>
         <ul class="sub-menu clearfix">
-          <li><a href="#">Clientes</a>
+          <li id = "clientes" class = "clientes"><a href="#">Clientes</a>
             <ul class="sub-menu">
               <li><a href="/loja_virtual/Cadastro_clientes.php">Cadastro De Clientes</a>
                 <ul class="sub-menu">
@@ -36,13 +37,13 @@ if (empty($_SESSION['login'])) {
               </li>
             </ul>
           </li>
-          <li>
-            <a href="#">Caixa</a>
+          <li id= "caixa" class= "caixa">
+            <a href="#" > Caixa</a>
             <ul class="sub-menu">
               <li><a href="/loja_virtual/Tela_caixa.php">Caixa</a> </li>
             </ul>
           </li>
-          <li>
+          <li id= "empresa" class= "empresa">
             <a href="#">Empresa</a>
             <ul class="sub-menu">
               <li><a href="/loja_virtual/Tela_cadastro_empresa.php">Cadastro de Empresa</a>
@@ -53,7 +54,7 @@ if (empty($_SESSION['login'])) {
             </ul>
           </li>
 
-          <li>
+          <li id= "produto" class= "produto">
             <a href="#">Produto</a>
             <ul class="sub-menu">
               <li><a href="/loja_virtual/Tela_cadastro_produto_1.php">Cadastro de Produto</a>
@@ -78,7 +79,8 @@ if (empty($_SESSION['login'])) {
 
             </ul>
           </li>
-          <li><a href="#">Fornecedor</a>
+          <li id= "fornecedor" class = "fornecedor">
+          <a href="#">Fornecedor</a>
             <ul class="sub-menu">
               <li><a href="/loja_virtual/Cadastro_fornecedor.php">Cadastro de Fornecedor</a>
                 <ul class="sub-menu">
@@ -88,19 +90,19 @@ if (empty($_SESSION['login'])) {
               <li><a href="#">Sub Sub</a></li>
             </ul>
           </li>
-          <li><a href="#">Estoque</a>
+          <li id= "estoque" class= "estoque" ><a href="#">Estoque</a>
             <ul class="sub-menu">
               <li><a href="#">Controle de Estoque</a></li>
               <li><a href="/loja_virtual/Tela_listar_trafere.php">Transferencia de Produtos</a></li>
             </ul>
           </li>
-          <li><a href="#">Relatórios</a>
+          <li id= "relatorios" class= "relatorios"><a href="#">Relatórios</a>
             <ul class="sub-menu">
 
             </ul>
           </li>
 
-          <li><a href="#">Usuário</a>
+          <li id= "usuario" class= "usuario" ><a href="#">Usuário</a>
             <ul class="sub-menu">
               <li><a href="/loja_virtual/Tela_cadastro_usuario.php">Cadastro</a>
               <ul  class="sub-menu">
@@ -111,7 +113,7 @@ if (empty($_SESSION['login'])) {
               <li><a href="#">LOG</a></li>
             </ul>
           </li>
-          <li><a href="#">Ferramentas</a>
+          <li id= "ferramentas" class= "ferramentas"><a href="#">Ferramentas</a>
             <ul class="sub-menu">
               <li><a href="#">Calculadora</a></li>
             </ul>

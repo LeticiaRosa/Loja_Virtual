@@ -1,5 +1,7 @@
 <?php
 
+//$id_usuario=$_SESSION['usuarioId'];
+//require_once ("conexao.php");
 // Dados da conexão com o banco de dados
 define("HOST", "25.107.219.2");
 define("USUARIO", "Gabriel");
@@ -274,6 +276,21 @@ endif;
 if ($acao == 'busca_dados_user') :
 
 	$sql = "SELECT U.id_usuario,U.Nome_usuario,U.LOGIN,U.permissao,E.NOME AS NOME_EMPRESA,DATE_format(u.data_cadastro, '%d-%m-%Y')as Data_cadastro FROM usuario  AS U LEFT OUTER JOIN EMPRESA AS E ON E.ID_EMPRESA=U.ID_EMPRESA where  u.id_usuario=?";
+	$stm = $conexao->prepare($sql);
+	$stm->bindValue(1, $parametro);
+	$stm->execute();
+	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
+
+	$json = json_encode($dados);
+
+	echo $json;
+endif;
+
+
+
+if ($acao == 'PERMISSOES') :
+
+	$sql = "SELECT U.permissao FROM usuario AS U where  u.id_usuario=?";
 	$stm = $conexao->prepare($sql);
 	$stm->bindValue(1, $parametro);
 	$stm->execute();
