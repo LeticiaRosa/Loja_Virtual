@@ -3,8 +3,6 @@ $(document).ready(function() {
         generateRange(1, $('#qtd_etiquetas').val());
     });
 });
-var produto = document.getElementById('number_begin');
-document.getElementById('nome').value = produto;
 
 function generateRange(numberBegin, numberEnd) {
     html = "";
@@ -12,7 +10,7 @@ function generateRange(numberBegin, numberEnd) {
         html += '<div class="cod_barra" style ="padding:15px;;page-break-after:always;width: 8.7cm;height: 4cm;display: flex; flex-direction: row;align-items: center;justify-items: center;justify-content: space-between;text-align:center;" >'
         for (j = 0; j < 1; j++) {
             html += '<div class="codigo_barras"  style ="justify-content: center;   margin-right: 0.9cm; display: flex;    flex-direction:column;    width: 4cm;    height: 4cm;    align-items: center;    justify-items: center;text-align:center;"> ' +
-                '<h1 style =" text-align:center; font-size: 10px;color: black;font-weight: bold;">' + $('#produto').val() + '</h1>' +
+                '<h1 style =" text-align:center; font-size: 10px;color: black;font-weight: bold;">' + $('#produto1').val() + '</h1>' +
                 '        <img  id="barcodeImage_' + i + '" class="codeBarImage" />' +
                 '<h1 style ="margin-top:15px;font-size: 20px;color: black;font-weight: bold;">R$:' + $('#valor_produto').val() + '</h1>' +
                 '</div>';
@@ -20,7 +18,7 @@ function generateRange(numberBegin, numberEnd) {
         }
         for (j = 0; j < 1; j++) {
             html += '<div class="codigo_barras_1"  style ="justify-content: center;  margin-left:0.9cm;  display: flex;    flex-direction:column;    width: 4cm;    height: 4cm;    align-items: center;    justify-items: center; text-align:center;"> ' +
-                '<h1 style =" text-align:center; font-size: 10px;color: black;font-weight: bold;">' + $('#produto').val() + '</h1>' +
+                '<h1 style =" text-align:center; font-size: 10px;color: black;font-weight: bold;">' + $('#produto1').val() + '</h1>' +
                 '        <img  id="barcodeImage_' + i + '" class="codeBarImage" />' +
                 '<h1 style ="margin-top:15px;font-size: 20px;color: black;font-weight: bold;">R$:' + $('#valor_produto').val() + '</h1>' +
                 '</div>';

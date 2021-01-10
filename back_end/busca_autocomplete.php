@@ -73,8 +73,9 @@ endif;
 
 if ($acao == 'codigo_barras') :
 
-	$sql = "SELECT P.ID_PRODUTO,UPPER(P.nome)AS nome,P.quantidade, P.PRECO_VENDA, cg.codigo_barras FROM produto as p left outer join CODIGO_BARRAS as cg on cg.id_produto =p.id_produto where P.id_produto=(select max(id_produto) from produto)";
+	$sql = "SELECT P.ID_PRODUTO,UPPER(P.nome)AS nome,P.quantidade, P.PRECO_VENDA, cg.codigo_barras FROM produto as p left outer join CODIGO_BARRAS as cg on cg.id_produto =p.id_produto where P.id_produto=?";
 	$stm = $conexao->prepare($sql);
+	$stm->bindValue(1,$parametro);
 	$stm->execute();
 	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
 

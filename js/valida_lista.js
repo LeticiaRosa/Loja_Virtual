@@ -102,3 +102,10 @@ function confirma() {
 
 
 }
+
+
+function gerar_cod() {
+    window.location.href = "Gera_codigo_barra.php?id=" + document.getElementById("id").value;
+
+
+}

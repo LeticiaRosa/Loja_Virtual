@@ -22,7 +22,7 @@
             <div class="col" style="  width: 25%; ">
               <p>ID_Produto</p>
               <input type="text" name="id" id="id" value="<?php $id = $_GET['id'];
-                                                          echo $id; ?>" placeholder="id" autocomplete="off">
+                                                          echo $id; ?>" placeholder="id" autocomplete="off" readonly="readonly">
             </div>
             <div class="col">
               <p>Nome do Produto*</p>
@@ -119,7 +119,10 @@
 
 
           <div class="enviar">
+          
+            
             <input type="submit" name="Salvar-1" id="Salvar-1" value="Salvar" onclick="return openConfirmacao('salvar')" />
+            <input type="button" name="Gerar_cod" id="Gerar_cod" value="Gerar Codigo De Barras" onclick="gerar_cod()"/>
             <input type="submit" name="Excluir" id="Excluir" value="Excluir" onclick="return openConfirmacao('excluir')" />
 
           </div>
