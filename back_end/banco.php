@@ -21,7 +21,7 @@ $valor_medida = $_POST['valor_medida'];
 $observacao=$_POST['observacao'];
 $id_usuario=$_SESSION['usuarioId'];
 $cod_barras = null;
-$empresa = $_POST['empresa'];
+$empresa = $_POST['empresa1'];
 $cod_referencia = $_POST['cod_referencia'];
 
 
@@ -68,7 +68,7 @@ $cod_referencia = $_POST['cod_referencia'];
                 $insert = "insert into CODIGO_BARRAS (ID_PRODUTO, id_usuario, CODIGO_BARRAS ,data_cadastro,codigo_referencia) values ('{$id2['id']}','$id_usuario','$cod_barras',  now(),'$cod_referencia')";
              // ECHO $insert;
                 mysqli_query($conexao, $insert);
-            header("Location:/loja_virtual/Tela_cadastro_produto_1.php");
+           header("Location:/loja_virtual/Tela_cadastro_produto_1.php");
             
         }else {
         $_SESSION['erro_cadastro'] = "Produto Não cadastrado";
@@ -92,7 +92,7 @@ $valor_medida = $_POST['valor_medida'];
 $observacao=$_POST['observacao'];
 $id_usuario=$_SESSION['usuarioId'];
 $cod_barras = null;
-$empresa = $_POST['empresa'];
+$empresa = $_POST['empresa1'];
 $cod_referencia = $_POST['cod_referencia'];
 
 
