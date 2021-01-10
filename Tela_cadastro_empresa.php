@@ -31,7 +31,7 @@
                     </div>
                     <div class="col">
                         <p>Razao Social*</p>
-                        <input type="text" name="razao_social" id="razao_social" required placeholder="razao social" autocomplete="off">
+                        <input type="text" name="razao_social" id="razao_social" required placeholder="Razão Social" autocomplete="off">
                     </div>
                     <div class="col">
                         <p>Descrição</p>
@@ -51,7 +51,7 @@
                 <div class="form-wraper">
                     <div class="col">
                         <p>Observação</p>
-                        <input type="text" name="Observacao" id="Observacao" placeholder="Observacao" autocomplete="off">
+                        <input type="text" name="Observacao" id="Observacao" placeholder="Observação" autocomplete="off">
                     </div>
                 </div>
                 <div class="enviar">
@@ -64,8 +64,11 @@
     </section>
     <div class="pega">
         <input id="pega" type="text" value="<?php if (isset($_SESSION['sucesso_cadastro'])) {
-                                                echo $_SESSION['sucesso_cadastro'];
-                                            } ?>">
+                                          echo $_SESSION['sucesso_cadastro'];
+                                        }else if (isset($_SESSION['erro_cadastro'])) {
+                                          echo $_SESSION['erro_cadastro'];
+                                      
+                                        } ?>">
     </div>
     <div class="conteiner" id="conteiner">
         <div class="couver">

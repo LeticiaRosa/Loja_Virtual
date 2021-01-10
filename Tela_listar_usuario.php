@@ -15,18 +15,18 @@
 <body>
 
 
-    <title>Usuaios</title>
+    <title>Usuários</title>
     </head>
 
-    <body onload="fechamdal()">
+    <body>
 
         <?php
         include_once("menu.php");
-        ?>
+        ?>  
 
 <section class="cover-form">
             <div class="form-container">
-                <h1>Usuaios</h1>
+                <h1>Usuários</h1>
 
                 <div class="form-wraper-1">
 
@@ -63,8 +63,11 @@
 
         <div class="pega">
             <input id="pega" type="text" value="<?php if (isset($_SESSION['sucesso_cadastro'])) {
-                                                    echo $_SESSION['sucesso_cadastro'];
-                                                } ?>">
+                                          echo $_SESSION['sucesso_cadastro'];
+                                        }else if (isset($_SESSION['erro_cadastro'])) {
+                                          echo $_SESSION['erro_cadastro'];
+                                      
+                                        } ?>">
 
         </div>
         <div class="conteiner" id="conteiner">
