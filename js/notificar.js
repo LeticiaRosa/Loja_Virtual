@@ -73,6 +73,7 @@ function pesquisaPermissoes(id_usuario) {
     /*Administrador, Caixa, Estoque_caixa */
 
     if (document.getElementsByClassName("celular").length >= 1) {
+        console.log(id('celular').onkeyup);
         id('celular').onkeyup = function() {
             mascara(this, mtel);
 
@@ -110,4 +111,5 @@ function mtel(v) {
 
 function id(el) {
     return document.getElementById(el);
+
 }

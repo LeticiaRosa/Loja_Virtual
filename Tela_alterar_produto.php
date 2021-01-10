@@ -34,7 +34,7 @@
             </div>
             <div class="col" style="  width: 80%; ">
               <p>Empresa</p>
-              <input type="text" name="empresa" id="empresa" value="" placeholder="Empresa" autocomplete="off" required>
+              <input type="text" name="empresa1" id="empresa1" value="" placeholder="Empresa" autocomplete="off" required>
             </div>
           </div>
 
@@ -137,12 +137,29 @@
       </div>
       <!--container bg-->
   </section>
+  <!--
+  <script> var url="js/jquery.js";  $.getScript(url);  
+     </script>
+     <script> var url="js/jquery-ui.min.js";
+     $.getScript(url);
+    
+     </script>
 
-
+  <script> var url="js/valida_lista.js";
+     $.getScript(url);
+    
+     </script>
+     <script> var url="js/produto.js";
+     $.getScript(url);
+    
+     </script>
+   
+   -->
 
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/jquery-ui.min.js"></script>
   <script type="text/javascript" src="js/valida_lista.js"></script>
+  <script type="text/javascript" src="js/produto.js"></script>
   <script type="text/javascript" src="js/auto_complete.js"></script>
 
 

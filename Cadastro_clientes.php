@@ -97,7 +97,7 @@
     </div>
 
     <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/mascara_telefone.js"></script>
+
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/modal.js"></script>
 

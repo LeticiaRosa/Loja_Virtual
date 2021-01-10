@@ -9,17 +9,11 @@
     <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="css/css_listar_clientes.css">
 
-</head>
+    <title>Clientes</title>
+    </head>
 <html>
 
 <body>
-
-
-    <title>Clientes</title>
-    </head>
-
-    <body>
-
         <?php
         include_once("menu.php");
         ?>
@@ -57,14 +51,13 @@
         </section>
         <!--cover-form-->
 
-        <div class="center">
+      
             <div id="openModal" class="modalDialog">
                 <div>
                     <?php include_once("Tela_alterar_cliente.php");  ?>
                 </div>
             </div>
-        </div>
-
+     
         <div class="pega">
             <input id="pega" type="text" value="<?php if (isset($_SESSION['sucesso_cadastro'])) {
                                                     echo $_SESSION['sucesso_cadastro'];

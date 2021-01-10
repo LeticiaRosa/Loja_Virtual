@@ -42,7 +42,7 @@
                 </div>
                 <div class="col">
                     <p>Telefone celular:</p>
-                    <input type="text" name="celular" id="celular" placeholder="Telefone" autocomplete="off">
+                    <input type="text" name="celular" id="celular" class="celular" placeholder="Telefone" autocomplete="off">
                 </div>
                 </div>
                 <div class="form-wraper">
@@ -77,13 +77,11 @@
 
 
 
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="js/Altera_cliente.js"></script>
-    
-
-
-
+     <script> var url="js/Altera_cliente.js";
+     $.getScript(url);
+     </script>
+     
+ 
 </body>
 
 </html>
