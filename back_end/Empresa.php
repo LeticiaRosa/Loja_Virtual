@@ -38,7 +38,7 @@ if($produto==1){
       $produto = mysqli_query($conexao, $query_2);
       if ($produto == 1) {
         $_SESSION['sucesso_cadastro'] = "Atualizado Com Sucesso";
-             header("Location:/loja_virtual/Tela _listar_empresa.php");
+             header("Location:/loja_virtual/Tela_listar_empresa.php");
       }
       mysqli_close($conexao);
     } elseif ($Status == "N") {
@@ -47,7 +47,7 @@ if($produto==1){
       $produto = mysqli_query($conexao, $query_2);
       if ($produto == 1) {
         $_SESSION['sucesso_cadastro'] = "Atualizado Com Sucesso";
-            header("Location:/loja_virtual/Tela _listar_empresa.php");
+            header("Location:/loja_virtual/Tela_listar_empresa.php");
       }
       mysqli_close($conexao);
     }

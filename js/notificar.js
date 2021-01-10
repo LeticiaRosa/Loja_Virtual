@@ -28,12 +28,9 @@ $(async function BUSCA() {
 
 });
 
-function fechamdal() {
-    $('#conteiner').css("display", "none");
-}
-
 
 function pesquisaPermissoes(id_usuario) {
+
     $.ajax({
             url: "back_end/busca_autocomplete.php",
             dataType: "json",
@@ -43,7 +40,7 @@ function pesquisaPermissoes(id_usuario) {
             },
             success: function(data) {
                 permissao = data.map(d => d.permissao);
-                console.log(permissao);
+
 
 
                 if (permissao == "Administrador") {
@@ -67,13 +64,50 @@ function pesquisaPermissoes(id_usuario) {
                     document.getElementById("estoque").style.display = 'flex';
                 }
 
-                console.log("teste");
+
             }
 
         }
 
     );
     /*Administrador, Caixa, Estoque_caixa */
-    fechamdal();
 
+    if (document.getElementsByClassName("celular").length >= 1) {
+        id('celular').onkeyup = function() {
+            mascara(this, mtel);
+
+        }
+        id('fixo').onkeyup = function() {
+            mascara(this, mtel);
+
+        }
+    }
+
+    if (document.getElementsByClassName("modalDialog").length >= 1) {
+        fechamdal();
+    }
+
+
+}
+
+
+function mascara(o, f) {
+    v_obj = o
+    v_fun = f
+    setTimeout("execmascara()", 1)
+}
+
+function execmascara() {
+    v_obj.value = v_fun(v_obj.value)
+}
+
+function mtel(v) {
+    v = v.replace(/\D/g, ""); //Remove tudo o que não é dígito
+    v = v.replace(/^(\d{2})(\d)/g, "($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
+    v = v.replace(/(\d)(\d{4})$/, "$1-$2"); //Coloca hífen entre o quarto e o quinto dígitos
+    return v;
+}
+
+function id(el) {
+    return document.getElementById(el);
 }

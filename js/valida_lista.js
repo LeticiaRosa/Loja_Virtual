@@ -84,7 +84,7 @@ function confirma() {
 
 
     if (texto == " Confirma exclusão ? ") {
-        var OK = document.getElementById("teste").elements[19].name = "Excluir";;
+        var OK = document.getElementById("teste").elements[19].name = "Excluir";
 
 
 

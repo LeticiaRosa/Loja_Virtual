@@ -114,6 +114,7 @@ $(window).on("click", (function() {
     var btnVisualizar = document.getElementById("visualizarDados");
 
     btnVisualizar.addEventListener("click", function() {
+        abremodal();
         var selecionados = tabela.getElementsByClassName("selecionado");
 
         //Verificar se está selecionado
@@ -145,3 +146,13 @@ $(window).on("click", (function() {
 
 
 }));
+
+function fechamdal() {
+    $('#openModal').css("display", "none");
+}
+
+
+function abremodal() {
+    $('#openModal').css("display", "inline-block");
+
+}

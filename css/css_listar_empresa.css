@@ -79,7 +79,7 @@ td {
     left: 0;
     padding: 50px;
     background: rgba(0, 0, 0, 0.8);
-    z-index: 99999;
+    z-index: 99;
     opacity: 0;
     -webkit-transition: opacity 400ms ease-in;
     -moz-transition: opacity 400ms ease-in;
@@ -90,16 +90,6 @@ td {
 .modalDialog:target {
     opacity: 1;
     pointer-events: auto;
-}
-
-.modalDialog>div {
-    width: 100%;
-    padding: 5px 20px 13px 20px;
-    border-radius: 10px;
-    background: #fff;
-    background: -moz-linear-gradient(#fff, #999);
-    background: -webkit-linear-gradient(#fff, #999);
-    background: -o-linear-gradient(#fff, #999);
 }
 
 .close {
@@ -137,7 +127,7 @@ td {
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 2000;
+    z-index: 99;
     display: none;
 }
 

@@ -8,17 +8,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="css/css_listar_fornecedor.css">
-
+    <title>Fornecedores</title>
 </head>
 <html>
 
 <body>
 
-
-    <title>Fornecedores</title>
-    </head>
-
-    <body>
 
         <?php
         include_once("menu.php");
@@ -44,7 +39,7 @@
                                 <th>Endereço</th>
                                 <th>E-mail</th>
                                 <th>Cep</th>
-                                <th>Obeservação</th>
+                                <th>Observação</th>
                                 <th>Usuario</th>
                                 <th>Data Cadastro</th>
 
@@ -62,13 +57,13 @@
         <!--cover-form-->
 
 
-        <div class="center">
+        
             <div id="openModal" class="modalDialog">
                 <div><a href="#close" title="Close" class="close">X</a>
                     <?php include_once("Tela_altera_fornecedor.php");  ?>
                 </div>
             </div>
-        </div>
+        
 
         <div class="pega">
             <input id="pega" type="text" value="<?php if (isset($_SESSION['sucesso_cadastro'])) {
@@ -91,10 +86,11 @@
 
             </div>
         </div>
-        <script type="text/javascript" src="js/modal.js"></script>
+    
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="js/listar_Fornecedor.js"></script>
+        <script type="text/javascript" src="js/Listar_fornecedor.js"></script> 
+        <script type="text/javascript" src="js/modal.js"></script>
         <script type="text/javascript" src="DataTables/datatables.min.js"></script>
 
 

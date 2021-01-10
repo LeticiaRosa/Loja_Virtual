@@ -11,9 +11,6 @@
 
 <body>
 
-    <?php
-    include_once("menu.php");
-    ?>
     <section class="cover-form-1">
         <div class="form-container">
             <h1>Editar Fornecedor</h1>
@@ -48,11 +45,11 @@
                     </div>
                     <div class="col">
                         <p>Telefone Fixo:</p>
-                        <input type="text" name="fixo" id="fixo" placeholder="Telefone" autocomplete="off">
+                        <input type="text" name="fixo" id="fixo" placeholder="Telefone" autocomplete="off" >
                     </div>
                     <div class="col">
                         <p>Telefone celular:</p>
-                        <input type="text" name="celular" id="celular" placeholder="Telefone" autocomplete="off">
+                        <input type="text" name="celular" id="celular" placeholder="Telefone" autocomplete="off" >
                     </div>
 
                 </div>
@@ -108,10 +105,6 @@
 
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="js/mascara_telefone.js"></script>
-
-
-
 </body>
 
 </html>
