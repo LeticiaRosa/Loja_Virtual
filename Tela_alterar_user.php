@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="css/css_editar_user.css">    
-    <title>Editar Usuario</title>
+    <title>Editar Usuário</title>
 </head>
 
 <body>
@@ -14,7 +14,7 @@
     <section class="cover-form">
     <div><a href="Tela_listar_usuario.php" title="Close" class="close">X</a></div>
       <div class="form-container" id="modal">
-            <h1>Editar de Usuario</h1>
+            <h1>Editar de Usuário</h1>
             <form method="POST" name="form" action="back_end/usuario.php">
                 <div class="form-wraper">
                     <div class="col" style="  width: 25%; ">
@@ -23,7 +23,7 @@
                                                                     echo $id; ?>" placeholder="id" autocomplete="off" readonly="readonly">
                     </div>
                     <div class="col">
-                        <p>Nome Usuario*</p>
+                        <p>Nome Usuário*</p>
                         <input type="text" name="nome" id="nome" required placeholder="Nome" autocomplete="off">
                     </div>
                     <div class="col">
@@ -60,17 +60,6 @@
                     </div>
 
                 </div>
-
-
-
-                <div class="form-wraper">
-                    <div class="col">
-                        <p>Observação:</p>
-                        <input type="text" name="observacao" id="observacao" placeholder="Observação" autocomplete="off">
-                    </div>
-
-                </div>
-
                 <div class="enviar">
 
                     <input type="submit" name="salvar" id="salvar" value="Salvar" />

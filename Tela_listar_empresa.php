@@ -69,8 +69,11 @@
 
         <div class="pega">
             <input id="pega" type="text" value="<?php if (isset($_SESSION['sucesso_cadastro'])) {
-                                                    echo $_SESSION['sucesso_cadastro'];
-                                                } ?>">
+                                          echo $_SESSION['sucesso_cadastro'];
+                                        }else if (isset($_SESSION['erro_cadastro'])) {
+                                          echo $_SESSION['erro_cadastro'];
+                                      
+                                        } ?>">
 
         </div>
         <div class="conteiner" id="conteiner">

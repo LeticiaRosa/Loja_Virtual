@@ -87,7 +87,7 @@ if (empty($_SESSION['login'])) {
                   <li><a href="/loja_virtual/Tela_listar_fornecedor.php">Listar Fornecedores</a></li>
                 </ul>
               </li>
-              <li><a href="#">Sub Sub</a></li>
+              
             </ul>
           </li>
           <li id= "estoque" class= "estoque" ><a href="#">Estoque</a>
