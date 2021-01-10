@@ -127,6 +127,7 @@
             <div class="couver">
               <p class="Texto" id="Texto"> </p>
               <input type="submit" value="OK" id="OK" onclick="return confirma()" />
+              </p>
               <input type="submit" value="CANCELAR" id="CANCELAR" name="CANCELAR" onclick="fechamodal()" />
 
             </div>
