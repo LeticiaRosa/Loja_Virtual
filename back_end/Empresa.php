@@ -13,12 +13,12 @@ $query_2 = "insert into empresa (nome, descricao,CNPJ,Endereco,observacao,id_usu
 $produto= mysqli_query($conexao, $query_2);
 echo $query_2;
 if($produto==1){
-    $_SESSION['sucesso_cadastro'] = "Produto inserido com sucesso";
+    $_SESSION['sucesso_cadastro'] = "Empresa inserida com sucesso";
     header("Location:/loja_virtual/Tela_cadastro_empresa.php");
     mysqli_close($conexao);
 }
     else {
-        $_SESSION['erro_cadastro'] = "Produto Não cadastrado";
+        $_SESSION['erro_cadastro'] = "Empresa não cadastrada";
     header("Location:/loja_virtual/Tela_cadastro_empresa.php");
     }
 }elseif (isset($_POST['Salvar'])) {

@@ -41,7 +41,16 @@ if (select == "Atualizado Com Sucesso") {
 } else if (select == "Usuario Excluido Com Sucesso") {
     $('#conteiner').css("display", "flex");
 
+} else if (select == "Empresa inserida com sucesso") {
+    $('#conteiner').css("display", "flex");
+
+} else if (select == "Empresa não cadastrada") {
+    $('#conteiner').css("display", "flex");
+
 }
+
+
+
 
 
 
