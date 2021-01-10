@@ -16,10 +16,10 @@ if (isset($_POST['acao'])) {
     // echo $query;
     $resultado = mysqli_query($conexao, $query);
     if ($resultado == 1) {
-        $_SESSION['sucesso_cadastro'] = "Usuario Cadastrado Com Sucesso";
+        $_SESSION['sucesso_cadastro'] = "Inserido com sucesso!";
         header("Location:/loja_virtual/Tela_cadastro_usuario.php");
     } else {
-        $_SESSION['erro_cadastro'] = "Erro ao Cadastrar Usuario";
+        $_SESSION['erro_cadastro'] = "Usuário não cadastrado!";
         header("Location:/loja_virtual/Tela_cadastro_usuario.php");
     }
 } elseif (isset($_POST['salvar'])) {
@@ -44,13 +44,13 @@ if (isset($_POST['acao'])) {
     } else {
         $query = "update usuario   set nome_usuario ='$nome',login='$Login',senha=md5('$Senha'), permissao='$permissao',id_empresa='{$variavel_3['id_empresa']}', id_usuario_alt='$id_usuario',  data_alterou=now()where id_usuario='$id'";
     }
-    echo $query;
+    //echo $query;
     $resultado = mysqli_query($conexao, $query);
     if ($resultado == 1) {
-        $_SESSION['sucesso_cadastro'] = "Usuario Atualizado Com Sucesso";
+        $_SESSION['sucesso_cadastro'] = "Atualizado com sucesso!";
         header("Location:/loja_virtual/Tela_listar_usuario.php");
     } else {
-        $_SESSION['erro_cadastro'] = "Erro ao Atualizar Usuario";
+        $_SESSION['erro_cadastro'] = "Usuário não atualizado!";
         header("Location:/loja_virtual/Tela_listar_usuario.php");
     }
 } elseif (isset($_POST['excluir'])) {
@@ -64,7 +64,7 @@ if (isset($_POST['acao'])) {
         $_SESSION['sucesso_cadastro'] = "Usuario Excluido Com Sucesso";
         header("Location:/loja_virtual/Tela_listar_usuario.php");
     } else {
-        $_SESSION['erro_cadastro'] = "Erro ao Excluir Usuario";
+        $_SESSION['erro_cadastro'] = "Excluído com sucesso!";
         header("Location:/loja_virtual/Tela_listar_usuario.php");
     }
 }
