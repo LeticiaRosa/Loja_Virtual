@@ -119,9 +119,15 @@
 
          }
 
-         window.location.replace("#openModal");
-         $("#openModal").load("Tela_confirma_trasferencia.php?id=" + selecionado[0].innerHTML);
 
+
+         if (selecionado[4].innerHTML == "Trasferencia Ja Confirmada" || selecionado[4].innerHTML == "Trasferencia Cancelada") {
+             $("#mensagem").html("Transferencia Não pode ser Selecionada");
+             $("#conteiner").css("display", "flex");
+         } else {
+             window.location.replace("#openModal");
+             $("#openModal").load("Tela_confirma_trasferencia.php?id=" + selecionado[0].innerHTML);
+         }
 
      });
 

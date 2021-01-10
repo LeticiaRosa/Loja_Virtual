@@ -5,10 +5,10 @@ require_once("conexao.php");
 if (isset($_POST['trasferir'])) {
     $nome = $_POST['nome'];
     $id_produto = $_POST['id_produto'];
-    $produto = $_POST['produto'];
+    $produto = $_POST['produto2'];
     $Quantidade = $_POST['Quantidade'];
     $Qtd_tras = $_POST['Qtd_tras'];
-    $empresa = $_POST['empresa'];
+    $empresa = $_POST['empresa3'];
     $id_usuario = $_SESSION['usuarioId'];
     $query = "select id_empresa from empresa where nome = '$nome'";
     $query_1 = "select id_empresa from empresa where nome = '$empresa'";
@@ -30,9 +30,9 @@ if (isset($_POST['trasferir'])) {
     $resultado = "";
     $id_tras = $_POST['id_tras'];
     $nome = $_POST['nome']; //empresa origem
-    $empresa = $_POST['empresa']; //empressa destino
+    $empresa = $_POST['empresa4']; //empressa destino
     $Qtd_tras = $_POST['Qtd_tras'];
-    $produto = $_POST['produto'];
+    $produto = $_POST['produto4'];
     $id_produto = $_POST['id_produto'];
     $cod_referencia = $_POST['cod_referencia'];
     $id_usuario = $_SESSION['usuarioId'];

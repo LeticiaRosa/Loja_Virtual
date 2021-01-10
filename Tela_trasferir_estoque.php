@@ -30,7 +30,7 @@
                     </div>
                     <div class="col">
                         <p>Nome do Produto</p>
-                        <input type="text" name="produto" id="produto" readonly="readonly" placeholder="produto" autocomplete="off">
+                        <input type="text" name="produto2" id="produto2" readonly="readonly" placeholder="produto" autocomplete="off">
                     </div>
                     <div class="col">
                         <p>Quantidade</p>
@@ -44,7 +44,7 @@
                     </div>
                     <div class="col-1">
                         <p>Empresa que deseja Trasferir:</p>
-                        <input type="text" name="empresa" id="empresa"  placeholder="empresa"require autocomplete="OFF">
+                        <input type="text" name="empresa3" id="empresa3"  placeholder="empresa"require autocomplete="OFF">
                     </div>
                 </div>
 

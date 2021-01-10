@@ -105,8 +105,8 @@ $(window).on("click", (function() {
     **/
     var btnVisualizar = document.getElementById("visualizarDados");
 
-    var nome = "";
     btnVisualizar.addEventListener("click", function() {
+        abremodal();
         var selecionados = tabela.getElementsByClassName("selecionado");
 
         //Verificar se está selecionado

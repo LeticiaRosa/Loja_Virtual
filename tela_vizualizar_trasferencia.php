@@ -11,7 +11,7 @@
 </head>
 <html>
 
-<body onload="fechamdal()">
+<body>
 
     <title>Trasferencias</title>
     </head>
@@ -65,7 +65,7 @@
         <div class="conteiner" id="conteiner">
             <div class="couver">
 
-                <p> <?php
+                <p id="mensagem"> <?php
                     //Recuperando o valor da variável global, os erro de login.
                     if (isset($_SESSION['sucesso_cadastro'])) {
                         echo $_SESSION['sucesso_cadastro'];

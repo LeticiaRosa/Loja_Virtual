@@ -1,4 +1,5 @@
 $(async function() {
+
     // Atribui evento e função para limpeza dos campos
     // $('#clicar').on('input', limpaCampos);
 
@@ -8,19 +9,18 @@ $(async function() {
         dataType: "json",
         data: {
             acao: 'autocomplete_empresa',
-            parametro: $('#empresa').val()
+            parametro: $('#empresa3').val()
         },
         success: function(data) {
             nomes = data.map(d => d.nome);
 
         }
     });
-    $("#empresa").autocomplete({
+    $("#empresa3").autocomplete({
         source: nomes
     });
 });
-
-$(window).on("load", $(async function() {
+$(async function() {
     // Atribui evento e função para limpeza dos campos
     // $('#clicar').on('input', limpaCampos);
 
@@ -37,7 +37,7 @@ $(window).on("load", $(async function() {
             nome_empresa = data.map(d => d.nome_empresa);
             quantidate = data.map(d => d.quantidade);
             document.getElementById('nome').value = nome_empresa;
-            document.getElementById('produto').value = nome;
+            document.getElementById('produto2').value = nome;
             document.getElementById('Quantidade').value = quantidate;
 
 
@@ -47,11 +47,11 @@ $(window).on("load", $(async function() {
 
     });
 
-}));
+});
 
 function validar() {
     var nome = document.getElementById("nome");
-    var empresa = document.getElementById("empresa");
+    var empresa = document.getElementById("empresa3");
     var Quantidade = document.getElementById("Quantidade");
     var Qtd_tras = document.getElementById("Qtd_tras");
 
@@ -61,7 +61,6 @@ function validar() {
         return false;
 
     } else if (Qtd_tras.value > Quantidade.value) {
-
         $('#conteiner').css("display", "flex");
         $('#texto').html("Quantidade informada para trasferencia e Maior que quantidade em estoque!!");
         return false;

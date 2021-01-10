@@ -37,7 +37,7 @@
                     </div>
                     <div class="col">
                         <p>Nome do Produto</p>
-                        <input type="text" name="produto" id="produto" readonly="readonly" placeholder="produto" autocomplete="off">
+                        <input type="text" name="produto4" id="produto4" readonly="readonly" placeholder="produto" autocomplete="off">
                     </div>
                 </div>
                 <div class="conter-1">
@@ -47,7 +47,7 @@
                     </div>
                     <div class="col-1">
                         <p>Empresa Recebeu</p>
-                        <input type="text" name="empresa" id="empresa" readonly="readonly" placeholder="empresa"require autocomplete="OFF">
+                        <input type="text" name="empresa4" id="empresa4" readonly="readonly" placeholder="empresa"require autocomplete="OFF">
                     </div>
                 </div>
 
