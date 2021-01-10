@@ -121,8 +121,8 @@
 
 
 
-         if (selecionado[4].innerHTML == "Trasferencia Ja Confirmada" || selecionado[4].innerHTML == "Trasferencia Cancelada") {
-             $("#mensagem").html("Transferencia Não pode ser Selecionada");
+         if (selecionado[4].innerHTML == "Transferência confirmada" || selecionado[4].innerHTML == "Transferência cancelada") {
+             $("#mensagem").html("Transferência não pode ser selecionada!");
              $("#conteiner").css("display", "flex");
          } else {
              window.location.replace("#openModal");

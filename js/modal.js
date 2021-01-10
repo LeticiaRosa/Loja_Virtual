@@ -82,10 +82,26 @@ if (select == "Inserido com sucesso!") {
 } else if (select == "Usuário não excluído!") {
     $('#conteiner').css("display", "flex");
 
-} else if (select == "Confirmação realizada Com Sucesso") {
+} else if (select == "Transferência criada!") {
+    $('#conteiner').css("display", "flex");
+
+} else if (select == "Erro ao criar transferência!") {
+    $('#conteiner').css("display", "flex");
+
+} else if (select == "Confirmação realizada com sucesso!") {
+    $('#conteiner').css("display", "flex");
+
+} else if (select == "Erro ao confirmar transferência!") {
+    $('#conteiner').css("display", "flex");
+
+} else if (select == "Transferência cancelada com sucesso!") {
+    $('#conteiner').css("display", "flex");
+
+} else if (select == "Erro ao cancelar transferência!") {
     $('#conteiner').css("display", "flex");
 
 }
+
 
 
 function fechamodal() {
