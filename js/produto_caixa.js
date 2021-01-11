@@ -1,4 +1,4 @@
-function busca_produto() {
+function busca_produto(teste) {
     t1 = "";
     t2 = "";
     valor = 0;
@@ -8,12 +8,15 @@ function busca_produto() {
     total_u = 0;
     total = 0;
     resultado = 0;
+
+    console.log(teste);
     $.ajax({
         url: "back_end/busca_autocomplete.php",
         dataType: "json",
         data: {
             acao: 'CAIXA',
-            parametro: $('#codigo').val()
+            parametro: $('#codigo').val(),
+            sessao: teste
         },
         success: function(data) {
             id = data.map(d => d.ID_PRODUTO);
