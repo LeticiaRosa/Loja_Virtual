@@ -202,7 +202,6 @@ section.cover-form {
 .enviar {
     padding: 15px;
     display: flex;
-    flex-direction: row-reverse;
     width: 100%;
     align-items: center;
     text-align: center;
@@ -232,6 +231,13 @@ section.cover-form {
     font-size: 20px;
     border: 0;
     border-radius: 10px;
+}
+
+.enviar .bntSalvar {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    float: right;
 }
 
 @media screen and (max-width: 1366px) {

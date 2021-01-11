@@ -61,10 +61,14 @@
                     <input type="text" name="observacao" id="observacao" placeholder="Observação" autocomplete="off">
                 </div>
                 </div>
-                <div class="enviar">
 
-                    <input type="submit" name="Salvar" id="Salvar" value="Salvar" />
-                    <input type="submit" name="Excluir" id="Excluir" value="Excluir" />
+                <div class="enviar">
+                 
+                <input type="submit" name="Excluir" id="Excluir" value="Excluir" />
+                <div>
+                <img class = "bntSalvar" src="imagens/icons8_ok_26px.png" ></img>
+                </div>
+                <input type="submit"  name="Salvar" id="Salvar" value="Salvar" />
 
                 </div>
 
