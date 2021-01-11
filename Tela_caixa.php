@@ -23,7 +23,7 @@
 
                 <div class="col">
                     <p>Codigo De Barras *</p>
-                    <input type="text" name="codigo" id="codigo" required placeholder="codigo" autocomplete="off" onchange="busca_produto();">
+                    <input type="text" name="codigo" id="codigo" required placeholder="codigo" autocomplete="off" onchange="busca_produto(<?php echo $_SESSION['empresausuario']?>)">
                 </div>
             </div>
             <div class="form-wraper">

@@ -3,6 +3,8 @@
 //$id_usuario=$_SESSION['usuarioId'];
 //require_once ("conexao.php");
 // Dados da conexão com o banco de dados
+
+
 define("HOST", "25.107.219.2");
 define("USUARIO", "Gabriel");
 define("SENHA", "Gb@30173572");
@@ -15,7 +17,7 @@ $parametro = (isset($_GET['parametro'])) ? $_GET['parametro'] : '';
 // Configura uma conexão com o banco de dados
 $opcoes = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES UTF8');
 $conexao = new PDO("mysql:host=" . HOST . "; dbname=" . DB, USUARIO, SENHA, $opcoes);
-
+$empresa=(isset($_GET['sessao'])) ? $_GET['sessao'] : '';
 // Verifica se foi solicitado uma consulta para o autocomplete
 if ($acao == 'autocomplete') :
 
@@ -251,7 +253,7 @@ if ($acao == 'lista_cliente_p') :
 endif;
 if ($acao == 'CAIXA') :
 
-	$sql = "SELECT P.ID_PRODUTO,P.NOME,P.PRECO_VENDA FROM produto AS P LEFT OUTER JOIN CODIGO_BARRAS AS COD ON COD.ID_PRODUTO=P.ID_PRODUTO WHERE P.ID_EMPRESA=1 AND COD.codigo_barras=?";
+	$sql = "SELECT P.ID_PRODUTO,P.NOME,P.PRECO_VENDA FROM produto AS P LEFT OUTER JOIN CODIGO_BARRAS AS COD ON COD.ID_PRODUTO=P.ID_PRODUTO WHERE P.ID_EMPRESA='$empresa'AND COD.codigo_barras=?";
 	$stm = $conexao->prepare($sql);
 	$stm->bindValue(1, $parametro);
 	$stm->execute();
