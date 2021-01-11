@@ -21,6 +21,10 @@ section.cover-form {
     padding: 40px;
 }
 
+.limpa {
+    clear: both;
+}
+
 .form-container {
     text-align: center;
     align-items: center;
@@ -233,11 +237,17 @@ section.cover-form {
     border-radius: 10px;
 }
 
-.enviar .bntSalvar {
+.teste {
+    float: right;
+    margin-top: -52px;
+    margin-right: 160px;
+}
+
+.teste img {
     position: absolute;
+    cursor: pointer;
     width: 30px;
     height: 30px;
-    float: right;
 }
 
 @media screen and (max-width: 1366px) {
