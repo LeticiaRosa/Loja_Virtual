@@ -2,9 +2,6 @@
 session_start();
 require_once ("conexao.php");
 
-
-
-
 if(isset($_POST['acao'])){
 $nome = $_POST['nome'];
 $descricao= $_POST['descricao'];
@@ -23,7 +20,6 @@ $id_usuario=$_SESSION['usuarioId'];
 $cod_barras = null;
 $empresa = $_POST['empresa1'];
 $cod_referencia = $_POST['cod_referencia'];
-
 
     $query = "select id_categoria from categoria where nome = '$id_categoria'";
     $query_1 = "select id_fornecedor from fornecedor where nome = '$id_fornecedor'";
@@ -50,9 +46,7 @@ $cod_referencia = $_POST['cod_referencia'];
     
     //ECHO  $produto;
         if($produto==1){
-            $_SESSION['sucesso_cadastro'] = "Produto inserido com sucesso";
-           
-            
+            $_SESSION['sucesso_cadastro'] = "Inserido com sucesso!";
                 $sql = "select max(id_produto) as id  from produto";
                 $id=mysqli_query($conexao, $sql );
                 $id2=mysqli_fetch_assoc($id);
@@ -60,7 +54,6 @@ $cod_referencia = $_POST['cod_referencia'];
                 if($barra=='S'){
                     $cod_barras=$id2['id'];
                 }elseif( $barra =='N'){
-                  
                     $cod_barras = $_POST['gerar_codigo'];
                 }
                // ECHO $cod_barras;
@@ -71,13 +64,13 @@ $cod_referencia = $_POST['cod_referencia'];
            header("Location:/loja_virtual/Tela_cadastro_produto_1.php");
             
         }else {
-        $_SESSION['erro_cadastro'] = "Produto Não cadastrado";
+        $_SESSION['erro_cadastro'] = "Produto não cadastrado!";
         header("Location:/loja_virtual/Tela_cadastro_produto_1.php");
         }
    
 
 } elseif (isset($_POST['Salvar'])) {
-    $nome = $_POST['nome'];
+$nome = $_POST['nome'];
 $descricao= $_POST['descricao'];
 $id_categoria=$_POST['id_categoria'];  
 $id_sub_categoria=$_POST['id_sub_categoria'];  
@@ -94,7 +87,6 @@ $id_usuario=$_SESSION['usuarioId'];
 $cod_barras = null;
 $empresa = $_POST['empresa1'];
 $cod_referencia = $_POST['cod_referencia'];
-
 
     $query = "select id_categoria from categoria where nome = '$id_categoria'";
     $query_1 = "select id_fornecedor from fornecedor where nome = '$id_fornecedor'";
@@ -121,36 +113,38 @@ $cod_referencia = $_POST['cod_referencia'];
     try {
     $query_2 = "UPDATE PRODUTO SET NOME='$nome', DESCRICAO='$descricao',ID_CATEGORIA='{$variavel['id_categoria']}',id_sub_categoria =  $variavel_sub ,PRECO_VENDA='$preco_venda',QUANTIDADE='$quantidade',ID_FORNECEDOR='{$variavel_1['id_fornecedor']}', MARCA='$marca',UNIDADE_MEDIDA='$unidade_medida',VALOR_MEDIDA='$valor_medida',OBSERVACAO='$observacao',ID_USUARIO_ALT='$id_usuario', DATA_ALTEROU=now(), id_empresa= '{$variavel_3['id_empresa']}' WHERE ID_PRODUTO='$id'";
     $produto = mysqli_query($conexao, $query_2);
-    echo $produto;
+    //echo $produto;
     if ($produto == 1) {
-      $_SESSION['sucesso_cadastro'] = "Atualizado Com Sucesso";
+      $_SESSION['sucesso_cadastro'] = "Atualizado com sucesso!";
       header("Location:/loja_virtual/Tela_visualizar_produto.php");
+    }else {
+        $_SESSION['erro_cadastro'] = "Produto não atualizado!";
+        header("Location:/loja_virtual/Tela_visualizar_produto.php");
     }
     mysqli_close($conexao);
     }catch(mysqli_sql_exception $e) {
-      
-        $_SESSION['erro_cadastro'] = "Produto Não Salvo";
+        $_SESSION['erro_cadastro'] = "Produto não atualizado!";
         header("Location:/loja_virtual/Tela_visualizar_produto.php");
         exit;
-
     }
 
 } elseif (isset($_POST['Excluir'])) {
     $id = $_POST['id'];
     $query_2 = "delete from PRODUTO where ID_PRODUTO='$id'";
-    echo $query_2;
+   // echo $query_2;
     $produto = mysqli_query($conexao, $query_2);
     
-  
     if ($produto == 1) {
-      $_SESSION['sucesso_cadastro'] = "Excluido Com Sucesso";
+      $_SESSION['sucesso_cadastro'] = "Excluído com sucesso!";
       header("Location:/loja_virtual/Tela_visualizar_produto.php");
+    }else {
+        $_SESSION['erro_cadastro'] = "Produto não excluído!";
+        header("Location:/loja_virtual/Tela_visualizar_produto.php");
     }
     mysqli_close($conexao);
 
 } 
 else {
-
 header("Location:/loja_virtual/Tela_visualizar_produto.php");
 }
 

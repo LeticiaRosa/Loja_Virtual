@@ -57,12 +57,12 @@ function validar() {
 
     if (nome.value == empresa.value) {
         $('#conteiner').css("display", "flex");
-        $('#texto').html("Transferencia Não pode ser para mesma empresa, gentileza verificar!!");
+        $('#texto').html("Transferência não pode ser para mesma empresa, gentileza verificar!!");
         return false;
 
     } else if (Qtd_tras.value > Quantidade.value) {
         $('#conteiner').css("display", "flex");
-        $('#texto').html("Quantidade informada para trasferencia e Maior que quantidade em estoque!!");
+        $('#texto').html("Quantidade informada para transferência e maior que quantidade em estoque!!");
         return false;
 
     }

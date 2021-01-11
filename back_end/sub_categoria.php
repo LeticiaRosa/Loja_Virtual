@@ -8,23 +8,23 @@ $observacao=$_POST['observacao'];
 $id_usuario=$_SESSION['usuarioId'];
 
     $query_2 = "insert into sub_CATEGORIA (nome, descricao,  observacao,id_usuario ,data_cadastro) values ('$nome', '$descricao','$observacao','$id_usuario', now())";
-    ECHO $query_2;
+    //ECHO $query_2;
     $produto= mysqli_query($conexao, $query_2);
     mysqli_close($conexao);
-   
-    if($produto==1){
-        $_SESSION['sucesso_cadastro'] = "Produto inserido com sucesso";
 
-            
+    if($produto==1){
+        $_SESSION['sucesso_cadastro'] = "Inserido com sucesso!";
             header("Location:/loja_virtual/Cadastro_sub_Categoria.php");
-        
-    }
+        }else {
+            $_SESSION['erro_cadastro'] = "Sub Categoria não cadastrada!";
+            header("Location:/loja_virtual/Cadastro_sub_Categoria.php");
+          }
 
 
 }elseif (isset($_POST['salvar'])) {
 
     $id = $_POST['id_categoria'];
-    echo  $id;
+    //echo  $id;
     $nome = $_POST['nome'];
     $descricao = $_POST['descricao'];
     $observacao = $_POST['observacao'];
@@ -32,24 +32,28 @@ $id_usuario=$_SESSION['usuarioId'];
     $id_usuario = $_SESSION['usuarioId'];
     if ($status == "S") {
         $query_2 = " UPDATE sub_categoria SET nome='$nome', descricao='$descricao',  observacao='$observacao',id_usuario='$id_usuario' ,data_alteracao=now() ,STATUS='S',id_usuario_alterou='$id_usuario' WHERE ID_SUB_CATEGORIA='$id'";
-        echo $query_2;
+        //echo $query_2;
         $produto = mysqli_query($conexao, $query_2);
 
         if ($produto == 1) {
-                $_SESSION['sucesso_cadastro'] = "Atualizado Com Sucesso";
-
+            $_SESSION['sucesso_cadastro'] = "Atualizado com sucesso!";
             header("Location:/loja_virtual/Tela_listar_subcategoria.php");
-        } 
+        } else {
+            $_SESSION['erro_cadastro'] = "Sub Categoria não atualizada!";
+            header("Location:/loja_virtual/Tela_listar_subcategoria.php");
+          }
     } elseif ($status == "N") {
         $query_2 = "UPDATE sub_categoria SET nome='$nome', descricao='$descricao',  observacao='$observacao',id_usuario='$id_usuario' ,data_alteracao=now() ,STATUS='N' ,id_usuario_alterou='$id_usuario' WHERE ID_SUB_CATEGORIA='$id'";
         echo $query_2;
         $produto = mysqli_query($conexao, $query_2);
 
         if ($produto == 1) {
-            $_SESSION['sucesso_cadastro'] = "Atualizado Com Sucesso";
-
+            $_SESSION['sucesso_cadastro'] = "Atualizado com sucesso!";
             header("Location:/loja_virtual/Tela_listar_subcategoria.php");
-        } 
+        } else {
+            $_SESSION['erro_cadastro'] = "Sub Categoria não atualizada!";
+            header("Location:/loja_virtual/Tela_listar_subcategoria.php");
+          }
     }
 }elseif (isset($_POST['excluir'])) {
 
@@ -66,13 +70,13 @@ $id_usuario=$_SESSION['usuarioId'];
         $produto = mysqli_query($conexao, $query_2);
 
         if ($produto == 1) {
-            $_SESSION['sucesso_cadastro'] = "Excluido Com Sucesso";
-
+            $_SESSION['sucesso_cadastro'] = "Excluído com sucesso!";
             header("Location:/loja_virtual/Tela_listar_subcategoria.php");
-        } 
-    
+        } else {
+            $_SESSION['erro_cadastro'] = "Sub Categoria não excluída!";
+            header("Location:/loja_virtual/Tela_listar_subcategoria.php");
+          }    
 } else {
-
  header("Location:/loja_virtual/Tela_listar_subcategoria.php");
 }
 

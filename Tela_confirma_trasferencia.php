@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/css_confirma_trasferencia.css">
-    <title>Confirmar Transferencia</title>
+    <title>Confirmar Transferência</title>
 </head>
 
 <body >
@@ -13,11 +13,11 @@
     <section class="cover-form">
     <div><a href="tela_vizualizar_trasferencia.php" title="Close" class="close">X</a>
         <div class="form-container">
-            <h1>Confirmar Transferencia</h1>
+            <h1>Confirmar Transferência</h1>s
             <form method="POST" name="form" action="back_end/trasferir.php">
             <div class="col3">
                     <div class="col">
-                        <label>ID TRASFERENCIA</label>
+                        <label>ID TRANSFERÊNCIA</label>
                         <input type="text" name="id_tras" id="id_tras" value="<?php $id = $_GET['id'];echo $id;?>" readonly="readonly" autocomplete="off">
                     </div>
                     <div class="col">
@@ -25,7 +25,7 @@
                         <input type="text" name="id_produto" id="id_produto"  readonly="readonly" autocomplete="off">
                     </div>
                     <div class="col">
-                        <label>Codigo Referencia</label>
+                        <label>Codigo Referência</label>
                         <input type="text" name="cod_referencia" id="cod_referencia"  readonly="readonly" autocomplete="off">
                     </div>
                 </div>
@@ -42,7 +42,7 @@
                 </div>
                 <div class="conter-1">
                 <div class="col-1">
-                        <p>Quantidade Trasferida</p>
+                        <p>Quantidade Transferida</p>
                         <input type="text" name="Qtd_tras" id="Qtd_tras"  readonly="readonly" placeholder="Quantidade"require autocomplete="OFF">
                     </div>
                     <div class="col-1">
