@@ -62,14 +62,14 @@
                 </div>
 
 
-
+                <!---
                 <div class="form-wraper">
                     <div class="col">
                         <p>Observação:</p>
                         <input type="text" name="observacao" id="observacao" placeholder="Observação" autocomplete="off">
                     </div>
 
-                </div>
+                </div> -->
 
                 <div class="enviar">
 

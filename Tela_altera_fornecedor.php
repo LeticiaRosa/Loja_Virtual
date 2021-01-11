@@ -49,7 +49,7 @@
                     </div>
                     <div class="col">
                         <p>Telefone celular:</p>
-                        <input type="text" name="celular" id="celular" placeholder="Telefone" autocomplete="off" >
+                        <input type="text" name="celular" id="celular" class="celular" placeholder="Telefone" autocomplete="off" >
                     </div>
 
                 </div>

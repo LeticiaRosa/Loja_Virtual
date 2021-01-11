@@ -74,7 +74,7 @@ if (empty($_SESSION['login'])) {
                   <li><a href="/loja_virtual/Tela_listar_subcategoria.php">Listar Sub Categorias</a></li>
                 </ul>
               </li>
-              <li><a href="/loja_virtual/Gera_codigo_barra.php">Gerar codigo de barras</a></li>
+             <!--- <li><a href="/loja_virtual/Gera_codigo_barra.php">Gerar codigo de barras</a></li> -->
 
 
             </ul>
@@ -93,7 +93,11 @@ if (empty($_SESSION['login'])) {
           <li id= "estoque" class= "estoque" ><a href="#">Estoque</a>
             <ul class="sub-menu">
               <li><a href="#">Controle de Estoque</a></li>
-              <li><a href="/loja_virtual/Tela_listar_trafere.php">Transferencia de Produtos</a></li>
+              <li><a href="/loja_virtual/tela_vizualizar_trasferencia.php">Transferência de Produtos</a>
+              <ul class="sub-menu">
+                  <li><a href="/loja_virtual/Tela_listar_trafere.php">Transferir Produtos</a></li>
+                </ul>
+              </li>
             </ul>
           </li>
           <li id= "relatorios" class= "relatorios"><a href="#">Relatórios</a>
