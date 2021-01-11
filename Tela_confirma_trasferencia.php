@@ -13,7 +13,7 @@
     <section class="cover-form">
     <div><a href="tela_vizualizar_trasferencia.php" title="Close" class="close">X</a>
         <div class="form-container">
-            <h1>Confirmar Transferência</h1>s
+            <h1>Confirmar Transferência</h1>
             <form method="POST" name="form" action="back_end/trasferir.php">
             <div class="col3">
                     <div class="col">

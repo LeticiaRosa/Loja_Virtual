@@ -205,7 +205,7 @@ if ($acao == 'contar_notificacao') :
 endif;
 if ($acao == 'Busca_notificacao') :
 
-	$sql = "SELECT t.id_trasferencia, es.nome AS EMPRESA,e.nome AS EMPRESA_TRASFERENCIA, u.nome_usuario,t.qtd_trasfere ,p.nome as produto,CASE WHEN T.status='N' THEN 'Aguardando Confirmação' WHEN T.status='C' THEN 'Trasferencia Cancelada' ELSE 'Trasferencia Ja Confirmada' end as STATUS FROM  trasferencia as t LEFT OUTER JOIN USUARIO AS U on u.id_usuario=t.id_usuario left outer join empresa as es on  es.id_empresa= t.id_empresa left outer join empresa as e on  e.id_empresa= t.id_empresa_tras left outer join produto as p on p.ID_produto=t.id_produto ";
+	$sql = "SELECT t.id_trasferencia, es.nome AS EMPRESA,e.nome AS EMPRESA_TRASFERENCIA, u.nome_usuario,t.qtd_trasfere ,p.nome as produto,mensagem as STATUS FROM  trasferencia as t LEFT OUTER JOIN USUARIO AS U on u.id_usuario=t.id_usuario left outer join empresa as es on  es.id_empresa= t.id_empresa left outer join empresa as e on  e.id_empresa= t.id_empresa_tras left outer join produto as p on p.ID_produto=t.id_produto ";
 	$stm = $conexao->prepare($sql);
 	$stm->execute();
 	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
