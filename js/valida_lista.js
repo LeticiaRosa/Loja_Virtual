@@ -84,14 +84,14 @@ function confirma() {
 
 
     if (texto == " Confirma exclusão ? ") {
-        var OK = document.getElementById("teste").elements[19].name = "Excluir";
+        var OK = document.getElementById("teste").elements[20].name = "Excluir";
 
 
 
         fechamodal();
         return true;
     } else if (texto == " Confirma alteração ? ") {
-        var OK = document.getElementById("teste").elements[19].name = "Salvar";
+        var OK = document.getElementById("teste").elements[20].name = "Salvar";
 
 
 

@@ -86,7 +86,7 @@ $observacao=$_POST['observacao'];
 $id_usuario=$_SESSION['usuarioId'];
 $cod_barras = null;
 $empresa = $_POST['empresa1'];
-$cod_referencia = $_POST['cod_referencia'];
+//$cod_referencia = $_POST['cod_referencia'];
 
     $query = "select id_categoria from categoria where nome = '$id_categoria'";
     $query_1 = "select id_fornecedor from fornecedor where nome = '$id_fornecedor'";

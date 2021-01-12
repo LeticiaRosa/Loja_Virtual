@@ -122,7 +122,7 @@
           
             
             <input type="submit" name="Salvar-1" id="Salvar-1" value="Salvar" onclick="return openConfirmacao('salvar')" />
-            <input type="button" name="Gerar_cod" id="Gerar_cod" value="Gerar Codigo De Barras" onclick="gerar_cod()"/>
+            <input type="button" name="Gerar_cod" id="Gerar_cod" value="Gerar" onclick="gerar_cod()"/>
             <input type="submit" name="Excluir" id="Excluir" value="Excluir" onclick="return openConfirmacao('excluir')" />
 
           </div>
