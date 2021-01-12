@@ -135,6 +135,7 @@ section.cover-form {
     font-size: 25px;
     border: 0;
     border-radius: 10px;
+    padding-left: 10px;
 }
 
 .form-container form input[type="email"] {
@@ -240,10 +241,23 @@ section.cover-form {
 .teste {
     float: right;
     margin-top: -52px;
-    margin-right: 160px;
+    margin-right: 158px;
 }
 
 .teste img {
+    position: absolute;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+.teste1 {
+    float: left;
+    margin-top: -52px;
+    margin-left: 21px;
+}
+
+.teste1 img {
     position: absolute;
     cursor: pointer;
     width: 30px;
