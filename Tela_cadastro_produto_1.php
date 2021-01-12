@@ -175,6 +175,8 @@
   <script type="text/javascript" src="js/jquery-ui.min.js"></script>
   <script type="text/javascript" src="js/valida_lista.js"></script>
   <script type="text/javascript" src="js/auto_complete.js"></script>
+  <script type="text/javascript" src="js/modal.js"></script>
+  
 </body>
 
 </html>

@@ -41,12 +41,13 @@ $cod_referencia = $_POST['cod_referencia'];
     }
 
     $query_2 = "insert into produto (nome, descricao, id_categoria,id_sub_categoria, preco_venda, preco_custo,quantidade, id_fornecedor, marca, unidade_medida, valor_medida, observacao,id_usuario ,data_cadastro, id_empresa,CODIGO_REFERENCIA) values ('$nome', '$descricao', '{$variavel['id_categoria']}', $variavel_sub ,'$preco_venda','$preco_custo' ,'$quantidade', '{$variavel_1['id_fornecedor']}', '$marca', '$unidade_medida', '$valor_medida' ,'$observacao','$id_usuario', now(), '{$variavel_3['id_empresa']}','$cod_referencia')";
-   // ECHO  $query_2 ;
+    //ECHO  $query_2 ;
     $produto= mysqli_query($conexao, $query_2);
     
     //ECHO  $produto;
         if($produto==1){
             $_SESSION['sucesso_cadastro'] = "Inserido com sucesso!";
+            
                 $sql = "select max(id_produto) as id  from produto";
                 $id=mysqli_query($conexao, $sql );
                 $id2=mysqli_fetch_assoc($id);
@@ -56,16 +57,16 @@ $cod_referencia = $_POST['cod_referencia'];
                 }elseif( $barra =='N'){
                     $cod_barras = $_POST['gerar_codigo'];
                 }
-               // ECHO $cod_barras;
+                //ECHO $cod_barras;
                
                 $insert = "insert into CODIGO_BARRAS (ID_PRODUTO, id_usuario, CODIGO_BARRAS ,data_cadastro,codigo_referencia) values ('{$id2['id']}','$id_usuario','$cod_barras',  now(),'$cod_referencia')";
-             // ECHO $insert;
+              //ECHO $insert;
                 mysqli_query($conexao, $insert);
            header("Location:/loja_virtual/Tela_cadastro_produto_1.php");
             
         }else {
         $_SESSION['erro_cadastro'] = "Produto não cadastrado!";
-        header("Location:/loja_virtual/Tela_cadastro_produto_1.php");
+        //header("Location:/loja_virtual/Tela_cadastro_produto_1.php");
         }
    
 
@@ -86,7 +87,7 @@ $observacao=$_POST['observacao'];
 $id_usuario=$_SESSION['usuarioId'];
 $cod_barras = null;
 $empresa = $_POST['empresa1'];
-//$cod_referencia = $_POST['cod_referencia'];
+$cod_referencia = $_POST['cod_referencia'];
 
     $query = "select id_categoria from categoria where nome = '$id_categoria'";
     $query_1 = "select id_fornecedor from fornecedor where nome = '$id_fornecedor'";
