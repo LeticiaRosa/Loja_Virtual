@@ -87,6 +87,19 @@ if ($acao == 'codigo_barras') :
 endif;
 
 
+if ($acao == 'codigo_barras_max') :
+
+	$sql = "SELECT P.ID_PRODUTO,UPPER(P.nome)AS nome,P.quantidade, P.PRECO_VENDA, cg.codigo_barras FROM produto as p left outer join CODIGO_BARRAS as cg on cg.id_produto =p.id_produto where P.id_produto=(select max(aux.ID_produto) from produto aux )";
+	$stm = $conexao->prepare($sql);
+	$stm->execute();
+	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
+
+	$json = json_encode($dados);
+
+	echo $json;
+endif;
+
+
 if ($acao == 'categoria') :
 
 	$sql = "SELECT c.id_categoria,UPPER(C.NOME) AS NOME ,UPPER(C.DESCRICAO ) AS DESCRICAO,CASE WHEN C.STATUS='S' THEN 'DISPONIVEL' ELSE'INDISPONIVEL' END AS STATUS,UPPER(U.NOME_USUARIO) AS USUARIO,DATE_format(C.data_cadastro, '%d-%m-%Y') AS DATA_CADASTRO,	UPPER(C.OBSERVACAO) OBSERVACAO  from CATEGORIA C    LEFT OUTER JOIN USUARIO U    ON U.ID_USUARIO=C.ID_USUARIO";

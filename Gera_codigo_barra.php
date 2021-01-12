@@ -21,8 +21,13 @@
                 <div class="conter">
                     <div class="col">
                         <p>ID PRODUTO:</p>
-                        <input type="text" name="Id" id="Id" value="<?php $id = $_GET['id'];
-                                                          echo $id; ?>" readonly="readonly">
+                        <input type="text" name="Id" id="Id" value=" <?php $id="";if  (isset($_GET['id'])) {
+                                                                            $id = $_GET['id'];
+                                                                            echo trim($id);
+                                                                        }else {
+                                                                            $id ="";
+                                                                            echo trim($id);
+                                                                        }  ?>" readonly="readonly">
                     </div>
                     <div class="col">
                         <p>Codigo De barras:</p>
