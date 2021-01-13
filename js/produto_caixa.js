@@ -102,3 +102,9 @@ function busca_produto(teste) {
 $(window).on("load", (function() {
     document.getElementById('codigo').focus();
 }));
+
+
+function Pesquisarproduto() {
+    console.log("teste");
+    $("#openModal").load("Tela_visualizar_produto_CAIXA.php");
+}

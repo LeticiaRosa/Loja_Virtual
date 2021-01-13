@@ -30,16 +30,49 @@
             
                 <div class="conter">
                     <div class="col">
-                        <p>Produto *</p>
-                        <input type="text" name="produto" id="produto" required placeholder="produto" autocomplete="off">
+                        <div class="iconeSearch">
+                        <input type="submit" name="Pesquisarproduto" id="Pesquisarproduto" class = "Pesquisarproduto" value="Pesquisar Produto" onclick="Pesquisarproduto()" />
+                        <div class="imagem">
+                             <img src="imagens/icons8_search_48px.png"></img>
+                        </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col">
+                        <div class = "input_produto">
+                            <p>Produto *</p>
+                            <input type="text" name="produto" id="produto" required placeholder="Produto" autocomplete="off">
+                        </div>
+                        <div class="divQuanti">
+                            <p>Quantidade *</p>
+                            <input type="text" name="quantidade" id="quantidade" placeholder="Quantidade" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="iconeSearch">
+                        <input type="submit" name="Pesquisar" id="Pesquisar" class = "Pesquisar" value="Pesquisar Vendedor  " />
+                        <div class="imagem">
+                             <img src="imagens/icons8_search_48px.png"></img>
+                        </div>
+                        </div>
+                        
                     </div>
                     <div class="col">
                         <p>Vendedor</p>
                         <input type="text" name="Vendedor" id="Vendedor" placeholder="Vendedor" autocomplete="off">
                     </div>
                     <div class="col">
+                        <div class="iconeSearch">
+                        <input type="submit" name="Pesquisar" id="Pesquisar" class = "Pesquisar" value="Pesquisar Cliente" />
+                        <div class="imagem">
+                             <img src="imagens/icons8_search_48px.png"></img>
+                        </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col">
                         <p>Nome Cliente</p>
-                        <input type="text" name="cliente" id="cliente" placeholder="cliente" autocomplete="off">
+                        <input type="text" name="cliente" id="cliente" placeholder="Cliente" autocomplete="off">
 
                     </div>
 
@@ -91,6 +124,10 @@
             </div>
     </section>
 
+    
+    <div id="openModal" class="modalDialog">
+
+</div>
 
     
     <script type="text/javascript" src="js/jquery.js"></script>
