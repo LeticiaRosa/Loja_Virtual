@@ -1,3 +1,4 @@
+  
 <!DOCTYPE html>
 
 
@@ -31,64 +32,51 @@
             
                 <div class="conter">
                     <div class="col">
-                        <p>Codigo De Barras *</p>
-                        <input type="text" name="codigo" id="codigo" required placeholder="codigo" autocomplete="off" onchange="busca_produto(<?php echo $_SESSION['empresausuario'] ?>)">
+                        <div class="iconeSearch">
+                        <input type="submit" name="Pesquisarproduto" id="Pesquisarproduto" class = "Pesquisarproduto" value="Pesquisar Produto" onclick="Pesquisarproduto()" />
+                        <div class="imagem">
+                             <img src="imagens/icons8_search_48px.png"></img>
+                        </div>
+                        </div>
+                        
                     </div>
-                </div>
-                <div class="form-wraper">
-
-                    <div class="conter">
-                        <div class="col">
-                            <div class="iconeSearch">
-                                <input type="submit" name="Pesquisarproduto" id="Pesquisarproduto" class="Pesquisarproduto" value="Pesquisar Produto" onclick="Pesquisarproduto()" />
-                                <div class="imagem">
-                                    <img src="imagens/icons8_search_48px.png"></img>
-                                </div>
-                            </div>
-
+                    <div class="col">
+                        <div class = "input_produto">
+                            <p>Produto *</p>
+                            <input type="text" name="produto" id="produto" required placeholder="Produto" autocomplete="off">
                         </div>
-                        <div class="col">
-                            <div class="input_produto">
-                                <p>Produto *</p>
-                                <input type="text" name="produto" id="produto" required placeholder="Produto" autocomplete="off">
-                            </div>
-                            <div class="divQuanti">
-                                <p>Quantidade *</p>
-                                <input type="text" name="quantidade" id="quantidade" placeholder="Quantidade" autocomplete="off">
-                            </div>
+                        <div class="divQuanti">
+                            <p>Quantidade *</p>
+                            <input type="text" name="quantidade" id="quantidade" placeholder="Quantidade" autocomplete="off">
                         </div>
-                        <div class="col">
-                            <div class="iconeSearch">
-                                <input type="submit" name="Pesquisar" id="Pesquisar" class="Pesquisar" value="Pesquisar Vendedor  " />
-                                <div class="imagem">
-                                    <img src="imagens/icons8_search_48px.png"></img>
-                                </div>
-                            </div>
-
+                    </div>
+                    <div class="col">
+                        <div class="iconeSearch">
+                        <input type="submit" name="Pesquisar" id="Pesquisar" class = "Pesquisar" value="Pesquisar Vendedor  " />
+                        <div class="imagem">
+                             <img src="imagens/icons8_search_48px.png"></img>
                         </div>
-                        <div class="col">
-                            <p>Vendedor</p>
-                            <input type="text" name="Vendedor" id="Vendedor" placeholder="Vendedor" autocomplete="off">
                         </div>
-                        <div class="col">
-                            <div class="iconeSearch">
-                                <input type="submit" name="Pesquisar" id="Pesquisar" class="Pesquisar" value="Pesquisar Cliente" />
-                                <div class="imagem">
-                                    <img src="imagens/icons8_search_48px.png"></img>
-                                </div>
-                            </div>
-
+                        
+                    </div>
+                    <div class="col">
+                        <p>Vendedor</p>
+                        <input type="text" name="Vendedor" id="Vendedor" placeholder="Vendedor" autocomplete="off">
+                    </div>
+                    <div class="col">
+                        <div class="iconeSearch">
+                        <input type="submit" name="Pesquisar" id="Pesquisar" class = "Pesquisar" value="Pesquisar Cliente" />
+                        <div class="imagem">
+                             <img src="imagens/icons8_search_48px.png"></img>
                         </div>
-                        <div class="col">
-                            <p>Nome Cliente</p>
-                            <input type="text" name="cliente" id="cliente" placeholder="Cliente" autocomplete="off">
-
                         </div>
+                        
+                    </div>
+                    <div class="col">
+                        <p>Nome Cliente</p>
+                        <input type="text" name="cliente" id="cliente" placeholder="Cliente" autocomplete="off">
 
                     </div>
-                    <div class="tabela-container">
-                        <div class="corpao">
-                            <table id="products-table" class="teste1">
 
                 </div>
                 <div class="tabela-container">
@@ -117,30 +105,23 @@
                             <p>Total De itens</p>
                             <input type="text" name="itens" id="itens" autocomplete="off">
                         </div>
-                        <div class="form-wraper1">
-
-                            <div class="col1">
-                                <p>Total De itens</p>
-                                <input type="text" name="itens" id="itens" autocomplete="off">
-                            </div>
-                            <div class="col2">
-                                <p>Total Venda</p>
-                                <input type="text" name="venda" id="venda" autocomplete="off">
-                            </div>
+                        <div class="col2">
+                            <p>Total Venda</p>
+                            <input type="text" name="venda" id="venda"  autocomplete="off">
                         </div>
                     </div>
-
-
                 </div>
 
-                <div class="form-wraper">
 
-                    <div class="enviar">
+            </div>
 
-                        <input type="submit" name="Confirmar" id="Confirmar" value="Confirmar" />
-                        <input type="submit" name="Excluir" id="Excluir" value="Excluir" />
+            <div class="form-wraper">
 
-                    </div>
+                <div class="enviar">
+
+                    <input type="submit" name="Confirmar" id="Confirmar" value="Confirmar" />
+                    <input type="submit" name="Excluir" id="Excluir" value="Excluir" />
+
                 </div>
             </div>
     </section>
@@ -151,9 +132,9 @@
 <div id="openModal" class="modalDialog1">
  
 
-    </div>
+</div>
 
-
+    
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/produto_caixa.js"></script>
