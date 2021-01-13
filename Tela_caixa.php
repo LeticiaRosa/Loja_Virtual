@@ -16,6 +16,7 @@
     <?php
     include_once("menu.php");
     ?>
+    <div class = "center">
     <section class="cover-form">
         <div class="form-container">
             <h1>CAIXA</h1>
@@ -79,7 +80,7 @@
                 </div>
                 <div class="tabela-container">
                 <div class= "corpao">
-                    <table id="products-table" class="teste1">
+                    <table id="products-table-1" class="teste1">
                     
                         <thead class="cabeça">
                             <tr>
@@ -123,9 +124,12 @@
                 </div>
             </div>
     </section>
-
-    
-    <div id="openModal" class="modalDialog">
+</div>
+<div class = "botaoFecha" id = "botaoFecha">  
+    <input type="submit" name="fecha" id="fecha" value="X" onclick= "fecha()" class="botao"/> 
+</div>
+<div id="openModal" class="modalDialog1">
+ 
 
 </div>
 
