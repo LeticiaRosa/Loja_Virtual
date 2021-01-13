@@ -10,98 +10,97 @@
 </head>
 
 <body>
+    <div class="center">
+        <section class="cover-form-1">
+            <div class="form-container">
+                <h1>Editar Fornecedor</h1>
+                <form method="POST" name="form" action="back_end/fornecedor.php">
+                    <div class="col3">
+                        <div class="col">
+                            <p>ID FORNECEDOR</p>
+                            <input type="text" name="id_fornecedor" id="id_fornecedor" readonly="readonly" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="form-wraper">
+                        <div class="col">
+                            <p>Nome Fornecedor*</p>
+                            <input type="text" name="nome" id="nome" required placeholder="Nome" autocomplete="off">
+                        </div>
+                        <div class="col">
+                            <p>Razao Social</p>
+                            <input type="text" name="Razao_Social" id="Razao_Social" placeholder="Razao Social" autocomplete="off">
+                        </div>
+                        <div class="col-1">
+                            <p>Status:</p>
+                            <select name="status" id="status" placeholder="Status">
+                                <option value="S" id="S">Disponível</option>
+                                <option value="N" id="N">Indisponível</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-wraper">
+                        <div class="col">
+                            <p>CNPJ*:</p>
+                            <input type="text" name="CNPJ" id="CNPJ" required placeholder="Cnpj" autocomplete="off">
+                        </div>
+                        <div class="col">
+                            <p>Telefone Fixo:</p>
+                            <input type="text" name="fixo" id="fixo" placeholder="Telefone" autocomplete="off">
+                        </div>
+                        <div class="col">
+                            <p>Telefone celular:</p>
+                            <input type="text" name="celular" id="celular" class="celular" placeholder="Telefone" autocomplete="off">
+                        </div>
 
-    <section class="cover-form-1">
-        <div class="form-container">
-            <h1>Editar Fornecedor</h1>
-            <form method="POST" name="form" action="back_end/fornecedor.php">
-                <div class="col3">
-                    <div class="col">
-                        <p>ID FORNECEDOR</p>
-                        <input type="text" name="id_fornecedor" id="id_fornecedor" readonly="readonly" autocomplete="off">
                     </div>
-                </div>
-                <div class="form-wraper">
-                    <div class="col">
-                        <p>Nome Fornecedor*</p>
-                        <input type="text" name="nome" id="nome" required placeholder="Nome" autocomplete="off">
-                    </div>
-                    <div class="col">
-                        <p>Razao Social</p>
-                        <input type="text" name="Razao_Social" id="Razao_Social" placeholder="Razao Social" autocomplete="off">
-                    </div>
-                    <div class="col-1">
-                        <p>Status:</p>
-                        <select name="status" id="status" placeholder="Status">
-                            <option value="S" id="S">Disponível</option>
-                            <option value="N" id="N">Indisponível</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-wraper">
-                    <div class="col">
-                        <p>CNPJ*:</p>
-                        <input type="text" name="CNPJ" id="CNPJ" required placeholder="Cnpj" autocomplete="off">
-                    </div>
-                    <div class="col">
-                        <p>Telefone Fixo:</p>
-                        <input type="text" name="fixo" id="fixo" placeholder="Telefone" autocomplete="off" >
-                    </div>
-                    <div class="col">
-                        <p>Telefone celular:</p>
-                        <input type="text" name="celular" id="celular" class="celular" placeholder="Telefone" autocomplete="off" >
-                    </div>
+                    <div class="form-wraper">
 
-                </div>
-                <div class="form-wraper">
+                        <div class="col">
+                            <p>Contato:</p>
+                            <input type="text" name="Contato" id="Contato" placeholder="Nome Pessoa Referencia" autocomplete="off">
+                        </div>
 
-                    <div class="col">
-                        <p>Contato:</p>
-                        <input type="text" name="Contato" id="Contato" placeholder="Nome Pessoa Referencia" autocomplete="off">
+                        <div class="col">
+                            <p>E-MAIL:</p>
+                            <input type="email" name="E-MAIL" id="E-MAIL" placeholder="E-mail" autocomplete="off">
+                        </div>
                     </div>
-
-                    <div class="col">
-                        <p>E-MAIL:</p>
-                        <input type="email" name="E-MAIL" id="E-MAIL" placeholder="E-mail" autocomplete="off">
-                    </div>
-                </div>
-                <div class="form-wraper">
-                    <div class="col">
-                        <p>Endereço:</p>
-                        <input type="text" name="endereco" id="endereco" placeholder="Endereço" autocomplete="off">
-                    </div>
-                    <div class="col">
-                        <p>CEP:</p>
-                        <input type="text" name="CEP" id="CEP" placeholder="CEP" autocomplete="off">
-                    </div>
-
-
-                </div>
+                    <div class="form-wraper">
+                        <div class="col">
+                            <p>Endereço:</p>
+                            <input type="text" name="endereco" id="endereco" placeholder="Endereço" autocomplete="off">
+                        </div>
+                        <div class="col">
+                            <p>CEP:</p>
+                            <input type="text" name="CEP" id="CEP" placeholder="CEP" autocomplete="off">
+                        </div>
 
 
-                <div class="form-wraper">
-                    <div class="col">
-                        <p>Observação:</p>
-                        <input type="text" name="observacao" id="observacao" placeholder="Observação" autocomplete="off">
                     </div>
 
-                </div>
 
-                <div class="enviar">
+                    <div class="form-wraper">
+                        <div class="col">
+                            <p>Observação:</p>
+                            <input type="text" name="observacao" id="observacao" placeholder="Observação" autocomplete="off">
+                        </div>
 
-                    <input type="submit" name="Salvar" id="Salvar" value="Salvar" />
-                    <input type="submit" name="Excluir" id="Excluir" value="Excluir" />
+                    </div>
 
-                </div>
+                    <div class="enviar">
 
-            </form>
+                        <input type="submit" name="Salvar" id="Salvar" value="Salvar" />
+                        <input type="submit" name="Excluir" id="Excluir" value="Excluir" />
 
-        </div>
-        <!--container bg-->
-    </section>
-    <!--cover-form-->
+                    </div>
 
+                </form>
 
+            </div>
+            <!--container bg-->
+        </section>
+        <!--cover-form-->
+    </div>
 
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>

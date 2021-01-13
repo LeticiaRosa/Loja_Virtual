@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="css/css_listar_empresa.css">
+    <title>Empresa</title>
 
 </head>
 <html>
@@ -15,14 +16,10 @@
 <body>
 
 
-    <title>Empresa</title>
-    </head>
-
-    <body>
-
-        <?php
-        include_once("menu.php");
-        ?>
+    <?php
+    include_once("menu.php");
+    ?>
+    <div class="center">
         <section class="cover-form">
             <div class="form-container">
                 <h1> Empresas</h1>
@@ -55,51 +52,50 @@
             <!--container bg-->
         </section>
         <!--cover-form-->
+    </div>
 
 
-        
-            <div id="openModal" class="modalDialog">
-                <div><a href="#close" title="Close" class="close">X</a>
-                    <?php include_once("Tela_alterar_empresa.php");  ?>
-                </div>
-            </div>
-       
+    <div id="openModal" class="modalDialog">
+        <div><a href="#close" title="Close" class="close">X</a>
+            <?php include_once("Tela_alterar_empresa.php");  ?>
+        </div>
+    </div>
 
 
 
-        <div class="pega">
-            <input id="pega" type="text" value="<?php if (isset($_SESSION['sucesso_cadastro'])) {
-                                          echo $_SESSION['sucesso_cadastro'];
-                                        }else if (isset($_SESSION['erro_cadastro'])) {
-                                          echo $_SESSION['erro_cadastro'];
-                                      
-                                        } ?>">
+
+    <div class="pega">
+        <input id="pega" type="text" value="<?php if (isset($_SESSION['sucesso_cadastro'])) {
+                                                echo $_SESSION['sucesso_cadastro'];
+                                            } else if (isset($_SESSION['erro_cadastro'])) {
+                                                echo $_SESSION['erro_cadastro'];
+                                            } ?>">
+
+    </div>
+    <div class="conteiner" id="conteiner">
+        <div class="couver">
+
+            <p id="mensagem"> <?php
+                                //Recuperando o valor da variável global, os erro de login.
+                                if (isset($_SESSION['sucesso_cadastro'])) {
+                                    echo $_SESSION['sucesso_cadastro'];
+                                    unset($_SESSION['sucesso_cadastro']);
+                                } ?>
+            </p>
+
+            <input type="submit" value="OK" onclick="fechamodal()" /> </p>
 
         </div>
-        <div class="conteiner" id="conteiner">
-            <div class="couver">
+    </div>
 
-                <p id="mensagem"> <?php
-                    //Recuperando o valor da variável global, os erro de login.
-                    if (isset($_SESSION['sucesso_cadastro'])) {
-                        echo $_SESSION['sucesso_cadastro'];
-                        unset($_SESSION['sucesso_cadastro']);
-                    } ?>
-                </p>
-
-                <input type="submit" value="OK" onclick="fechamodal()" /> </p>
-
-            </div>
-        </div>
-
-        <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="js/modal.js"></script>
-        <script type="text/javascript" src="js/listar_empresa.js"></script>
-        <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/modal.js"></script>
+    <script type="text/javascript" src="js/listar_empresa.js"></script>
+    <script type="text/javascript" src="DataTables/datatables.min.js"></script>
 
 
 
-    </body>
+</body>
 
 </html>

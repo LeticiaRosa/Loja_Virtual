@@ -14,65 +14,64 @@
 
     include_once("menu.php");
     ?>
-    <nav class="menu" id="menu">
-        <div class="corpo">
-            <h1>Gerador De Codigos</h1>
-            <form method="POST" name="form" action="">
-                <div class="conter">
-                    <div class="col">
-                        <p>ID PRODUTO:</p>
-                        <input type="text" name="Id" id="Id" value=" <?php $id="";if  (isset($_GET['id'])) {
-                                                                            $id = $_GET['id'];
-                                                                            echo trim($id);
-                                                                        }else {
-                                                                            $id ="";
-                                                                            echo trim($id);
-                                                                        }  ?>" readonly="readonly">
+    <div class="center">
+        <nav class="menu" id="menu">
+            <div class="corpo">
+                <h1>Gerador De Codigos</h1>
+                <form method="POST" name="form" action="">
+                    <div class="conter">
+                        <div class="col">
+                            <p>ID PRODUTO:</p>
+                            <input type="text" name="Id" id="Id" value=" <?php $id = "";
+                                                                            if (isset($_GET['id'])) {
+                                                                                $id = $_GET['id'];
+                                                                                echo trim($id);
+                                                                            } else {
+                                                                                $id = "";
+                                                                                echo trim($id);
+                                                                            }  ?>" readonly="readonly">
+                        </div>
+                        <div class="col">
+                            <p>Codigo De barras:</p>
+                            <input type="text" name="codigo" id="codigo" disabled>
+                        </div>
+
+                        <div class="col">
+                            <p>PRODUTO:</p>
+                            <input type="text" name="produto1" id="produto1" disabled>
+                        </div>
+
+                        <div class="col">
+                            <p>VALOR PRODUTO:</p>
+                            <input type="text" name="valor_produto" id="valor_produto" disabled>
+                        </div>
+
+                        <div class="col">
+                            <p>QUANTIDADE EM ESTOQUE:</p>
+                            <input type="text" name="qtd_estoque" id="qtd_estoque" disabled>
+                        </div>
+
+
                     </div>
-                    <div class="col">
-                        <p>Codigo De barras:</p>
-                        <input type="text" name="codigo" id="codigo" disabled>
+                    <div class="conter-1">
+
+                        <div class="col-1">
+                            <p>QUANTIDADE DE ETIQUETAS:</p>
+                            <input type="text" name="qtd_etiquetas" id="qtd_etiquetas" require autocomplete="OFF">
+                        </div>
                     </div>
-
-                    <div class="col">
-                        <p>PRODUTO:</p>
-                        <input type="text" name="produto1" id="produto1" disabled>
+                    <div class="conter">
+                        <div class="enviar">
+                            <input type="submit" name="acao" id="clicar" value="Gerar">
+                        </div>
                     </div>
+                </form>
+            </div>
+    </div>
+    <div class="cod_barra" id="barcodeDiv">
 
-                    <div class="col">
-                        <p>VALOR PRODUTO:</p>
-                        <input type="text" name="valor_produto" id="valor_produto" disabled>
-                    </div>
+    </div>
 
-                    <div class="col">
-                        <p>QUANTIDADE EM ESTOQUE:</p>
-                        <input type="text" name="qtd_estoque" id="qtd_estoque" disabled>
-                    </div>
-
-
-                </div>
-                <div class="conter-1">
-
-                    <div class="col-1">
-                        <p>QUANTIDADE DE ETIQUETAS:</p>
-                        <input type="text" name="qtd_etiquetas" id="qtd_etiquetas" require autocomplete="OFF">
-                    </div>
-                </div>
-                <div class="conter">
-                    <div class="enviar">
-                        <input type="submit" name="acao" id="clicar" value="Gerar">
-                    </div>
-                </div>
-            </form>
-        </div>
-
-        <div class="cod_barra" id="barcodeDiv">
-
-        </div>
-
-
-
-    </nav>
 
 
     <script type="text/javascript" src="js/jquery.js"></script>

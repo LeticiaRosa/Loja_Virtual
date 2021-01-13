@@ -16,53 +16,54 @@
     <?php
     include_once("menu.php");
     ?>
-    <section class="cover-form">
-        <div class="form-container">
-            <h1>Cadastro de Usuario</h1>
-            <form method="POST" name="form" action="back_end/usuario.php">
-                <div class="form-wraper">
+    <div class="center">
+        <section class="cover-form">
+            <div class="form-container">
+                <h1>Cadastro de Usuario</h1>
+                <form method="POST" name="form" action="back_end/usuario.php">
+                    <div class="form-wraper">
 
-                    <div class="col">
-                        <p>Nome Usuario*</p>
-                        <input type="text" name="nome" id="nome" required placeholder="Nome" autocomplete="off">
+                        <div class="col">
+                            <p>Nome Usuario*</p>
+                            <input type="text" name="nome" id="nome" required placeholder="Nome" autocomplete="off">
+                        </div>
+                        <div class="col">
+                            <p>Login*</p>
+                            <input type="text" name="Login" id="Login" required placeholder="Login" autocomplete="off">
+                        </div>
+                        <div class="col">
+                            <p>Senha*:</p>
+
+                            <input type="password" name="Senha" id="Senha" required placeholder="Senha" autocomplete="off">
+
+                        </div>
+                        <div class="olho" id="olho">
+                            <img src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" id="v" class="v">
+                        </div>
+                        <div class="limpa"></div>
+
                     </div>
-                    <div class="col">
-                        <p>Login*</p>
-                        <input type="text" name="Login" id="Login" required placeholder="Login" autocomplete="off">
-                    </div>
-                    <div class="col">
-                        <p>Senha*:</p>
+                    <div class="form-wraper">
 
-                        <input type="password" name="Senha" id="Senha" required placeholder="Senha" autocomplete="off">
+                        <div class="col">
+                            <p>Empresa</p>
+                            <input type="text" name="Empresa" id="Empresa" required placeholder="Empresa" autocomplete="off">
+                        </div>
+                        <div class="col-1">
+                            <p>Permissões:</p>
+                            <select name="permissao" id="permissao" placeholder="permissao de Medida">
+                                <option selected disabled value="">Selecione</option>
+                                <option value="Administrador">Administrador</option>
+                                <option value="Estoque_caixa">Estoque e Caixa</option>
+                                <option value="Caixa">Caixa</option>
+                                <option value="">Nenhum</option>
+                            </select>
+                        </div>
 
-                    </div>
-                    <div class="olho" id="olho">
-                        <img src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" id="v" class="v">
-                    </div>
-                    <div class="limpa"></div>
-
-                </div>
-                <div class="form-wraper">
-
-                    <div class="col">
-                        <p>Empresa</p>
-                        <input type="text" name="Empresa" id="Empresa" required placeholder="Empresa" autocomplete="off">
-                    </div>
-                    <div class="col-1">
-                        <p>Permissões:</p>
-                        <select name="permissao" id="permissao" placeholder="permissao de Medida">
-                            <option selected disabled value="">Selecione</option>
-                            <option value="Administrador">Administrador</option>
-                            <option value="Estoque_caixa">Estoque e Caixa</option>
-                            <option value="Caixa">Caixa</option>
-                            <option value="">Nenhum</option>
-                        </select>
                     </div>
 
-                </div>
 
-
-                <!---
+                    <!---
                 <div class="form-wraper">
                     <div class="col">
                         <p>Observação:</p>
@@ -71,25 +72,25 @@
 
                 </div> -->
 
-                <div class="enviar">
+                    <div class="enviar">
 
-                    <input type="submit" name="acao" id="clicar" value="Cadastrar" />
+                        <input type="submit" name="acao" id="clicar" value="Cadastrar" />
 
-                </div>
+                    </div>
 
-            </form>
+                </form>
 
-        </div>
-        <!--container bg-->
-    </section>
-    <!--cover-form-->
+            </div>
+            <!--container bg-->
+        </section>
+        <!--cover-form-->
+    </div>
     <div class="pega">
         <input id="pega" type="text" value="<?php if (isset($_SESSION['sucesso_cadastro'])) {
-                                          echo $_SESSION['sucesso_cadastro'];
-                                        }else if (isset($_SESSION['erro_cadastro'])) {
-                                          echo $_SESSION['erro_cadastro'];
-                                      
-                                        } ?>">
+                                                echo $_SESSION['sucesso_cadastro'];
+                                            } else if (isset($_SESSION['erro_cadastro'])) {
+                                                echo $_SESSION['erro_cadastro'];
+                                            } ?>">
     </div>
     <div class="conteiner" id="conteiner">
         <div class="couver">

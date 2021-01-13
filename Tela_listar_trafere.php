@@ -10,39 +10,39 @@
 </head>
 <html>
 
-<body >
+<body>
 
     <?php
     include_once("menu.php");
     ?>
 
+    <div class="center">
+        <section class="cover-form">
+            <div class="form-container">
+                <h1>Transferir Produtos</h1>
 
-    <section class="cover-form">
-        <div class="form-container">
-            <h1>Transferir Produtos</h1>
+                <div class="form-wraper-1">
+                    <table id="products-table">
+                        <thead class="cabeça">
 
-            <div class="form-wraper-1">
-                <table id="products-table">
-                    <thead class="cabeça">
-
-                        <tr>
-                            <th class="sumir-sempre"> Id <br /> </th>
-                            <th> Nome Produto</th>
-                            <th>Nome Empresa</th>
-                            <th>Quantidade</th>
-                        </tr>
-                    </thead>
-                    <tbody id="visualizarDados">
+                            <tr>
+                                <th class="sumir-sempre"> Id <br /> </th>
+                                <th> Nome Produto</th>
+                                <th>Nome Empresa</th>
+                                <th>Quantidade</th>
+                            </tr>
+                        </thead>
+                        <tbody id="visualizarDados">
 
 
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </div>
-        <!--container bg-->
-    </section>
-    <!--cover-form-->
-
+            <!--container bg-->
+        </section>
+        <!--cover-form-->
+    </div>
     <div id="openModal" class="modalDialog">
 
     </div>
@@ -50,11 +50,10 @@
 
     <div class="pega">
         <input id="pega" type="text" value="<?php if (isset($_SESSION['sucesso_cadastro'])) {
-                                          echo $_SESSION['sucesso_cadastro'];
-                                        }else if (isset($_SESSION['erro_cadastro'])) {
-                                          echo $_SESSION['erro_cadastro'];
-                                      
-                                        } ?>">
+                                                echo $_SESSION['sucesso_cadastro'];
+                                            } else if (isset($_SESSION['erro_cadastro'])) {
+                                                echo $_SESSION['erro_cadastro'];
+                                            } ?>">
 
     </div>
 

@@ -13,7 +13,7 @@
     <?php
     include_once("menu.php");
     ?>
-
+    <div class="center">
     <section class="cover-form">
         <div class="form-container">
             <h1>Cadastro de Clientes</h1>
@@ -68,6 +68,7 @@
         </div>
         <!--container bg-->
     </section>
+    </div>
     <!--cover-form-->
     <div class="pega">
         <input id="pega" type="text" value="<?php if (isset($_SESSION['sucesso_cadastro'])) {

@@ -13,6 +13,12 @@ body {
     background-color: rgb(235, 237, 240);
 }
 
+.center {
+    width: 100%;
+    margin: auto;
+    max-width: 1280px;
+}
+
 section.cover-form {
     width: 100%;
     padding: 40px;

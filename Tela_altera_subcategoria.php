@@ -13,65 +13,65 @@
   <?php
   include_once("menu.php");
   ?>
-
-  <section class="cover-form">
-    <div class="form-container">
-      <h1>Editar Sub Categoria</h1>
-      <form method="POST" name="form" action="back_end/sub_categoria.php">
-        <div class="form-wraper">
-          <div class="col3">
-            <p>Id Do Produto</p>
-            <input type="text" name="id_categoria" id="id_categoria" readonly="readonly">
-          </div>
-        </div>
-
-        <div class="form-wraper">
-
-          <div class="col">
-            <p>Nome Categoria*</p>
-            <input type="text" name="nome" id="nome" required placeholder="Nome" autocomplete="off">
-          </div>
-          <div class="col">
-            <p>Descrição</p>
-            <input type="text" name="descricao" id="descricao" placeholder="Descrição" autocomplete="off">
-          </div>
-          <div class="col-1">
-            <p>Status:</p>
-            <select name="status" id="status" placeholder="Status">
-              <option value="S" id="S">Disponível</option>
-              <option value="N" id="N">Indisponível</option>
-            </select>
+  <div class="center">
+    <section class="cover-form">
+      <div class="form-container">
+        <h1>Editar Sub Categoria</h1>
+        <form method="POST" name="form" action="back_end/sub_categoria.php">
+          <div class="form-wraper">
+            <div class="col3">
+              <p>Id Do Produto</p>
+              <input type="text" name="id_categoria" id="id_categoria" readonly="readonly">
+            </div>
           </div>
 
-        </div>
+          <div class="form-wraper">
 
+            <div class="col">
+              <p>Nome Categoria*</p>
+              <input type="text" name="nome" id="nome" required placeholder="Nome" autocomplete="off">
+            </div>
+            <div class="col">
+              <p>Descrição</p>
+              <input type="text" name="descricao" id="descricao" placeholder="Descrição" autocomplete="off">
+            </div>
+            <div class="col-1">
+              <p>Status:</p>
+              <select name="status" id="status" placeholder="Status">
+                <option value="S" id="S">Disponível</option>
+                <option value="N" id="N">Indisponível</option>
+              </select>
+            </div>
 
-
-        <div class="form-wraper">
-          <div class="col">
-            <p>Observação:</p>
-            <input type="text" name="observacao" id="observacao" placeholder="Observação" autocomplete="off">
           </div>
 
-        </div>
-
-        <div class="enviar">
-          <input type="submit" name="salvar" id="salvar" value="Salvar" />
-          <input type="submit" name="excluir" id="excluir" value="Excluir" />
-        </div>
 
 
+          <div class="form-wraper">
+            <div class="col">
+              <p>Observação:</p>
+              <input type="text" name="observacao" id="observacao" placeholder="Observação" autocomplete="off">
+            </div>
 
-      </form>
+          </div>
 
-    </div>
-    <!--container bg-->
-  </section>
-  <!--cover-form-->
+          <div class="enviar">
+            <input type="submit" name="salvar" id="salvar" value="Salvar" />
+            <input type="submit" name="excluir" id="excluir" value="Excluir" />
+          </div>
 
+
+
+        </form>
+
+      </div>
+      <!--container bg-->
+    </section>
+    <!--cover-form-->
+  </div>
 
   <script type="text/javascript" src="js/jquery.js"></script>
-  
+
   <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 
 

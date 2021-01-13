@@ -18,6 +18,12 @@ section.cover-form {
     padding: 40px;
 }
 
+.center {
+    width: 100%;
+    margin: auto;
+    max-width: 1280px;
+}
+
 .form-container {
     text-align: center;
     align-items: center;

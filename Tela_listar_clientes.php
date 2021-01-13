@@ -10,15 +10,15 @@
     <link rel="stylesheet" type="text/css" href="css/css_listar_clientes.css">
 
     <title>Clientes</title>
-    </head>
+</head>
 <html>
 
 <body>
-        <?php
-        include_once("menu.php");
-        ?>
-
-<section class="cover-form">
+    <?php
+    include_once("menu.php");
+    ?>
+    <div class="center">
+        <section class="cover-form">
             <div class="form-container">
                 <h1>Clientes</h1>
 
@@ -50,44 +50,43 @@
             <!--container bg-->
         </section>
         <!--cover-form-->
+    </div>
 
-      
-            <div id="openModal" class="modalDialog">
-                <div>
-                    <?php include_once("Tela_alterar_cliente.php");  ?>
-                </div>
-            </div>
-     
-        <div class="pega">
-            <input id="pega" type="text" value="<?php if (isset($_SESSION['sucesso_cadastro'])) {
-                                          echo $_SESSION['sucesso_cadastro'];
-                                        }else if (isset($_SESSION['erro_cadastro'])) {
-                                          echo $_SESSION['erro_cadastro'];
-                                      
-                                        } ?>">
+    <div id="openModal" class="modalDialog">
+        <div>
+            <?php include_once("Tela_alterar_cliente.php");  ?>
+        </div>
+    </div>
+
+    <div class="pega">
+        <input id="pega" type="text" value="<?php if (isset($_SESSION['sucesso_cadastro'])) {
+                                                echo $_SESSION['sucesso_cadastro'];
+                                            } else if (isset($_SESSION['erro_cadastro'])) {
+                                                echo $_SESSION['erro_cadastro'];
+                                            } ?>">
+
+    </div>
+    <div class="conteiner" id="conteiner">
+        <div class="couver">
+
+            <p> <?php
+                //Recuperando o valor da variável global, os erro de login.
+                if (isset($_SESSION['sucesso_cadastro'])) {
+                    echo $_SESSION['sucesso_cadastro'];
+                    unset($_SESSION['sucesso_cadastro']);
+                } ?>
+            </p>
+
+            <input type="submit" value="OK" onclick="fechamodal()" /> </p>
 
         </div>
-        <div class="conteiner" id="conteiner">
-            <div class="couver">
+    </div>
+    <script type="text/javascript" src="js/modal.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/listar_clientes.js"></script>
+    <script type="text/javascript" src="DataTables/datatables.min.js"></script>
 
-                <p> <?php
-                    //Recuperando o valor da variável global, os erro de login.
-                    if (isset($_SESSION['sucesso_cadastro'])) {
-                        echo $_SESSION['sucesso_cadastro'];
-                        unset($_SESSION['sucesso_cadastro']);
-                    } ?>
-                </p>
-
-                <input type="submit" value="OK" onclick="fechamodal()" /> </p>
-
-            </div>
-        </div>
-        <script type="text/javascript" src="js/modal.js"></script>
-        <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="js/listar_clientes.js"></script>
-        <script type="text/javascript" src="DataTables/datatables.min.js"></script>
-
-    </body>
+</body>
 
 </html>

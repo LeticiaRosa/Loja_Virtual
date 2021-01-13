@@ -14,61 +14,59 @@
 <body>
 
     <?php
-
     include_once("menu.php");
-
-
     ?>
-    <section class="cover-form">
-        <div class="form-container">
-            <h1>Cadastro de Empresas</h1>
-            <form method="POST" name="form" action="back_end/Empresa.php">
-                <div class="form-wraper">
+    <div class="center">
+        <section class="cover-form">
+            <div class="form-container">
+                <h1>Cadastro de Empresas</h1>
+                <form method="POST" name="form" action="back_end/Empresa.php">
+                    <div class="form-wraper">
 
-                    <div class="col">
-                        <p>Nome da Empresa*</p>
-                        <input type="text" name="nome" id="nome" required placeholder="Empresa" autocomplete="off">
+                        <div class="col">
+                            <p>Nome da Empresa*</p>
+                            <input type="text" name="nome" id="nome" required placeholder="Empresa" autocomplete="off">
+                        </div>
+                        <div class="col">
+                            <p>Razao Social*</p>
+                            <input type="text" name="razao_social" id="razao_social" required placeholder="Razão Social" autocomplete="off">
+                        </div>
+                        <div class="col">
+                            <p>Descrição</p>
+                            <input type="text" name="descricao" id="descricao" placeholder="Descrição" autocomplete="off">
+                        </div>
                     </div>
-                    <div class="col">
-                        <p>Razao Social*</p>
-                        <input type="text" name="razao_social" id="razao_social" required placeholder="Razão Social" autocomplete="off">
+                    <div class="form-wraper">
+                        <div class="col">
+                            <p>CNPJ</p>
+                            <input type="text" name="CNPJ" id="CNPJ" placeholder="CNPJ" autocomplete="off">
+                        </div>
+                        <div class="col">
+                            <p>Endereço</p>
+                            <input type="text" name="Endereco" id="Endereco" placeholder="Endereço" autocomplete="off">
+                        </div>
                     </div>
-                    <div class="col">
-                        <p>Descrição</p>
-                        <input type="text" name="descricao" id="descricao" placeholder="Descrição" autocomplete="off">
+                    <div class="form-wraper">
+                        <div class="col">
+                            <p>Observação</p>
+                            <input type="text" name="Observacao" id="Observacao" placeholder="Observação" autocomplete="off">
+                        </div>
                     </div>
-                </div>
-                <div class="form-wraper">
-                    <div class="col">
-                        <p>CNPJ</p>
-                        <input type="text" name="CNPJ" id="CNPJ" placeholder="CNPJ" autocomplete="off">
-                    </div>
-                    <div class="col">
-                        <p>Endereço</p>
-                        <input type="text" name="Endereco" id="Endereco" placeholder="Endereço" autocomplete="off">
-                    </div>
-                </div>
-                <div class="form-wraper">
-                    <div class="col">
-                        <p>Observação</p>
-                        <input type="text" name="Observacao" id="Observacao" placeholder="Observação" autocomplete="off">
-                    </div>
-                </div>
-                <div class="enviar">
-                    <input type="submit" name="acao" id="clicar" value="Cadastrar" />
+                    <div class="enviar">
+                        <input type="submit" name="acao" id="clicar" value="Cadastrar" />
 
-                </div>
+                    </div>
 
-            </form>
-        </div>
-    </section>
+                </form>
+            </div>
+        </section>
+    </div>
     <div class="pega">
         <input id="pega" type="text" value="<?php if (isset($_SESSION['sucesso_cadastro'])) {
-                                          echo $_SESSION['sucesso_cadastro'];
-                                        }else if (isset($_SESSION['erro_cadastro'])) {
-                                          echo $_SESSION['erro_cadastro'];
-                                      
-                                        } ?>">
+                                                echo $_SESSION['sucesso_cadastro'];
+                                            } else if (isset($_SESSION['erro_cadastro'])) {
+                                                echo $_SESSION['erro_cadastro'];
+                                            } ?>">
     </div>
     <div class="conteiner" id="conteiner">
         <div class="couver">
