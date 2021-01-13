@@ -9,7 +9,7 @@
 </head>
 
 <body >
-
+    <div class="center">
     <section class="cover-form">
     <div><a href="Tela_listar_trafere.php" title="Close" class="close">X</a>
         <div class="form-container">
@@ -58,6 +58,7 @@
         </div>
         <!--container bg-->
     </section>
+</div>
     <!--cover-form-->
     
     <div class="conteiner" id="conteiner">

@@ -11,7 +11,7 @@
 <html>
 
 <body>
-
+<div class="center">
     <section class="cover-form">
         <div class="form-container">
          
@@ -49,6 +49,7 @@
         </div>
         <!--container bg-->
     </section>
+</div>
     <!--cover-form-->
 
     <script type="text/javascript" src="js/jquery.js"></script> 

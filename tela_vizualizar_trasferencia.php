@@ -21,7 +21,7 @@
         <?php
         include_once("menu.php");
         ?>
-
+        <div class = "center">
         <section class="cover-form">
             <div class="form-container">
                 <h1>Transferencia</h1>
@@ -33,7 +33,7 @@
                             <tr>
                                 <th class="sumir_sempre">Id</th>
                                 <th>Produto</th>
-                                <th>Nome Empresa Origem</th>
+                                <th>Nome Empr   esa Origem</th>
                                 <th>Nome Empresa Destino</th>
                                 <th class="sumir">Status</th>
                                 <th class="sumir">Quantidade</th>
@@ -51,6 +51,7 @@
             </div>
             <!--container bg-->
         </section>
+        </div>
         <div id="openModal" class="modalDialog">
         </div>
         <div class="pega">

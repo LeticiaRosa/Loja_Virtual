@@ -15,7 +15,7 @@
     <?php
     include_once("menu.php");
     ?>
-
+    <div class="center">
     <section class="cover-form">
         <div class="form-container">
             <h1>Editar Produtos</h1>
@@ -51,6 +51,7 @@
         </div>
         <!--container bg-->
     </section>
+</div>
     <!--cover-form-->
 
     <div id="openModal" class="modalDialog">
