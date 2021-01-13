@@ -16,12 +16,29 @@
     <?php
     include_once("menu.php");
     ?>
+<<<<<<< HEAD
     <div class="center">
         <section class="cover-form">
             <div class="form-container">
                 <h1>CAIXA</h1>
                 <div class="form-wraper">
 
+=======
+    <div class = "center">
+    <section class="cover-form">
+        <div class="form-container">
+            <h1>CAIXA</h1>
+            <div class="form-wraper">
+
+                <div class="col">
+                    <p>Codigo De Barras *</p>
+                    <input type="text" name="codigo" id="codigo" required placeholder="codigo" autocomplete="off" onchange="busca_produto(<?php echo $_SESSION['empresausuario']?>)">
+                </div>
+            </div>
+            <div class="form-wraper">
+            
+                <div class="conter">
+>>>>>>> c4280c2f700978012b9233533a0375204b4a42c4
                     <div class="col">
                         <p>Codigo De Barras *</p>
                         <input type="text" name="codigo" id="codigo" required placeholder="codigo" autocomplete="off" onchange="busca_produto(<?php echo $_SESSION['empresausuario'] ?>)">
@@ -82,6 +99,7 @@
                         <div class="corpao">
                             <table id="products-table" class="teste1">
 
+<<<<<<< HEAD
                                 <thead class="cabeça">
                                     <tr>
                                         <th>Id</th>
@@ -97,6 +115,34 @@
                                 </tbody>
 
                             </table>
+=======
+                </div>
+                <div class="tabela-container">
+                <div class= "corpao">
+                    <table id="products-table-1" class="teste1">
+                    
+                        <thead class="cabeça">
+                            <tr>
+                                <th>Id</th>
+                                <th>Nome do produto</th>
+                                <th>Valor produto</th>
+                                <th>Quantidade</th>
+
+                            </tr>
+                        </thead>
+                       
+                        <tbody id="visualizarDados" class="teste">
+
+                        </tbody>
+                       
+                    </table>
+                    </div>
+                    <div class="form-wraper1">
+                        
+                        <div class="col1">
+                            <p>Total De itens</p>
+                            <input type="text" name="itens" id="itens" autocomplete="off">
+>>>>>>> c4280c2f700978012b9233533a0375204b4a42c4
                         </div>
                         <div class="form-wraper1">
 
@@ -123,10 +169,21 @@
 
                     </div>
                 </div>
+<<<<<<< HEAD
         </section>
 
     </div>
     <div id="openModal" class="modalDialog">
+=======
+            </div>
+    </section>
+</div>
+<div class = "botaoFecha" id = "botaoFecha">  
+    <input type="submit" name="fecha" id="fecha" value="X" onclick= "fecha()" class="botao"/> 
+</div>
+<div id="openModal" class="modalDialog1">
+ 
+>>>>>>> c4280c2f700978012b9233533a0375204b4a42c4
 
     </div>
 

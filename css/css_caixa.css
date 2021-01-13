@@ -11,6 +11,19 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgb(235, 237, 240);
+    display: block !important;
+    overflow-y: initial !important
+    /* I added this to see the modal, you don't need this */
+}
+
+.limpa {
+    clear: both;
+}
+
+.center {
+    width: 100%;
+    margin: auto;
+    max-width: 1280px;
 }
 
 .center {
@@ -44,6 +57,40 @@ section.cover-form {
     width: 100%;
     max-height: 400px;
     overflow-y: auto;
+}
+
+.modalDialog1 {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+.modalDialog1:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.botaoFecha {
+    display: none;
+}
+
+.botaoFecha .botao {
+    position: absolute;
+    padding: 50px;
+    z-index: 100;
+    float: right;
+    width: 50px;
 }
 
 .tabela-container {
@@ -142,6 +189,19 @@ section.cover-form {
     border-radius: 10px;
     text-align: left;
     padding: 5px;
+}
+
+.conteiner {
+    top: 0px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    display: none;
 }
 
 .conter input[type="text"] {

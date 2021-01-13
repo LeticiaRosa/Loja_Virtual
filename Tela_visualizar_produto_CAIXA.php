@@ -12,12 +12,10 @@
 
 <body>
 
-    <?php
-    include_once("menu.php");
-    ?>
-
     <section class="cover-form">
         <div class="form-container">
+         
+
             <h1>Editar Produtos</h1>
 
             <div class="form-wraper-1">
@@ -52,9 +50,7 @@
         <!--container bg-->
     </section>
     <!--cover-form-->
-  
 
-   
     <script type="text/javascript" src="js/jquery.js"></script> 
     <script type="text/javascript" src="js/jquery-ui.min.js"></script> 
     <script type="text/javascript" src="js/seleciona_linha.js"></script>

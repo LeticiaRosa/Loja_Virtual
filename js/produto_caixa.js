@@ -31,14 +31,14 @@ function busca_produto(teste) {
                 cols += '<td>' + NOME[i] + '</td>';
                 cols += '<td>' + PRECO_VENDA[i] + '</td>';
                 cols += '<td>' + 1 + '</td>';
-                var tabela = document.getElementById("products-table");
+                var tabela = document.getElementById("products-table-1");
                 var selecionados = tabela.getElementsByClassName("selecionado");
                 //console.log(selecionados.length);
                 //Verificar se está selecionado
                 if (selecionados.length == 0) {
 
                     newRow.append(cols);
-                    $("#products-table").append(newRow);
+                    $("#products-table-1").append(newRow);
                     qtd_pro = qtd_pro + 1;
                     //console.log(qtd_pro);
                 } else {
@@ -65,7 +65,7 @@ function busca_produto(teste) {
                     } else {
                         newRow.append(cols);
 
-                        $("#products-table").append(newRow);
+                        $("#products-table-1").append(newRow);
                     }
 
 
@@ -105,6 +105,15 @@ $(window).on("load", (function() {
 
 
 function Pesquisarproduto() {
-    console.log("teste");
+
+    window.location.replace("#openModal");
+    $('#botaoFecha').css("display", "flex");
     $("#openModal").load("Tela_visualizar_produto_CAIXA.php");
+    console.log("teste");
 }
+
+function fecha() {
+    $('#openModal').css("display", "none");
+    $('#botaoFecha').css("display", "none");
+    document.getElementById('codigo').focus();
+};
