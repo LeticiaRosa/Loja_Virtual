@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
-    <link rel="stylesheet" type="text/css" href="css/editar_produto.css">
+    <link rel="stylesheet" type="text/css" href="css/selecionar_produto.css">
 </head>
 <html>
 

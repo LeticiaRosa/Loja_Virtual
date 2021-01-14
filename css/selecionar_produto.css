@@ -27,7 +27,7 @@ body {
 section.cover-form {
     width: 100%;
     padding: 40px;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 .form-container {
@@ -178,6 +178,11 @@ td {
     align-items: center;
     text-align: center;
     justify-content: space-between;
+}
+
+.form-wraper-1 {
+    max-height: 100px;
+    overflow-y: auto;
 }
 
 .sumir-sempre {
