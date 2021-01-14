@@ -89,7 +89,7 @@ if (isset($_POST['trasferir'])) {
     }elseif($Produto['valor']>0){
         $update = "update produto set quantidade=quantidade+'$Qtd_tras' where CODIGO_REFERENCIA='$cod_referencia' AND ID_EMPRESA='{$variavel_1['id_empresa']}'";
         $resultado = mysqli_query($conexao, $update);
-        mysqli_commit($update);
+       // mysqli_commit($update);
         $update_1 = "update produto set quantidade=quantidade-'$Qtd_tras' where id_produto='$id_produto' and id_empresa='{$variavel['id_empresa']}'";
         $resultado = $resultado + mysqli_query($conexao,  $update_1);
         mysqli_commit($update1);
