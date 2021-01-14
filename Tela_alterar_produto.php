@@ -93,7 +93,7 @@
               </div>
 
             </div>
-
+<!--
             <div class="form-wraper">
               <div class="col-3">
                 <div class="texto"> Deseja gerar codigo de barra automático? </div>
@@ -104,10 +104,10 @@
               </div>
               <div class="col-3" id="gerar_codigo">
                 <div class="texto" id="texto">Código: </div>
-                <div class="barra" id="barra"><input type="text" class="gerar" name="gerar_codigo-1" id="gerar_codigo_1" placeholder="Código" autocomplete="off"></div>
+                <div class="barra" id="barra"><input type="text" class="gerar" name="gerar_codigo-1" id="gerar_codigo" placeholder="Código" autocomplete="off"></div>
               </div>
             </div>
-
+-->
 
             <div class="form-wraper">
               <div class="col">

@@ -13,6 +13,7 @@
 <body>
 <div class="center">
     <section class="cover-form">
+    <div><a href="#close" title="Close" class="close">X</a>
         <div class="form-container">
          
 

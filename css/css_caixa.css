@@ -59,7 +59,7 @@ section.cover-form {
     overflow-y: auto;
 }
 
-.modalDialog1 {
+.modalDialog {
     position: fixed;
     font-family: Arial, Helvetica, sans-serif;
     top: 0;
@@ -76,17 +76,12 @@ section.cover-form {
     pointer-events: none;
 }
 
-.modalDialog1:target {
+.modalDialog:target {
     opacity: 1;
     pointer-events: auto;
 }
 
-.botaoFecha {
-    display: none;
-}
-
-.botaoFecha .botao {
-    z-index: 100;
+.close {
     background: #606061;
     color: #FFFFFF;
     line-height: 25px;
@@ -102,6 +97,14 @@ section.cover-form {
     -moz-box-shadow: 1px 1px 3px #000;
     -webkit-box-shadow: 1px 1px 3px #000;
     box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover {
+    background: #00d9ff;
+}
+
+.pega {
+    display: none;
 }
 
 .tabela-container {

@@ -40,14 +40,14 @@ $(async function() {
             document.getElementById('unidade_medida').value = unidade_medida;
             document.getElementById('valor_medida').value = valor_medida;
             document.getElementById('observacao').value = observacao;
-
-            if (id == codigo_barras) {
-                document.getElementById('radio-1').checked = true;
-            } else {
-                document.getElementById('radio-2').checked = true;
-            }
-            document.getElementById('gerar_codigo_1').value = codigo_barras;
-
+            /*
+                        if (id == codigo_barras) {
+                            document.getElementById('radio-1').checked = true;
+                        } else {
+                            document.getElementById('radio-2').checked = true;
+                        }
+                        document.getElementById('gerar_codigo_1').value = codigo_barras;
+            */
 
         }
 

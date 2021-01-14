@@ -108,6 +108,8 @@ $cod_referencia = $_POST['cod_referencia'];
         $variavel_sub = "'{$variavel_2['id_sub_categoria']}'";
     }
 
+   
+
     $id = $_POST['id'];
     mysqli_report(MYSQLI_REPORT_STRICT|MYSQLI_REPORT_ERROR);
 
