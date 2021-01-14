@@ -105,15 +105,16 @@ $(window).on("load", (function() {
 
 
 function Pesquisarproduto() {
-
     window.location.replace("#openModal");
-    $('#botaoFecha').css("display", "flex");
     $("#openModal").load("Tela_visualizar_produto_CAIXA.php");
+    $('#botaoFecha').css("display", "flex");
     console.log("teste");
 }
 
 function fecha() {
+    window.location.reload();
     $('#openModal').css("display", "none");
     $('#botaoFecha').css("display", "none");
     document.getElementById('codigo').focus();
+
 };

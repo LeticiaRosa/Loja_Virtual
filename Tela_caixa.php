@@ -130,9 +130,15 @@
     <input type="submit" name="fecha" id="fecha" value="X" onclick= "fecha()" class="botao"/> 
 </div>
 <div id="openModal" class="modalDialog1">
- 
-
 </div>
+<div class="pega">
+        <input id="pega" type="text" value="<?php if (isset($_SESSION['sucesso_cadastro'])) {
+                                                echo $_SESSION['sucesso_cadastro'];
+                                            } else if (isset($_SESSION['erro_cadastro'])) {
+                                                echo $_SESSION['erro_cadastro'];
+                                            } ?>">
+
+    </div>
 
     
     <script type="text/javascript" src="js/jquery.js"></script>
