@@ -206,28 +206,3 @@ td {
 .sumir-sempre {
     display: none;
 }
-
-@media screen and (max-width: 1050px) {
-    .sumir {
-        display: none;
-    }
-    section.cover-form {
-        width: 100%;
-        height: 400px;
-        padding: 10px;
-    }
-}
-
-@media screen and (max-width: 895px) {
-    .sumir1 {
-        display: none;
-    }
-    .sumir2 {
-        display: none;
-    }
-    section.cover-form {
-        width: 100%;
-        height: 400px;
-        padding: 10px;
-    }
-}
