@@ -54,7 +54,7 @@ if (empty($_SESSION['login'])) {
             </ul>
           </li>
 
-          <li id= "produto" class= "produto">
+          <li id= "produto-1" class= "produto">
             <a href="#">Produto</a>
             <ul class="sub-menu">
               <li><a href="/loja_virtual/Tela_cadastro_produto_1.php">Cadastro de Produto</a>

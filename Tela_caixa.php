@@ -24,7 +24,7 @@
 
                       <div class="col">
                           <p>Codigo De Barras *</p>
-                          <input type="text" name="codigo" id="codigo" required placeholder="codigo" autocomplete="off" onchange="busca_produto(<?php echo $_SESSION['empresausuario'] ?>)">
+                          <input type="text" name="codigo" id="codigo" required placeholder="codigo" autocomplete="off" onchange="busca_produto(<?php echo $_SESSION['empresausuario']?>)">
                       </div>
                   </div>
                   <div class="form-wraper">
@@ -42,11 +42,11 @@
                           <div class="col">
                               <div class="input_produto">
                                   <p>Produto *</p>
-                                  <input type="text" name="produto" id="produto" required placeholder="Produto" autocomplete="off">
+                                  <input type="text" name="produto" id="produto" readonly = "readonly" placeholder="Produto">
                               </div>
                               <div class="divQuanti">
                                   <p>Quantidade *</p>
-                                  <input type="text" name="quantidade" id="quantidade" placeholder="Quantidade" autocomplete="off">
+                                  <input type="text" name="quantidade" id="quantidade" placeholder="Quantidade" autocomplete="off" onchange="busca_produto(<?php echo $_SESSION['empresausuario']?>)">
                               </div>
                           </div>
                           <div class="col">

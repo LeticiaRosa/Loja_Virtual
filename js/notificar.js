@@ -47,7 +47,7 @@ function pesquisaPermissoes(id_usuario) {
                     document.getElementById("clientes").style.display = 'flex';
                     document.getElementById("caixa").style.display = 'flex';
                     document.getElementById("empresa").style.display = 'flex';
-                    document.getElementById("produto").style.display = 'flex';
+                    document.getElementById("produto-1").style.display = 'flex';
                     document.getElementById("fornecedor").style.display = 'flex';
                     document.getElementById("estoque").style.display = 'flex';
                     document.getElementById("relatorios").style.display = 'flex';
@@ -57,10 +57,10 @@ function pesquisaPermissoes(id_usuario) {
                 } else if (permissao == "Estoque_caixa") {
                     document.getElementById("clientes").style.display = 'flex';
                     document.getElementById("caixa").style.display = 'flex';
-                    document.getElementById("produto").style.display = 'flex';
+                    document.getElementById("produto-1").style.display = 'flex';
                     document.getElementById("estoque").style.display = 'flex';
                 } else if (permissao == "Estoque") {
-                    document.getElementById("produto").style.display = 'flex';
+                    document.getElementById("produto-1").style.display = 'flex';
                     document.getElementById("estoque").style.display = 'flex';
                 }
 

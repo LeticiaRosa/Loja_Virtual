@@ -129,8 +129,9 @@ $(window).on("click", (function() {
             var selecionado = selecionados[i];
             selecionado = selecionado.getElementsByTagName("td");
         }
-        document.getElementById('codigo').value = parseFloat(selecionado[8].innerHTML);
         document.getElementById('produto').value = selecionado[1].innerHTML;
+        document.getElementById('codigo').value = parseFloat(selecionado[8].innerHTML);
+        document.getElementById('quantidade').focus();
         $('#openModal').css("display", "none");
     });
 

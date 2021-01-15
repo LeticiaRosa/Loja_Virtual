@@ -8,8 +8,12 @@ function busca_produto(teste) {
     total_u = 0;
     total = 0;
     resultado = 0;
+    qtd_pro = document.getElementById("quantidade").value;
+    console.log(qtd_pro);
+    if (qtd_pro == "") {
+        qtd_pro = 1;
+    }
 
-    console.log(teste);
     $.ajax({
         url: "back_end/busca_autocomplete.php",
         dataType: "json",
@@ -30,7 +34,7 @@ function busca_produto(teste) {
                 cols += '<td>' + id[i] + '</td>';
                 cols += '<td>' + NOME[i] + '</td>';
                 cols += '<td>' + PRECO_VENDA[i] + '</td>';
-                cols += '<td>' + 1 + '</td>';
+                cols += '<td>' + qtd_pro + '</td>';
                 var tabela = document.getElementById("products-table-1");
                 var selecionados = tabela.getElementsByClassName("selecionado");
                 //console.log(selecionados.length);
@@ -89,10 +93,12 @@ function busca_produto(teste) {
 
         }
     });
+
     $(document).ready(function() {
         document.getElementById('codigo').value = "";
-
-
+        document.getElementById('produto').value = "";
+        document.getElementById('quantidade').value = "";
+        document.getElementById('codigo').focus();
     });
 
 
