@@ -24,24 +24,18 @@
                     <thead class="cabeça">
 
                         <tr>
-                            <th class= "sumir-sempre"> Id <br /> </th>
+                            <th> Id <br /> </th>
                             <th> Nome <br /> </th>
                             <th class="sumir"> Descricao</th>
-                            <th> Empresa</th>
-                            <th class="sumir2"> Categoria</th>
-                            <th class="sumir2"> Sub Categoria</th>
                             <th> Preço de Venda </th>
-                            <th> Preço de Custo </th>
                             <th> Quantidade </th>
-                            <th class="sumir1"> Fornecedor </th>
                             <th class="sumir1"> Marca</th>
                             <th class="sumir"> Unidade de Medida</th>
                             <th class="sumir"> Valor Medida </th>
-                            <th class="sumir-sempre"> Observacao</th>
-                            <th class="sumir-sempre"> Codigo Barras </th>
+                            <th> Codigo Barras </th>
                         </tr>
                     </thead>
-                    <tbody id="visualizarDados">
+                    <tbody id="visualizarDados-1">
 
 
                     </tbody>
@@ -55,7 +49,7 @@
 
     <script type="text/javascript" src="js/jquery.js"></script> 
     <script type="text/javascript" src="js/jquery-ui.min.js"></script> 
-    <script type="text/javascript" src="js/seleciona_linha.js"></script>
+    <script type="text/javascript" src="js/seleciona_linha_caixa.js"></script>
     <script type="text/javascript" src="js/valida_lista.js"></script>
     <script type="text/javascript" src="DataTables/datatables.js"></script>
     <script type="text/javascript" src="js/modal.js"></script>

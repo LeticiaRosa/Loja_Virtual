@@ -124,9 +124,8 @@
                       </div>
                   </div>
           </section>
-      </div>
 
-      <div id="openModal" class="modalDialog">
+          <div id="openModal" class="modalDialog">
         
         </div>
     </div>
@@ -138,6 +137,11 @@
                                                 } ?>">
 
       </div>
+
+
+      </div>
+
+      
 
 
       <script type="text/javascript" src="js/jquery.js"></script>
