@@ -8,10 +8,10 @@ function busca_produto(teste) {
     total_u = 0;
     total = 0;
     resultado = 0;
-    qtd_pro = document.getElementById("quantidade").value;
-    console.log(qtd_pro);
-    if (qtd_pro == "") {
-        qtd_pro = 1;
+    qtd = document.getElementById("quantidade").value;
+    console.log(qtd);
+    if (qtd == "") {
+        qtd = 1;
     }
 
     $.ajax({
@@ -34,7 +34,7 @@ function busca_produto(teste) {
                 cols += '<td>' + id[i] + '</td>';
                 cols += '<td>' + NOME[i] + '</td>';
                 cols += '<td>' + PRECO_VENDA[i] + '</td>';
-                cols += '<td>' + qtd_pro + '</td>';
+                cols += '<td>' + qtd + '</td>';
                 var tabela = document.getElementById("products-table-1");
                 var selecionados = tabela.getElementsByClassName("selecionado");
                 //console.log(selecionados.length);
@@ -63,7 +63,7 @@ function busca_produto(teste) {
                         selecionado = selecionados[existe_valor];
                         selecionado = selecionado.getElementsByTagName("td");
                         valor = selecionado[3].innerHTML;
-                        resultado = parseFloat(valor) + 1;
+                        resultado = parseFloat(valor) + parseFloat(qtd);
                         selecionado[3].innerHTML = resultado;
 
                     } else {
