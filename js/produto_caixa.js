@@ -9,7 +9,7 @@ function busca_produto(teste) {
     total = 0;
     resultado = 0;
     qtd = document.getElementById("quantidade").value;
-    console.log(qtd);
+
     if (qtd == "") {
         qtd = 1;
     }
@@ -116,7 +116,7 @@ function Pesquisarproduto() {
     abremodal();
     $("#openModal").load("Tela_visualizar_produto_CAIXA.php");
     //  $('#botaoFecha').css("display", "flex");
-    console.log("teste");
+
 }
 
 function fecha() {
