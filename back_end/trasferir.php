@@ -50,14 +50,14 @@ if (isset($_POST['trasferir'])) {
    if ($Produto['valor']==0){
         $update = "update produto set quantidade=quantidade-'$Qtd_tras' where id_produto='$id_produto' and id_empresa='{$variavel['id_empresa']}'";
         $resultado = mysqli_query($conexao, $update);
-        mysqli_commit($update);
+      //  mysqli_commit($update);
        // echo $resultado;
         // fazer insert do mesmo produto na empresa nova com  a quantidade nova 
         $insert = "insert into produto (nome,descricao,preco_venda,preco_custo,quantidade,unidade_medida,valor_medida,marca,data_cadastro,observacao,id_fornecedor,id_usuario,id_categoria,id_sub_categoria,id_empresa,codigo_referencia)
         select nome,descricao,preco_venda,preco_custo,'$Qtd_tras',unidade_medida,valor_medida,marca,now(),observacao,id_fornecedor,id_usuario,id_categoria,id_sub_categoria,'{$variavel_1['id_empresa']}',codigo_referencia
         from produto where id_produto='$id_produto' and id_empresa='{$variavel['id_empresa']}'";
         $resultado = $resultado + mysqli_query($conexao, $insert);
-        mysqli_commit($insert);
+      //  mysqli_commit($insert);
         //echo $insert;
         /// buscar id do novo produto inserido//
         $query_4 = "select max(id_produto) as id from produto where CODIGO_REFERENCIA='$cod_referencia' AND ID_EMPRESA='{$variavel_1['id_empresa']}'";
@@ -70,13 +70,13 @@ if (isset($_POST['trasferir'])) {
      //   echo $insert_cod;
         mysqli_query($conexao, $insert_cod);
 
-        mysqli_commit($insert_cod);
+       // mysqli_commit($insert_cod);
         
     
         //update na confirmando a trasferencia
         $update2 = "update trasferencia set status='S', MENSAGEM='Transferência confirmada' where id_trasferencia='$id_tras'";
         $resultado = $resultado + mysqli_query($conexao, $update2);
-        mysqli_commit( $update2);
+      //  mysqli_commit( $update2);
         //echo $resultado;
         if ($resultado == 3) {
             $_SESSION['sucesso_cadastro'] = "Confirmação realizada com sucesso!";
@@ -87,15 +87,15 @@ if (isset($_POST['trasferir'])) {
         }
         
     }elseif($Produto['valor']>0){
-        $update = "update produto set quantidade=quantidade+'$Qtd_tras' where CODIGO_REFERENCIA='$cod_referencia' AND ID_EMPRESA='{$variavel_1['id_empresa']}'";
+        $update= "update produto set quantidade=quantidade+'$Qtd_tras' where CODIGO_REFERENCIA='$cod_referencia' AND ID_EMPRESA='{$variavel_1['id_empresa']}'";
         $resultado = mysqli_query($conexao, $update);
-       // mysqli_commit($update);
+        //mysqli_commit($resultado);
         $update_1 = "update produto set quantidade=quantidade-'$Qtd_tras' where id_produto='$id_produto' and id_empresa='{$variavel['id_empresa']}'";
         $resultado = $resultado + mysqli_query($conexao,  $update_1);
-        mysqli_commit($update1);
+       // mysqli_commit($update_1);
         $update_2 = "update trasferencia set status='S', MENSAGEM='Transferência confirmada' where id_trasferencia='$id_tras'";
         $resultado = $resultado + mysqli_query($conexao, $update_2);
-        mysqli_commit($update2);
+        //mysqli_commit($update_2);
         //echo $resultado;
         
         if ($resultado == 3) {
