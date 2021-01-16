@@ -328,3 +328,17 @@ if ($acao == 'PERMISSOES') :
 
 	echo $json;
 endif;
+
+
+if ($acao == 'BUSCA_CAIXA') :
+
+	$sql = "SELECT E.NOME AS nome_empresa, C.NOME as nome, C.NOME_MAQUINA, C.STATUS FROM CAIXA C LEFT OUTER JOIN EMPRESA E ON E.ID_EMPRESA = C.ID_EMPRESA WHERE C.NOME LIKE ? AND C.STATUS='Ativo' limit 10";
+	$stm = $conexao->prepare($sql);
+	$stm->bindValue(1, '%' . $parametro . '%');
+	$stm->execute();
+	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
+
+	$json = json_encode($dados);
+
+	echo $json;
+endif;

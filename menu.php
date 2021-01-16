@@ -40,7 +40,10 @@ if (empty($_SESSION['login'])) {
           <li id= "caixa" class= "caixa">
             <a href="#" > Caixa</a>
             <ul class="sub-menu">
-              <li><a href="/loja_virtual/Tela_cadastro_caixa.php">Cadastrar Caixa</a> </li>
+              <li><a href="/loja_virtual/Tela_cadastro_caixa.php">Cadastrar Caixa</a> <ul class="sub-menu">
+                  <li><a href="/loja_virtual/Tela_listar_empresa.php">Listar Caixas</a></li>
+                </ul>
+              </li>
               <li><a href="/loja_virtual/Tela_abrir_caixa.php">Abrir/Fechar Caixa</a> </li>
               <li><a href="/loja_virtual/Tela_caixa.php">Caixa</a> </li>
             </ul>
