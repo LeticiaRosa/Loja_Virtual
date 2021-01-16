@@ -240,7 +240,6 @@ section.cover-form {
 .corpo:hover {
     width: 100%;
     border-collapse: collapse;
-    cursor: pointer;
     background-color: rgb(200, 204, 198);
 }
 
@@ -310,6 +309,12 @@ td {
 
 .iconeSearch {
     margin-top: 20px;
+}
+
+.deleteSearch img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
 }
 
 .imagem {

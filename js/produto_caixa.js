@@ -27,20 +27,25 @@ function busca_produto(teste) {
             id = data.map(d => d.ID_PRODUTO);
             NOME = data.map(d => d.NOME);
             PRECO_VENDA = data.map(d => d.PRECO_VENDA);
+            //
+            var html = " <div class='deleteSearch'  onclick='excluirlinha(" + id + ")'> <img src='imagens/icons8_delete_bin_48px.png'></img>  </div>   ";
+
+
+
             for (i = 0; i < data.length; i++) {
                 teste = id[i];
-                var newRow = $('<tr class = "corpo selecionado" >');
+                var newRow = $('<tr class = "corpo selecionado" id="testee' + id + '">');
                 var cols = "";
                 cols += '<td>' + id[i] + '</td>';
                 cols += '<td>' + NOME[i] + '</td>';
                 cols += '<td>' + PRECO_VENDA[i] + '</td>';
                 cols += '<td>' + qtd + '</td>';
+                cols += '<td>' + html + '</td>';
                 var tabela = document.getElementById("products-table-1");
                 var selecionados = tabela.getElementsByClassName("selecionado");
                 //console.log(selecionados.length);
                 //Verificar se está selecionado
                 if (selecionados.length == 0) {
-
                     newRow.append(cols);
                     $("#products-table-1").append(newRow);
                     qtd_pro = qtd_pro + 1;
@@ -81,16 +86,11 @@ function busca_produto(teste) {
                     selecionado = selecionado.getElementsByTagName("td");
                     //console.log(parseFloat(selecionado[2].innerHTML));
                     total_u = total_u + parseFloat(selecionado[2].innerHTML) * parseFloat(selecionado[3].innerHTML);
-
-
                 }
                 // console.log(total_u);
-
-
             }
             document.getElementById("itens").value = qtd_pro;
             document.getElementById("venda").value = "R$ " + total_u;
-
         }
     });
 
@@ -158,6 +158,27 @@ function fechamdal() {
 function abremodal() {
     $('#openModal').css("display", "inline-block");
 
+}
+
+function excluirlinha(id) {
+    //console.log(document.querySelector("tbody tr"));
+    a = 'testee' + id;
+    selecionado = document.getElementById(a);
+    selecionados = selecionado.getElementsByTagName("td");
+    quantidade = selecionados[3].innerHTML;
+    preco_venda = selecionados[2].innerHTML;
+    valor_diminuir = parseFloat(quantidade) * parseFloat(preco_venda);
+    caixa = document.getElementById('venda').value;
+    valor_caixa = parseFloat(parseFloat(caixa.substr(3)) - valor_diminuir);
+    if (Number.isNaN(valor_caixa)) {
+        document.getElementById('venda').value = '0'
+    } else {
+        document.getElementById('venda').value = valor_caixa;
+    }
+    itens = document.getElementById("itens").value;
+    total_itens = itens - 1;
+    document.getElementById("itens").value = total_itens;
+    document.getElementById(a).remove();
 
 
 }
