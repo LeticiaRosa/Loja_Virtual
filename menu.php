@@ -44,7 +44,8 @@ if (empty($_SESSION['login'])) {
                   <li><a href="/loja_virtual/Tela_listar_empresa.php">Listar Caixas</a></li>
                 </ul>
               </li>
-              <li><a href="/loja_virtual/Tela_abrir_caixa.php">Abrir/Fechar Caixa</a> </li>
+              <li><a href="/loja_virtual/Tela_abrir_caixa.php">Abrir Caixa</a> </li>
+              <li><a href="/loja_virtual/Tela_fechar_caixa.php">Fechar Caixa</a> </li>
               <li><a href="/loja_virtual/Tela_caixa.php">Caixa</a> </li>
             </ul>
     
@@ -144,7 +145,7 @@ if (empty($_SESSION['login'])) {
           <li><a href="#">Sobre</a></li>
         </ul>
       </li>
-      <li class="welcome"><a href="#">Bem vindo! <?php echo $_SESSION['login']; ?> </a> </li>
+      <li class="welcome"><a href="#">Bem vindo! <?php echo $_SESSION['usuarioNome']; ?> </a> </li>
       <li class="notificacao"><a href="#">Notificações</a>
         <span class="contador" id="contador"></span>
         <ul class="sub-menu" id="notifica">

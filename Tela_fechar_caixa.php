@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/css_fechar_caixa.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="imagens/favicon.ico">
     <title>Fechamento de Caixa</title>
 </head>
@@ -22,37 +23,45 @@
                     <div class="form-wraper">
 
                         <div class="col">
+                            <p>Caixa:</p>
+                            <input type="text" name="Caixa" id="Caixa" placeholder="Caixa" autocomplete="off">
+                        </div>
+                        <div class="col">
                             <p>Loja:</p>
-                            <input type="text" name="nome" id="nome" readonly="readonly" placeholder="Nome" autocomplete="off">
+                            <input type="text" name="Loja" id="Loja" readonly="readonly"  autocomplete="off">
+                        </div>
+                        <div class="col">
+                            <p>Maquina:</p>
+                            <input type="text" name="Maquina" id="Maquina" value = "<?php echo gethostbyaddr($_SERVER['REMOTE_ADDR']); ?>" readonly="readonly"  autocomplete="off">
                         </div>
                     </div>
                     <div class="form-wraper">
                         <div class="col">
                             <p>Usuário Abertura:</p>
-                            <input type="text" name="user_abertura" id="user_abt" readonly="readonly" placeholder="Nome" autocomplete="off">
+                            <input type="text" name="user_abt" id="user_abt" readonly="readonly"  autocomplete="off">
                         </div>
                         <div class="col">
                             <p id="p_texto">Data Abertura:</p>
-                            <input type="date" name="dt_abertura" id="dt_abertura" readonly="readonly" placeholder="Nome" autocomplete="off">
+                            <input type="date" name="dt_abertura" id="dt_abertura" readonly="readonly"  autocomplete="off">
                         </div>
                         <div class="col">
                             <p id="p_texto">Hora Abertura:</p>
-                            <input type="time" name="hr_abertura" id="hr_abertura" readonly="readonly" placeholder="Nome" autocomplete="off">
+                            <input type="time" name="hr_abertura" id="hr_abertura" readonly="readonly"  autocomplete="off">
                         </div>
 
                     </div>
                     <div class="form-wraper">
                         <div class="col">
                             <p>Usuário Fechamento:</p>
-                            <input type="text" name="user_fechamento" id="user_abt" readonly="readonly" placeholder="Nome" autocomplete="off">
+                            <input type="text" name="user_fechamento" id="user_fechamento" value="<?php echo $_SESSION['usuarioNome'] ?>"readonly="readonly" autocomplete="off">
                         </div>
                         <div class="col">
                             <p id="p_texto">Data Fechamento:</p>
-                            <input type="date" name="dt_fechamento" id="dt_abertura" readonly="readonly" placeholder="Nome" autocomplete="off">
+                            <input type="date" name="dt_fechamento" id="dt_fechamento" readonly="readonly"  autocomplete="off">
                         </div>
                         <div class="col">
                             <p id="p_texto">Hora Fechamento:</p>
-                            <input type="time" name="hr_fechamento" id="hr_abertura" readonly="readonly" placeholder="Nome" autocomplete="off">
+                            <input type="time" name="hr_fechamento" id="hr_fechamento" readonly="readonly"  autocomplete="off">
                         </div>
 
                     </div>
@@ -72,195 +81,7 @@
                                 </thead>
 
                                 <tbody id="visualizarDados" class="teste">
-                                    <tr class="corpo">
-                                        <td>1</td>
-                                        <td>Nome do produto</td>
-                                        <td>Valor produto</td>
-                                        <td>50</td>
-
-                                    </tr>
-                                    <tr class="corpo">
-                                        <td>1</td>
-                                        <td>Nome do produto</td>
-                                        <td>Valor produto</td>
-                                        <td>50</td>
-
-                                    </tr>
-                                    <tr class="corpo">
-                                        <td>1</td>
-                                        <td>Nome do produto</td>
-                                        <td>Valor produto</td>
-                                        <td>50</td>
-
-                                    </tr>
-                                    <tr class="corpo">
-                                        <td>1</td>
-                                        <td>Nome do produto</td>
-                                        <td>Valor produto</td>
-                                        <td>50</td>
-
-                                    </tr>
-                                    <tr class="corpo">
-                                        <td>1</td>
-                                        <td>Nome do produto</td>
-                                        <td>Valor produto</td>
-                                        <td>50</td>
-
-                                    </tr>
-                                    <tr class="corpo">
-                                        <td>1</td>
-                                        <td>Nome do produto</td>
-                                        <td>Valor produto</td>
-                                        <td>50</td>
-
-                                    </tr>
-                                    <tr class="corpo">
-                                        <td>1</td>
-                                        <td>Nome do produto</td>
-                                        <td>Valor produto</td>
-                                        <td>50</td>
-
-                                    </tr>
-                                    <tr class="corpo">
-                                        <td>1</td>
-                                        <td>Nome do produto</td>
-                                        <td>Valor produto</td>
-                                        <td>50</td>
-
-                                    </tr>
-                                    <tr class="corpo">
-                                        <td>1</td>
-                                        <td>Nome do produto</td>
-                                        <td>Valor produto</td>
-                                        <td>50</td>
-
-                                    </tr>
-                                    <tr class="corpo">
-                                        <td>1</td>
-                                        <td>Nome do produto</td>
-                                        <td>Valor produto</td>
-                                        <td>50</td>
-
-                                    </tr>
-                                    <tr class="corpo">
-                                        <td>1</td>
-                                        <td>Nome do produto</td>
-                                        <td>Valor produto</td>
-                                        <td>50</td>
-
-                                    </tr>
-                                    <tr class="corpo">
-                                        <td>1</td>
-                                        <td>Nome do produto</td>
-                                        <td>Valor produto</td>
-                                        <td>50</td>
-
-                                    </tr>
-                                    <tr class="corpo">
-                                        <td>1</td>
-                                        <td>Nome do produto</td>
-                                        <td>Valor produto</td>
-                                        <td>50</td>
-
-                                    </tr>
-                                    <tr class="corpo">
-                                        <td>1</td>
-                                        <td>Nome do produto</td>
-                                        <td>Valor produto</td>
-                                        <td>50</td>
-
-                                    </tr>
-                                    <tr class="corpo">
-                                        <td>1</td>
-                                        <td>Nome do produto</td>
-                                        <td>Valor produto</td>
-                                        <td>50</td>
-
-                                    </tr>
-                                    <tr class="corpo">
-                                        <td>1</td>
-                                        <td>Nome do produto</td>
-                                        <td>Valor produto</td>
-                                        <td>50</td>
-
-                                    </tr>
-                                    <tr class="corpo">
-                                        <td>1</td>
-                                        <td>Nome do produto</td>
-                                        <td>Valor produto</td>
-                                        <td>50</td>
-
-                                    </tr>
-                                    <tr class="corpo">
-                                        <td>1</td>
-                                        <td>Nome do produto</td>
-                                        <td>Valor produto</td>
-                                        <td>50</td>
-
-                                    </tr>
-                                    <tr class="corpo">
-                                        <td>1</td>
-                                        <td>Nome do produto</td>
-                                        <td>Valor produto</td>
-                                        <td>50</td>
-
-                                    </tr>
-                                    <tr class="corpo">
-                                        <td>1</td>
-                                        <td>Nome do produto</td>
-                                        <td>Valor produto</td>
-                                        <td>50</td>
-
-                                    </tr>
-                                    <tr class="corpo">
-                                        <td>1</td>
-                                        <td>Nome do produto</td>
-                                        <td>Valor produto</td>
-                                        <td>50</td>
-
-                                    </tr>
-                                    <tr class="corpo">
-                                        <td>1</td>
-                                        <td>Nome do produto</td>
-                                        <td>Valor produto</td>
-                                        <td>50</td>
-
-                                    </tr>
-                                    <tr class="corpo">
-                                        <td>1</td>
-                                        <td>Nome do produto</td>
-                                        <td>Valor produto</td>
-                                        <td>50</td>
-
-                                    </tr>
-                                    <tr class="corpo">
-                                        <td>1</td>
-                                        <td>Nome do produto</td>
-                                        <td>Valor produto</td>
-                                        <td>50</td>
-
-                                    </tr>
-                                    <tr class="corpo">
-                                        <td>1</td>
-                                        <td>Nome do produto</td>
-                                        <td>Valor produto</td>
-                                        <td>50</td>
-
-                                    </tr>
-                                    <tr class="corpo">
-                                        <td>1</td>
-                                        <td>Nome do produto</td>
-                                        <td>Valor produto</td>
-                                        <td>50</td>
-
-                                    </tr>
-                                    <tr class="corpo">
-                                        <td>1</td>
-                                        <td>Nome do produto</td>
-                                        <td>Valor produto</td>
-                                        <td>50</td>
-
-                                    </tr>
+                                   
 
                                 </tbody>
 
@@ -273,11 +94,11 @@
                     <div class="form-wraper">
                         <div class="col">
                             <p id="p_texto">Quatidade Total de Vendas:</p>
-                            <input id="fim" type="text" name="qtd_vendas" id="qtd_vendas" readonly="readonly" placeholder="Vendas" autocomplete="off">
+                            <input id="qtd_vendas" type="text" name="qtd_vendas" id="qtd_vendas" readonly="readonly" placeholder="Vendas" autocomplete="off">
                         </div>
                         <div class="col">
                             <p id="p_texto">Valor Total:</p>
-                            <input id="fim" type="text" name="v_total" id="v_total" readonly="readonly" placeholder="Valor Total" autocomplete="off">
+                            <input id="v_total" type="text" name="v_total" id="v_total" readonly="readonly" placeholder="Valor Total" autocomplete="off">
                         </div>
 
 
@@ -322,7 +143,10 @@
 
         </div>
     </div>
-
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/fechamento_caixa.js"></script>
+    <script type="text/javascript" src="js/modal.js"></script>
 </body>
 
 </html>

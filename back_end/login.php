@@ -18,7 +18,7 @@
         if(isset($resultado)){
             $_SESSION['usuarioId'] = $resultado['id_usuario'];
             $_SESSION['empresausuario'] = $resultado['id_empresa'];
-            $_SESSION['usuarioNome'] = $resultado['nome_usuario'];
+            $_SESSION['usuarioNome'] = $resultado['Nome_usuario'];
             $_SESSION['login'] = $resultado['login'];
             header("Location:/loja_virtual/Tela_inicial_1.php");
             
