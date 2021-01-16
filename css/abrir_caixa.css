@@ -214,6 +214,7 @@ section.cover-form {
     display: none;
 }
 
+#Empresa1,
 #maquina,
 #status {
     background-color: rgba(214, 226, 217, 0.8);
@@ -222,11 +223,13 @@ section.cover-form {
     border-radius: 10px;
 }
 
+#Empresa1:hover,
 #maquina:hover,
 #status:hover {
     cursor: default;
 }
 
+#Empresa1:focus,
 #maquina:focus,
 #status:focus {
     box-shadow: 0 0 0 0;

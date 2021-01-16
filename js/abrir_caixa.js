@@ -20,14 +20,8 @@ $(async function() {
         source: nomes
     });
 });
-/*
-window.onclick =
-    a = document.getElementById("nome_caixa").value;
-console.log(a);
 
-if (a != '') {
-    console.log("entrou");
-*/
+
 function buscaDados() {
     //Para buscar CAIXA
     $(async function() {

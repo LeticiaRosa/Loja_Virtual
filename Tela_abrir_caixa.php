@@ -22,12 +22,12 @@
         <section class="cover-form">
             <div class="form-container">
                 <h1>ABRIR CAIXA</h1>
-                <form method="POST" name="form">
+                <form method="POST" name="form" action="back_end/abrir_caixa.php">
                     <div class="form-wraper">
 
                         <div class="col">
                             <p>Selecione o caixa que deseja abrir: * </p>
-                            <input type="text" name="nome_caixa" id="nome_caixa" required placeholder="Nome do Caixa" onchange="buscaDados(); document.getElementById('valor_inicial').focus();">
+                            <input type="text" name="nome_caixa" id="nome_caixa" required placeholder="Nome do Caixa" onchange="buscaDados();" >
                         </div>
 
                         <div class="col-1">
@@ -49,7 +49,7 @@
                     <div class="form-wraper">
                         <div class="col-2">
                             <p>Valor Inicial: *</p>
-                            <input type="text" name="valor_inicial" id="valor_inicial" autocomplete="off">
+                            <input type="text" name="valor_inicial" required id="valor_inicial" autocomplete="off">
                         </div>
                     </div>
                     <div class="form-wraper">
