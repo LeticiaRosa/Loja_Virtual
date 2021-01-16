@@ -100,7 +100,12 @@ if (select == "Inserido com sucesso!") {
 } else if (select == "Erro ao cancelar transferência!") {
     $('#conteiner').css("display", "flex");
 
+} else if (select == "Caixa não cadastrado!") {
+    $('#conteiner').css("display", "flex");
+
 }
+
+
 
 
 

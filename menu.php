@@ -4,7 +4,6 @@ session_start();
 
 if (empty($_SESSION['login'])) {
   header('Location:/Loja_Virtual/Tela_login_nova.php');
-
   exit();
 }
 ?>
@@ -41,8 +40,13 @@ if (empty($_SESSION['login'])) {
           <li id= "caixa" class= "caixa">
             <a href="#" > Caixa</a>
             <ul class="sub-menu">
+              <li><a href="/loja_virtual/Tela_cadastro_caixa.php">Cadastrar Caixa</a> </li>
+              <li><a href="/loja_virtual/Tela_abrir_caixa.php">Abrir/Fechar Caixa</a> </li>
               <li><a href="/loja_virtual/Tela_caixa.php">Caixa</a> </li>
             </ul>
+    
+             
+           
           </li>
           <li id= "empresa" class= "empresa">
             <a href="#">Empresa</a>
