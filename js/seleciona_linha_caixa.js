@@ -1,12 +1,13 @@
 $(async function() {
     // Atribui evento e função para limpeza dos campos
     // $('#clicar').on('input', limpaCampos);
-
+    empresa = document.getElementById('id_empresa').value;
     await $.ajax({
         url: "back_end/busca_autocomplete.php",
         dataType: "json",
         data: {
-            acao: 'produto'
+            acao: 'caixa_produto',
+            parametro: empresa,
         },
         success: function(data) {
             id = data.map(d => d.id_produto);
@@ -61,6 +62,7 @@ $(async function() {
                 "sProcessing": "Processando...",
                 "sZeroRecords": "Nenhum registro encontrado",
                 "sSearch": "Pesquisar",
+                "Search": "Empresa",
                 "oPaginate": {
                     "sNext": "Próximo",
                     "sPrevious": "Anterior",

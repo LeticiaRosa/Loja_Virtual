@@ -1,4 +1,5 @@
 function busca_produto(teste) {
+    console.log(teste);
     t1 = "";
     t2 = "";
     valor = 0;

@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+
+if (empty($_SESSION['login'])) {
+  header('Location:/Loja_Virtual/Tela_login_nova.php');
+
+  exit();
+}
+?>
 <!DOCTYPE html>
 
 <head>
@@ -12,6 +22,9 @@
 <html>
 
 <body>
+<div class="pega">
+  <input id="id_empresa" type="text" value="<?php echo $_SESSION['empresausuario']?>">
+          </div>
 <div class="center">
     <section class="cover-form">
     <div><a href="#close" title="Close" class="close">X</a>
