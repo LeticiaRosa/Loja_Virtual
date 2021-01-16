@@ -90,6 +90,7 @@
                                           <th>Nome do produto</th>
                                           <th>Valor produto</th>
                                           <th>Quantidade</th>
+                                          <th>  </th>
 
                                       </tr>
                                   </thead>
