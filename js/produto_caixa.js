@@ -26,7 +26,6 @@ function busca_produto(teste) {
             id = data.map(d => d.ID_PRODUTO);
             NOME = data.map(d => d.NOME);
             PRECO_VENDA = data.map(d => d.PRECO_VENDA);
-
             for (i = 0; i < data.length; i++) {
                 teste = id[i];
                 var newRow = $('<tr class = "corpo selecionado" >');
@@ -110,27 +109,54 @@ $(window).on("load", (function() {
 }));
 
 
-function Pesquisarproduto() {
-
+function produto() {
     window.location.replace("#openModal");
     abremodal();
     $("#openModal").load("Tela_visualizar_produto_CAIXA.php");
-    //  $('#botaoFecha').css("display", "flex");
 
 }
 
+function Vendedor() {
+    $('#openModal1').css("display", "inline-block");
+    window.location.replace("#openModal1");
+    $("#openModal1").load("tele_pesq_vendedor_CAIXA.php");
+
+}
+
+function cliente() {
+    $('#openModal2').css("display", "inline-block");
+    window.location.replace("#openModal2");
+    $("#openModal2").load("tela_pesq_cliente.php");
+
+}
+
+
+
+
+
+
+
+
+
 function fecha() {
     $('#openModal').css("display", "none");
+    $('#openModal1').css("display", "none");
+    $('#openModal2').css("display", "none");
     document.getElementById('codigo').focus();
 
 };
 
 function fechamdal() {
     $('#openModal').css("display", "none");
+    $('#openModal1').css("display", "none");
+    $('#openModal2').css("display", "none");
 }
+
 
 
 function abremodal() {
     $('#openModal').css("display", "inline-block");
+
+
 
 }
