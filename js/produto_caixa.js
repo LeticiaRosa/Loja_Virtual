@@ -130,6 +130,13 @@ function cliente() {
 
 }
 
+function retirada() {
+    $('#openModal3').css("display", "inline-block");
+    window.location.replace("#openModal3");
+    $("#openModal3").load("tela_retirada.php");
+
+}
+
 
 
 

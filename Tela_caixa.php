@@ -113,20 +113,25 @@
                                   <input type="text" name="venda" id="venda" autocomplete="off">
                               </div>
                           </div>
+                         
                       </div>
 
 
                   </div>
 
                   <div class="form-wraper">
-
+                        <div class="enviar-1">
+                      <input type="submit" name="Retirada" id="Retirada" class = "Retirada" value="Fazer retirada" onclick="retirada()" />
+                      </div>
                       <div class="enviar">
 
                           <input type="submit" name="Confirmar" id="Confirmar" value="Confirmar" />
                           <input type="submit" name="Excluir" id="Excluir" value="Excluir" />
 
                       </div>
+                     
                   </div>
+                       
           </section>
 
           <div id="openModal" class="modalDialog">
@@ -136,6 +141,10 @@
         
         </div>
         <div id="openModal2" class="modalDialog">
+        
+        </div>
+
+        <div id="openModal3" class="modalDialog">
         
         </div>
     </div>
@@ -152,8 +161,6 @@
       </div>
 
       
-
-
       <script type="text/javascript" src="js/jquery.js"></script>
       <script type="text/javascript" src="js/jquery-ui.min.js"></script>
       <script type="text/javascript" src="js/produto_caixa.js"></script>
