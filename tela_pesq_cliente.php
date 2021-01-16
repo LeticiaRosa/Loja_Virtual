@@ -18,25 +18,19 @@
         <div class="form-container">
          
 
-            <h1>Pesquisar Produtos</h1>
+            <h1>Pesquisar Cliente</h1>
 
             <div class="form-wraper-1">
-                <table id="products-table">
+                <table id="products-table-3">
                     <thead class="cabeça">
 
                         <tr>
-                            <th> Id <br /> </th>
+                         
                             <th> Nome <br /> </th>
-                            <th class="sumir"> Descricao</th>
-                            <th> Preço de Venda </th>
-                            <th> Quantidade </th>
-                            <th class="sumir1"> Marca</th>
-                            <th class="sumir"> Unidade de Medida</th>
-                            <th class="sumir"> Valor Medida </th>
-                            <th> Codigo Barras </th>
+                            
                         </tr>
                     </thead>
-                    <tbody id="visualizarDados-1">
+                    <tbody id="visualizarDados-3">
 
 
                     </tbody>
@@ -50,10 +44,9 @@
 
     <script type="text/javascript" src="js/jquery.js"></script> 
     <script type="text/javascript" src="js/jquery-ui.min.js"></script> 
-    <script type="text/javascript" src="js/seleciona_linha_caixa.js"></script>
-    <script type="text/javascript" src="js/valida_lista.js"></script>
+    <script type="text/javascript" src="js/seleciona_caixa_cliente.js"></script>
     <script type="text/javascript" src="DataTables/datatables.js"></script>
-    <script type="text/javascript" src="js/modal.js"></script>
+    
 
 </body>
 

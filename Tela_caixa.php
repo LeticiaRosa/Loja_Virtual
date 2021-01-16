@@ -34,7 +34,7 @@
                       <div class="conter">
                           <div class="col">
                               <div class="iconeSearch">
-                                  <input type="submit" name="Pesquisarproduto" id="Pesquisarproduto" class="Pesquisarproduto" value="Pesquisar Produto" onclick="Pesquisarproduto()" />
+                                  <input type="submit" name="Pesquisarproduto" id="Pesquisarproduto" class="Pesquisarproduto" value="Pesquisar Produto" onclick="produto()" />
                                   <div class="imagem">
                                       <img src="imagens/icons8_search_48px.png"></img>
                                   </div>
@@ -53,7 +53,7 @@
                           </div>
                           <div class="col">
                               <div class="iconeSearch">
-                                  <input type="submit" name="Pesquisar" id="Pesquisar" class="Pesquisar" value="Pesquisar Vendedor  " />
+                                  <input type="submit" name="Pesquisar" id="Pesquisar" class="Pesquisar" value="Pesquisar Vendedor"  onclick="Vendedor()"/>
                                   <div class="imagem">
                                       <img src="imagens/icons8_search_48px.png"></img>
                                   </div>
@@ -62,11 +62,11 @@
                           </div>
                           <div class="col">
                               <p>Vendedor</p>
-                              <input type="text" name="Vendedor" id="Vendedor" placeholder="Vendedor" autocomplete="off">
+                              <input type="text" name="Vendedor" id="Vendedor" readonly = "readonly" placeholder="Vendedor" autocomplete="off">
                           </div>
                           <div class="col">
                               <div class="iconeSearch">
-                                  <input type="submit" name="Pesquisar" id="Pesquisar" class="Pesquisar" value="Pesquisar Cliente" />
+                                  <input type="submit" name="Pesquisar" id="Pesquisar" class="Pesquisar" value="Pesquisar Cliente" onclick="cliente()" />
                                   <div class="imagem">
                                       <img src="imagens/icons8_search_48px.png"></img>
                                   </div>
@@ -75,7 +75,7 @@
                           </div>
                           <div class="col">
                               <p>Nome Cliente</p>
-                              <input type="text" name="cliente" id="cliente" placeholder="Cliente" autocomplete="off">
+                              <input type="text" name="cliente" id="cliente" placeholder="Cliente"  readonly = "readonly"autocomplete="off">
 
                           </div>
 
@@ -91,6 +91,7 @@
                                           <th>Valor produto</th>
                                           <th>Quantidade</th>
                                           <th>  </th>
+                                          
 
                                       </tr>
                                   </thead>
@@ -129,6 +130,12 @@
           </section>
 
           <div id="openModal" class="modalDialog">
+        
+        </div>
+        <div id="openModal1" class="modalDialog">
+        
+        </div>
+        <div id="openModal2" class="modalDialog">
         
         </div>
     </div>

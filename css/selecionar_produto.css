@@ -26,23 +26,6 @@ body {
     max-width: 1280px;
 }
 
-#produto {
-    background-color: rgba(214, 226, 217, 0.8);
-    font-size: 20px;
-    border: 0 none;
-    border-radius: 10px;
-}
-
-#produto:hover {
-    cursor: default;
-}
-
-#produto:focus {
-    box-shadow: 0 0 0 0;
-    border: 0 none;
-    outline: 0;
-}
-
 section.cover-form {
     width: 100%;
     padding: 10px;

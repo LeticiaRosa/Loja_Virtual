@@ -332,6 +332,29 @@ td {
     height: 32px;
 }
 
+#produto,
+#Vendedor,
+#cliente {
+    background-color: rgba(214, 226, 217, 0.8);
+    font-size: 20px;
+    border: 0 none;
+    border-radius: 10px;
+}
+
+#produto:hover,
+#Vendedor:hover,
+#cliente:hover {
+    cursor: default;
+}
+
+#produto:focus,
+#Vendedor:focus,
+#cliente:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
 @media screen and (max-width: 900px) {
     .col1 {
         padding-right: 100px;
