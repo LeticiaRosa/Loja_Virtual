@@ -150,6 +150,7 @@ function fecha() {
     $('#openModal').css("display", "none");
     $('#openModal1').css("display", "none");
     $('#openModal2').css("display", "none");
+    $('#openModal3').css("display", "none");
     document.getElementById('codigo').focus();
 
 };
@@ -158,6 +159,8 @@ function fechamdal() {
     $('#openModal').css("display", "none");
     $('#openModal1').css("display", "none");
     $('#openModal2').css("display", "none");
+    $('#openModal3').css("display", "none");
+    document.getElementById('codigo').focus();
 }
 
 

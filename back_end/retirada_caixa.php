@@ -2,6 +2,33 @@
 session_start();
 require_once ("conexao.php");
 if(isset($_POST['Retirar'])){
+  $maquina = gethostbyaddr($_SERVER['REMOTE_ADDR']);
+  $query_1 = "SELECT ID_CAIXA FROM CAIXA WHERE NOME_MAQUINA = '$maquina' AND STATUS = 'Ativo'";
+  $id_caixa = mysqli_query($conexao, $query_1);
+  $caixa = mysqli_fetch_assoc($id_caixa);
+ // echo $caixa['ID_CAIXA'];
+  if($caixa['ID_CAIXA']!=""){
+    $valor_retirda=$_POST['Valor'];
+    $pessoa=$_POST['Valor'];
+    $observacao=$_POST['observacao'];
+    $id_usuario=$_SESSION['usuarioId'];
+    $insert="insert into RETIRADA_CAIXA(id_caixa,valor_retirada,nome,data_retirada,observacao,id_usuario,data_cadastro)values('{$caixa['ID_CAIXA']}','$valor_retirda','$pessoa',CURDATE(),'$observacao','$id_usuario',now())";
+    $resultado= mysqli_query($conexao, $insert);
+
+
+      if($resultado==1){
+    $_SESSION['sucesso_cadastro'] = "Retirada realizada com sucesso!";
+    header("Location:/loja_virtual/Tela_caixa.php");
+    mysqli_close($conexao);
+    } else {
+    $_SESSION['erro_cadastro'] = "Caixa não cadastrado!";
+    header("Location:/loja_virtual/Tela_caixa.php");
+    }
+}else {
+  header("Location:/loja_virtual/Tela_caixa.php");
+ }
+
+/*
 $maquina = gethostbyaddr($_SERVER['REMOTE_ADDR']);
 $query_1 = "SELECT ID_CAIXA FROM CAIXA WHERE NOME_MAQUINA = '$maquina' AND STATUS = 'Ativo'";
 $id_caixa = mysqli_query($conexao, $query_1);
@@ -42,7 +69,3 @@ if($produto==1){
   // header("Location:/loja_virtual/Tela_cadastro_caixa.php");
     */
   }
-
-  
-
-?>

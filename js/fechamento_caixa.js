@@ -45,6 +45,8 @@ function time() {
     var seg = data.getSeconds(); // 0-59
 
     seg = adicionaZero(seg.toString());
+    min = adicionaZero(min.toString());
+    dia = adicionaZero(dia.toString());
     mes = mes + 1;
     mes = adicionaZero(mes.toString());
     var str_hora = hora + ':' + min + ':' + seg;

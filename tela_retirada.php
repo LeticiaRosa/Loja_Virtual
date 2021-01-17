@@ -40,7 +40,7 @@
                     
                       <div class="enviar">
                           <input type="submit" name="Retirar" id="Retirar" value="Retirar" />
-                          <input type="submit" name="Cancelar" id="Cancelar" value="Cancelar" />
+                          <input type="button" name="Cancelar" id="Cancelar" value="Cancelar"  onclick="window.location.href='tela_caixa.php'">
                   
                   
                 
@@ -72,7 +72,7 @@
                 }
                 ?>
             </p>
-            <input type="submit" value="OK" onclick="fechamodal()" /> </p>
+            <input type="submit" value="OK" onclick="fechamdal()" /> </p>
 
         </div>
     </div>
