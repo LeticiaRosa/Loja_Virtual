@@ -235,7 +235,8 @@ td {
 
 /*------------------------------Campos finais das telas-------------------------------------*/
 
-.form-container form #fim {
+.form-container form #qtd_vendas,
+.form-container form #v_total {
     background-color: rgba(214, 226, 217, 0.8);
     width: 50%;
     height: 40px;
