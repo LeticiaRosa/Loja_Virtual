@@ -6,52 +6,76 @@
     <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
-    <link rel="stylesheet" type="text/css" href="css/retirada.css">
+    <link rel="stylesheet" type="text/css" href="css/css_caixa.css">
     <link rel="shortcut icon" type="image/x-icon" href="imagens/favicon.ico">
 </head>
 <html>
 
 <body>
 <div class="center">
-          <section class="cover-form">
-          <div><a href="#close" title="Close" class="close">X</a>
-          <form method="POST" name="form" action="back_end/banco.php">
-              <div class="form-container">
+    <section class="cover-form">
+      <div class="form-container">
+        <a href="#close" title="Close" class="close">X</a>
+          <form method="POST" name="form" action="back_end/retirada_caixa.php">
                   <h1>Fazer retirada</h1>
-                  <div class="divisor">
+                    <div class="form-wraper">
                       <div class="col">
-                          <p> Valor</p>
+                          <p> Valor da retirada: *</p>
                           <input type="text" name="Valor" id="Valor" required placeholder="Valor" autocomplete="off">
                       </div>
-                  </div>
-                        <div class="divisor">
-                          <div class="col">
-                                  <p> Quem está retirando:</p>
-                                  <input type="text" name="nome" id="nome" placeholder="Nome">
-                          </div>
-                        </div>
-                      <div class="divisor">
+                     
+                    </div>
+                    <div class="form-wraper">
+                    <div class="col">
+                          <p> Quem está retirando: *</p>
+                          <input type="text" name="nome" id="nome" placeholder="Nome">
+                      </div>
+                    </div>
+                    <div class="form-wraper">
                         <div class="col">
-                        <p>Observação:</p>
-                        <input type="text" name="observacao" id="observacao" placeholder="Observação" autocomplete="off">
+                            <p>Observação:</p>
+                            <input type="text" name="observacao" id="observacao" placeholder="Observação" autocomplete="off">
                         </div>
                     </div>
-                      <div class="divisor">
+                    
                       <div class="enviar">
                           <input type="submit" name="Retirar" id="Retirar" value="Retirar" />
                           <input type="submit" name="Cancelar" id="Cancelar" value="Cancelar" />
-                      </div>
-                  </div> 
-                </div>
-            </form>     
-          </section>
+                  
+                  
+                
+          </form>  
+     </div>   
+    </section>
+</div>
+<div class="pega">
+        <input id="pega" type="text" value="<?php if (isset($_SESSION['sucesso_cadastro'])) {
+                                                echo $_SESSION['sucesso_cadastro'];
+                                            } else if (isset($_SESSION['erro_cadastro'])) {
+                                                echo $_SESSION['erro_cadastro'];
+                                            } ?>">
     </div>
+    <div class="conteiner" id="conteiner">
+        <div class="couver">
+            <p> <?php
+                //Recuperando o valor da variável global, os erro de login.
+                if (isset($_SESSION['sucesso_cadastro'])) {
+                    echo $_SESSION['sucesso_cadastro'];
+                    unset($_SESSION['sucesso_cadastro']);
+                } ?>
+            </p>
+            <p> <?php
+                //Recuperando o valor da variável global, deslogado com sucesso.
+                if (isset($_SESSION['erro_cadastro'])) {
+                    echo $_SESSION['erro_cadastro'];
+                    unset($_SESSION['erro_cadastro']);
+                }
+                ?>
+            </p>
+            <input type="submit" value="OK" onclick="fechamodal()" /> </p>
 
-      </div>
-
-      
-
-    <!--cover-form-->
+        </div>
+    </div>
 
     <script type="text/javascript" src="js/jquery.js"></script> 
     <script type="text/javascript" src="js/jquery-ui.min.js"></script> 
@@ -59,3 +83,5 @@
 </body>
 
 </html>
+
+
