@@ -26,7 +26,7 @@ body {
 
 section.cover-form {
     width: 100%;
-    padding: 40px;
+    padding: 20px;
 }
 
 .form-container {
@@ -274,37 +274,24 @@ td {
     justify-content: space-between;
 }
 
-.enviar-1 {
-    padding: 15px;
-    display: flex;
-    flex-direction: row-reverse;
-    width: 100%;
-    align-items: center;
-    text-align: center;
-    width: 180px;
-}
-
-.form-container .enviar-1 .Retirada {
-    width: 500px;
-}
-
 .form-container input[type="submit"] {
     background-color: rgba(71, 92, 71, 0.8);
     text-transform: uppercase;
     color: white;
-    width: 150px;
+    width: 25%;
     height: 45px;
     cursor: pointer;
     font-size: 25px;
     border: 0;
     border-radius: 10px;
+    padding: 5px;
 }
 
 .form-container input[type="button"] {
     background-color: rgba(71, 92, 71, 0.8);
     text-transform: uppercase;
     color: white;
-    width: 150px;
+    width: 25%;
     height: 45px;
     cursor: pointer;
     font-size: 25px;
@@ -443,7 +430,7 @@ td {
     background-color: rgba(71, 92, 71, 0.8);
     text-transform: uppercase;
     color: white;
-    width: 150px;
+    width: 50%;
     height: 45px;
     cursor: pointer;
     font-size: 25px;
@@ -453,6 +440,80 @@ td {
 
 
 /* FIM:  Css da Tela de Retirada de caixa! */
+
+
+/* tela de finalizar venda */
+
+.col-1 {
+    padding: 10px;
+}
+
+.col-1 select {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 8px 3px 3px 3px;
+    outline: none;
+    background-color: rgba(214, 226, 217, 0.8);
+    height: 40px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    border: 0;
+    border-radius: 10px;
+}
+
+.col10 {
+    align-items: right;
+    justify-items: right;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    width: 100%;
+}
+
+.col10 input[type="text"] {
+    background-color: rgba(214, 226, 217, 0.8);
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    font-size: 25px;
+    border: 0;
+    border-radius: 10px;
+    text-align: left;
+    padding: 5px;
+}
+
+.col10 #total_itens,
+.col11 #Valor_total,
+.col11 #desconto,
+.col11 #tl_fim {
+    background-color: rgba(214, 226, 217, 0.8);
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    font-size: 25px;
+    border: 0;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
+}
+
+.col11 {
+    padding-right: 10px;
+    float: right;
+}
+
+.col11 p {
+    font-size: 14px;
+    text-align: left;
+    color: #525252;
+    text-transform: uppercase;
+}
+
+
+/*************************/
 
 @media screen and (max-width: 900px) {
     .col1 {

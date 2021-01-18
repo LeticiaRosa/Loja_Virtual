@@ -1,5 +1,4 @@
 function busca_produto(teste) {
-    console.log(teste);
     t1 = "";
     t2 = "";
     valor = 0;
@@ -189,6 +188,32 @@ function excluirlinha(id) {
     total_itens = itens - 1;
     document.getElementById("itens").value = total_itens;
     document.getElementById(a).remove();
+
+
+}
+
+
+
+function openConfirmacao(tipo) {
+
+    $('#conteiner').css("display", "flex");
+    if (tipo == "excluir") {
+        $('#Texto').html("Deseja Cancelar Venda?");
+        return false;
+    }
+
+
+}
+
+
+function confirma() {
+    var texto = document.getElementById("Texto").innerHTML;
+    console.log(texto);
+    if (texto == "Deseja Cancelar Venda?") {
+        document.location.reload();
+        fechamdal()
+        return true;
+    }
 
 
 }

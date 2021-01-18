@@ -123,18 +123,18 @@
                        
                       <div class="enviar">
 
-                          <input type="submit" name="Confirmar" id="Confirmar" value="Confirmar" />
-                          <div class="enviar-1">
+                          <input type="submit" name="Confirmar" id="Confirmar" value="Finalizar Venda"   />
+                         
                       <input type="submit" name="Retirada" id="Retirada" class = "Retirada" value="Fazer retirada" onclick="retirada()" />
-                      </div>
-                          <input type="submit" name="Excluir" id="Excluir" value="Cancelar" />
+                     
+                          <input type="submit" name="Excluir" id="Excluir" value="Cancelar Venda" onclick="return openConfirmacao('excluir')" />
 
                       </div>
                      
                   </div>
                        
           </section>
-
+         
           <div id="openModal" class="modalDialog">
         
         </div>
@@ -148,7 +148,7 @@
         <div id="openModal3" class="modalDialog">
         
         </div>
-    </div>
+    
       <div class="pega">
           <input id="pega" type="text" value="<?php if (isset($_SESSION['sucesso_cadastro'])) {
                                                     echo $_SESSION['sucesso_cadastro'];
@@ -160,14 +160,14 @@
 
       <div class="conteiner" id="conteiner">
         <div class="couver">
-            <p> <?php
+            <p id="Texto"> <?php
                 //Recuperando o valor da variável global, os erro de login.
                 if (isset($_SESSION['sucesso_cadastro'])) {
                     echo $_SESSION['sucesso_cadastro'];
                     unset($_SESSION['sucesso_cadastro']);
                 } ?>
             </p>
-            <p> <?php
+            <p id="Texto"> <?php
                 //Recuperando o valor da variável global, deslogado com sucesso.
                 if (isset($_SESSION['erro_cadastro'])) {
                     echo $_SESSION['erro_cadastro'];
@@ -175,11 +175,13 @@
                 }
                 ?>
             </p>
-            <input type="submit" value="OK" onclick="fechamodal()" /> </p>
+            <input type="submit" value="OK" id="OK" onclick="return confirma()" />
+            <p></p>
+            <input type="submit" value="Cancelar" onclick="fechamodal()" />
 
         </div>
     </div>
-      
+    </div>
      
 
       
