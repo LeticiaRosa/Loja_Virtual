@@ -149,6 +149,31 @@ function finalizar_venda() {
     document.getElementById('Cliente').value = cliente;
     document.getElementById('total_itens').value = itens;
     document.getElementById('Valor_total').value = venda;
+    var dados = new Array();
+    var tabela = document.getElementById("products-table-1");
+    var selecionados = tabela.getElementsByClassName("selecionado");
+    for (i = 0; i < selecionados.length; i++) {
+
+        selecionado = selecionados[i];
+        selecionado = selecionado.getElementsByTagName("td");
+        dados.push({ "id_produto": selecionado[0].innerHTML, "quantidade": selecionado[3].innerHTML });
+
+
+    }
+
+    jQuery.ajax({
+        url: "back_end/caixa.php",
+        type: "POST",
+        data: { dados: JSON.stringify(dados) },
+        dataType: "json",
+        success: function(data) {
+            console.log("foi");
+            console.log(data);
+        }
+
+
+
+    });
 }
 
 

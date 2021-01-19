@@ -17,7 +17,7 @@
 <div class="center">
     <section class="cover-form">
         <div class="form-container">
-            <form method="POST" name="form" action="back_end/caixa.php">
+            <form method="POST" name="form" action="back_end/finalizar_venda.php">
                 <h1>Confirmar Venda</h1>
                 <div class="form-wraper">
                     <div class="col10">
@@ -93,9 +93,8 @@
                     <input type="submit" name="Confirmar" id="Confirmar" value="Confirmar" />
 
                     <input type="button" name="Cancelar" id="Cancelar" value="Cancelar" onclick="window.location.href='tela_caixa.php'">
-
-
-
+                   
+                  
             </form>
         </div>
     </section>
