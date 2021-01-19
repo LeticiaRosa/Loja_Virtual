@@ -223,12 +223,11 @@ function openConfirmacao(tipo) {
 
 function confirma() {
     var texto = document.getElementById("Texto").innerHTML;
-    console.log(texto);
-    if (texto == "Deseja Cancelar Venda?") {
+    if (texto != "Deseja Cancelar Venda?") {
+        fechamodal();
+    } else if (texto == "Deseja Cancelar Venda?") {
+        console.log("entrou");
         document.location.reload();
-        fechamdal()
-        return true;
+        fechamdal();
     }
-
-
 }
