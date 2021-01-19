@@ -1,6 +1,4 @@
   <!DOCTYPE html>
-
-
   <head>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
@@ -12,9 +10,7 @@
       <title>Caixa</title>
   </head>
   <html>
-
   <body>
-
       <?php
         include_once("menu.php");
         ?>
@@ -175,13 +171,15 @@
                 }
                 ?>
             </p>
-            <input type="submit" value="OK" id="OK" onclick="return confirma()" />
+            <input type="submit" value="OK" id="OK" onclick="confirma()" />
             <p></p>
             <input type="submit" value="Cancelar" onclick="fechamodal()" />
 
         </div>
     </div>
     </div>
+
+   
      
 
       

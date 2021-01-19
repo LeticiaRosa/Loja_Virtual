@@ -21,7 +21,7 @@ if(isset($_POST['Retirar'])){
     header("Location:/loja_virtual/Tela_caixa.php");
     mysqli_close($conexao);
     } else {
-    $_SESSION['erro_cadastro'] = "Caixa não cadastrado!";
+    $_SESSION['erro_cadastro'] = "Retirada não cadastrada!";
     header("Location:/loja_virtual/Tela_caixa.php");
     }
 }else {

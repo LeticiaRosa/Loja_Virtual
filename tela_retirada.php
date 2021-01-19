@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
@@ -10,7 +9,6 @@
     <link rel="shortcut icon" type="image/x-icon" href="imagens/favicon.ico">
 </head>
 <html>
-
 <body>
 <div class="center">
     <section class="cover-form">
@@ -40,48 +38,15 @@
                     
                       <div class="enviar">
                           <input type="submit" name="Retirar" id="Retirar" value="Retirar" />
-                          <input type="button" name="Cancelar" id="Cancelar" value="Cancelar"  onclick="window.location.href='tela_caixa.php'">
-                  
-                  
-                
+                          <input type="button" name="Cancelar" id="Cancelar" value="Cancelar" onclick="fechamdal()">                
           </form>  
      </div>   
     </section>
 </div>
-<div class="pega">
-        <input id="pega" type="text" value="<?php if (isset($_SESSION['sucesso_cadastro'])) {
-                                                echo $_SESSION['sucesso_cadastro'];
-                                            } else if (isset($_SESSION['erro_cadastro'])) {
-                                                echo $_SESSION['erro_cadastro'];
-                                            } ?>">
-    </div>
-    <div class="conteiner" id="conteiner">
-        <div class="couver">
-            <p> <?php
-                //Recuperando o valor da variável global, os erro de login.
-                if (isset($_SESSION['sucesso_cadastro'])) {
-                    echo $_SESSION['sucesso_cadastro'];
-                    unset($_SESSION['sucesso_cadastro']);
-                } ?>
-            </p>
-            <p> <?php
-                //Recuperando o valor da variável global, deslogado com sucesso.
-                if (isset($_SESSION['erro_cadastro'])) {
-                    echo $_SESSION['erro_cadastro'];
-                    unset($_SESSION['erro_cadastro']);
-                }
-                ?>
-            </p>
-            <input type="submit" value="OK" onclick="fechamdal()" /> </p>
-
-        </div>
-    </div>
-
     <script type="text/javascript" src="js/jquery.js"></script> 
     <script type="text/javascript" src="js/jquery-ui.min.js"></script> 
-
+  
 </body>
-
 </html>
 
 

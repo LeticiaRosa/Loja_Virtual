@@ -106,10 +106,10 @@ if (select == "Inserido com sucesso!") {
 } else if (select == "Retirada realizada com sucesso!") {
     $('#conteiner').css("display", "flex");
 
+} else if (select == "Retirada não cadastrada!") {
+    $('#conteiner').css("display", "flex");
+
 }
-
-
-
 
 function fechamodal() {
     document.getElementById('codigo').focus();
