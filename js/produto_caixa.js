@@ -137,6 +137,19 @@ function retirada() {
 
 }
 
+function finalizar_venda() {
+    $('#openModal4').css("display", "inline-block");
+    window.location.replace("#openModal4");
+    itens = document.getElementById('itens').value;
+    venda = document.getElementById('venda').value;
+    cliente = document.getElementById('cliente').value;
+    Vendedor = document.getElementById('Vendedor').value;
+
+    document.getElementById('Vendedo').value = Vendedor;
+    document.getElementById('Cliente').value = cliente;
+    document.getElementById('total_itens').value = itens;
+    document.getElementById('Valor_total').value = venda;
+}
 
 
 
@@ -150,6 +163,7 @@ function fecha() {
     $('#openModal1').css("display", "none");
     $('#openModal2').css("display", "none");
     $('#openModal3').css("display", "none");
+    $('#openModal4').css("display", "none");
     document.getElementById('codigo').focus();
 
 };
@@ -159,6 +173,7 @@ function fechamdal() {
     $('#openModal1').css("display", "none");
     $('#openModal2').css("display", "none");
     $('#openModal3').css("display", "none");
+    $('#openModal4').css("display", "none");
     document.getElementById('codigo').focus();
 }
 

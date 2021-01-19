@@ -18,6 +18,7 @@
       <?php
         include_once("menu.php");
         ?>
+       
       <div class="center" >
           <section class="cover-form">
               <div class="form-container">
@@ -123,7 +124,7 @@
                        
                       <div class="enviar">
 
-                          <input type="submit" name="Confirmar" id="Confirmar" value="Finalizar Venda"   />
+                          <input type="submit" name="Confirmar" id="Confirmar" value="Finalizar Venda"  onclick="finalizar_venda()" />
                          
                       <input type="submit" name="Retirada" id="Retirada" class = "Retirada" value="Fazer retirada" onclick="retirada()" />
                      
@@ -132,7 +133,8 @@
                       </div>
                      
                   </div>
-                       
+                  
+       
           </section>
          
           <div id="openModal" class="modalDialog">
@@ -147,6 +149,11 @@
 
         <div id="openModal3" class="modalDialog">
         
+        </div>
+        <div id="openModal4" class="modalDialog">
+        <div><a href="#close" title="Close" class="close">X</a>
+            <?php include_once("Tela_finalizar_vendas.php");  ?>
+        </div>
         </div>
     
       <div class="pega">

@@ -12,16 +12,17 @@
     <title>Finalizar Venda</title>
 </head>
 <html>
+    
+<body>
 <div class="center">
     <section class="cover-form">
         <div class="form-container">
-            <a href="#close" title="Close" class="close">X</a>
             <form method="POST" name="form" action="back_end/caixa.php">
                 <h1>Confirmar Venda</h1>
                 <div class="form-wraper">
                     <div class="col10">
                         <p> Vendedor: *</p>
-                        <input type="text" name="Vendedor" id="Vendedor" required placeholder="Vendedor" autocomplete="off">
+                        <input type="text" name="Vendedo" id="Vendedo" required placeholder="Vendedor" autocomplete="off">
                     </div>
                     <div class="col10">
                         <p> Cliente: *</p>
@@ -50,7 +51,7 @@
                     </div>
                     <div class="col-1">
                         <p>Quantidade de Parcelas</p>
-                        <select name="pagamento" id="pagamento" placeholder="Forma de Pagamento">
+                        <select name="forma_pagamento" id="forma_pagamento" placeholder="Forma de Pagamento">
                             <option selected disabled value="">Selecione</option>
                             <option value="a_vista">A vista</option>
                             <option value="1x">1x</option>
@@ -70,7 +71,7 @@
 
                 </div>
                 <div class="col11 limpa">
-                        <p> Valor Total Da Venda: *</p>
+                        <p> Valor Total Da Venda:</p>
                         <input type="text" name="Valor_total" id="Valor_total" required placeholder="Valor" autocomplete="off">
                     </div>
                 
@@ -79,12 +80,12 @@
                     <div class="texto">
                     <p>Porcentagem de Desconto:</p> 
                     </div>
-                     <input type="text" name="desconto" id="desconto" required placeholder=" %Valor" autocomplete="off">
+                     <input type="text" name="desconto" id="desconto" required placeholder="% Valor" autocomplete="off">
                     </div>
 
                 <div class="col11 limpa">
-                    <p> Valor Total Após Desconto: *</p>
-                    <input type="text" name="tl_fim" id="tl_fim" placeholder="Nome">
+                    <p> Valor Total Após Desconto:</p>
+                    <input type="text" name="tl_fim" id="tl_fim" placeholder="Valor Fim">
                 </div>
 
 
@@ -100,7 +101,7 @@
     </section>
 </div>
 
-<body>
+
 </body>
 
 </html>
