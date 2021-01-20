@@ -14,16 +14,14 @@
 </head>
 <html>
 
-<body>
-
-
-    <?php
+<?php
     include_once("menu.php");
-    ?>
+?>
+<body>
     <div class="center">
         <section class="cover-form">
             <div class="form-container">
-                <h1> Empresas</h1>
+                <h1> Caixas </h1>
 
                 <div class="form-wraper-1">
 
@@ -31,15 +29,15 @@
                         <thead class="cabeça">
                             <tr>
                                 <th class="sumir_sempre">Id</th>
-                                <th>Nome</th>
-                                <th>Razão Social</th>
-                                <th>Decrição</th>
+                                <th>Caixa</th>
+                                <th>Empresa</th>
+                                <th>Máquina</th>
                                 <th>Status</th>
-                                <th>Cnpj</th>
-                                <th>Endereço</th>
-                                <th>Observação</th>
-                                <th>Usuario</th>
-                                <th>Data Cadastro</th>
+                                <th>Status Caixa</th>
+                                <th>Usuario Abertura</th>
+                                <th>Data Abertura</th>
+                                <th>Usuario Fechamento</th>
+                                <th>Data Fechamento</th>
 
                             </tr>
                         </thead>
@@ -92,7 +90,7 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/modal.js"></script>
-    <script type="text/javascript" src="js/listar_empresa.js"></script>
+    <script type="text/javascript" src="js/listar_caixas.js"></script>
     <script type="text/javascript" src="DataTables/datatables.min.js"></script>
 
 
