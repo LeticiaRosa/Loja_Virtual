@@ -1,5 +1,5 @@
 <?php
-
+include_once("sessao.php");
 //$id_usuario=$_SESSION['usuarioId'];
 //require_once ("conexao.php");
 // Dados da conexão com o banco de dados
@@ -18,6 +18,8 @@ $parametro = (isset($_GET['parametro'])) ? $_GET['parametro'] : '';
 $opcoes = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES UTF8');
 $conexao = new PDO("mysql:host=" . HOST . "; dbname=" . DB, USUARIO, SENHA, $opcoes);
 $empresa=(isset($_GET['sessao'])) ? $_GET['sessao'] : '';
+
+
 // Verifica se foi solicitado uma consulta para o autocomplete
 if ($acao == 'autocomplete') :
 
@@ -348,6 +350,18 @@ if ($acao == 'FECHA_CAIXA') :
 	$sql = "SELECT CAX.NOME AS NOME_CAIXA,EMP.NOME AS NOME_EMPRESA,CAX.NOME_MAQUINA, US.NOME_USUARIO, CX.DATA_ABERTURA,CX.HORA_ABERTURA FROM CONTROLE_CAIXA AS CX 	LEFT OUTER JOIN CAIXA AS CAX	ON CAX.ID_CAIXA=CX.ID_CAIXA	LEFT OUTER JOIN EMPRESA AS EMP	ON EMP.ID_EMPRESA=CAX.ID_EMPRESA	LEFT OUTER JOIN USUARIO  AS US	ON US.ID_USUARIO=CX.ID_USUARIO_ABERTURA	WHERE CAX.NOME_MAQUINA=? AND  CX.DATA_FECHAMENTO IS NULL AND CX.HORA_ABERTURA=(SELECT MAX(AUX.HORA_ABERTURA) FROM CONTROLE_CAIXA AS AUX  WHERE AUX.ID_CAIXA=CX.ID_CAIXA)";
 	$stm = $conexao->prepare($sql);
 	$stm->bindValue(1,  $parametro  );
+	$stm->execute();
+	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
+
+	$json = json_encode($dados);
+
+	echo $json;
+endif;
+
+
+if ($acao == 'lista_caixa') :
+	$sql = "SELECT CAX.NOME AS NOME_CAIXA, EMP.NOME AS NOME_EMPRESA, CAX.NOME_MAQUINA, CAX.STATUS, CASE WHEN ( CX.DATA_ABERTURA IS NULL AND CX.DATA_FECHAMENTO IS NULL ) OR ( CX.DATA_ABERTURA IS NOT NULL AND CX.DATA_FECHAMENTO IS NULL) THEN 'Caixa Aberto' ELSE 'Caixa Fechado' END AS STATUS_CAIXA, coalesce(US.NOME_USUARIO,'') AS USUARIO_ABERTURA, coalesce(DATE_format(CX.DATA_ABERTURA, '%d-%m-%Y'),'') AS DATA_ABERTURA , coalesce(USF.NOME_USUARIO,'') AS USUARIO_FECHAMENTO, coalesce(DATE_format(CX.DATA_FECHAMENTO, '%d-%m-%Y'),'') AS DATA_FECHAMENTO FROM CONTROLE_CAIXA AS CX LEFT OUTER JOIN CAIXA AS CAX ON CAX.ID_CAIXA=CX.ID_CAIXA LEFT OUTER JOIN EMPRESA AS EMP ON EMP.ID_EMPRESA=CAX.ID_EMPRESA LEFT OUTER JOIN USUARIO  AS US	ON US.ID_USUARIO=CX.ID_USUARIO_ABERTURA LEFT OUTER JOIN USUARIO  AS USF	ON USF.ID_USUARIO=CX.ID_USUARIO_FECHAMENTO WHERE CAX.ID_EMPRESA='$x'";	
+	$stm = $conexao->prepare($sql);
 	$stm->execute();
 	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
 
