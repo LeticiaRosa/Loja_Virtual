@@ -21,24 +21,20 @@
                 <h1>Confirmar Venda</h1>
                 <div class="form-wraper">
                     <div class="col10">
-                        <p> Vendedor: *</p>
-                        <input type="text" name="Vendedo" id="Vendedo" required placeholder="Vendedor" autocomplete="off">
+                        <p> Vendedor:</p>
+                        <input type="text" readonly="readonly" name="Vendedo" id="Vendedo" placeholder="Vendedor" autocomplete="off">
                     </div>
                     <div class="col10">
-                        <p> Cliente: *</p>
-                        <input type="text" name="Cliente" id="Cliente" placeholder="Cliente" autocomplete="off">
+                        <p> Cliente:</p>
+                        <input type="text"  readonly="readonly"name="Cliente" id="Cliente" placeholder="Cliente" autocomplete="off">
                     </div>
                 </div>
                 <div class="form-wraper">
                     <div class="col10">
-                        <p>Total De Itens: *</p>
-                        <input type="text" name="total_itens" id="total_itens" required placeholder="Total De itens" autocomplete="off">
-                    </div>
+                        <p>Total De Itens:</p>
+                        <input type="text" name="total_itens" id="total_itens" readonly="readonly" placeholder="Total De itens" autocomplete="off">
                     </div>
                     
-                
-
-                <div class="form-wraper">
                     <div class="col-1">
                         <p>Forma de Pagamento:</p>
                         <select name="pagamento" id="pagamento" required placeholder="Forma de Pagamento">
@@ -49,9 +45,9 @@
                             <option value="Anotar">Anotar</option>
                         </select>
                     </div>
-                    <div class="col-1">
+                    <div class="col-1" id="col-5">
                         <p>Quantidade de Parcelas</p>
-                        <select name="forma_pagamento" id="forma_pagamento" placeholder="Forma de Pagamento">
+                        <select name="forma_pagamento" id="forma_pagamento"placeholder="Forma de Pagamento">
                             <option selected disabled value="">Selecione</option>
                             <option value="a_vista">A vista</option>
                             <option value="1x">1x</option>
@@ -70,9 +66,36 @@
                     </div>
 
                 </div>
+                
+                <div class="conter-tabela">
+                          <div class="corpao">
+                              <table id="products-table-2" class="teste1">
+
+                                  <thead class="cabeça">
+                                      <tr>
+                                          <th>Id</th>
+                                          <th>Nome do produto</th>
+                                          <th>Valor produto</th>
+                                          <th>Quantidade</th>
+                                          
+
+                                      </tr>
+                                  </thead>
+
+                                  <tbody id="visualizarDados" class="teste">
+
+                                  </tbody>
+
+                              </table>
+                          </div>
+                          
+                         
+                      </div>
+
+                
                 <div class="col11 limpa">
                         <p> Valor Total Da Venda:</p>
-                        <input type="text" name="Valor_total" id="Valor_total" required placeholder="Valor" autocomplete="off">
+                        <input type="text" name="Valor_total" id="Valor_total" readonly="readonly" placeholder="Valor" autocomplete="off">
                     </div>
                 
                     
@@ -80,15 +103,14 @@
                     <div class="texto">
                     <p>Porcentagem de Desconto:</p> 
                     </div>
-                     <input type="text" name="desconto" id="desconto" required placeholder="% Valor" autocomplete="off">
+                     <input type="text" name="desconto" id="desconto" required onkeyup="chamda()" placeholder="% Valor"  autocomplete="off">
                     </div>
 
                 <div class="col11 limpa">
                     <p> Valor Total Após Desconto:</p>
-                    <input type="text" name="tl_fim" id="tl_fim" placeholder="Valor Fim">
+                    <input type="text" name="tl_fim" id="tl_fim" readonly="readonly" placeholder="Valor Fim">
                 </div>
-
-
+                
                 <div class="enviar">
                     <input type="submit" name="Confirmar" id="Confirmar" value="Confirmar" />
 

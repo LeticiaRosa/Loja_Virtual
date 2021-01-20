@@ -13,7 +13,6 @@ foreach ($data as $key => $value) {
     
 }
 
-
 $_SESSION['id']=$id;
 $_SESSION['quant']=$quant;
 

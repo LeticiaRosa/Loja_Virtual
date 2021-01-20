@@ -103,11 +103,16 @@
 
                               <div class="col1">
                                   <p>Total De itens</p>
-                                  <input type="text" name="itens" id="itens" autocomplete="off">
+                                  <input   readonly = "readonly" type="text" name="itens" id="itens" autocomplete="off">
                               </div>
                               <div class="col2">
-                                  <p>Total Venda</p>
-                                  <input type="text" name="venda" id="venda" autocomplete="off">
+                                  <p id="nome_campo">Total Venda</p>
+                                  <div class="din">
+                                      <p id="dinheiro"> R$</p>
+                                  <input type="text"   readonly = "readonly" name="venda" id="venda" autocomplete="off">
+                                    </div>
+                                  
+                                  
                               </div>
                           </div>
                          

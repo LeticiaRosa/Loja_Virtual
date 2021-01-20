@@ -146,8 +146,26 @@ section.cover-form {
     padding: 5px;
     padding-left: 200px;
     margin-top: 10px;
-    align-items: right;
-    justify-items: right;
+    align-items: center;
+    justify-items: center;
+}
+
+.form-wraper1 .col2 #nome_campo {
+    text-align: left;
+    margin-left: 30px;
+}
+
+.form-wraper1 .col2 #dinheiro {
+    text-align: left;
+    font-size: 18px;
+    padding: 3px;
+}
+
+.din {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
 }
 
 .col1 {
@@ -349,18 +367,24 @@ td {
     height: 32px;
 }
 
-#maquina {
+#maquina,
+#venda,
+#itens {
     background-color: rgba(214, 226, 217, 0.8);
     font-size: 20px;
     border: 0 none;
     border-radius: 10px;
 }
 
-#maquina:hover {
+#maquina:hover,
+#venda:hover,
+#itens:hover {
     cursor: default;
 }
 
-#maquina:focus {
+#maquina:focus,
+#venda:focus,
+#itens:focus {
     box-shadow: 0 0 0 0;
     border: 0 none;
     outline: 0;
@@ -500,6 +524,55 @@ td {
     padding: 5px;
 }
 
+.col10 #total_itens {
+    background-color: rgba(214, 226, 217, 0.8);
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    font-size: 25px;
+    border: 0;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
+}
+
+.col10 #total_itens,
+.col11 #Valor_total,
+.col11 #tl_fim,
+.col10 #total_itens,
+.col10 #Cliente,
+.col10 #Vendedo {
+    cursor: default;
+}
+
+.col10 #total_itens:focus,
+.col11 #Valor_total:focus,
+.col11 #tl_fim:focus,
+.col10 #total_itens:focus,
+.col10 #Cliente:focus,
+.col10 #Vendedo:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+.col-1 {
+    display: block;
+    width: 100%;
+}
+
+.col-1 select {
+    padding: 8px 3px 3px 3px;
+    outline: none;
+    background-color: rgba(214, 226, 217, 0.8);
+    height: 40px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    border: 0;
+    border-radius: 10px;
+}
+
 .col11 {
     padding-right: 10px;
     float: right;
@@ -511,6 +584,22 @@ td {
     text-align: left;
     color: #525252;
     text-transform: uppercase;
+}
+
+.conter-tabela {
+    margin-right: 10px;
+    width: 50%;
+    -webkit-box-shadow: 2px 2px 5px 0px rgb(71, 92, 71);
+    -moz-box-shadow: 2px 2px 5px 0px rgb(71, 92, 71);
+    box-shadow: 2px 2px 5px 0px rgb(71, 92, 71);
+    background-color: rgb(235, 237, 240);
+    height: 100%;
+    display: inline-block;
+    margin-top: 0px;
+}
+
+.corpo2:nth-child(even) {
+    background-color: rgba(214, 226, 217, 0.8);
 }
 
 

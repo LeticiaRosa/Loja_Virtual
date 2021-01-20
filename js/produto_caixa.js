@@ -89,7 +89,8 @@ function busca_produto(teste) {
                 // console.log(total_u);
             }
             document.getElementById("itens").value = qtd_pro;
-            document.getElementById("venda").value = "R$ " + total_u;
+
+            document.getElementById("venda").value = formatarMoeda(total_u);
         }
     });
 
@@ -108,6 +109,14 @@ $(window).on("load", (function() {
     document.getElementById('codigo').focus();
 }));
 
+
+function formatarMoeda(moeda) {
+    atual = moeda
+    var f2 = atual.toLocaleString('pt-br', { minimumFractionDigits: 2 });
+
+
+    return f2;
+}
 
 function produto() {
     window.location.replace("#openModal");
@@ -149,6 +158,8 @@ function finalizar_venda() {
     document.getElementById('Cliente').value = cliente;
     document.getElementById('total_itens').value = itens;
     document.getElementById('Valor_total').value = venda;
+    document.getElementById('tl_fim').value = venda;;
+    document.getElementById('desconto').value = 0;
     var dados = new Array();
     var tabela = document.getElementById("products-table-1");
     var selecionados = tabela.getElementsByClassName("selecionado");
@@ -158,17 +169,22 @@ function finalizar_venda() {
         selecionado = selecionado.getElementsByTagName("td");
         dados.push({ "id_produto": selecionado[0].innerHTML, "quantidade": selecionado[3].innerHTML });
 
-
+        var newRow = $('<tr class="corpo2">');
+        var cols = "";
+        cols += '<td>' + selecionado[0].innerHTML + '</td>';
+        cols += '<td>' + selecionado[1].innerHTML + '</td>';
+        cols += '<td>' + selecionado[2].innerHTML + '</td>';
+        cols += '<td>' + selecionado[3].innerHTML + '</td>';
+        newRow.append(cols);
+        $("#products-table-2").append(newRow);
     }
-
     jQuery.ajax({
         url: "back_end/caixa.php",
         type: "POST",
         data: { dados: JSON.stringify(dados) },
         dataType: "json",
         success: function(data) {
-            console.log("foi");
-            console.log(data);
+
         }
 
 
@@ -176,12 +192,40 @@ function finalizar_venda() {
     });
 }
 
+$('#col-5').prop("disabled", true);
+$('#col-5').css("display", "none");
+
+$('#pagamento').on('change', function() {
+    var select = document.getElementById('pagamento');
+    var tipo = select.options[select.selectedIndex].value
+    if (tipo == "credito") {
+        $('#col-5').prop("disabled", false);
+        $('#forma_pagamento').attr("required", true);
+        $('#col-5').css("display", "block");
+
+    } else if (tipo != "credito") {
+        $('#col-5').prop("disabled", true);
+        $('#col-5').css("display", "none");
+    }
+});
 
 
+function chamda() {
+    cal();
+};
 
+function cal() {
+    valor_s_d = document.getElementById('Valor_total').value;
+    desconto = document.getElementById('desconto').value;
 
-
-
+    procentagem = parseFloat(valor_s_d) * parseFloat(desconto) / 100;
+    if (desconto == 0) {
+        document.getElementById('tl_fim').value = formatarMoeda(valor_s_d)
+    } else {
+        total_desc = parseFloat(valor_s_d) - parseFloat(procentagem);
+        document.getElementById('tl_fim').value = formatarMoeda(total_desc);
+    }
+};
 
 function fecha() {
     $('#openModal').css("display", "none");
