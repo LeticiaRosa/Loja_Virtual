@@ -12,6 +12,7 @@ $(async function() {
         },
 
         success: function(data) {
+            ID_CAIXA = data.map(d => d.ID_CAIXA);
             NOME_CAIXA = data.map(d => d.NOME_CAIXA);
             NOME_EMPRESA = data.map(d => d.NOME_EMPRESA);
             NOME_MAQUINA = data.map(d => d.NOME_MAQUINA);
@@ -22,10 +23,11 @@ $(async function() {
             USUARIO_FECHAMENTO = data.map(d => d.USUARIO_FECHAMENTO);
             DATA_FECHAMENTO = data.map(d => d.DATA_FECHAMENTO);
 
+
             for (i = 0; i < data.length; i++) {
                 var newRow = $('<tr class = "corpo" >');
                 var cols = "";
-                cols += '<td class="sumir_sempre">' + id[i] + '</td>';
+                cols += '<td class = "sumir_sempre">' + ID_CAIXA[i] + '</td>';
                 cols += '<td>' + NOME_CAIXA[i] + '</td>';
                 cols += '<td>' + NOME_EMPRESA[i] + '</td>';
                 cols += '<td>' + NOME_MAQUINA[i] + '</td>';
@@ -133,11 +135,11 @@ $(window).on("click", (function() {
         if (selecionado[1].innerHTML !== null) {
 
             window.location.replace("#openModal");
-            document.getElementById('id_empresa').value = selecionado[0].innerHTML;
-            document.getElementById('nome').value = selecionado[1].innerHTML;
-            document.getElementById('Razao_Social').value = selecionado[2].innerHTML;
-            document.getElementById('descricao').value = selecionado[3].innerHTML;
-            if (selecionado[4].innerHTML == "Disponível") {
+
+            document.getElementById('nome_caixa').value = selecionado[1].innerHTML;
+            document.getElementById('empresa1').value = selecionado[2].innerHTML;
+            document.getElementById('maquina').value = selecionado[3].innerHTML;
+            if (selecionado[4].innerHTML == "Ativo") {
 
                 document.getElementById('status').value = document.getElementById('S').value;
             } else {
@@ -145,9 +147,12 @@ $(window).on("click", (function() {
                 document.getElementById('status').value = document.getElementById('N').value;
             }
 
-            document.getElementById('CNPJ').value = selecionado[5].innerHTML;
-            document.getElementById('endereco').value = selecionado[6].innerHTML;
-            document.getElementById('observacao').value = selecionado[7].innerHTML;
+            document.getElementById('status_caixa').value = selecionado[5].innerHTML;
+            document.getElementById('usuario_abertura').value = selecionado[6].innerHTML;
+            document.getElementById('data_abertura').value = selecionado[7].innerHTML;
+            document.getElementById('usuario_fechamento').value = selecionado[8].innerHTML;
+            document.getElementById('data_fechamento').value = selecionado[9].innerHTML;
+            document.getElementById('id_caixa-1').value = selecionado[0].innerHTML;
 
 
         }
