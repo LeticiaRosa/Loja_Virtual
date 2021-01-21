@@ -23,6 +23,7 @@ function busca_produto(teste) {
             sessao: teste
         },
         success: function(data) {
+            console.log(data);
             id = data.map(d => d.ID_PRODUTO);
             NOME = data.map(d => d.NOME);
             PRECO_VENDA = data.map(d => d.PRECO_VENDA);

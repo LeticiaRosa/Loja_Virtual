@@ -67,6 +67,7 @@ function openConfirmacao(tipo) {
     $('#conteiner').css("display", "flex");
     if (tipo == "salvar") {
         $('#Texto').html(" Confirma alteração ? ");
+
         return false;
     } else if (tipo == "excluir") {
         $('#Texto').html(" Confirma exclusão ? ");
@@ -81,14 +82,12 @@ function confirma() {
 
     var texto = document.getElementById("Texto").innerHTML;
 
-
-
     if (texto == " Confirma exclusão ? ") {
-        var OK = document.getElementById("teste").elements[20].name = "Excluir";
+        var OK = document.getElementById("teste").elements[17].name = "Excluir";
         fechamodal();
         return true;
     } else if (texto == " Confirma alteração ? ") {
-        var OK = document.getElementById("teste").elements[20].name = "Salvar";
+        var OK = document.getElementById("teste").elements[17].name = "Salvar";
         fechamodal();
         return true;
     }

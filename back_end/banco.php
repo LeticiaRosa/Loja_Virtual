@@ -71,6 +71,7 @@ $cod_referencia = $_POST['cod_referencia'];
    
 
 } elseif (isset($_POST['Salvar'])) {
+    echo("teste");
 $nome = $_POST['nome'];
 $descricao= $_POST['descricao'];
 $id_categoria=$_POST['id_categoria'];  
@@ -118,8 +119,8 @@ $cod_referencia = $_POST['cod_referencia'];
     $produto = mysqli_query($conexao, $query_2);
     //echo $produto;
     if ($produto == 1) {
-      $_SESSION['sucesso_cadastro'] = "Atualizado com sucesso!";
-      header("Location:/loja_virtual/Tela_visualizar_produto.php");
+        $_SESSION['sucesso_cadastro'] = "Atualizado com sucesso!";
+        header("Location:/loja_virtual/Tela_visualizar_produto.php");
     }else {
         $_SESSION['erro_cadastro'] = "Produto não atualizado!";
         header("Location:/loja_virtual/Tela_visualizar_produto.php");
@@ -148,9 +149,9 @@ $cod_referencia = $_POST['cod_referencia'];
 
 } 
 else {
-header("Location:/loja_virtual/Tela_visualizar_produto.php");
-}
 
+//header("Location:/loja_virtual/Tela_visualizar_produto.php");
+}
 
 
 
