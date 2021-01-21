@@ -74,6 +74,14 @@
                         unset($_SESSION['sucesso_cadastro']);
                     } ?>
                 </p>
+                <p id="mensagem"> <?php
+                //Recuperando o valor da variável global, deslogado com sucesso.
+                if (isset($_SESSION['erro_cadastro'])) {
+                    echo $_SESSION['erro_cadastro'];
+                    unset($_SESSION['erro_cadastro']);
+                }
+                ?>
+            </p>
 
                 <input type="submit" value="OK" onclick="fechamodal()" /> </p>
 
