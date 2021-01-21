@@ -112,9 +112,12 @@ $(window).on("load", (function() {
 
 function formatarMoeda(moeda) {
     atual = moeda
-    var f2 = atual.toLocaleString('pt-br', { minimumFractionDigits: 2 });
+    var f2 = atual.toLocaleString('pt-br', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    });
 
-
+    //console.log(f2);
     return f2;
 }
 
@@ -215,14 +218,18 @@ function chamda() {
 };
 
 function cal() {
-    valor_s_d = document.getElementById('Valor_total').value;
+    valor_s_d = document.getElementById('Valor_total').value.replace(".", "");
     desconto = document.getElementById('desconto').value;
 
     procentagem = parseFloat(valor_s_d) * parseFloat(desconto) / 100;
+    console.log(procentagem);
     if (desconto == 0) {
         document.getElementById('tl_fim').value = formatarMoeda(valor_s_d)
     } else {
+        console.log(valor_s_d);
+
         total_desc = parseFloat(valor_s_d) - parseFloat(procentagem);
+
         document.getElementById('tl_fim').value = formatarMoeda(total_desc);
     }
 };

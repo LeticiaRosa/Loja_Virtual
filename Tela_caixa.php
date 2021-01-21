@@ -109,7 +109,7 @@
                                   <p id="nome_campo">Total Venda</p>
                                   <div class="din">
                                       <p id="dinheiro"> R$</p>
-                                  <input type="text"   readonly = "readonly" name="venda" id="venda" autocomplete="off">
+                                  <input type="text"   readonly = "readonly" name="venda"  id="venda" autocomplete="off">
                                     </div>
                                   
                                   
@@ -184,8 +184,6 @@
                 ?>
             </p>
             <input type="submit" value="OK" id="OK" onclick="confirma()" />
-            <p></p>
-            <input type="submit" value="Cancelar" onclick="fechamodal()" />
 
         </div>
     </div>
