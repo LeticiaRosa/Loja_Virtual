@@ -36,8 +36,8 @@
                         <div class="col-1">
                             <p>Status</p>
                             <select name="status" id="status" placeholder="Status">
-                                <option value="S" id="S">Ativo</option>
-                                <option value="N" id="N">Inativo</option>
+                                <option value="Ativo" id="S">Ativo</option>
+                                <option value="Inativo" id="N">Inativo</option>
                             </select>
                         </div>
                         <div class="col">

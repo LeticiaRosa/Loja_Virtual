@@ -23,7 +23,6 @@ $(async function() {
             USUARIO_FECHAMENTO = data.map(d => d.USUARIO_FECHAMENTO);
             DATA_FECHAMENTO = data.map(d => d.DATA_FECHAMENTO);
 
-
             for (i = 0; i < data.length; i++) {
                 var newRow = $('<tr class = "corpo" >');
                 var cols = "";
@@ -146,15 +145,12 @@ $(window).on("click", (function() {
 
                 document.getElementById('status').value = document.getElementById('N').value;
             }
-
             document.getElementById('status_caixa').value = selecionado[5].innerHTML;
             document.getElementById('usuario_abertura').value = selecionado[6].innerHTML;
             document.getElementById('data_abertura').value = selecionado[7].innerHTML;
             document.getElementById('usuario_fechamento').value = selecionado[8].innerHTML;
             document.getElementById('data_fechamento').value = selecionado[9].innerHTML;
             document.getElementById('id_caixa-1').value = selecionado[0].innerHTML;
-
-
         }
     });
 

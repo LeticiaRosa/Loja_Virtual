@@ -28,16 +28,30 @@ if($produto==1){
     $id_caixa = $_POST['id_caixa-1'];
     $nome_caixa = $_POST['nome_caixa'];
     $status = $_POST['status'];
+    $data_abertura = $_POST['data_abertura'];
+    $data_fechamento = $_POST['data_fechamento'];
     $id_usuario=$_SESSION['usuarioId'];
+
+
+    $query_4 = "select status from caixa where ID_CAIXA ='$id_caixa'";
+    $status_anterior = mysqli_query($conexao, $query_4);
+    $variavel_3 = mysqli_fetch_assoc($status_anterior);
+    $status_anterior1 = $variavel_3['status'];
+   
+    if( isset($data_abertura) && ( strlen($data_fechamento)  == "0")  && $status_anterior1 <> $status){
+           $_SESSION['erro_cadastro'] = "Não é possível atualizar o status do caixa pois ele está aberto!";
+           header("Location:/loja_virtual/Tela_listar_caixa.php");
+    } else {
+    //Se a existe data de abertura o status do caixa não pode ser mudado!
     $query = "UPDATE CAIXA SET NOME ='$nome_caixa', status ='$status', id_usuario='$id_usuario', data_cadastro=now() where ID_CAIXA ='$id_caixa'";
-        //echo $query;
     $resultado = mysqli_query($conexao, $query);
     if ($resultado == 1) {
         $_SESSION['sucesso_cadastro'] = "Atualizado com sucesso!";
-        header("Location:/loja_virtual/Tela_listar_caixa.php");
+        //header("Location:/loja_virtual/Tela_listar_caixa.php");
     } else {
-        $_SESSION['erro_cadastro'] = "Usuário não atualizado!";
-        header("Location:/loja_virtual/Tela_listar_caixa.php");
+        $_SESSION['erro_cadastro'] = "Caixa não atualizado!";
+        //header("Location:/loja_virtual/Tela_listar_caixa.php");
+    }
     }
 } 
 

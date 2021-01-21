@@ -112,7 +112,15 @@ if (select == "Inserido com sucesso!") {
 } else if (select == "Venda finalizada com sucesso!") {
     $('#conteiner').css("display", "flex");
 
+} else if (select == "Caixa não atualizado!") {
+    $('#conteiner').css("display", "flex");
+
+} else if (select == "Não é possível atualizar o status do caixa pois ele está aberto!") {
+    $('#conteiner').css("display", "flex");
+
 }
+
+
 
 function fechamodal() {
     $('#conteiner').css("display", "none");
