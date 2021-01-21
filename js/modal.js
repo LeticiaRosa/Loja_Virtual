@@ -115,6 +115,12 @@ if (select == "Inserido com sucesso!") {
 }
 
 function fechamodal() {
+    $('#conteiner').css("display", "none");
+
+}
+
+
+function fechamodal1() {
     document.getElementById('codigo').focus();
     $('#conteiner').css("display", "none");
 

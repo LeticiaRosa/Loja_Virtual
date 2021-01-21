@@ -57,7 +57,11 @@
         <div class="center">
             <div id="openModal" class="modalDialog">
                 <div><a href="#close" title="Close" class="close">X</a>
+<<<<<<< HEAD
                     
+=======
+                    <?php include_once("Tela_alterar_user.php");  ?>
+>>>>>>> fc670e2a57e4d87cc834297ae8533e6b25847389
                 </div>
             </div>
         </div>
