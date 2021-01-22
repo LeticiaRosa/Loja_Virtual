@@ -29,7 +29,7 @@ if (isset($_POST['Confirmar'])) {
     /// BUSCAR ID DO VENDEDOR (VENDEDOR = USUARIO)\\\\\\
     if ($nome!=""){
         $query = "select ID_USUARIO from USUARIO where nome_usuario LIKE '%$nome%'";
-        echo $query;
+       // echo $query;
         $VENDEDOR = mysqli_query($conexao, $query );
         $variavel = mysqli_fetch_assoc($VENDEDOR);
        // echo   $variavel['ID_USUARIO'] ;
