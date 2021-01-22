@@ -118,7 +118,12 @@ if (select == "Inserido com sucesso!") {
 } else if (select == "Não é possível atualizar o status do caixa pois ele está aberto!") {
     $('#conteiner').css("display", "flex");
 
+} else if (select == "Caixa finalizado com sucesso!") {
+    $('#conteiner').css("display", "flex");
+
 }
+
+
 
 
 

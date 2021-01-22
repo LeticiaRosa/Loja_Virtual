@@ -41,7 +41,7 @@
                             <option selected disabled value="">Selecione</option>
                             <option value="credito">Cartão de Credito</option>
                             <option value="debito">Cartão de Debito</option>
-                            <option value="Dinehiro">Dinehiro</option>
+                            <option value="dinheiro">Dinheiro</option>
                             <option value="Anotar">Anotar</option>
                         </select>
                     </div>

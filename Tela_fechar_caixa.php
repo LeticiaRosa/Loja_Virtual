@@ -19,12 +19,16 @@
         <section class="cover-form">
             <div class="form-container">
                 <h1>Fechamento de Caixa</h1>
-                <form method="POST" name="form" action="">
+                <form method="POST" name="form" action="back_end/finalizar_venda.php">
                     <div class="form-wraper">
 
                         <div class="col">
                             <p>Caixa:</p>
-                            <input type="text" name="Caixa" id="Caixa" placeholder="Caixa" autocomplete="off">
+                            <input type="text" name="Caixa" id="Caixa" readonly="readonly" placeholder="Caixa" autocomplete="off">
+                        </div>
+                        <div class="col">
+                            <p>Valor Inicial Caixa:</p>
+                            <input type="text" name="v_Caixa" id="v_Caixa" readonly="readonly"  placeholder="Caixa" autocomplete="off">
                         </div>
                         <div class="col">
                             <p>Loja:</p>
@@ -48,6 +52,7 @@
                             <p id="p_texto">Hora Abertura:</p>
                             <input type="time" name="hr_abertura" id="hr_abertura" readonly="readonly"  autocomplete="off">
                         </div>
+                       
 
                     </div>
                     <div class="form-wraper">
@@ -72,10 +77,9 @@
 
                                 <thead class="cabeça">
                                     <tr>
-                                        <th>Id</th>
-                                        <th>Nome do produto</th>
-                                        <th>Valor produto</th>
-                                        <th>Quantidade</th>
+                                        <th>TIPO VENDA</th>
+                                        <th>TOTAL</th>
+                                        <th>QUANTIDADE</th>
 
                                     </tr>
                                 </thead>
@@ -104,7 +108,7 @@
 
                     </div>
                     <div class="enviar">
-                        <input type="submit" name="acao" id="clicar" value="Fechar" />
+                        <input type="submit" name="fechar" id="clicar" value="Fechar" />
 
                     </div>
                 </form>

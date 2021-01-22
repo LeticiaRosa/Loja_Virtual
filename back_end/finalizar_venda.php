@@ -53,18 +53,23 @@ if (isset($_POST['Confirmar'])) {
 
 $maquina = gethostbyaddr($_SERVER['REMOTE_ADDR']);
 //echo $maquina;
-  $query_1 = "SELECT ID_CAIXA FROM CAIXA WHERE NOME_MAQUINA = '$maquina' AND STATUS = 'Ativo'";
+  $query_1 = "SELECT cx.id_caixa,cax.id as id_controle FROM CAIXA  AS CX  LEFT OUTER JOIN CONTROLE_CAIXA  AS CAX
+  ON CX.ID_CAIXA=CAX.ID_CAIXA
+  WHERE CAX.DATA_ABERTURA=(SELECT MAX(AUX.DATA_ABERTURA)
+FROM CONTROLE_CAIXA AS AUX  WHERE AUX.ID_CAIXA=CAX.ID_CAIXA AND DATA_FECHAMENTO 
+       IS NULL )	AND CX.NOME_MAQUINA='$maquina' AND STATUS = 'Ativo'";
   $id_caixa = mysqli_query($conexao, $query_1);
   $caixa = mysqli_fetch_assoc($id_caixa);
  // echo $caixa['ID_CAIXA'];
-  if($caixa['ID_CAIXA']!=""){
+  if($caixa['id_caixa']!=""){
+    
       ///INSERE PRIMEIRO NA TABELA DE VENDAS OS DADOS REFERENTE A VENDA/\\\\
-      $INSERT_VENDA="INSERT INTO VENDAS (ID_CAIXA,ID_VENDEDOR,ID_CLIENTE,TOTAL_ITENS,TIPO_VENDA,PARCELAS,TOTAL_VENDA,DESCONTO,TOTAL_DESCONTO,DATA_VENDA,HORA_VENDA, ID_USUARIO,DATA_CADASTRO)VALUES('{$caixa['ID_CAIXA']}',{$client['ID_CLIENTE']},{$variavel['ID_USUARIO']},'$total_itens','$pagamento','$forma_pagamento','$Valor_total','$desconto','$tl_fim',CURDATE(),CURTIME(),$id_usuario, now())";
+      $INSERT_VENDA="INSERT INTO VENDAS (ID_CAIXA,id_control_caixa,ID_VENDEDOR,ID_CLIENTE,TOTAL_ITENS,TIPO_VENDA,PARCELAS,TOTAL_VENDA,DESCONTO,TOTAL_DESCONTO,DATA_VENDA,HORA_VENDA, ID_USUARIO,DATA_CADASTRO)VALUES('{$caixa['id_caixa']}','{$caixa['id_controle']}',{$client['ID_CLIENTE']},{$variavel['ID_USUARIO']},'$total_itens','$pagamento','$forma_pagamento','$Valor_total','$desconto','$tl_fim',CURDATE(),CURTIME(),$id_usuario, now())";
       //echo $INSERT_VENDA;
       $ins_vend=mysqli_query($conexao, $INSERT_VENDA);
         if($ins_vend==1){
            // echo "ENTROU";
-           $VENDA_ID="SELECT MAX(ID_VENDA) AS ID_VENDA FROM vendas WHERE ID_CAIXA='{$caixa['ID_CAIXA']}'";
+           $VENDA_ID="SELECT MAX(ID_VENDA) AS ID_VENDA FROM vendas WHERE ID_CAIXA='{$caixa['id_caixa']}'";
            $ID_VENDA = mysqli_query($conexao, $VENDA_ID);
             $ID = mysqli_fetch_assoc($ID_VENDA);
             for($i=0;$i<count($_SESSION['id']);$i++){
@@ -89,8 +94,36 @@ $maquina = gethostbyaddr($_SERVER['REMOTE_ADDR']);
         }
     }
 
+    unset ($_SESSION['quant']);
+    unset ($_SESSION['id']);
 
 
-unset ($_SESSION['quant']);
-unset ($_SESSION['id']);
+}elseif(isset($_POST['fechar'])){
+    $Caixa =$_POST['Caixa'];
+    $dt_abertura =$_POST['dt_abertura'];
+    $hr_abertura =$_POST['hr_abertura'];
+    $v_total =$_POST['v_total'];
+   
+    $valor_tratado=str_replace(',','.',str_replace('.','',$v_total));
+   // echo $valor_tratado;
+    $qtd_vendas =$_POST['qtd_vendas'];
+    $dt_fechamento =$_POST['dt_fechamento'];
+    $hr_fechamento =$_POST['hr_fechamento'];
+    $query_1 = "SELECT ID_CAIXA FROM CAIXA WHERE NOME = '$Caixa' AND STATUS = 'Ativo'";
+    
+    $id_caixa = mysqli_query($conexao, $query_1);
+    $caixa = mysqli_fetch_assoc($id_caixa);
+   // echo $caixa['ID_CAIXA'];
+    if($caixa['ID_CAIXA']!=""){
+        $update_caixa="UPDATE controle_caixa SET   ID_USUARIO_FECHAMENTO='$id_usuario', DATA_FECHAMENTO='$dt_fechamento',   HORA_FECHAMENTO='$hr_fechamento',    VALOR_TOTAL='$valor_tratado',  QTD_VENDAS='$qtd_vendas' WHERE ID_CAIXA='{$caixa['ID_CAIXA']}'  AND DATA_ABERTURA='$dt_abertura' AND HORA_ABERTURA='$hr_abertura'";
+       //echo $update_caixa;
+        $resultado=mysqli_query($conexao, $update_caixa);
+        if($resultado>=1){
+            $_SESSION['sucesso_cadastro'] = "Caixa finalizado com sucesso!";
+            header("Location:/loja_virtual/Tela_fechar_caixa.php");
+            mysqli_close($conexao);
+         };
+   
+
+}
 }

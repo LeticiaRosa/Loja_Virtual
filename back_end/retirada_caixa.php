@@ -9,14 +9,15 @@ if(isset($_POST['Retirar'])){
  // echo $caixa['ID_CAIXA'];
   if($caixa['ID_CAIXA']!=""){
     $valor_retirda=$_POST['Valor'];
-    $pessoa=$_POST['Valor'];
+    $pessoa=$_POST['nome'];
     $observacao=$_POST['observacao'];
     $id_usuario=$_SESSION['usuarioId'];
+    
     $insert="insert into RETIRADA_CAIXA(id_caixa,valor_retirada,nome,data_retirada,observacao,id_usuario,data_cadastro)values('{$caixa['ID_CAIXA']}','$valor_retirda','$pessoa',CURDATE(),'$observacao','$id_usuario',now())";
+    ECHO $insert;
     $resultado= mysqli_query($conexao, $insert);
 
-
-      if($resultado==1){
+    if($resultado==1){
     $_SESSION['sucesso_cadastro'] = "Retirada realizada com sucesso!";
     header("Location:/loja_virtual/Tela_caixa.php");
     mysqli_close($conexao);
