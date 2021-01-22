@@ -180,7 +180,7 @@ function finalizar_venda() {
         cols += '<td>' + selecionado[2].innerHTML + '</td>';
         cols += '<td>' + selecionado[3].innerHTML + '</td>';
         newRow.append(cols);
-        $("#products-table-2").append(newRow);
+        $("#products-table-8").append(newRow);
     }
     jQuery.ajax({
         url: "back_end/caixa.php",

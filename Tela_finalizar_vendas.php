@@ -69,7 +69,7 @@
                 
                 <div class="conter-tabela">
                           <div class="corpao">
-                              <table id="products-table-2" class="teste1">
+                              <table id="products-table-8" class="teste1">
 
                                   <thead class="cabeça">
                                       <tr>
