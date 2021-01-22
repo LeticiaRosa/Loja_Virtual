@@ -123,6 +123,12 @@ if (select == "Inserido com sucesso!") {
 } else if (select == "Não é possível abrir o caixa pois ele já está aberto!") {
     $('#conteiner').css("display", "flex");
 
+} else if (select == "Caixa aberto com sucesso!") {
+    $('#conteiner').css("display", "flex");
+
+} else if (select == "Para essa máquina já existe um caixa cadastrado!") {
+    $('#conteiner').css("display", "flex");
+
 }
 
 
