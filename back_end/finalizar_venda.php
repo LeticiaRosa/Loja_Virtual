@@ -61,12 +61,12 @@ FROM CONTROLE_CAIXA AS AUX  WHERE AUX.ID_CAIXA=CAX.ID_CAIXA AND DATA_FECHAMENTO
        IS NULL )	AND CX.NOME_MAQUINA='$maquina' AND STATUS = 'Ativo'";
   $id_caixa = mysqli_query($conexao, $query_1);
   $caixa = mysqli_fetch_assoc($id_caixa);
- // echo $caixa['ID_CAIXA'];
+  
   if($caixa['id_caixa']!=""){
     
       ///INSERE PRIMEIRO NA TABELA DE VENDAS OS DADOS REFERENTE A VENDA/\\\\
-      $INSERT_VENDA="INSERT INTO VENDAS (ID_CAIXA,id_control_caixa,ID_VENDEDOR,ID_CLIENTE,TOTAL_ITENS,TIPO_VENDA,PARCELAS,TOTAL_VENDA,DESCONTO,TOTAL_DESCONTO,DATA_VENDA,HORA_VENDA, ID_USUARIO,DATA_CADASTRO)VALUES('{$caixa['id_caixa']}','{$caixa['id_controle']}',{$client['ID_CLIENTE']},{$variavel['ID_USUARIO']},'$total_itens','$pagamento','$forma_pagamento','$Valor_total','$desconto','$tl_fim',CURDATE(),CURTIME(),$id_usuario, now())";
-      //echo $INSERT_VENDA;
+      $INSERT_VENDA="INSERT INTO VENDAS (ID_CAIXA,id_control_caixa,ID_VENDEDOR,ID_CLIENTE,TOTAL_ITENS,TIPO_VENDA,PARCELAS,TOTAL_VENDA,DESCONTO,TOTAL_DESCONTO,DATA_VENDA,HORA_VENDA, ID_USUARIO,DATA_CADASTRO)VALUES('{$caixa['id_caixa']}','{$caixa['id_controle']}',{$variavel['ID_USUARIO']},{$client['ID_CLIENTE']},'$total_itens','$pagamento','$forma_pagamento','$Valor_total','$desconto','$tl_fim',CURDATE(),CURTIME(),$id_usuario, now())";
+      echo $INSERT_VENDA;
       $ins_vend=mysqli_query($conexao, $INSERT_VENDA);
         if($ins_vend==1){
            // echo "ENTROU";
