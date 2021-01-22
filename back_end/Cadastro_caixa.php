@@ -38,7 +38,7 @@ if($produto==1){
     $variavel_3 = mysqli_fetch_assoc($status_anterior);
     $status_anterior1 = $variavel_3['status'];
    
-    if( isset($data_abertura) && ( strlen($data_fechamento)  == "0")  && $status_anterior1 <> $status){
+    if( strlen($data_abertura)  > "0" && ( strlen($data_fechamento)  == "0")  && $status_anterior1 <> $status){
            $_SESSION['erro_cadastro'] = "Não é possível atualizar o status do caixa pois ele está aberto!";
            header("Location:/loja_virtual/Tela_listar_caixa.php");
     } else {
@@ -47,10 +47,10 @@ if($produto==1){
     $resultado = mysqli_query($conexao, $query);
     if ($resultado == 1) {
         $_SESSION['sucesso_cadastro'] = "Atualizado com sucesso!";
-        //header("Location:/loja_virtual/Tela_listar_caixa.php");
+        header("Location:/loja_virtual/Tela_listar_caixa.php");
     } else {
         $_SESSION['erro_cadastro'] = "Caixa não atualizado!";
-        //header("Location:/loja_virtual/Tela_listar_caixa.php");
+        header("Location:/loja_virtual/Tela_listar_caixa.php");
     }
     }
 } 

@@ -120,6 +120,8 @@ if (select == "Inserido com sucesso!") {
 
 } else if (select == "Caixa finalizado com sucesso!") {
     $('#conteiner').css("display", "flex");
+} else if (select == "Não é possível abrir o caixa pois ele já está aberto!") {
+    $('#conteiner').css("display", "flex");
 
 }
 
