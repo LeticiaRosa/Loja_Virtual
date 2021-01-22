@@ -25,7 +25,7 @@ $query_2 = "INSERT INTO CONTROLE_CAIXA (ID_CAIXA,VALOR_INICIAL,ID_USUARIO_ABERTU
 $produto= mysqli_query($conexao, $query_2);
 
 if($produto==1){
-    $_SESSION['sucesso_cadastro'] = "Inserido com sucesso!";
+    $_SESSION['sucesso_cadastro'] = "Caixa aberto com sucesso!";
     header("Location:/loja_virtual/Tela_abrir_caixa.php");
     mysqli_close($conexao);
 } else {
