@@ -3,17 +3,21 @@ session_start();
 require_once ("conexao.php");
 if(isset($_POST['Retirar'])){
   $maquina = gethostbyaddr($_SERVER['REMOTE_ADDR']);
-  $query_1 = "SELECT ID_CAIXA FROM CAIXA WHERE NOME_MAQUINA = '$maquina' AND STATUS = 'Ativo'";
+  $query_1 = "SELECT cx.id_caixa,cax.id as id_controle FROM CAIXA  AS CX  LEFT OUTER JOIN CONTROLE_CAIXA  AS CAX
+  ON CX.ID_CAIXA=CAX.ID_CAIXA
+  WHERE CAX.ID=(SELECT MAX(AUX.ID)
+FROM CONTROLE_CAIXA AS AUX  WHERE AUX.ID_CAIXA=CAX.ID_CAIXA AND DATA_FECHAMENTO 
+       IS NULL )	AND CX.NOME_MAQUINA='$maquina' AND STATUS = 'Ativo'";
   $id_caixa = mysqli_query($conexao, $query_1);
   $caixa = mysqli_fetch_assoc($id_caixa);
  // echo $caixa['ID_CAIXA'];
-  if($caixa['ID_CAIXA']!=""){
+  if($caixa['id_caixa']!=""){
     $valor_retirda=$_POST['Valor'];
     $pessoa=$_POST['nome'];
     $observacao=$_POST['observacao'];
     $id_usuario=$_SESSION['usuarioId'];
     
-    $insert="insert into RETIRADA_CAIXA(id_caixa,valor_retirada,nome,data_retirada,observacao,id_usuario,data_cadastro)values('{$caixa['ID_CAIXA']}','$valor_retirda','$pessoa',CURDATE(),'$observacao','$id_usuario',now())";
+    $insert="insert into RETIRADA_CAIXA(id_caixa,valor_retirada,nome,data_retirada,observacao,id_usuario,data_cadastro)values('{$caixa['id_caixa']}','{$caixa['id_controle']}','$valor_retirda','$pessoa',CURDATE(),'$observacao','$id_usuario',now())";
     ECHO $insert;
     $resultado= mysqli_query($conexao, $insert);
 

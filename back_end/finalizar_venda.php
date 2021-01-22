@@ -55,7 +55,7 @@ $maquina = gethostbyaddr($_SERVER['REMOTE_ADDR']);
 //echo $maquina;
   $query_1 = "SELECT cx.id_caixa,cax.id as id_controle FROM CAIXA  AS CX  LEFT OUTER JOIN CONTROLE_CAIXA  AS CAX
   ON CX.ID_CAIXA=CAX.ID_CAIXA
-  WHERE CAX.DATA_ABERTURA=(SELECT MAX(AUX.DATA_ABERTURA)
+  WHERE CAX.ID=(SELECT MAX(AUX.ID)
 FROM CONTROLE_CAIXA AS AUX  WHERE AUX.ID_CAIXA=CAX.ID_CAIXA AND DATA_FECHAMENTO 
        IS NULL )	AND CX.NOME_MAQUINA='$maquina' AND STATUS = 'Ativo'";
   $id_caixa = mysqli_query($conexao, $query_1);
