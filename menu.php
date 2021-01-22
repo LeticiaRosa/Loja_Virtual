@@ -28,6 +28,7 @@ if (empty($_SESSION['login'])) {
       <li>
         <label id="icone" for="check"><img src="imagens/icons8_menu_50px.png" width="35" height="35"> </label>
         <ul class="sub-menu clearfix">
+
           <li id = "clientes" class = "clientes"><a href="#">Clientes</a>
             <ul class="sub-menu">
               <li><a href="/loja_virtual/Cadastro_clientes.php">Cadastro De Clientes</a>
@@ -37,21 +38,23 @@ if (empty($_SESSION['login'])) {
               </li>
             </ul>
           </li>
-          <li id= "caixa" class= "caixa">
+
+          <li  id= "caixa" class= "caixa">
             <a href="#" > Caixa</a>
             <ul class="sub-menu">
-              <li><a href="/loja_virtual/Tela_cadastro_caixa.php">Cadastrar Caixa</a> <ul class="sub-menu">
+            <div id= "caixa_adm" class= "caixa_adm">
+                  <li ><a href="/loja_virtual/Tela_cadastro_caixa.php">Cadastrar Caixa</a> <ul class="sub-menu">
                   <li><a href="/loja_virtual/Tela_listar_caixa.php">Listar Caixas</a></li>
                 </ul>
               </li>
-              <li><a href="/loja_virtual/Tela_abrir_caixa.php">Abrir Caixa</a> </li>
-              <li><a href="/loja_virtual/Tela_fechar_caixa.php">Fechar Caixa</a> </li>
-              <li><a href="/loja_virtual/Tela_caixa.php">Caixa</a> </li>
+              <li ><a href="/loja_virtual/Tela_abrir_caixa.php">Abrir Caixa</a> </li>
+              <li ><a href="/loja_virtual/Tela_fechar_caixa.php">Fechar Caixa</a> </li>
+             </div>
+              <li id= "caixa_" class= "caixa_" ><a href="/loja_virtual/Tela_caixa.php">Caixa</a> </li>
             </ul>
-    
-             
-           
           </li>
+
+
           <li id= "empresa" class= "empresa">
             <a href="#">Empresa</a>
             <ul class="sub-menu">
