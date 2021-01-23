@@ -24,8 +24,10 @@ if (isset($_POST['Confirmar'])) {
     }
     
     $Valor_total = $_POST['Valor_total'];
+    $valor_tratado=str_replace(',','.',str_replace('.','',$Valor_total));
     $desconto = $_POST['desconto'];
     $tl_fim = $_POST['tl_fim'];
+    $valor_tratado_fim=str_replace(',','.',str_replace('.','',$tl_fim));
     /// BUSCAR ID DO VENDEDOR (VENDEDOR = USUARIO)\\\\\\
     if ($nome!=""){
         $query = "select ID_USUARIO from USUARIO where nome_usuario LIKE '%$nome%'";
@@ -65,7 +67,7 @@ FROM CONTROLE_CAIXA AS AUX  WHERE AUX.ID_CAIXA=CAX.ID_CAIXA AND DATA_FECHAMENTO
   if($caixa['id_caixa']!=""){
     
       ///INSERE PRIMEIRO NA TABELA DE VENDAS OS DADOS REFERENTE A VENDA/\\\\
-      $INSERT_VENDA="INSERT INTO VENDAS (ID_CAIXA,id_control_caixa,ID_VENDEDOR,ID_CLIENTE,TOTAL_ITENS,TIPO_VENDA,PARCELAS,TOTAL_VENDA,DESCONTO,TOTAL_DESCONTO,DATA_VENDA,HORA_VENDA, ID_USUARIO,DATA_CADASTRO)VALUES('{$caixa['id_caixa']}','{$caixa['id_controle']}',{$variavel['ID_USUARIO']},{$client['ID_CLIENTE']},'$total_itens','$pagamento','$forma_pagamento','$Valor_total','$desconto','$tl_fim',CURDATE(),CURTIME(),$id_usuario, now())";
+      $INSERT_VENDA="INSERT INTO VENDAS (ID_CAIXA,id_control_caixa,ID_VENDEDOR,ID_CLIENTE,TOTAL_ITENS,TIPO_VENDA,PARCELAS,TOTAL_VENDA,DESCONTO,TOTAL_DESCONTO,DATA_VENDA,HORA_VENDA, ID_USUARIO,DATA_CADASTRO)VALUES('{$caixa['id_caixa']}','{$caixa['id_controle']}',{$variavel['ID_USUARIO']},{$client['ID_CLIENTE']},'$total_itens','$pagamento','$forma_pagamento','$valor_tratado','$desconto','$valor_tratado_fim',CURDATE(),CURTIME(),$id_usuario, now())";
       echo $INSERT_VENDA;
       $ins_vend=mysqli_query($conexao, $INSERT_VENDA);
         if($ins_vend==1){

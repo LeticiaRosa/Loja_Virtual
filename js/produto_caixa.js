@@ -23,7 +23,6 @@ function busca_produto(teste) {
             sessao: teste
         },
         success: function(data) {
-            console.log(data);
             id = data.map(d => d.ID_PRODUTO);
             NOME = data.map(d => d.NOME);
             PRECO_VENDA = data.map(d => d.PRECO_VENDA);
@@ -245,7 +244,16 @@ function fecha() {
 
 };
 
+function tiralinha() {
+    var linhas = document.getElementById("products-table-8").rows;
+
+    for (i = linhas.length - 1; i >= 1; i--) {
+        document.getElementById("products-table-8").deleteRow(i);
+    }
+}
+
 function fechamdal() {
+
     $('#openModal').css("display", "none");
     $('#openModal1').css("display", "none");
     $('#openModal2').css("display", "none");
@@ -270,11 +278,11 @@ function excluirlinha(id) {
     preco_venda = selecionados[2].innerHTML;
     valor_diminuir = parseFloat(quantidade) * parseFloat(preco_venda);
     caixa = document.getElementById('venda').value;
-    valor_caixa = parseFloat(parseFloat(caixa.substr(3)) - valor_diminuir);
+    valor_caixa = parseFloat(caixa) - valor_diminuir;
     if (Number.isNaN(valor_caixa)) {
         document.getElementById('venda').value = '0'
     } else {
-        document.getElementById('venda').value = valor_caixa;
+        document.getElementById('venda').value = formatarMoeda(valor_caixa);
     }
     itens = document.getElementById("itens").value;
     total_itens = itens - 1;

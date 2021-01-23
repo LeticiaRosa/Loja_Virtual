@@ -17,6 +17,7 @@
 <div class="center">
     <section class="cover-form">
         <div class="form-container">
+        
             <form method="POST" name="form" action="back_end/finalizar_venda.php">
                 <h1>Confirmar Venda</h1>
                 <div class="form-wraper">

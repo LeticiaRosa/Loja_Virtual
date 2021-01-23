@@ -152,7 +152,7 @@
         
         </div>
         <div id="openModal4" class="modalDialog">
-        <div><a href="#close" title="Close" class="close">X</a>
+        <div><a href="#close" title="Close" onclick="tiralinha()" class="close">X</a>
             <?php include_once("Tela_finalizar_vendas.php");  ?>
         </div>
         </div>
