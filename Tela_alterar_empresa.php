@@ -79,10 +79,22 @@
 
                     <div class="enviar">
 
-                        <input type="submit" name="Salvar" id="Salvar" value="Salvar" />
                         <input type="submit" name="Excluir" id="Excluir" value="Excluir" />
+                        
+                        <input type="submit" name="Salvar" id="Salvar" value="Salvar" />
 
                     </div>
+
+                    <div class="teste">
+                            <img src="imagens/icons8_ok_48px.png"></img>
+                        </div>
+
+                        <div class="teste1">
+                            <img src="imagens/icons8_cancel_48px.png"></img>
+                        </div>
+
+                    
+
 
                 </form>
 

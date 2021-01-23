@@ -77,15 +77,17 @@
                             <input type="text" name="data_fechamento" id="data_fechamento" readonly="readonly" autocomplete="off" >
                         </div>
                     </div>
-                    <div class="enviar-1">
-
-             
+                    <div class="enviar-1">          
                         <input type="submit" name="Salvar-1" id="Salvar-1" value="Salvar" />
-
-
                         </div>
 
+
+
+                      
                 </form>
+                <div class="teste3">
+                            <img src="imagens/icons8_ok_48px.png"></img>
+                </div>
             </div>
         </section>
     </div>

@@ -99,3 +99,12 @@ function mtel(v) {
 function id(el) {
     return document.getElementById(el);
 }
+
+
+
+
+$(document).keyup(function(e) {
+    if (e.keyCode == 27) {
+        fechamdal();
+    }
+});

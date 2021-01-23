@@ -95,6 +95,14 @@
 
                     </div>
 
+                    <div class="teste">
+                            <img src="imagens/icons8_ok_48px.png"></img>
+                        </div>
+
+                        <div class="teste1">
+                            <img src="imagens/icons8_cancel_48px.png"></img>
+                        </div>
+
                 </form>
 
             </div>

@@ -251,6 +251,32 @@ input[type="button"] {
     border-radius: 10px;
 }
 
+.teste1 {
+    float: right;
+    margin-top: -52px;
+    margin-right: 158px;
+}
+
+.teste1 img {
+    position: absolute;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+.teste2 {
+    float: left;
+    margin-top: -52px;
+    margin-left: 21px;
+}
+
+.teste2 img {
+    position: absolute;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
 @media screen and (max-width: 900px) {
     .botao {
         width: 100%;

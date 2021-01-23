@@ -286,6 +286,18 @@ section.cover-form {
     height: 30px;
 }
 
+.teste3 img {
+    position: absolute;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+.teste3 {
+    margin-top: -55px;
+    margin-right: 130px;
+}
+
 @media screen and (max-width: 1366px) {
     section.cover-form {
         width: 100%;
