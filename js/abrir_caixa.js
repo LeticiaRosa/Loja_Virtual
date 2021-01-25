@@ -21,15 +21,28 @@ $(async function() {
     });
 });
 
+window.onclick = function() {
+    buscaDados();
+}
+
+
+window.onkeyup =
+    function(e) {
+        if (e.keyCode == 13) {
+            buscaDados();
+        }
+    };
+
 
 function buscaDados() {
     //Para buscar CAIXA
-    $(async function() {
+    contagem = document.getElementById("nome_caixa").value;
+
+    if (contagem.length > 5) {
         // Atribui evento e função para limpeza dos campos
         // $('#clicar').on('input', limpaCampos);
-
         var nomes = [];
-        await $.ajax({
+        $.ajax({
             url: "back_end/busca_autocomplete.php",
             dataType: "json",
             data: {
@@ -46,5 +59,6 @@ function buscaDados() {
                 document.getElementById("status").value = status;
             }
         });
-    });
-}
+
+    }
+};

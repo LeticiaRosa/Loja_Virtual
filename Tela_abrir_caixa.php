@@ -23,11 +23,11 @@
             <div class="form-container">
                 <h1>ABRIR CAIXA</h1>
                 <form method="POST" name="form" action="back_end/abrir_caixa.php">
-                    <div class="form-wraper">
+                    <div class="form-wraper">   
 
                         <div class="col">
                             <p>Selecione o caixa que deseja abrir: * </p>
-                            <input type="text" name="nome_caixa" id="nome_caixa" required placeholder="Nome do Caixa" onchange="buscaDados();" >
+                            <input type="text" name="nome_caixa" id="nome_caixa" required placeholder="Nome do Caixa" >
                         </div>
 
                         <div class="col-1">
