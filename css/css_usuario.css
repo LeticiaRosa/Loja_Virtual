@@ -150,12 +150,13 @@ section.cover-form {
     background-color: rgba(71, 92, 71, 0.8);
     text-transform: uppercase;
     color: white;
-    width: 150px;
+    width: 180px;
     height: 45px;
     cursor: pointer;
     font-size: 25px;
     border: 0;
     border-radius: 10px;
+    padding-left: 10px;
 }
 
 .conteiner {
@@ -183,6 +184,19 @@ section.cover-form {
     justify-content: center;
 }
 
+.couver input[type="submit"] {
+    background-color: rgba(71, 92, 71, 0.8);
+    text-transform: uppercase;
+    color: white;
+    width: 150px;
+    height: 45px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 25px;
+    border: 0;
+    border-radius: 10px;
+}
+
 .couver:last-child {
     padding: 10px;
 }
@@ -195,18 +209,17 @@ section.cover-form {
     width: 100%;
 }
 
-.couver input[type="submit"] {
-    background-color: rgba(71, 92, 71, 0.8);
-    text-transform: uppercase;
-    color: white;
-    width: 150px;
-    height: 45px;
-    cursor: pointer;
-    font-size: 25px;
-    border: 0;
-    border-radius: 10px;
-}
-
 .pega {
     display: none;
+}
+
+.teste3 img {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+.teste3 {
+    margin-top: -50px;
+    margin-right: 137px;
 }

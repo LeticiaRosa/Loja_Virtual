@@ -45,6 +45,10 @@
             <input type="submit" name="acao" id="clicar" value="Cadastrar" />
 
           </div>
+          
+          <div class="teste3">
+                            <img src="imagens/icons8_ok_48px.png"></img>
+          </div>
 
         </form>
 

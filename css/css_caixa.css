@@ -296,13 +296,27 @@ td {
     background-color: rgba(71, 92, 71, 0.8);
     text-transform: uppercase;
     color: white;
-    width: 25%;
+    width: 21%;
     height: 45px;
     cursor: pointer;
     font-size: 25px;
     border: 0;
     border-radius: 10px;
     padding: 5px;
+    padding-left: 10px;
+}
+
+.couver input[type="submit"] {
+    background-color: rgba(71, 92, 71, 0.8);
+    text-transform: uppercase;
+    color: white;
+    width: 150px;
+    height: 45px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 25px;
+    border: 0;
+    border-radius: 10px;
 }
 
 .form-container input[type="button"] {
@@ -450,18 +464,6 @@ td {
     width: 100%;
 }
 
-.couver input[type="submit"] {
-    background-color: rgba(71, 92, 71, 0.8);
-    text-transform: uppercase;
-    color: white;
-    width: 50%;
-    height: 45px;
-    cursor: pointer;
-    font-size: 25px;
-    border: 0;
-    border-radius: 10px;
-}
-
 
 /* FIM:  Css da Tela de Retirada de caixa! */
 
@@ -600,6 +602,32 @@ td {
 
 .corpo2:nth-child(even) {
     background-color: rgba(214, 226, 217, 0.8);
+}
+
+.teste2 {
+    float: right;
+    margin-top: -52px;
+    margin-right: 260px;
+}
+
+.teste2 img {
+    position: absolute;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+.teste3 {
+    float: left;
+    margin-top: -52px;
+    margin-left: 21px;
+}
+
+.teste3 img {
+    position: absolute;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
 }
 
 

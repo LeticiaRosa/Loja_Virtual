@@ -146,8 +146,22 @@ section.cover-form {
     background-color: rgba(71, 92, 71, 0.8);
     text-transform: uppercase;
     color: white;
+    width: 180px;
+    height: 45px;
+    cursor: pointer;
+    font-size: 25px;
+    border: 0;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+.couver input[type="submit"] {
+    background-color: rgba(71, 92, 71, 0.8);
+    text-transform: uppercase;
+    color: white;
     width: 150px;
     height: 45px;
+    padding: 5px;
     cursor: pointer;
     font-size: 25px;
     border: 0;
@@ -208,24 +222,22 @@ section.cover-form {
     width: 100%;
 }
 
-.couver input[type="submit"] {
-    background-color: rgba(71, 92, 71, 0.8);
-    text-transform: uppercase;
-    color: white;
-    width: 150px;
-    height: 45px;
-    cursor: pointer;
-    font-size: 25px;
-    border: 0;
-    border-radius: 10px;
-}
-
 .enviar {
     padding: 15px;
     display: flex;
-    flex-direction: row-reverse;
     width: 100%;
     align-items: center;
     text-align: center;
-    justify-content: space-between;
+    justify-content: center;
+}
+
+.teste3 img {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+.teste3 {
+    margin-top: -51px;
+    margin-right: 141px;
 }

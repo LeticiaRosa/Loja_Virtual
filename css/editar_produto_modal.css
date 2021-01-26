@@ -182,8 +182,22 @@ section.cover-form {
     background-color: rgba(71, 92, 71, 0.8);
     text-transform: uppercase;
     color: white;
+    width: 400px;
+    height: 45px;
+    cursor: pointer;
+    font-size: 25px;
+    border: 0;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+.couver input[type="submit"] {
+    background-color: rgba(71, 92, 71, 0.8);
+    text-transform: uppercase;
+    color: white;
     width: 150px;
     height: 45px;
+    padding: 5px;
     cursor: pointer;
     font-size: 25px;
     border: 0;
@@ -194,12 +208,13 @@ input[type="button"] {
     background-color: rgba(71, 92, 71, 0.8);
     text-transform: uppercase;
     color: white;
-    width: 200px;
+    width: 180px;
     height: 45px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 25px;
     border: 0;
     border-radius: 10px;
+    padding-left: 10px;
 }
 
 .conteiner {
@@ -237,18 +252,6 @@ input[type="button"] {
     text-align: center;
     color: #525252;
     width: 100%;
-}
-
-.couver input[type="submit"] {
-    background-color: rgba(71, 92, 71, 0.8);
-    text-transform: uppercase;
-    color: white;
-    width: 150px;
-    height: 45px;
-    cursor: pointer;
-    font-size: 25px;
-    border: 0;
-    border-radius: 10px;
 }
 
 .teste1 {
