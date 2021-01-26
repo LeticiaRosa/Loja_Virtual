@@ -17,17 +17,17 @@ FROM CONTROLE_CAIXA AS AUX  WHERE AUX.ID_CAIXA=CAX.ID_CAIXA AND DATA_FECHAMENTO
     $observacao=$_POST['observacao'];
     $id_usuario=$_SESSION['usuarioId'];
     
-    $insert="insert into RETIRADA_CAIXA(id_caixa,valor_retirada,nome,data_retirada,observacao,id_usuario,data_cadastro)values('{$caixa['id_caixa']}','{$caixa['id_controle']}','$valor_retirda','$pessoa',CURDATE(),'$observacao','$id_usuario',now())";
+    $insert="insert into RETIRADA_CAIXA(id_caixa,id_control_caixa, valor_retirada,nome,data_retirada,observacao,id_usuario,data_cadastro)values('{$caixa['id_caixa']}','{$caixa['id_controle']}','$valor_retirda','$pessoa',CURDATE(),'$observacao','$id_usuario',now())";
     ECHO $insert;
     $resultado= mysqli_query($conexao, $insert);
 
     if($resultado==1){
     $_SESSION['sucesso_cadastro'] = "Retirada realizada com sucesso!";
-    header("Location:/loja_virtual/Tela_caixa.php");
+   // header("Location:/loja_virtual/Tela_caixa.php");
     mysqli_close($conexao);
     } else {
     $_SESSION['erro_cadastro'] = "Retirada não cadastrada!";
-    header("Location:/loja_virtual/Tela_caixa.php");
+    //header("Location:/loja_virtual/Tela_caixa.php");
     }
 }else {
   header("Location:/loja_virtual/Tela_caixa.php");
