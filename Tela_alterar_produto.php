@@ -64,7 +64,7 @@
 
               <div class="col">
                 <p>Quantidade:*</p>
-                <input type="text" name="quantidade" id="quantidade" required placeholder="Quantidade" autocomplete="off" maxlength="10">
+                <input type="text" name="quantidade" id="quantidade" readonly = "readonly" placeholder="Quantidade" autocomplete="off" >
               </div>
 
             </div>
