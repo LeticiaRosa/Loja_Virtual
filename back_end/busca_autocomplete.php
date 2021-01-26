@@ -321,6 +321,9 @@ endif;
 if ($acao == 'PERMISSOES') :
 
 	$sql = "SELECT U.permissao FROM usuario AS U where  u.id_usuario=?";
+
+//	select DATA_ABERTURA,DATA_FECHAMENTO from CONTROLE_CAIXA where ID_CAIXA ='{$caixa['id_caixa']}' AND DATA_ABERTURA = CURDATE()"
+
 	$stm = $conexao->prepare($sql);
 	$stm->bindValue(1, $parametro);
 	$stm->execute();

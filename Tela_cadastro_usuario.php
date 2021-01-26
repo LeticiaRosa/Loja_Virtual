@@ -20,7 +20,7 @@
     <div class="center">
         <section class="cover-form">
             <div class="form-container">
-                <h1>Cadastro de Usuario</h1>
+                <h1>Cadastro de Usuário</h1>
                 <form method="POST" name="form" action="back_end/usuario.php">
                     <div class="form-wraper">
 
@@ -78,6 +78,9 @@
                         <input type="submit" name="acao" id="clicar" value="Cadastrar" />
 
                     </div>
+                <div class="teste3">
+                    <img src="imagens/icons8_ok_48px.png"></img>
+                </div>
 
                 </form>
 

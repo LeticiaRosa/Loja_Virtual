@@ -121,6 +121,9 @@
 
                   </div>
 
+
+
+
                   <div class="form-wraper">
                        
                       <div class="enviar">
@@ -134,6 +137,14 @@
                       </div>
                      
                   </div>
+
+                  <div class="teste2">
+                            <img src="imagens/icons8_ok_48px.png"></img>
+                        </div>
+
+                        <div class="teste3">
+                            <img src="imagens/icons8_cancel_48px.png"></img>
+                </div>
                   
        
           </section>

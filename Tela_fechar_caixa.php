@@ -111,6 +111,9 @@
                         <input type="submit" name="fechar" id="clicar" value="Fechar" />
 
                     </div>
+                    <div class="teste3">
+                            <img src="imagens/icons8_ok_48px.png"></img>
+                </div>
                 </form>
             </div>
 
