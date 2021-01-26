@@ -49,7 +49,9 @@ if (empty($_SESSION['login'])) {
               </li>
               <li ><a href="/loja_virtual/Tela_abrir_caixa.php">Abrir Caixa</a> </li>
               <li ><a href="/loja_virtual/Tela_fechar_caixa.php">Fechar Caixa</a> </li>
+              
              </div>
+              <li ><a href="/loja_virtual/Tela_troca_produt.php">Trocar Produto</a> </li>
               <li id= "caixa_" class= "caixa_" ><a href="/loja_virtual/Tela_caixa.php">Caixa</a> </li>
             </ul>
           </li>

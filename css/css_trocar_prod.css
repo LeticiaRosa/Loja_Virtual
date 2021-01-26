@@ -1,0 +1,318 @@
+@import url(https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Dosis", sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(235, 237, 240);
+    /* I added this to see the modal, you don't need this */
+}
+
+.center {
+    width: 100%;
+    margin: auto;
+    max-width: 1280px;
+}
+
+section.cover-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.form-container {
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    -webkit-box-shadow: 2px 2px 5px 0px rgb(71, 92, 71);
+    -moz-box-shadow: 2px 2px 5px 0px rgb(71, 92, 71);
+    box-shadow: 2px 2px 5px 0px rgb(71, 92, 71);
+    background-color: rgb(235, 237, 240);
+}
+
+.form {
+    padding: 20px;
+    width: 100%;
+}
+
+.form-container h1 {
+    width: 100%;
+    font-weight: normal;
+    padding: 20px 10px;
+    font-size: 30px;
+    background-color: rgba(71, 92, 71, 0.5);
+}
+
+
+/*div que abriga os inputs tipo texto*/
+
+.form-wraper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.form-wraper1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: right;
+    justify-items: right;
+}
+
+
+/* --------------------*/
+
+
+/*div que define os inputs em linha */
+
+.col {
+    display: flex;
+    padding: 2px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 5px;
+}
+
+
+/****/
+
+.form-wraper p {
+    font-size: 14px;
+    text-align: left;
+    color: #525252;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.form-container input[type="text"] {
+    background-color: rgba(214, 226, 217, 0.8);
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 20px;
+    border: 0;
+    border-radius: 10px;
+    text-align: left;
+    padding: 5px;
+}
+
+.form-wraper1 input[type="text"] {
+    background-color: rgba(214, 226, 217, 0.8);
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 25px;
+    border: 0;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
+}
+
+.col2 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 5px;
+    padding-left: 200px;
+    margin-top: 10px;
+    align-items: center;
+    justify-items: center;
+}
+
+.form-wraper1 .col2 #nome_campo {
+    text-align: left;
+    margin-left: 30px;
+}
+
+.form-wraper1 .col2 #dinheiro {
+    text-align: left;
+    font-size: 18px;
+    padding: 3px;
+}
+
+.din {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+}
+
+.col1 {
+    align-items: right;
+    justify-items: right;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    padding-right: 200px;
+    width: 50%;
+    margin-top: 10px;
+}
+
+.corpo:nth-child(even) {
+    background-color: rgba(214, 226, 217, 0.8);
+}
+
+.corpo:hover {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgb(200, 204, 198);
+}
+
+th,
+td {
+    border-collapse: collapse;
+    padding: 3px;
+    text-align: center;
+    border-bottom: 1px solid #c5c9c1
+}
+
+.teste1 {
+    width: 100%;
+    height: 100%;
+    table-layout: fixed;
+    box-sizing: border-box;
+}
+
+.form-container .iconeSearch .Pesquisarproduto,
+.form-container .iconeSearch .Pesquisar {
+    background-color: rgba(124, 155, 133, 0.8);
+    color: white;
+    width: 210px;
+    height: 36px;
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 5px;
+    padding-right: 10px;
+}
+
+.iconeSearch {
+    margin-top: 10px;
+}
+
+.deleteSearch img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.imagem {
+    margin-top: 100px;
+    float: right;
+    margin-top: 2px;
+}
+
+.imagem img {
+    position: absolute;
+    cursor: pointer;
+    width: 32px;
+    margin-top: 1px;
+    margin-left: -35px;
+    height: 32px;
+}
+
+#produto2,
+#Quantidade,
+#produto-saida,
+#Quantidade-saida {
+    background-color: rgba(214, 226, 217, 0.8);
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    font-size: 25px;
+    border: 0;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
+}
+
+#produto2,
+#produto-saida {
+    cursor: default;
+}
+
+#Quantidade,
+#Quantidade-saida {
+    width: 50%;
+}
+
+.form-container input[type="submit"] {
+    background-color: rgba(71, 92, 71, 0.8);
+    text-transform: uppercase;
+    color: white;
+    width: 25%;
+    height: 45px;
+    cursor: pointer;
+    font-size: 25px;
+    border: 0;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.col {
+    padding: 10px;
+}
+
+.col select {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 8px 3px 3px 3px;
+    outline: none;
+    background-color: rgba(214, 226, 217, 0.8);
+    height: 40px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    border: 0;
+    border-radius: 10px;
+}
+
+.tabela-container {
+    margin-right: 10px;
+    width: 100%;
+    -webkit-box-shadow: 2px 2px 5px 0px rgb(71, 92, 71);
+    -moz-box-shadow: 2px 2px 5px 0px rgb(71, 92, 71);
+    box-shadow: 2px 2px 5px 0px rgb(71, 92, 71);
+    background-color: rgb(235, 237, 240);
+    height: 100%;
+    display: inline-block;
+    margin-top: 0px;
+}
+
+.corpo2:nth-child(even) {
+    background-color: rgba(214, 226, 217, 0.8);
+}
+
+.form-container input[type="button"] {
+    background-color: rgba(71, 92, 71, 0.8);
+    text-transform: uppercase;
+    color: white;
+    width: 25%;
+    height: 45px;
+    cursor: pointer;
+    font-size: 25px;
+    border: 0;
+    border-radius: 10px;
+}
+
+.enviar {
+    padding: 15px;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}

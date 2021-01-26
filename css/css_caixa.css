@@ -25,6 +25,8 @@ body {
 }
 
 section.cover-form {
+    display: flex;
+    flex-direction: row;
     width: 100%;
     padding: 20px;
 }
@@ -47,6 +49,12 @@ section.cover-form {
 .corpao {
     width: 100%;
     max-height: 400px;
+    overflow-y: auto;
+}
+
+.corpao1 {
+    width: 100%;
+    max-height: 300px;
     overflow-y: auto;
 }
 
