@@ -69,7 +69,7 @@
                 </div>
                 
                 <div class="conter-tabela">
-                          <div class="corpao">
+                          <div class="corpao1">
                               <table id="products-table-8" class="teste1">
 
                                   <thead class="cabeça">
@@ -117,7 +117,7 @@
 
                     <input type="button" name="Cancelar" id="Cancelar" value="Cancelar" onclick="window.location.href='tela_caixa.php'">
                    
-                  
+                </div> 
             </form>
         </div>
     </section>
