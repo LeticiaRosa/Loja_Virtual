@@ -320,18 +320,15 @@ endif;
 
 if ($acao == 'PERMISSOES') :
 
-	$sql = "SELECT U.permissao FROM usuario AS U where  u.id_usuario=?";
-
-//	select DATA_ABERTURA,DATA_FECHAMENTO from CONTROLE_CAIXA where ID_CAIXA ='{$caixa['id_caixa']}' AND DATA_ABERTURA = CURDATE()"
-
+	$sql = "SELECT U.permissao FROM usuario AS U where  u.id_usuario=? ";
 	$stm = $conexao->prepare($sql);
 	$stm->bindValue(1, $parametro);
 	$stm->execute();
 	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
-
 	$json = json_encode($dados);
-
+	
 	echo $json;
+  
 endif;
 
 
@@ -413,4 +410,26 @@ if ($acao == 'BUSCA_DADOS_FECHAMENTO') :
 	$json = json_encode($dados);
 
 	echo $json;
+endif;
+
+
+
+
+if ($acao == 'BUSCA_CAIXA_ABERTO') :
+$maquina = gethostbyaddr($_SERVER['REMOTE_ADDR']);
+//echo $maquina;
+$sql1 = "SELECT cx.id_caixa,cax.id as id_controle, cax.DATA_ABERTURA, cax.DATA_FECHAMENTO FROM CAIXA AS CX  
+LEFT OUTER JOIN CONTROLE_CAIXA  AS CAX
+ON CX.ID_CAIXA=CAX.ID_CAIXA
+WHERE CAX.ID=(SELECT MAX(AUX.ID)
+FROM CONTROLE_CAIXA AS AUX  WHERE AUX.ID_CAIXA=CAX.ID_CAIXA ) AND CX.NOME_MAQUINA='$maquina' AND STATUS = 'Ativo' and cax.DATA_ABERTURA = CURDATE()";
+
+$stm1 = $conexao->prepare($sql1);
+$stm1->execute();
+$dados1 = $stm1->fetchAll(PDO::FETCH_OBJ);
+
+$json = json_encode($dados1);
+
+	echo $json;
+
 endif;

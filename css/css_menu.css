@@ -19,6 +19,121 @@ body,
     padding: 0;
 }
 
+.limpa {
+    clear: both;
+}
+
+.center {
+    width: 100%;
+    margin: auto;
+    max-width: 1280px;
+}
+
+section.cover-form {
+    width: 100%;
+    padding: 40px;
+}
+
+.form-container {
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    -webkit-box-shadow: 2px 2px 5px 0px rgb(71, 92, 71);
+    -moz-box-shadow: 2px 2px 5px 0px rgb(71, 92, 71);
+    box-shadow: 2px 2px 5px 0px rgb(71, 92, 71);
+    background-color: rgb(235, 237, 240);
+}
+
+.form-container h1 {
+    width: 100%;
+    font-weight: normal;
+    padding: 20px 10px;
+    font-size: 30px;
+    color: black;
+    background-color: rgba(71, 92, 71, 0.5);
+}
+
+.modalDialog:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: 15px;
+    text-align: center;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover {
+    background: #00d9ff;
+}
+
+.pega-1 {
+    display: none;
+}
+
+.conteiner-1 {
+    top: 0px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    display: none;
+}
+
+.couver {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    max-width: 300px;
+    padding: 40px;
+    background: white;
+    border: 10px solid gray;
+    align-items: center;
+    justify-content: center;
+}
+
+.couver:last-child {
+    padding: 10px;
+}
+
+.couver p {
+    padding: 10px;
+    font-size: 25px;
+    text-align: center;
+    color: #525252;
+    width: 100%;
+}
+
+.couver input[type="submit"] {
+    background-color: rgba(71, 92, 71, 0.8);
+    text-transform: uppercase;
+    color: white;
+    width: 150px;
+    height: 45px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 25px;
+    border: 0;
+    border-radius: 10px;
+}
+
 .clearfix:after {
     content: '.';
     display: block;
@@ -98,6 +213,10 @@ body,
 
 .welcome a {
     cursor: default;
+}
+
+.pega {
+    display: none;
 }
 
 .contador {
