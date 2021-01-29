@@ -182,6 +182,7 @@ td {
     height: 100%;
     table-layout: fixed;
     box-sizing: border-box;
+    max-height: 300px;
 }
 
 .form-container .iconeSearch .Pesquisarproduto,
@@ -220,6 +221,35 @@ td {
     margin-left: -35px;
     height: 32px;
 }
+
+.imagem-alert {
+    float: left;
+    margin: 5px -38px;
+}
+
+.imagem-alert img {
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+}
+
+.imagem-alert #mensagem-alter {
+    display: none;
+    position: absolute;
+    color: red;
+    margin: 35px -12px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+/*
+#tl_fim {
+ border: 1px solid red;
+}
+*/
 
 #produto2,
 #Quantidade,
@@ -413,6 +443,10 @@ td {
     font-size: 25px;
     border: 0;
     border-radius: 10px;
+}
+
+#col-5 {
+    display: none;
 }
 
 @media screen and (max-width: 1366px) {
