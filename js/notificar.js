@@ -69,10 +69,13 @@ function pesquisaPermissoes(id_usuario) {
             }
         }
     });
-
+    console.log(document.getElementsByClassName("celular").length);
     if (document.getElementsByClassName("celular").length >= 1) {
+
         id('celular').onkeyup = function() {
+
             mascara(this, mtel);
+
         }
         id('fixo').onkeyup = function() {
             mascara(this, mtel);
@@ -155,7 +158,6 @@ function chama_teste() {
 }
 
 
-function fechamodal() {
+function fechamodal_menu() {
     $('#conteiner-1').css("display", "none");
-
 }

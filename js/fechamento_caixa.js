@@ -124,3 +124,7 @@ function formatarMoeda(moeda) {
     //console.log(f2);
     return f2;
 }
+
+function fechamodal_menu() {
+    $('#conteiner-1').css("display", "none");
+}

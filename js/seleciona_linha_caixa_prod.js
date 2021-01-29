@@ -149,3 +149,7 @@ function abremodal() {
     $('#openModal').css("display", "inline-block");
 
 }
+
+function fechamodal_menu() {
+    $('#conteiner-1').css("display", "none");
+}

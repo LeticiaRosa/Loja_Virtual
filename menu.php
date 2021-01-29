@@ -169,7 +169,7 @@ if (empty($_SESSION['login'])) {
   <div class="conteiner-1" id="conteiner-1">
     <div class="couver">
       <p id = "mensagem">     </p>
-      <input type="submit" value="OK" onclick="fechamodal()" /> </p>
+      <input type="submit" value="OK" onclick="fechamodal_menu()" /> </p>
 
     </div>
   </div>

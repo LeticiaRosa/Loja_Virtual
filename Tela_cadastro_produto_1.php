@@ -29,11 +29,11 @@
 
             <div class="col">
               <p>Nome do Produto*</p>
-              <input type="text" name="nome" id="nome" required placeholder="Nome" autocomplete="off">
+              <input type="text" name="nome" id="nome" required placeholder="Nome" autocomplete="off" maxlength="30">
             </div>
             <div class="col">
               <p>Descrição</p>
-              <input type="text" name="descricao" id="descricao" placeholder="Descrição" autocomplete="off">
+              <input type="text" name="descricao" id="descricao" placeholder="Descrição" autocomplete="off" maxlength="50">
             </div>
             <div class="col" style="  width: 80%; ">
               <p>Empresa</p>
@@ -61,17 +61,17 @@
 
             <div class="col">
               <p>Preço de Venda:*</p>
-              <input type="text" name="preco_venda" id="preco_venda" required placeholder="Preço de Venda" autocomplete="off">
+              <input type="text" name="preco_venda" id="preco_venda" required placeholder="Preço de Venda" autocomplete="off" maxlength="10">
             </div>
 
             <div class="col">
               <p>Preço de Custo:*</p>
-              <input type="text" name="preco_custo" id="preco_custo" required placeholder="Preço de Custo" autocomplete="off">
+              <input type="text" name="preco_custo" id="preco_custo" required placeholder="Preço de Custo" autocomplete="off" maxlength="10">
             </div>
 
             <div class="col">
               <p>Quantidade:*</p>
-              <input type="text" name="quantidade" id="quantidade" required placeholder="Quantidade" autocomplete="off">
+              <input type="text" name="quantidade" id="quantidade" required placeholder="Quantidade" autocomplete="off" maxlength="5">
             </div>
 
           </div>
@@ -82,7 +82,7 @@
             </div>
             <div class="col">
               <p>Marca:</p>
-              <input type="text" name="marca" id="marca" placeholder="Marca" autocomplete="off">
+              <input type="text" name="marca" id="marca" placeholder="Marca" autocomplete="off" maxlength="30">
             </div>
             <div class="col-1">
               <p>Unidade de medida:</p>
@@ -97,7 +97,7 @@
 
             <div class="col-2" id="valor_medida">
               <p>Valor Medida:</p>
-              <input type="text" name="valor_medida" id="valor_medida" placeholder="Valor Medida" autocomplete="off">
+              <input type="text" name="valor_medida" id="valor_medida" placeholder="Valor Medida" autocomplete="off" maxlength="10"> 
             </div>
 
           </div>
@@ -120,7 +120,7 @@
           <div class="form-wraper">
             <div class="col">
               <p>Observação:</p>
-              <input type="text" name="observacao" id="observacao" placeholder="Observação" autocomplete="off">
+              <input type="text" name="observacao" id="observacao" placeholder="Observação" autocomplete="off" maxlength="100">
             </div>
 
           </div>

@@ -29,11 +29,11 @@
                     <div class="form-wraper">
                         <div class="col">
                             <p>Nome Empresa*</p>
-                            <input type="text" name="nome" id="nome" required placeholder="Nome" autocomplete="off">
+                            <input type="text" name="nome" id="nome" required placeholder="Nome" autocomplete="off" maxlength="30">
                         </div>
                         <div class="col">
                             <p>Razao Social</p>
-                            <input type="text" name="Razao_Social" id="Razao_Social" placeholder="Razao Social" autocomplete="off">
+                            <input type="text" name="Razao_Social" id="Razao_Social" placeholder="Razao Social" autocomplete="off" maxlength="30">
                         </div>
                         <div class="col-1">
                             <p>Status:</p>
@@ -46,18 +46,18 @@
                     <div class="form-wraper">
                         <div class="col">
                             <p>Descrição*:</p>
-                            <input type="text" name="descricao" id="descricao" autocomplete="off">
+                            <input type="text" name="descricao" id="descricao" autocomplete="off" maxlength="100">
                         </div>
                     </div>
                     <div class="form-wraper">
                         <div class="col">
                             <p>CNPJ*:</p>
-                            <input type="text" name="CNPJ" id="CNPJ" required placeholder="Cnpj" autocomplete="off">
+                            <input type="text" name="CNPJ" id="CNPJ" required placeholder="Cnpj" autocomplete="off" maxlength="11">
                         </div>
 
                         <div class="col">
                             <p>Endereço:</p>
-                            <input type="text" name="endereco" id="endereco" placeholder="Endereço" autocomplete="off">
+                            <input type="text" name="endereco" id="endereco" placeholder="Endereço" autocomplete="off" maxlength="100">
                         </div>
                     </div>
 

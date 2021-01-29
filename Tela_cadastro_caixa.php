@@ -27,7 +27,7 @@
 
                         <div class="col">
                             <p>Nome do Caixa *</p>
-                            <input type="text" name="nome_caixa" id="nome_caixa" required placeholder="Nome do Caixa" autocomplete="off">
+                            <input type="text" name="nome_caixa" id="nome_caixa" required placeholder="Nome do Caixa" autocomplete="off" maxlength="15">
                         </div>
 
                         <div class="col">
@@ -53,7 +53,7 @@
                     <div class="form-wraper">
                         <div class="col">
                             <p>Observação</p>
-                            <input type="text" name="Observacao" id="Observacao" placeholder="Observação" autocomplete="off">
+                            <input type="text" name="Observacao" id="Observacao" placeholder="Observação" autocomplete="off" maxlength="100">
                         </div>
                     </div>
                     <div class="enviar">

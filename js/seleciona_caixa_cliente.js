@@ -133,3 +133,7 @@ function abremodal() {
     $('#openModal2').css("display", "inline-block");
 
 }
+
+function fechamodal_menu() {
+    $('#conteiner-1').css("display", "none");
+}

@@ -53,11 +53,6 @@ section.cover-form {
     background-color: rgba(71, 92, 71, 0.5);
 }
 
-.modalDialog:target {
-    opacity: 1;
-    pointer-events: auto;
-}
-
 .close {
     background: #606061;
     color: #FFFFFF;

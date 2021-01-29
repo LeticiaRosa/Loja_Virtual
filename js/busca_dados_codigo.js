@@ -56,3 +56,8 @@ $(async function() {
         });
     }
 });
+
+
+function fechamodal_menu() {
+    $('#conteiner-1').css("display", "none");
+}

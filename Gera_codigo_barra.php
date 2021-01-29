@@ -58,7 +58,7 @@
 
                         <div class="col-1">
                             <p>QUANTIDADE DE ETIQUETAS:</p>
-                            <input type="text" name="qtd_etiquetas" id="qtd_etiquetas" require autocomplete="OFF">
+                            <input type="text" name="qtd_etiquetas" id="qtd_etiquetas" require autocomplete="OFF" maxlength="3">
                         </div>
                     </div>
                     <div class="conter">

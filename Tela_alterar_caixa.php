@@ -31,7 +31,7 @@
                 <div class="form-wraper">
                         <div class="col">
                             <p>Nome Caixa* </p>
-                            <input type="text" name="nome_caixa" id="nome_caixa" placeholder="Nome Caixa" autocomplete="off">
+                            <input type="text" name="nome_caixa" id="nome_caixa" placeholder="Nome Caixa" autocomplete="off" maxlength="15">
                         </div>
                         <div class="col-1">
                             <p>Status</p>
