@@ -19,20 +19,20 @@
                     <div class="form-wraper">
                       <div class="col">
                           <p> Valor da retirada: *</p>
-                          <input type="text" name="Valor" id="Valor" required placeholder="Valor" autocomplete="off">
+                          <input type="text" name="Valor" id="Valor" required placeholder="Valor" autocomplete="off" maxlength="5">
                       </div>
                      
                     </div>
                     <div class="form-wraper">
                     <div class="col">
                           <p> Quem está retirando: *</p>
-                          <input type="text" name="nome" id="nome" placeholder="Nome">
+                          <input type="text" name="nome" id="nome" placeholder="Nome" maxlength="30">
                       </div>
                     </div>
                     <div class="form-wraper">
                         <div class="col">
                             <p>Observação:</p>
-                            <input type="text" name="observacao" id="observacao" placeholder="Observação" autocomplete="off">
+                            <input type="text" name="observacao" id="observacao" placeholder="Observação" autocomplete="off" maxlength="100">
                         </div>
                     </div>
                     

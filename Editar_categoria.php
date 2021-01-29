@@ -34,7 +34,7 @@
                                 <th>Descricao</th>
                                 <th>Status</th>
                                 <th class="sumir">Observação</th>
-                                <th class="sumir"> Usuario</th>
+                                <th class="sumir"> Usuário</th>
                                 <th class="sumir">Data Cadastro</th>
 
                             </tr>

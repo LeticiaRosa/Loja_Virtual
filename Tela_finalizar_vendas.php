@@ -104,7 +104,7 @@
                     <div class="texto">
                     <p>Porcentagem de Desconto:</p> 
                     </div>
-                     <input type="text" name="desconto" id="desconto" required onkeyup="chamda()" placeholder="% Valor"  autocomplete="off">
+                     <input type="text" name="desconto" id="desconto" required onkeyup="chamda()" placeholder="% Valor"  autocomplete="off" maxlength="2"> 
                     </div>
 
                 <div class="col11 limpa">
