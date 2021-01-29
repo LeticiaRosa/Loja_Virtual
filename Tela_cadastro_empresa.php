@@ -26,31 +26,31 @@
 
                         <div class="col">
                             <p>Nome da Empresa*</p>
-                            <input type="text" name="nome" id="nome" required placeholder="Empresa" autocomplete="off">
+                            <input type="text" name="nome" id="nome" required placeholder="Empresa" autocomplete="off" maxlength="30">
                         </div>
                         <div class="col">
                             <p>Razao Social*</p>
-                            <input type="text" name="razao_social" id="razao_social" required placeholder="Razão Social" autocomplete="off">
+                            <input type="text" name="razao_social" id="razao_social" required placeholder="Razão Social" autocomplete="off" maxlength="30">
                         </div>
                         <div class="col">
                             <p>Descrição</p>
-                            <input type="text" name="descricao" id="descricao" placeholder="Descrição" autocomplete="off">
+                            <input type="text" name="descricao" id="descricao" placeholder="Descrição" autocomplete="off" maxlength="100">
                         </div>
                     </div>
                     <div class="form-wraper">
                         <div class="col">
                             <p>CNPJ</p>
-                            <input type="text" name="CNPJ" id="CNPJ" placeholder="CNPJ" autocomplete="off">
+                            <input type="text" name="CNPJ" id="CNPJ" placeholder="CNPJ" autocomplete="off" maxlength="11">
                         </div>
                         <div class="col">
                             <p>Endereço</p>
-                            <input type="text" name="Endereco" id="Endereco" placeholder="Endereço" autocomplete="off">
+                            <input type="text" name="Endereco" id="Endereco" placeholder="Endereço" autocomplete="off" maxlength="100">
                         </div>
                     </div>
                     <div class="form-wraper">
                         <div class="col">
                             <p>Observação</p>
-                            <input type="text" name="Observacao" id="Observacao" placeholder="Observação" autocomplete="off">
+                            <input type="text" name="Observacao" id="Observacao" placeholder="Observação" autocomplete="off" maxlength="100">
                         </div>
                     </div>
                     <div class="enviar">

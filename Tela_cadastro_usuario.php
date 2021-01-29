@@ -26,16 +26,16 @@
 
                         <div class="col">
                             <p>Nome Usuario*</p>
-                            <input type="text" name="nome" id="nome" required placeholder="Nome" autocomplete="off">
+                            <input type="text" name="nome" id="nome" required placeholder="Nome" autocomplete="off" maxlength="30">
                         </div>
                         <div class="col">
                             <p>Login*</p>
-                            <input type="text" name="Login" id="Login" required placeholder="Login" autocomplete="off">
+                            <input type="text" name="Login" id="Login" required placeholder="Login" autocomplete="off" maxlength="10">
                         </div>
                         <div class="col">
                             <p>Senha*:</p>
 
-                            <input type="password" name="Senha" id="Senha" required placeholder="Senha" autocomplete="off">
+                            <input type="password" name="Senha" id="Senha" required placeholder="Senha" autocomplete="off" maxlength="30">
 
                         </div>
                         <div class="olho" id="olho">

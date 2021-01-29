@@ -1,7 +1,7 @@
 <?php
     session_start(); 
         //Incluindo a conexão com banco de dados   
-        
+  
     include_once("conexao.php");    
     //O campo usuário e senha preenchido entra no if para validar
     if((isset($_POST['usuario'])) && (isset($_POST['senha']))){

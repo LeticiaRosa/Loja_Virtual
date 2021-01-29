@@ -182,7 +182,7 @@ section.cover-form {
     background-color: rgba(71, 92, 71, 0.8);
     text-transform: uppercase;
     color: white;
-    width: 400px;
+    width: 150px;
     height: 45px;
     cursor: pointer;
     font-size: 25px;
@@ -211,10 +211,9 @@ input[type="button"] {
     width: 180px;
     height: 45px;
     cursor: pointer;
-    font-size: 25px;
+    font-size: 16px;
     border: 0;
     border-radius: 10px;
-    padding-left: 10px;
 }
 
 .conteiner {

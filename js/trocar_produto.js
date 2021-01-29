@@ -257,6 +257,12 @@ function fechamdal() {
 }
 
 
+function fechamodal() {
+    $('#conteiner-1').css("display", "none");
+
+}
+
+
 function excluirlinha(id) {
     //console.log(document.querySelector("tbody tr"));
     a = 'testee' + id;

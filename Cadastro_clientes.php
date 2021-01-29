@@ -23,41 +23,41 @@
 
                     <div class="col">
                         <p>Nome*</p>
-                        <input type="text" name="nome" id="nome" required placeholder="Nome" autocomplete="off">
+                        <input type="text" name="nome" id="nome" required placeholder="Nome" autocomplete="off" maxlength="100" >
                     </div>
                     <div class="col">
                         <p>CPF*</p>
-                        <input type="text" name="cpf" id="cpf" required placeholder="cpf" autocomplete="off">
+                        <input type="text" name="cpf" id="cpf" required placeholder="cpf" autocomplete="off" maxlength="11">
                     </div>
                     <div class="col">
                         <p>E-MAIL:</p>
-                        <input type="email" name="E-MAIL" id="E-MAIL" placeholder="E-mail" autocomplete="off">
+                        <input type="email" name="E-MAIL" id="E-MAIL" placeholder="E-mail" autocomplete="off" maxlength="100">
                     </div>
                 </div>
                 <div class="form-wraper">
                     <div class="col">
                         <p>Telefone Fixo:</p>
-                        <input type="text" name="fixo" id="fixo" placeholder="Telefone" autocomplete="off">
+                        <input type="text" name="fixo" id="fixo" placeholder="Telefone" autocomplete="off" maxlength="15">
                     </div>
                     <div class="col">
                         <p>Telefone celular:</p>
-                        <input type="text" name="celular" id="celular" class="celular" placeholder="Telefone" autocomplete="off">
+                        <input type="text" name="celular" id="celular" class="celular" placeholder="Telefone" autocomplete="off" maxlength="15">
                     </div>
                 </div>
                 <div class="form-wraper">
                     <div class="col">
                         <p>Endereço:</p>
-                        <input type="text" name="endereco" id="endereco" placeholder="Endereço" autocomplete="off">
+                        <input type="text" name="endereco" id="endereco" placeholder="Endereço" autocomplete="off" maxlength="100">
                     </div>
                     <div class="col">
                         <p>CEP:</p>
-                        <input type="text" name="CEP" id="CEP" placeholder="CEP" autocomplete="off">
+                        <input type="text" name="CEP" id="CEP" placeholder="CEP" autocomplete="off" maxlength="25">
                     </div>
                 </div>
                 <div class="form-wraper">
                     <div class="col">
                         <p>Observação:</p>
-                        <input type="text" name="observacao" id="observacao" placeholder="Observação" autocomplete="off">
+                        <input type="text" name="observacao" id="observacao" placeholder="Observação" autocomplete="off" maxlength="100">
                     </div>
                 </div>
                 <div class="enviar">

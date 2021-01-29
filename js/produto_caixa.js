@@ -316,3 +316,39 @@ function confirma() {
         fechamdal();
     }
 }
+
+/*
+window.onload = function() {
+
+    $.ajax({
+        url: "back_end/busca_autocomplete.php",
+        dataType: "json",
+        data: {
+            acao: 'BUSCA_CAIXA_ABERTO'
+        },
+        success: function(data) {
+            console.log(data);
+        }
+    });
+
+    var select = document.getElementById('pega').value;
+    console.log(select);
+    if (select == "Caixa precisa estar aberto para efetuar vendas!") {
+        $('#conteiner').css("display", "flex");
+        return false;
+
+    } else if (select == "Erro ao abrir caixa!") {
+        $('#conteiner').css("display", "flex");
+        return false;
+    } else {
+
+        return true;
+    }
+
+
+}
+*/
+
+function fechamodal_menu() {
+    $('#conteiner-1').css("display", "none");
+}

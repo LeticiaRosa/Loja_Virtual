@@ -49,13 +49,13 @@
                     <div class="form-wraper">
                         <div class="col-2">
                             <p>Valor Inicial: *</p>
-                            <input type="text" name="valor_inicial" required id="valor_inicial" autocomplete="off">
+                            <input type="text" name="valor_inicial" required id="valor_inicial" autocomplete="off" maxlength="10">
                         </div>
                     </div>
                     <div class="form-wraper">
                         <div class="col">
                             <p>Observação</p>
-                            <input type="text" name="Observacao" id="Observacao" placeholder="Observação" autocomplete="off">
+                            <input type="text" name="Observacao" id="Observacao" placeholder="Observação" autocomplete="off" maxlength="100">
                         </div>
                     </div>
                     <div class="enviar">

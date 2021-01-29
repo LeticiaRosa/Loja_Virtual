@@ -146,3 +146,7 @@ function fechamodal1() {
     $('#conteiner').css("display", "none");
 
 }
+
+function fechamodal_menu() {
+    $('#conteiner-1').css("display", "none");
+}

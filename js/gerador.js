@@ -57,3 +57,8 @@ function pad_with_zeroes(number, length) {
     }
     return my_string;
 }
+
+
+function fechamodal_menu() {
+    $('#conteiner-1').css("display", "none");
+}

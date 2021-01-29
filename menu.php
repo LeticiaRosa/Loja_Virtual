@@ -52,7 +52,7 @@ if (empty($_SESSION['login'])) {
               
              </div>
               <li ><a href="/loja_virtual/Tela_troca_produt.php">Trocar Produto</a> </li>
-              <li id= "caixa_" class= "caixa_" ><a href="/loja_virtual/Tela_caixa.php">Caixa</a> </li>
+              <li id= "caixa_" class= "caixa_" onclick="return chama_teste() "><a href="/loja_virtual/Tela_caixa.php">Caixa</a> </li>
             </ul>
           </li>
 
@@ -164,6 +164,15 @@ if (empty($_SESSION['login'])) {
 
   </div>
   <!--menu-->
+
+  
+  <div class="conteiner-1" id="conteiner-1">
+    <div class="couver">
+      <p id = "mensagem">     </p>
+      <input type="submit" value="OK" onclick="fechamodal_menu()" /> </p>
+
+    </div>
+  </div>
 
 
   <script type="text/javascript" src="js/jquery.js"></script>

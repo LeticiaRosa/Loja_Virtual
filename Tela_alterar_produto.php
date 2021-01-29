@@ -40,7 +40,7 @@
             </div>
 
             <div class="form-wraper">
-
+ 
 
               <div class="col">
                 <p>Categoria:*</p>
@@ -64,7 +64,7 @@
 
               <div class="col">
                 <p>Quantidade:*</p>
-                <input type="text" name="quantidade" id="quantidade" readonly = "readonly" placeholder="Quantidade" autocomplete="off" >
+                <input type="text" name="quantidade" id="quantidade" readonly = "readonly" placeholder="Quantidade" autocomplete="off" maxlength="5" >
               </div>
 
             </div>
@@ -75,7 +75,7 @@
               </div>
               <div class="col">
                 <p>Marca:</p>
-                <input type="text" name="marca" id="marca" placeholder="Marca" autocomplete="off">
+                <input type="text" name="marca" id="marca" placeholder="Marca" autocomplete="off" maxlength="30">
               </div>
               <div class="col-1">
                 <p>Unidade de medida:</p>
@@ -90,7 +90,7 @@
 
               <div class="col-2" id="valor_medida">
                 <p>Valor Medida:</p>
-                <input type="text" name="valor_medida" id="valor_medida" placeholder="Valor Medida" autocomplete="off" maxlength="5">
+                <input type="text" name="valor_medida" id="valor_medida" placeholder="Valor Medida" autocomplete="off" maxlength="10">
               </div>
 
             </div>

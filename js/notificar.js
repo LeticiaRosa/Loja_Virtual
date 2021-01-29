@@ -1,4 +1,5 @@
 $(async function BUSCA() {
+
     await $.ajax({
         url: "back_end/busca_autocomplete.php",
         dataType: "json",
@@ -20,11 +21,12 @@ $(async function BUSCA() {
             setTimeout(BUSCA, 60000);
         }
     });
+
 });
 
 
 function pesquisaPermissoes(id_usuario) {
-
+    //  exibir_mensagem();
     $.ajax({
         url: "back_end/busca_autocomplete.php",
         dataType: "json",
@@ -34,10 +36,13 @@ function pesquisaPermissoes(id_usuario) {
         },
         success: function(data) {
             permissao = data.map(d => d.permissao);
+            caixa = data.map(d => d.DATA_ABERTURA);
 
             if (permissao == "Administrador") {
                 document.getElementById("clientes").style.display = 'flex';
                 document.getElementById("caixa").style.display = 'flex';
+
+
                 document.getElementById("empresa").style.display = 'flex';
                 document.getElementById("produto-1").style.display = 'flex';
                 document.getElementById("fornecedor").style.display = 'flex';
@@ -64,10 +69,13 @@ function pesquisaPermissoes(id_usuario) {
             }
         }
     });
-
+    console.log(document.getElementsByClassName("celular").length);
     if (document.getElementsByClassName("celular").length >= 1) {
+
         id('celular').onkeyup = function() {
+
             mascara(this, mtel);
+
         }
         id('fixo').onkeyup = function() {
             mascara(this, mtel);
@@ -108,3 +116,48 @@ $(document).keyup(function(e) {
         fechamdal();
     }
 });
+
+
+
+function confirma() {
+
+    var texto = document.getElementById("Texto").innerHTML;
+
+    if (texto == " Confirma exclusão ? ") {
+        var OK = document.getElementById("teste").elements[17].name = "Excluir";
+        fechamodal();
+        return true;
+    } else if (texto == " Confirma alteração ? ") {
+        var OK = document.getElementById("teste").elements[17].name = "Salvar";
+        fechamodal();
+        return true;
+    }
+
+}
+
+function chama_teste() {
+
+    $.ajax({
+        url: "back_end/busca_autocomplete.php",
+        async: false,
+        dataType: "json",
+        data: {
+            acao: 'BUSCA_CAIXA_ABERTO'
+        },
+        success: function(data) {
+            DATA_ABERTURA = data.map(d => d.DATA_ABERTURA);
+            DATA_FECHAMENTO = data.map(d => d.DATA_FECHAMENTO);
+        }
+    });
+    if ((DATA_ABERTURA != "" && DATA_FECHAMENTO != "") || (DATA_ABERTURA == "" && DATA_FECHAMENTO == "")) {
+        $('#mensagem').html("Para efetuar vendas o caixa precisa estar aberto!");
+        $('#conteiner-1').css("display", "flex");
+        return false;
+    }
+
+}
+
+
+function fechamodal_menu() {
+    $('#conteiner-1').css("display", "none");
+}

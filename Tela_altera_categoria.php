@@ -30,11 +30,11 @@
 
             <div class="col">
               <p>Nome Categoria*</p>
-              <input type="text" name="nome" id="nome" required placeholder="Nome" autocomplete="off">
+              <input type="text" name="nome" id="nome" required placeholder="Nome" autocomplete="off"maxlength="15">
             </div>
             <div class="col">
               <p>Descrição</p>
-              <input type="text" name="descricao" id="descricao" placeholder="Descrição" autocomplete="off">
+              <input type="text" name="descricao" id="descricao" placeholder="Descrição" autocomplete="off" maxlength="30">
             </div>
             <div class="col-1">
               <p>Status:</p>
@@ -51,7 +51,7 @@
           <div class="form-wraper">
             <div class="col">
               <p>Observação:</p>
-              <input type="text" name="observacao" id="observacao" placeholder="Observação" autocomplete="off">
+              <input type="text" name="observacao" id="observacao" placeholder="Observação" autocomplete="off" maxlength="100">
             </div>
 
           </div>
