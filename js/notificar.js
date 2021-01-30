@@ -158,6 +158,73 @@ function chama_teste() {
 }
 
 
+function valida_caixa_aberto() {
+
+    $.ajax({
+        url: "back_end/busca_autocomplete.php",
+        async: false,
+        dataType: "json",
+        data: {
+            acao: 'BUSCA_CAIXA_ABERTO'
+        },
+        success: function(data) {
+            DATA_ABERTURA = data.map(d => d.DATA_ABERTURA);
+            DATA_FECHAMENTO = data.map(d => d.DATA_FECHAMENTO);
+        }
+    });
+    var hoje = new Date().toDateString();
+    if (DATA_ABERTURA != hoje) {
+        $('#mensagem').html("Há um caixa que não foi aberto hoje! Feche-o primeiro! ");
+        $('#conteiner-1').css("display", "flex");
+        return false;
+    }
+
+}
+
+function valida_caixa_aberto1() {
+
+    $.ajax({
+        url: "back_end/busca_autocomplete.php",
+        async: false,
+        dataType: "json",
+        data: {
+            acao: 'BUSCA_CAIXA_ABERTO'
+        },
+        success: function(data) {
+            DATA_ABERTURA = data.map(d => d.DATA_ABERTURA);
+            DATA_FECHAMENTO = data.map(d => d.DATA_FECHAMENTO);
+        }
+    });
+    var hoje = new Date().toDateString();
+    if (DATA_ABERTURA != hoje) {
+        $('#mensagem').html("Há um caixa que não foi aberto hoje!");
+        $('#conteiner-1').css("display", "flex");
+        return false;
+    }
+
+}
+
+
 function fechamodal_menu() {
-    $('#conteiner-1').css("display", "none");
+
+    $.ajax({
+        url: "back_end/busca_autocomplete.php",
+        async: false,
+        dataType: "json",
+        data: {
+            acao: 'BUSCA_CAIXA_ABERTO'
+        },
+        success: function(data) {
+            DATA_ABERTURA = data.map(d => d.DATA_ABERTURA);
+            DATA_FECHAMENTO = data.map(d => d.DATA_FECHAMENTO);
+        }
+    });
+    var hoje = new Date().toDateString();
+    if (DATA_ABERTURA != hoje) {
+        $('#conteiner-1').css("display", "none");
+        window.location.href = "Tela_fechar_caixa.php";
+    } else {
+        $('#conteiner-1').css("display", "none");
+    }
+
 }
