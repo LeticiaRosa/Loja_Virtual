@@ -41,7 +41,7 @@
                 <div class="conter-1">
                 <div class="col-1">
                         <p>Quantidade que deseja Transferir:</p>
-                        <input type="text" name="Qtd_tras" id="Qtd_tras"  placeholder="Quantidade"require autocomplete="OFF">
+                        <input type="text" name="Qtd_tras" id="Qtd_tras"  placeholder="Quantidade"require autocomplete="OFF" maxlength="10">
                     </div>
                     <div class="col-1">
                         <p>Empresa que deseja Trasferir:</p>
