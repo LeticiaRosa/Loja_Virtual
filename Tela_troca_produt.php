@@ -18,7 +18,7 @@
     ?>
 
     <div class="center">
-        <form method="POST" name="form" action="back_end/trocar_produto.php">
+       
             <section class="cover-form">
                 <div class="form">
                     <div class="form-container">
@@ -170,6 +170,7 @@
             </section>
             <section class="cover-form">
                 <div class="form-container">
+                <form method="POST" name="form" id ="form"action="back_end/trocar_produto.php">
                     <h1>Dados Troca</h1>
 
 
@@ -218,7 +219,7 @@
                     </div>
 
                     <div class="enviar">
-                        <input type="submit" name="Confirmar" id="Confirmar" value="Confirmar" onclick="finaliza_troca()" />
+                        <input type="submit" name="Confirmar" id="Confirmar" value="Confirmar" onclick=" return finaliza_troca()" />
 
                         <input type="button" name="Cancelar" id="Cancelar" value="Cancelar" onclick="window.location.href='Tela_troca_produt.php'">
 
