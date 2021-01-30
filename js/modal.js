@@ -129,6 +129,9 @@ if (select == "Inserido com sucesso!") {
 } else if (select == "Para essa máquina já existe um caixa cadastrado!") {
     $('#conteiner').css("display", "flex");
 
+} else if (select == "Troca Realizada Com Sucesso!") {
+    $('#conteiner').css("display", "flex");
+
 }
 
 

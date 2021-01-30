@@ -262,6 +262,9 @@ function fechamodal() {
 
 }
 
+function confirma() {
+    $('#conteiner').css("display", "none");
+}
 
 function excluirlinha(id) {
     //console.log(document.querySelector("tbody tr"));
@@ -368,6 +371,7 @@ function Remove_alert() {
 $('#pagamento').on('change', function() {
     var select = document.getElementById('pagamento');
     var tipo = select.options[select.selectedIndex].value
+    document.getElementById('pagamento').style.border = "none";
     if (tipo == "credito") {
         $('#col-5').prop("disabled", false);
         $('#forma_pagamento').attr("required", true);
@@ -379,6 +383,9 @@ $('#pagamento').on('change', function() {
     }
 });
 
+$('#forma_pagamento').on('change', function() {
+    document.getElementById('forma_pagamento').style.border = "none";
+});
 
 
 
@@ -406,8 +413,6 @@ function finaliza_troca() {
         dados_saiu.push({ "id_produto": selecionado[0].innerHTML, "quantidade": selecionado[3].innerHTML });
 
     }
-    //console.log(dados_saiu);
-    console.log(dados_saiu);
     jQuery.ajax({
         url: "back_end/id_troca.php",
         type: "POST",
@@ -421,5 +426,34 @@ function finaliza_troca() {
 
 
     });
+    valor = document.getElementById('tl_fim').value;
+    if (parseFloat(valor) < 0) {
+        document.getElementById('Texto').innerHTML = "Troca Não pode ser finalizada Devido ao Valor da Devolução ser maior ao Valor Saida";
+        document.getElementById('conteiner').style.display = 'flex';
+        return false;
+    } else {
+        var select = document.getElementById('pagamento');
+        var tipo = select.options[select.selectedIndex].value
+        var pag_selec = document.getElementById('forma_pagamento');
+        var value_selec = pag_selec.options[select.selectedIndex].value
+        if (tipo == "") {
+            document.getElementById('Texto').innerHTML = "Gentileza informar a forma de Pagamento!";
+            document.getElementById('conteiner').style.display = 'flex';
+            document.getElementById('pagamento').focus();
+            document.getElementById('pagamento').style.border = "1px solid red";
+
+        } else if (tipo == "credito" && value_selec == "") {
+            document.getElementById('Texto').innerHTML = "Para  pagamento em Cartão de Credito e necessario selecionar as parcelas!";
+            document.getElementById('conteiner').style.display = 'flex';
+            document.getElementById('forma_pagamento').focus();
+            document.getElementById('forma_pagamento').style.border = "1px solid red";
+        } else {
+
+            return true;
+        }
+
+    }
+
+
 
 }
