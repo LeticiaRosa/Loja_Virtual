@@ -47,11 +47,11 @@ if (empty($_SESSION['login'])) {
                   <li><a href="/loja_virtual/Tela_listar_caixa.php">Listar Caixas</a></li>
                 </ul>
               </li>
-              <li ><a href="/loja_virtual/Tela_abrir_caixa.php">Abrir Caixa</a> </li>
-              <li ><a href="/loja_virtual/Tela_fechar_caixa.php">Fechar Caixa</a> </li>
+              <li ><a href="/loja_virtual/Tela_abrir_caixa.php" >Abrir Caixa</a> </li>
+              <li ><a href="/loja_virtual/Tela_fechar_caixa.php" onclick="return valida_caixa_aberto1()" >Fechar Caixa</a> </li>
               
              </div>
-              <li ><a href="/loja_virtual/Tela_troca_produt.php">Trocar Produto</a> </li>
+              <li ><a href="/loja_virtual/Tela_troca_produt.php" onclick="return chama_teste() " >Trocar Produto</a> </li>
               <li id= "caixa_" class= "caixa_" onclick="return chama_teste() "><a href="/loja_virtual/Tela_caixa.php">Caixa</a> </li>
             </ul>
           </li>
@@ -106,7 +106,7 @@ if (empty($_SESSION['login'])) {
           </li>
           <li id= "estoque" class= "estoque" ><a href="#">Estoque</a>
             <ul class="sub-menu">
-              <li><a href="#">Controle de Estoque</a></li>
+              <li><a href="/loja_virtual/Tela_controle_estoque.php">Controle de Estoque</a></li>
               <li><a href="/loja_virtual/tela_vizualizar_trasferencia.php">Transferência de Produtos</a>
               <ul class="sub-menu">
                   <li><a href="/loja_virtual/Tela_listar_trafere.php">Transferir Produtos</a></li>

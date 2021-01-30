@@ -158,6 +158,100 @@ function chama_teste() {
 }
 
 
+function valida_caixa_aberto() {
+
+    $.ajax({
+        url: "back_end/busca_autocomplete.php",
+        async: false,
+        dataType: "json",
+        data: {
+            acao: 'BUSCA_CAIXA_ABERTO'
+        },
+        success: function(data) {
+            DATA_ABERTURA = data.map(d => d.DATA_ABERTURA);
+            DATA_FECHAMENTO = data.map(d => d.DATA_FECHAMENTO);
+        }
+    });
+    var hoje = new Date().toDateString();
+    if (DATA_ABERTURA != hoje) {
+        $('#mensagem').html("Há um caixa que não foi aberto hoje! Feche-o primeiro! ");
+        $('#conteiner-1').css("display", "flex");
+        return false;
+    }
+
+}
+
+
+function data() {
+    function adicionaZero(numero) {
+        if (numero <= 9)
+            return "0" + numero;
+        else
+            return numero;
+    }
+    var data = new Date();
+    var dia = data.getDate(); // 1-31
+    var mes = data.getMonth(); // 0-11 (zero=janeiro)
+    var ano4 = data.getFullYear(); // 4 dígitos
+
+    seg = adicionaZero(seg.toString());
+    min = adicionaZero(min.toString());
+    dia = adicionaZero(dia.toString());
+    mes = mes + 1;
+    mes = adicionaZero(mes.toString());
+
+    var str_data = ano4 + '-' + (mes) + '-' + dia;
+    setTimeout('time()', 1000);
+
+    return str_data;
+}
+
+function valida_caixa_aberto1() {
+
+    $.ajax({
+        url: "back_end/busca_autocomplete.php",
+        async: false,
+        dataType: "json",
+        data: {
+            acao: 'BUSCA_CAIXA_ABERTO'
+        },
+        success: function(data) {
+            DATA_ABERTURA = data.map(d => d.DATA_ABERTURA);
+            DATA_FECHAMENTO = data.map(d => d.DATA_FECHAMENTO);
+        }
+    });
+
+
+    console.log(data());
+    if (DATA_ABERTURA != data()) {
+        $('#mensagem').html("Há um caixa que não foi aberto hoje!");
+        $('#conteiner-1').css("display", "flex");
+        return false;
+    }
+
+}
+
+
 function fechamodal_menu() {
-    $('#conteiner-1').css("display", "none");
+
+    $.ajax({
+        url: "back_end/busca_autocomplete.php",
+        async: false,
+        dataType: "json",
+        data: {
+            acao: 'BUSCA_CAIXA_ABERTO'
+        },
+        success: function(data) {
+            DATA_ABERTURA = data.map(d => d.DATA_ABERTURA);
+            DATA_FECHAMENTO = data.map(d => d.DATA_FECHAMENTO);
+        }
+    });
+    var hoje = new Date().toDateString();
+    if (DATA_ABERTURA != hoje) {
+        $('#conteiner-1').css("display", "none");
+        window.location.href = "Tela_fechar_caixa.php";
+    } else {
+        $('#conteiner-1').css("display", "none");
+    }
+
 }
