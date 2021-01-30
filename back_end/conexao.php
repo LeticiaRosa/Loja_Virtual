@@ -1,6 +1,6 @@
 <?php
 
-define("HOST","25.107.219.2");
+define("HOST","127.0.0.1");
 define("USUARIO","Gabriel");
 define("SENHA","Gb@30173572");
 define("DB","Loja");

@@ -178,6 +178,9 @@ function finalizar_venda() {
         cols += '<td>' + selecionado[1].innerHTML + '</td>';
         cols += '<td>' + selecionado[2].innerHTML + '</td>';
         cols += '<td>' + selecionado[3].innerHTML + '</td>';
+
+
+
         newRow.append(cols);
         $("#products-table-8").append(newRow);
     }
@@ -351,4 +354,15 @@ window.onload = function() {
 
 function fechamodal_menu() {
     $('#conteiner-1').css("display", "none");
+}
+
+
+function imprimir_cupom() {
+    $('#openModal5').css("display", "inline-block");
+    window.location.replace("#openModal5");
+
+    ///var local = window.location.href = "Teste.php";
+
+
+
 }
