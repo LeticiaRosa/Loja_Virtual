@@ -167,6 +167,11 @@
             <?php include_once("Tela_finalizar_vendas.php");  ?>
         </div>
         </div>
+        <div id="openModal5" class="modalDialog">
+        <div><a href="#close" title="Close" class="close">X</a>
+            <?php include_once("Cupom.php"); ?>
+        </div>
+        </div>
     
       <div class="pega">
           <input id="pega" type="text" value="<?php if (isset($_SESSION['sucesso_cadastro'])) {
@@ -195,6 +200,8 @@
                 ?>
             </p>
             <input type="submit" value="OK" id="OK" onclick="confirma()" />
+            <p></p>
+            <input type="button" value="Gerar Cupom" id="" onclick=" imprimir_cupom()" />
 
         </div>
     </div>

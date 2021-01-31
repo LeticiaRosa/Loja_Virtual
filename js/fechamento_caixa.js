@@ -90,6 +90,7 @@ $(async function() {
                     venda_total = venda_total - parseFloat(TOTAL[i]);
                     tirar = tirar - parseFloat(QUANTIDADE[i]);
 
+
                 } else {
 
                     qtd_total = qtd_total + parseFloat(QUANTIDADE[i]) - tirar;
@@ -109,8 +110,31 @@ $(async function() {
             document.getElementById('qtd_vendas').value = qtd_total;
             document.getElementById('v_total').value = formatarMoeda(venda_total);
 
+            var tabela = document.getElementById("products-table");
+            var selecionados = tabela.getElementsByClassName("selecionado");
+            for (i = 0; i < selecionados.length; i++) {
+
+                selecionado = selecionados[i];
+                selecionado = selecionado.getElementsByTagName("td");
+                console.log(selecionado[0].innerHTML);
+                if (selecionado[0].innerHTML == "Retiradas") {
+                    selecionado[0].style.color = "red";
+                    selecionado[1].style.color = "red";
+                    selecionado[2].style.color = "red";
+                } else if (selecionado[0].innerHTML == "Anotar") {
+                    selecionado[0].style.color = "#ffb34f";
+                    selecionado[1].style.color = "#ffb34f";
+                    selecionado[2].style.color = "#ffb34f";
+                } else {
+                    selecionado[0].style.color = "green";
+                    selecionado[1].style.color = "green";
+                    selecionado[2].style.color = "green";
+                }
+            }
+
 
         }
+
     });
 });
 

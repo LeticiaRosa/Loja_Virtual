@@ -23,11 +23,11 @@ FROM CONTROLE_CAIXA AS AUX  WHERE AUX.ID_CAIXA=CAX.ID_CAIXA AND DATA_FECHAMENTO
 
     if($resultado==1){
     $_SESSION['sucesso_cadastro'] = "Retirada realizada com sucesso!";
-   // header("Location:/loja_virtual/Tela_caixa.php");
+   header("Location:/loja_virtual/Tela_caixa.php");
     mysqli_close($conexao);
     } else {
     $_SESSION['erro_cadastro'] = "Retirada não cadastrada!";
-    //header("Location:/loja_virtual/Tela_caixa.php");
+   header("Location:/loja_virtual/Tela_caixa.php");
     }
 }else {
   header("Location:/loja_virtual/Tela_caixa.php");

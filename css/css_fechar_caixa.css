@@ -110,12 +110,8 @@ section.cover-form {
 .col {
     display: flex;
     flex-direction: column;
-    padding: 5px;
     flex-wrap: wrap;
     width: 100%;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
 }
 
 .form-wraper .col #p_texto {
@@ -173,6 +169,8 @@ input:focus {
 }
 
 .corpao {
+    font-weight: bold;
+    text-transform: uppercase;
     width: 100%;
     max-height: 400px;
     overflow-y: auto;
