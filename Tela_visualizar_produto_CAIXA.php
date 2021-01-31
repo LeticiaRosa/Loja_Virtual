@@ -16,7 +16,7 @@ if (empty($_SESSION['login'])) {
     <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
-    <link rel="stylesheet" type="text/css" href="css/css_caixa.css">
+    <link rel="stylesheet" type="text/css" href="css/editar_produto.css">
     <link rel="shortcut icon" type="image/x-icon" href="imagens/favicon.ico">
 </head>
 <html>

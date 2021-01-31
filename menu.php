@@ -106,7 +106,14 @@ if (empty($_SESSION['login'])) {
           </li>
           <li id= "estoque" class= "estoque" ><a href="#">Estoque</a>
             <ul class="sub-menu">
-              <li><a href="/loja_virtual/Tela_controle_estoque.php">Controle de Estoque</a></li>
+              <li>
+              
+              <a href="/loja_virtual/Tela_controle_estoque.php">Controle de Estoque</a>
+              <ul class="sub-menu">
+                  <li><a href="/loja_virtual/Tela_movimento_estoque.php">Visualizar Movimento de Estoque</a></li>
+                </ul>
+              
+              </li>
               <li><a href="/loja_virtual/tela_vizualizar_trasferencia.php">Transferência de Produtos</a>
               <ul class="sub-menu">
                   <li><a href="/loja_virtual/Tela_listar_trafere.php">Transferir Produtos</a></li>

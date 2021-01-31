@@ -194,6 +194,10 @@ section.cover-form {
     width: 100%;
 }
 
+.codigo_barras {
+    width: 50%;
+}
+
 .conter {
     margin-right: 60px;
     display: flex;

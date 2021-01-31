@@ -69,7 +69,7 @@ function pesquisaPermissoes(id_usuario) {
             }
         }
     });
-    console.log(document.getElementsByClassName("celular").length);
+
     if (document.getElementsByClassName("celular").length >= 1) {
 
         id('celular').onkeyup = function() {
