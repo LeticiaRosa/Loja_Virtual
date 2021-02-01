@@ -20,15 +20,26 @@
               <div class="form-container">
                   <h1>CONTROLE DE ESTOQUE</h1>
                   <div class="form-wraper">
-
-                      <div class="col">
-                          <p>Codigo De Barras *</p>
-                          <input type="text" name="codigo" id="codigo" required placeholder="codigo" autocomplete="off" onchange="busca_produto(<?php echo $_SESSION['empresausuario']?>)" maxlength="100">
-                      </div>
+                  <div class="col-1">
+                            <p>Tipo Movimento</p>
+                            <select name="tipo" id="tipo" placeholder="Tipo Movimento">
+                                <option value="Entrada" id="Entrada">Entrada de Produtos</option>
+                                <option value="Saida" id="Saida">Saida de Produtos</option>
+                            </select>
+                        </div>
+                     
                   </div>
+                  
                   <div class="form-wraper">
 
                       <div class="conter">
+
+                        <div class="form-wraper">
+                                <div class="codigo_barras col">
+                                        <p>Codigo De Barras *</p>
+                                        <input type="text" name="codigo" id="codigo" required placeholder="Codigo" autocomplete="off" onchange="busca_produto(<?php echo $_SESSION['empresausuario']?>)" maxlength="100">
+                                </div>
+                            </div>
                           <div class="col">
                               <div class="iconeSearch ">
                                   
@@ -53,17 +64,8 @@
                               </div>
                           </div>
 
-                          <div class="col-1">
-                            <p>Tipo Movimento</p>
-                            <select name="tipo" id="tipo" placeholder="Tipo Movimento">
-                                <option value="Entrada" id="Entrada">Entrada de Produtos</option>
-                                <option value="Saida" id="Saida">Saida de Produtos</option>
-                            </select>
-                            </div>
 
                       </div>
-
-
                       <div class="tabela-container">
                           <div class="corpao">
                               <table id="products-table-1" class="teste1">
@@ -75,8 +77,6 @@
                                           <th>Quantidade</th>
                                           <th>Tipo Mov</th>
                                           <th>  </th>
-                                          
-
                                       </tr>
                                   </thead>
 
@@ -88,93 +88,39 @@
                           </div>
                           <div class="form-wraper1">
 
-                              <div class="col1">
-                                  <p>Total De itens Entrada</p>
-                                  <input   readonly = "readonly" type="text" name="itens" id="itens" autocomplete="off">
-                              </div>
-                              <div class="col2">
-                                  <p id="nome_campo">Total de Itens Saida</p>
-                                  <div class="din">
-                                     
-                                  <input type="text"   readonly = "readonly" name="venda"  id="venda" autocomplete="off">
+                                <div class="col1">
+                                    <p>Total De itens Entrada</p>
+                                    <input   readonly = "readonly" type="text" name="itens_entrada" id="itens_entrada" autocomplete="off">
+                                </div>
+                                <div class="col2">
+                                    <p id="nome_campo">Total de Itens Saida</p>
+                                    <div class="din">
+                                    
+                                    <input type="text"   readonly = "readonly" name="itens_saida"  id="itens_saida" autocomplete="off">
                                     </div>
-                              </div>
-                          </div>
+                                </div>
+                                </div>
                       </div>
                   </div>
 
                   <div class="form-wraper">
-                       
                       <div class="enviar">
-
-                          <input type="submit" name="Confirmar" id="Confirmar" value="Concluir"  />
-                         
-                     
+                          <input type="submit" name="Confirmar" id="Confirmar" value="Concluir" onclick= "return openConfirmacao('confirma')"/>
                           <input type="submit" name="Excluir" id="Excluir" value="Cancelar" onclick="return openConfirmacao('excluir')" />
-
                       </div>
-                     
                   </div>
-
           </section>
+       
 
-          <div class="center" >
-          <section class="cover-form">
-          <div class="form-container">
-                  <h1>Movimento de Estoque</h1>
-
-          <div class="tabela-container">
-                          <div class="corpao">
-                              <table id="products-table-1" class="teste1">
-
-                                  <thead class="cabeça">
-                                      <tr>
-                                          <th>Id</th>
-                                          <th>Nome do produto</th>
-                                          <th>Quantidade</th>
-                                          <th>Tipo Mov</th>
-                                          <th>  </th>
-                                          
-
-                                      </tr>
-                                  </thead>
-
-                                  <tbody id="visualizarDados" class="teste">
-
-                                  </tbody>
-
-                              </table>
-                          </div>
-                          <div class="form-wraper1">
-
-                              <div class="col1">
-                                  <p>Total De itens Entrada</p>
-                                  <input   readonly = "readonly" type="text" name="itens_entrada" id="itens_entrada" autocomplete="off">
-                              </div>
-                              <div class="col2">
-                                  <p id="nome_campo">Total de Itens Saida</p>
-                                  <div class="din">
-                                     
-                                  <input type="text"   readonly = "readonly" name="itens_saida"  id="itens_saida" autocomplete="off">
-                                    </div>
-                              </div>
-                          </div>
-                      </div>
-                      </div>
-          </section>
-         
           <div id="openModal" class="modalDialog">
         
         </div>
-       
-    
       <div class="pega">
           <input id="pega" type="text" value="<?php if (isset($_SESSION['sucesso_cadastro'])) {
                                                     echo $_SESSION['sucesso_cadastro'];
                                                 } else if (isset($_SESSION['erro_cadastro'])) {
                                                     echo $_SESSION['erro_cadastro'];
                                                 } ?>">
-
       </div>
 
       <div class="conteiner" id="conteiner">
@@ -194,15 +140,12 @@
                 }
                 ?>
             </p>
-            <input type="submit" value="OK" id="OK" onclick="confirma()" />
+            <input type="submit" value="OK" id="OK" onclick=" return confirma()" />
+            <input type="submit" value="Cancelar" id="Cancelar" onclick="fechamodal()" />
 
         </div>
     </div>
     </div>
-
-   
-     
-
       
       <script type="text/javascript" src="js/jquery.js"></script>
       <script type="text/javascript" src="js/jquery-ui.min.js"></script>
