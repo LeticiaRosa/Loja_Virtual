@@ -262,6 +262,7 @@ function fechamdal() {
     $('#openModal2').css("display", "none");
     $('#openModal3').css("display", "none");
     $('#openModal4').css("display", "none");
+    $('#openModal5').css("display", "none");
     document.getElementById('codigo').focus();
 }
 
@@ -358,7 +359,28 @@ function fechamodal_menu() {
 
 
 function imprimir_cupom() {
+    $('#conteiner').css("display", "none");
     $('#openModal5').css("display", "inline-block");
+
+    var tabela = document.getElementById("products-table-1");
+    var selecionados = tabela.getElementsByClassName("selecionado");
+    for (i = 0; i < selecionados.length; i++) {
+
+        selecionado = selecionados[i];
+        selecionado = selecionado.getElementsByTagName("td");
+        var newRow = $('<tr>');
+        var cols = "";
+        cols += '<td>' + selecionado[1].innerHTML + '</td>';
+        cols += '<td>' + selecionado[3].innerHTML + '</td>';
+        cols += '<td>' + selecionado[2].innerHTML + '</td>';
+
+        console.log(selecionado[1].innerHTML);
+
+        newRow.append(cols);
+        $("#products-table-90").append(newRow);
+
+    }
+
     window.location.replace("#openModal5");
 
     ///var local = window.location.href = "Teste.php";

@@ -30,7 +30,7 @@
                 <div class="form-wraper-90">
                     <div class="col-90">
                         <div class="Tabela-90">
-                            <table class="tabela-90">
+                            <table id="products-table-90" class="tabela-90" >
                                 <thead>
                                     <tr>
                                         <th>Nome</th>
@@ -39,9 +39,9 @@
                                         <th>Valor Total</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="linhas">
                                     
-                                </tbody id="linhas">
+                                </tbody >
                             </table>
 
                         </div>
