@@ -49,23 +49,27 @@
                     </div>
                 </div>
 
-                <div class="form-wraper-90">
-                    <div class="col-90">
+                <div class="rodape-90">
+                    <div class="col_rodape-90">
                         <p id="Forma_pagamento">Tipo_pagamento:</p>
-                        <p id="Parcelas" >Qtd_parcelas:</p>
-                        <p id="Valor" >Sub Total:</p>
-                        <p id="Desconto" >Valor Desconto:</p>
+                        <p id="Parcelas">Qtd_parcelas:</p>
+                        <p id="Valor">Sub Total:</p>
+                        <p id="Desconto">Valor Desconto:</p>
                         <p id="Valor_venda">Valor Total:</p>
                     </div>
 
                 </div>
-
+                <div class="form-wraper-90">
+                    <div class="col-90">
+                        <input type="button" id="btn" onclick="window.print()" value="Imprimir" />
+                    </div>
+                </div>
             </div>
 
         </section>
 
     </div>
-    <input type="button" id="btn" onclick="window.print()" value="Imprimir" />
+
 
 
 </body>
