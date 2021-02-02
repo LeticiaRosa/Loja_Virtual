@@ -677,6 +677,7 @@ section.cover-form-90 {
     text-align: center;
     align-items: center;
     justify-content: center;
+    background-color: white;
     width: 100%;
 }
 
@@ -746,6 +747,15 @@ section.cover-form-90 {
 }
 
 @media print {
+    #btn,
+    .modalDialog,
+    .close {
+        display: none;
+        padding: 0px;
+    }
+    .section.cover-form-90 {
+        width: 100%;
+    }
     .form-container-90 {
         margin-top: 15px;
         margin-left: -5px;
