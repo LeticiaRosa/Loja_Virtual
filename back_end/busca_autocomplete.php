@@ -433,3 +433,22 @@ $json = json_encode($dados1);
 	echo $json;
 
 endif;
+
+
+if ($acao == 'lista_movimento') :
+
+	$sql= "SELECT DATE_format(E.DATA_MOVIMENTO, '%d-%m-%Y') AS DATA_MOVIMENTO, E.ID_PRODUTO AS ID_PRODUTO , P.NOME AS NOME_PRODUTO, E.QTD AS QUANTIDADE, E.TIPO_MOVIMENTO AS TIPO_MOVI
+	FROM CONTRO_ESTOQUE AS E
+	INNER JOIN PRODUTO AS P
+	ON E.ID_PRODUTO = P.ID_PRODUTO 
+	WHERE P.ID_EMPRESA = '$empresa' ";
+
+	$stm = $conexao->prepare($sql);
+	$stm->bindValue(1, $parametro);
+	$stm->execute();
+	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
+
+	$json = json_encode($dados);
+
+	echo $json;
+endif;

@@ -244,16 +244,20 @@ function confirma() {
     if (texto == "Deseja Salvar esse Movimento?") {
         $('#conteiner').css("display", "none");
         finalizar_movimento();
-        document.location.reload();
-        $('#conteiner').css("display", "flex");
-        $('#Texto').html("Salvo com sucesso");
-        return false;
+        $('#conteiner-3').css("display", "flex");
+        $('#Texto-3').html("Salvo com sucesso");
 
     } else if (texto == "Deseja Cancelar Movimento?") {
         document.location.reload();
         fechamdal();
     }
 
+}
+
+
+function salvao() {
+    $('#conteiner-3').css("display", "none");
+    document.location.reload();
 }
 
 
