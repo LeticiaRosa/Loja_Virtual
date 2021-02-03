@@ -95,7 +95,7 @@
 
                 
                 <div class="col11 limpa">
-                        <p> Valor Total Da Venda:</p>
+                        <p> Subtotal:</p>
                         <input type="text" name="Valor_total" id="Valor_total" readonly="readonly" placeholder="Valor" autocomplete="off">
                     </div>
                 
@@ -107,9 +107,25 @@
                      <input type="text" name="desconto" id="desconto" required onkeyup="chamda()" placeholder="% Valor"  autocomplete="off" maxlength="2"> 
                     </div>
 
-                <div class="col11 limpa">
-                    <p> Valor Total Após Desconto:</p>
+                <div class="col11 limpa ">
+                    <p> Total Final:</p>
                     <input type="text" name="tl_fim" id="tl_fim" readonly="readonly" placeholder="Valor Fim">
+                </div>
+
+                <div class="col11 limpa ">
+                    <p> Total Final:</p>
+                    <input type="text" name="tl_fim" id="tl_fim" readonly="readonly" placeholder="Valor Fim">
+                </div>
+
+                <div class = "troco_habilitar" id = "troco_habilitar">
+                <div class="col11 limpa">
+                    <p> Dinheiro:</p>
+                    <input type="text" name="dinheiro_1" id="dinheiro_1" onkeyup = "calcula_troco()" placeholder="Dinheiro">
+                </div>
+                
+                <div class="col11 limpa">
+               Dar R$:  <label  name="troco" id="troco" readonly="readonly" placeholder="Troco"> </label>
+                </div>
                 </div>
                 
                 <div class="enviar">
