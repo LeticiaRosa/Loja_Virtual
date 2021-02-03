@@ -734,10 +734,10 @@ section.cover-form-90 {
     border-right: 0.5px dashed black;
 }
 
-<<<<<<< HEAD
 .troco_habilitar {
     display: none;
-=======
+}
+
 .rodape-90 {
     display: flex;
 }
@@ -791,7 +791,6 @@ section.cover-form-90 {
     font-size: 25px;
     border: 0;
     border-radius: 10px;
->>>>>>> 0feed26c97cad30706a36746ae2dfea539f9a8d6
 }
 
 #cupom {
