@@ -510,7 +510,8 @@ td {
 .col10 #total_itens,
 .col11 #Valor_total,
 .col11 #desconto,
-.col11 #tl_fim {
+.col11 #tl_fim,
+.col11 #dinheiro_1 {
     background-color: rgba(214, 226, 217, 0.8);
     width: 100%;
     height: 40px;

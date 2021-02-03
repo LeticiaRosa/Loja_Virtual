@@ -112,10 +112,7 @@
                     <input type="text" name="tl_fim" id="tl_fim" readonly="readonly" placeholder="Valor Fim">
                 </div>
 
-                <div class="col11 limpa ">
-                    <p> Total Final:</p>
-                    <input type="text" name="tl_fim" id="tl_fim" readonly="readonly" placeholder="Valor Fim">
-                </div>
+                
 
                 <div class = "troco_habilitar" id = "troco_habilitar">
                 <div class="col11 limpa">
