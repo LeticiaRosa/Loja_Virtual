@@ -26,18 +26,18 @@
                     <div class="form-wraper">
                     <div class="col">
                           <p> Quem está retirando: *</p>
-                          <input type="text" name="nome" id="nome" placeholder="Nome" maxlength="30">
+                          <input type="text" name="nome" id="nome"  required placeholder="Nome" maxlength="30">
                       </div>
                     </div>
                     <div class="form-wraper">
                         <div class="col">
                             <p>Observação:</p>
-                            <input type="text" name="observacao" id="observacao" placeholder="Observação" autocomplete="off" maxlength="100">
+                            <input type="text" name="observacao" id="observacao" required placeholder="Observação" autocomplete="off" maxlength="100">
                         </div>
                     </div>
                     
                       <div class="enviar">
-                          <input type="submit" name="Retirar" id="Retirar" value="Retirar" />
+                          <input type="submit" name="Retirar" id="Retirar" onclick="teste()" value="Retirar" />
                           <input type="button" name="Cancelar" id="Cancelar" value="Cancelar" onclick="fechamdal()">                
           </form>  
      </div>   

@@ -266,6 +266,7 @@ function fechamdal() {
     $('#openModal3').css("display", "none");
     $('#openModal4').css("display", "none");
     $('#openModal5').css("display", "none");
+    $('#openModal6').css("display", "none");
 
     document.getElementById('codigo').focus();
 }
@@ -331,59 +332,99 @@ function fechamodal_menu() {
 }
 
 
-function imprimir_cupom(EMPRESA) {
-    jQuery.ajax({
-        url: "back_end/busca_autocomplete.php",
-        dataType: "json",
-        data: {
-            acao: 'busca_dados_cupom',
-            parametro: EMPRESA,
-        },
-        success: function(data) {
-            caixa = data.map(d => d.caixa);
-            CNPJ = data.map(d => d.CNPJ);
-            ENDERECO = data.map(d => d.ENDERECO);
-            nome_empresa = data.map(d => d.nome_empresa);
-            document.getElementById('empresa-90').innerHTML = nome_empresa;
-            document.getElementById('endereco-90').innerHTML = ENDERECO;
-            document.getElementById('CNPJ-90').innerHTML = 'CNPJ:' + CNPJ;
-            document.getElementById('caixa-90').innerHTML = 'Caixa:' + caixa;
+function imprimir_cupom(EMPRESA, tela) {
+    if (tela == "Retirada realizada com sucesso!") {
+
+        jQuery.ajax({
+            url: "back_end/busca_autocomplete.php",
+            dataType: "json",
+            data: {
+                acao: 'busca_dados_cupom',
+                parametro: EMPRESA,
+            },
+            success: function(data) {
+                caixa = data.map(d => d.caixa);
+                CNPJ = data.map(d => d.CNPJ);
+                ENDERECO = data.map(d => d.ENDERECO);
+                nome_empresa = data.map(d => d.nome_empresa);
+                document.getElementById('empresa-91').innerHTML = nome_empresa;
+                document.getElementById('caixa-91').innerHTML = 'Caixa:' + caixa;
+            }
+
+
+
+        });
+
+        $('#conteiner').css("display", "none");
+        window.location.replace("#openModal6");
+        $('#openModal6').css("display", "inline-block");
+        var Dados_cupom = JSON.parse(localStorage.getItem('cupom_retirada'));
+        for (i = 0; i < Dados_cupom.length; i++) {
+            document.getElementById('valor').innerHTML = "Valor Retirada: " + Dados_cupom[i].Valor;
+            document.getElementById('Pessoa').innerHTML = "Pessoa Retirou :" + Dados_cupom[i].Pessoa;
+            document.getElementById('obs').innerHTML = "Motivo Retirada :" + Dados_cupom[i].Obs;
+            document.getElementById('ass').innerHTML = "Ass:" + "_______________________"
         }
+        time();
+        localStorage.clear();
+
+    } else {
+
+
+        jQuery.ajax({
+            url: "back_end/busca_autocomplete.php",
+            dataType: "json",
+            data: {
+                acao: 'busca_dados_cupom',
+                parametro: EMPRESA,
+            },
+            success: function(data) {
+                caixa = data.map(d => d.caixa);
+                CNPJ = data.map(d => d.CNPJ);
+                ENDERECO = data.map(d => d.ENDERECO);
+                nome_empresa = data.map(d => d.nome_empresa);
+                document.getElementById('empresa-90').innerHTML = nome_empresa;
+                document.getElementById('endereco-90').innerHTML = ENDERECO;
+                document.getElementById('CNPJ-90').innerHTML = 'CNPJ:' + CNPJ;
+                document.getElementById('caixa-90').innerHTML = 'Caixa:' + caixa;
+            }
 
 
 
-    });
+        });
 
 
-    $('#conteiner').css("display", "none");
-    window.location.replace("#openModal5");
-    $('#openModal5').css("display", "inline-block");
-    var Dados_cupom = JSON.parse(localStorage.getItem('seção'));
-    for (i = 0; i < Dados_cupom.length; i++) {
-        var total = parseFloat(Dados_cupom[i].Valor) * Dados_cupom[i].quantidade;
-        var newRow = $('<tr >');
-        var cols = "";
-        cols += '<td>' + Dados_cupom[i].Nome_produto + '</td>';
-        cols += '<td>' + Dados_cupom[i].quantidade + '</td>';
-        cols += '<td>' + formatarMoeda(parseFloat(Dados_cupom[i].Valor)) + '</td>';
-        cols += '<td>' + formatarMoeda(total) + '</td>';
+        $('#conteiner').css("display", "none");
+        window.location.replace("#openModal5");
+        $('#openModal5').css("display", "inline-block");
+        var Dados_cupom = JSON.parse(localStorage.getItem('seção'));
+        for (i = 0; i < Dados_cupom.length; i++) {
+            var total = parseFloat(Dados_cupom[i].Valor) * Dados_cupom[i].quantidade;
+            var newRow = $('<tr >');
+            var cols = "";
+            cols += '<td>' + Dados_cupom[i].Nome_produto + '</td>';
+            cols += '<td>' + Dados_cupom[i].quantidade + '</td>';
+            cols += '<td>' + formatarMoeda(parseFloat(Dados_cupom[i].Valor)) + '</td>';
+            cols += '<td>' + formatarMoeda(total) + '</td>';
 
 
 
-        newRow.append(cols);
-        $("#products-table-90").append(newRow);
+            newRow.append(cols);
+            $("#products-table-90").append(newRow);
+
+        }
+        total_desc = parseFloat(Dados_cupom[0].Valor_total) - parseFloat(Dados_cupom[0].Valor_final)
+        document.getElementById('Forma_pagamento').innerHTML = "Tipo Pagamento:" + Dados_cupom[0].pagamento;
+        document.getElementById('Parcelas').innerHTML = "Qtd Parcelas:" + Dados_cupom[0].parcelas;
+        document.getElementById('Valor').innerHTML = "Sub Total:" + Dados_cupom[0].Valor_total;
+        document.getElementById('Desconto').innerHTML = "Desconto: " + formatarMoeda(total_desc);
+        document.getElementById('Valor_venda').innerHTML = "Valor Total " + Dados_cupom[0].Valor_final;
+
+        /// console.log(Dados_cupom);
+        time();
+        localStorage.clear();
 
     }
-    total_desc = parseFloat(Dados_cupom[0].Valor_total) - parseFloat(Dados_cupom[0].Valor_final)
-    document.getElementById('Forma_pagamento').innerHTML = "Tipo Pagamento:" + Dados_cupom[0].pagamento;
-    document.getElementById('Parcelas').innerHTML = "Qtd Parcelas:" + Dados_cupom[0].parcelas;
-    document.getElementById('Valor').innerHTML = "Sub Total:" + Dados_cupom[0].Valor_total;
-    document.getElementById('Desconto').innerHTML = "Desconto: " + formatarMoeda(total_desc);
-    document.getElementById('Valor_venda').innerHTML = "Valor Total " + Dados_cupom[0].Valor_final;
-
-    /// console.log(Dados_cupom);
-    time();
-    localStorage.clear();
 }
 
 
@@ -432,4 +473,13 @@ function time() {
     var str_data = dia + '-' + (mes) + '-' + ano4;
     document.getElementById('data_cupom').innerHTML = "Data: " + str_data;
     document.getElementById('hr_cupom').innerHTML = "Hora: " + str_hora;
+}
+
+
+function teste() {
+    var Cupom_retirada = new Array();
+    Cupom_retirada.push({ "Valor": document.getElementById('Valor').value, "Pessoa": document.getElementById('nome').value, "Obs": document.getElementById('observacao').value })
+    localStorage.setItem('cupom_retirada', JSON.stringify(Cupom_retirada));
+
+
 }

@@ -18,13 +18,18 @@
                 <h1>CUPOM DE RETIRADA </h1>
                 <div class="form-wraper-90">
                     <div class="col-90">
-                        <p id="empresa-90"></p>
-                        <p id="caixa-90"></p>
+                        <p id="empresa-91"></p>
+                        <p id="caixa-91"></p>
                         <p id="valor"></p>
                         <p id="Pessoa"></p>
                         <p id="obs"></p>
-                        <p id="ass"></p>
 
+
+                    </div>
+                </div>
+                <div class="form-wraper-90">
+                    <div class="col-90">
+                        <p id="ass"></p>
                     </div>
                 </div>
                 <div class="form-wraper-90">

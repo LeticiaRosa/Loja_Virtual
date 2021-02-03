@@ -172,6 +172,11 @@
             <?php include_once("Cupom.php"); ?>
         </div>
         </div>
+        <div id="openModal6" class="modalDialog">
+        <div><a href="#close" title="Close" class="close">X</a>
+            <?php include_once("cupom_retirada.php");?>
+        </div>
+        </div>
     
       <div class="pega">
           <input id="pega" type="text" value="<?php if (isset($_SESSION['sucesso_cadastro'])) {
@@ -189,6 +194,7 @@
                 if (isset($_SESSION['sucesso_cadastro'])) {
                     echo $_SESSION['sucesso_cadastro'];
                     unset($_SESSION['sucesso_cadastro']);
+                    
                 } ?>
             </p>
             <p id="Texto"> <?php
@@ -201,7 +207,7 @@
             </p>
             <input type="submit" value="OK" id="OK" onclick="confirma()" />
             <p></p>
-            <input type="button" value="Gerar Cupom" id="cupom" onclick=" imprimir_cupom(<?php echo $_SESSION['empresausuario']?>)" />
+            <input type="button" value="Gerar Cupom" id="cupom" onclick=" imprimir_cupom(<?php echo $_SESSION['empresausuario']?>, document.getElementById('pega').value)" />
 
         </div>
     </div>
