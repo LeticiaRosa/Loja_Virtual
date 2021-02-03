@@ -229,10 +229,7 @@ function cal() {
     valor_s_d = document.getElementById('Valor_total').value.replace(".", "");
     desconto = document.getElementById('desconto').value;
     procentagem = parseFloat(valor_s_d) * parseFloat(desconto) / 100;
-<<<<<<< HEAD
 
-=======
->>>>>>> 0feed26c97cad30706a36746ae2dfea539f9a8d6
     if (desconto == 0) {
         document.getElementById('tl_fim').value = formatarMoeda(valor_s_d)
     } else {
@@ -476,7 +473,6 @@ function Armazena_cupom() {
 
         selecionado = selecionados[i];
         selecionado = selecionado.getElementsByTagName("td");
-<<<<<<< HEAD
         var newRow = $('<tr>');
         var cols = "";
         cols += '<td>' + selecionado[1].innerHTML + '</td>';
@@ -487,9 +483,7 @@ function Armazena_cupom() {
 
         newRow.append(cols);
         $("#products-table-90").append(newRow);
-=======
         Cupom.push({ "Nome_produto": selecionado[1].innerHTML, "quantidade": selecionado[3].innerHTML, "Valor": selecionado[2].innerHTML, "Valor_total": document.getElementById('Valor_total').value, "Valor_final": document.getElementById('tl_fim').value, "pagamento": document.getElementById('pagamento').value, "parcelas": document.getElementById('forma_pagamento').value });
->>>>>>> 0feed26c97cad30706a36746ae2dfea539f9a8d6
 
         localStorage.setItem('seção', JSON.stringify(Cupom));
     }
