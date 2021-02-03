@@ -161,7 +161,7 @@ function finalizar_venda() {
     document.getElementById('Cliente').value = cliente;
     document.getElementById('total_itens').value = itens;
     document.getElementById('Valor_total').value = venda;
-    document.getElementById('tl_fim').value = venda;;
+    document.getElementById('tl_fim').value = venda;
     document.getElementById('desconto').value = 0;
     var dados = new Array();
     var tabela = document.getElementById("products-table-1");
@@ -229,7 +229,10 @@ function cal() {
     valor_s_d = document.getElementById('Valor_total').value.replace(".", "");
     desconto = document.getElementById('desconto').value;
     procentagem = parseFloat(valor_s_d) * parseFloat(desconto) / 100;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0feed26c97cad30706a36746ae2dfea539f9a8d6
     if (desconto == 0) {
         document.getElementById('tl_fim').value = formatarMoeda(valor_s_d)
     } else {
@@ -238,7 +241,11 @@ function cal() {
         total_desc = parseFloat(valor_s_d) - parseFloat(procentagem);
 
         document.getElementById('tl_fim').value = formatarMoeda(total_desc);
+
+
+
     }
+
 };
 
 const round = (num, places) => {
@@ -295,6 +302,7 @@ function fechamdal() {
     $('#openModal3').css("display", "none");
     $('#openModal4').css("display", "none");
     $('#openModal5').css("display", "none");
+
     document.getElementById('codigo').focus();
 }
 
@@ -353,37 +361,6 @@ function confirma() {
     }
 }
 
-/*
-window.onload = function() {
-
-    $.ajax({
-        url: "back_end/busca_autocomplete.php",
-        dataType: "json",
-        data: {
-            acao: 'BUSCA_CAIXA_ABERTO'
-        },
-        success: function(data) {
-            console.log(data);
-        }
-    });
-
-    var select = document.getElementById('pega').value;
-    console.log(select);
-    if (select == "Caixa precisa estar aberto para efetuar vendas!") {
-        $('#conteiner').css("display", "flex");
-        return false;
-
-    } else if (select == "Erro ao abrir caixa!") {
-        $('#conteiner').css("display", "flex");
-        return false;
-    } else {
-
-        return true;
-    }
-
-
-}
-*/
 
 function fechamodal_menu() {
     $('#conteiner-1').css("display", "none");
@@ -392,14 +369,49 @@ function fechamodal_menu() {
 
 function imprimir_cupom() {
     $('#conteiner').css("display", "none");
+    window.location.replace("#openModal5");
     $('#openModal5').css("display", "inline-block");
+    var Dados_cupom = JSON.parse(localStorage.getItem('seção'));
+    for (i = 0; i < Dados_cupom.length; i++) {
+        var total = Dados_cupom[i].Valor * Dados_cupom[i].quantidade;
+        var newRow = $('<tr >');
+        var cols = "";
+        cols += '<td>' + Dados_cupom[i].Nome_produto + '</td>';
+        cols += '<td>' + Dados_cupom[i].quantidade + '</td>';
+        cols += '<td>' + Dados_cupom[i].Valor + '</td>';
+        cols += '<td>' + total + '</td>';
 
+
+
+        newRow.append(cols);
+        $("#products-table-90").append(newRow);
+
+    }
+    total_desc = parseFloat(Dados_cupom[0].Valor_total) - parseFloat(Dados_cupom[0].Valor_final)
+    document.getElementById('Forma_pagamento').innerHTML = "Tipo Pagamento:" + Dados_cupom[0].pagamento;
+    document.getElementById('Parcelas').innerHTML = "Qtd Parcelas:" + Dados_cupom[0].parcelas;
+    document.getElementById('Valor').innerHTML = "Sub Total:" + Dados_cupom[0].Valor_total;
+    document.getElementById('Desconto').innerHTML = "Desconto: " + formatarMoeda(total_desc);
+    document.getElementById('Valor_venda').innerHTML = "Valor Total " + Dados_cupom[0].Valor_final;
+
+    console.log(Dados_cupom);
+
+    localStorage.clear();
+}
+
+///var local = window.location.href = "Teste.php";
+
+
+
+function Armazena_cupom() {
+    var Cupom = new Array();
     var tabela = document.getElementById("products-table-1");
     var selecionados = tabela.getElementsByClassName("selecionado");
     for (i = 0; i < selecionados.length; i++) {
 
         selecionado = selecionados[i];
         selecionado = selecionado.getElementsByTagName("td");
+<<<<<<< HEAD
         var newRow = $('<tr>');
         var cols = "";
         cols += '<td>' + selecionado[1].innerHTML + '</td>';
@@ -410,13 +422,12 @@ function imprimir_cupom() {
 
         newRow.append(cols);
         $("#products-table-90").append(newRow);
+=======
+        Cupom.push({ "Nome_produto": selecionado[1].innerHTML, "quantidade": selecionado[3].innerHTML, "Valor": selecionado[2].innerHTML, "Valor_total": document.getElementById('Valor_total').value, "Valor_final": document.getElementById('tl_fim').value, "pagamento": document.getElementById('pagamento').value, "parcelas": document.getElementById('forma_pagamento').value });
+>>>>>>> 0feed26c97cad30706a36746ae2dfea539f9a8d6
 
+        localStorage.setItem('seção', JSON.stringify(Cupom));
     }
-
-    window.location.replace("#openModal5");
-
-    ///var local = window.location.href = "Teste.php";
-
 
 
 }

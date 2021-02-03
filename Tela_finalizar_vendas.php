@@ -129,7 +129,7 @@
                 </div>
                 
                 <div class="enviar">
-                    <input type="submit" name="Confirmar" id="Confirmar" value="Confirmar" />
+                    <input type="submit" name="Confirmar" id="Confirmar" value="Confirmar" onclick="Armazena_cupom()" />
 
                     <input type="button" name="Cancelar" id="Cancelar" value="Cancelar" onclick="window.location.href='tela_caixa.php'">
                    

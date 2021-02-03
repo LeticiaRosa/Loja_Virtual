@@ -18,8 +18,9 @@
                 <h1>CUPOM NÃO FISCAL </h1>
                 <div class="form-wraper-90">
                     <div class="col-90">
-                        <p id="empresa-90">Empresa</p>
-                        <p id="endereco-90">Rua luiza mascarenhas ,177,jadim Pirineus</p>
+                        <p id="empresa-90"></p>
+                        <p id="endereco-90"></p>
+                        <p id="CNPJ-90">CNPJ:</p>
 
                     </div>
 
@@ -30,7 +31,7 @@
                 <div class="form-wraper-90">
                     <div class="col-90">
                         <div class="Tabela-90">
-                            <table id="products-table-90" class="tabela-90" >
+                            <table id="products-table-90" class="tabela-90">
                                 <thead>
                                     <tr>
                                         <th>Nome</th>
@@ -40,22 +41,35 @@
                                     </tr>
                                 </thead>
                                 <tbody id="linhas">
-                                    
-                                </tbody >
+
+                                </tbody>
                             </table>
 
                         </div>
                     </div>
                 </div>
 
+                <div class="rodape-90">
+                    <div class="col_rodape-90">
+                        <p id="Forma_pagamento">Tipo_pagamento:</p>
+                        <p id="Parcelas">Qtd_parcelas:</p>
+                        <p id="Valor">Sub Total:</p>
+                        <p id="Desconto">Valor Desconto:</p>
+                        <p id="Valor_venda">Valor Total:</p>
+                    </div>
 
-
+                </div>
+                <div class="form-wraper-90">
+                    <div class="col-90">
+                        <input type="button" id="btn" onclick="window.print()" value="Imprimir" />
+                    </div>
+                </div>
             </div>
 
         </section>
 
     </div>
-    <!-- <input type="button" id="btn" onclick="window.print()" value="Imprimir" />-->
+
 
 
 </body>

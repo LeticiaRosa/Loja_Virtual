@@ -677,6 +677,7 @@ section.cover-form-90 {
     text-align: center;
     align-items: center;
     justify-content: center;
+    background-color: white;
     width: 100%;
 }
 
@@ -728,6 +729,7 @@ section.cover-form-90 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 10px;
     border-collapse: collapse;
+    text-transform: uppercase;
 }
 
 .tabela-90 td,
@@ -745,11 +747,57 @@ section.cover-form-90 {
     border-right: 0.5px dashed black;
 }
 
+<<<<<<< HEAD
 .troco_habilitar {
     display: none;
+=======
+.rodape-90 {
+    display: flex;
+}
+
+.col_rodape-90 {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: left;
+    justify-content: left;
+    justify-items: left;
+}
+
+.col_rodape-90 p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-align: left;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#btn {
+    background-color: rgba(71, 92, 71, 0.8);
+    text-transform: uppercase;
+    color: white;
+    width: 25%;
+    height: 45px;
+    cursor: pointer;
+    font-size: 25px;
+    border: 0;
+    border-radius: 10px;
+>>>>>>> 0feed26c97cad30706a36746ae2dfea539f9a8d6
 }
 
 @media print {
+    #btn,
+    .modalDialog,
+    .close {
+        display: none;
+        padding: 0px;
+    }
+    .section.cover-form-90 {
+        width: 100%;
+    }
     .form-container-90 {
         margin-top: 15px;
         margin-left: -5px;
