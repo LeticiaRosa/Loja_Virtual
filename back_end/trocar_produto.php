@@ -79,6 +79,8 @@ if (isset($_POST['Confirmar'])) {
             $resultado = $resultado + mysqli_query($conexao, $INSERT_ITENS);
             $update_protudo = "update produto set quantidade=quantidade+'$quantidade_e' where id_produto=' $id_produto_e'";
             $resultado = $resultado + mysqli_query($conexao, $update_protudo);
+            $INSERT_MOVIMENTO="INSERT INTO CONTRO_ESTOQUE (ID_PRODUTO,QTD,TIPO_MOVIMENTO,ORIGEM,DATA_MOVIMENTO,ID_USUARIO,DATA_CADASTRO)VALUES('$id_produto_e',' $quantidade_e','Entrada','Troca Produto',CURDATE(),'$id_usuario',NOW())";
+            $resultado = $resultado + mysqli_query($conexao, $INSERT_MOVIMENTO);
         };
 
         for ($j = 0; $j < count($_SESSION['id_s']); $j++) {
@@ -92,6 +94,8 @@ if (isset($_POST['Confirmar'])) {
             $resultado = $resultado + mysqli_query($conexao, $INSERT_ITENS_s);
             $update_protudo_s = "update produto set quantidade=quantidade-'$quantidade_s' where id_produto=' $id_produto_s'";
             $resultado = $resultado + mysqli_query($conexao, $update_protudo_s);
+            $INSERT_MOVIMENTO_s="INSERT INTO CONTRO_ESTOQUE (ID_PRODUTO,QTD,TIPO_MOVIMENTO,ORIGEM,DATA_MOVIMENTO,ID_USUARIO,DATA_CADASTRO)VALUES('$id_produto_s',' $quantidade_s','Saida','Troca Produto',CURDATE(),'$id_usuario',NOW())";
+            $resultado = $resultado + mysqli_query($conexao, $INSERT_MOVIMENTO_s);
         };
         if($resultado>=1){
             $_SESSION['sucesso_cadastro'] = "Troca Realizada Com Sucesso!";

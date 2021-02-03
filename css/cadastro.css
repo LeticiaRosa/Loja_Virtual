@@ -275,6 +275,19 @@ section.cover-form {
     margin-right: 141px;
 }
 
+#cod_referencia:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    cursor: default;
+}
+
+#cod_referencia:hover {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    cursor: default;
+}
+
 @media screen and (max-width: 900px) {
     .botao {
         width: 100%;

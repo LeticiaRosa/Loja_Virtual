@@ -18,7 +18,7 @@ $(async function() {
                 quantidate = data.map(d => d.quantidade);
                 valor = data.map(d => d.PRECO_VENDA);
                 codigo = data.map(d => d.codigo_barras)
-                document.getElementById('valor_produto').value = valor + ',00';
+                document.getElementById('valor_produto').value = formatarMoeda(parseFloat(valor));
                 document.getElementById('qtd_estoque').value = quantidate;
                 document.getElementById('produto1').value = nome;
                 document.getElementById('codigo').value = codigo;
@@ -46,7 +46,7 @@ $(async function() {
                 codigo = data.map(d => d.codigo_barras)
 
                 //   document.getElementById('Id').value = id;
-                document.getElementById('valor_produto').value = valor + ',00';
+                document.getElementById('valor_produto').value = formatarMoeda(parseFloat(valor));
                 document.getElementById('qtd_estoque').value = quantidate;
                 document.getElementById('produto1').value = nome;
                 document.getElementById('codigo').value = codigo;
@@ -57,6 +57,16 @@ $(async function() {
     }
 });
 
+function formatarMoeda(moeda) {
+    atual = moeda
+    var f2 = atual.toLocaleString('pt-br', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    });
+
+    //console.log(f2);
+    return f2;
+}
 
 function fechamodal_menu() {
     $('#conteiner-1').css("display", "none");

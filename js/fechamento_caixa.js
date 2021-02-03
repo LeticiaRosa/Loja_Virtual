@@ -78,27 +78,23 @@ $(async function() {
             TOTAL = data.map(d => d.TOTAL);
             QUANTIDADE = data.map(d => d.QUANTIDADE);
 
+
             for (i = 0; i < data.length; i++) {
-                total_f = formatarMoeda(TOTAL[i]);
+                total_f = formatarMoeda(parseFloat(TOTAL[i]));
                 var newRow = $('<tr class = "corpo selecionado" >');
                 var cols = "";
                 cols += '<td>' + TIPO_VENDA[i] + '</td>';
                 cols += '<td>' + 'R$' + total_f + '</td>';
                 cols += '<td>' + QUANTIDADE[i] + '</td>';
 
-                if (TIPO_VENDA[i] == 'Retiradas') {
-                    venda_total = venda_total - parseFloat(TOTAL[i]);
-                    tirar = tirar - parseFloat(QUANTIDADE[i]);
 
 
-                } else {
-
-                    qtd_total = qtd_total + parseFloat(QUANTIDADE[i]) - tirar;
-                    venda_total = venda_total + parseFloat(TOTAL[i]);
+                qtd_total = qtd_total + parseFloat(QUANTIDADE[i]);
+                venda_total = venda_total + parseFloat(TOTAL[i]);
 
 
-                    //console.log(parseFloat(QUANTIDADE[i]));
-                }
+                //console.log(parseFloat(QUANTIDADE[i]));
+
                 newRow.append(cols);
                 $("#products-table").append(newRow);
 
@@ -118,9 +114,9 @@ $(async function() {
                 selecionado = selecionado.getElementsByTagName("td");
                 console.log(selecionado[0].innerHTML);
                 if (selecionado[0].innerHTML == "Retiradas") {
-                    selecionado[0].style.color = "red";
-                    selecionado[1].style.color = "red";
-                    selecionado[2].style.color = "red";
+                    selecionado[0].style.color = "#b8b337";
+                    selecionado[1].style.color = "#b8b337";
+                    selecionado[2].style.color = "#b8b337";
                 } else if (selecionado[0].innerHTML == "Anotar") {
                     selecionado[0].style.color = "#ffb34f";
                     selecionado[1].style.color = "#ffb34f";

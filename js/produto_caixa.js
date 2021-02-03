@@ -367,19 +367,42 @@ function fechamodal_menu() {
 }
 
 
-function imprimir_cupom() {
+function imprimir_cupom(EMPRESA) {
+    jQuery.ajax({
+        url: "back_end/busca_autocomplete.php",
+        dataType: "json",
+        data: {
+            acao: 'busca_dados_cupom',
+            parametro: EMPRESA,
+        },
+        success: function(data) {
+            caixa = data.map(d => d.caixa);
+            CNPJ = data.map(d => d.CNPJ);
+            ENDERECO = data.map(d => d.ENDERECO);
+            nome_empresa = data.map(d => d.nome_empresa);
+            document.getElementById('empresa-90').innerHTML = nome_empresa;
+            document.getElementById('endereco-90').innerHTML = ENDERECO;
+            document.getElementById('CNPJ-90').innerHTML = 'CNPJ:' + CNPJ;
+            document.getElementById('caixa-90').innerHTML = 'Caixa:' + caixa;
+        }
+
+
+
+    });
+
+
     $('#conteiner').css("display", "none");
     window.location.replace("#openModal5");
     $('#openModal5').css("display", "inline-block");
     var Dados_cupom = JSON.parse(localStorage.getItem('seção'));
     for (i = 0; i < Dados_cupom.length; i++) {
-        var total = Dados_cupom[i].Valor * Dados_cupom[i].quantidade;
+        var total = parseFloat(Dados_cupom[i].Valor) * Dados_cupom[i].quantidade;
         var newRow = $('<tr >');
         var cols = "";
         cols += '<td>' + Dados_cupom[i].Nome_produto + '</td>';
         cols += '<td>' + Dados_cupom[i].quantidade + '</td>';
-        cols += '<td>' + Dados_cupom[i].Valor + '</td>';
-        cols += '<td>' + total + '</td>';
+        cols += '<td>' + formatarMoeda(parseFloat(Dados_cupom[i].Valor)) + '</td>';
+        cols += '<td>' + formatarMoeda(total) + '</td>';
 
 
 
@@ -394,10 +417,11 @@ function imprimir_cupom() {
     document.getElementById('Desconto').innerHTML = "Desconto: " + formatarMoeda(total_desc);
     document.getElementById('Valor_venda').innerHTML = "Valor Total " + Dados_cupom[0].Valor_final;
 
-    console.log(Dados_cupom);
-
+    /// console.log(Dados_cupom);
+    time();
     localStorage.clear();
 }
+
 
 ///var local = window.location.href = "Teste.php";
 
@@ -430,4 +454,31 @@ function Armazena_cupom() {
     }
 
 
+}
+
+
+function time() {
+    function adicionaZero(numero) {
+        if (numero <= 9)
+            return "0" + numero;
+        else
+            return numero;
+    }
+    var data = new Date();
+    var dia = data.getDate(); // 1-31
+    var mes = data.getMonth(); // 0-11 (zero=janeiro)
+    var ano4 = data.getFullYear(); // 4 dígitos
+    var hora = data.getHours(); // 0-23
+    var min = data.getMinutes(); // 0-59
+    var seg = data.getSeconds(); // 0-59
+
+    seg = adicionaZero(seg.toString());
+    min = adicionaZero(min.toString());
+    dia = adicionaZero(dia.toString());
+    mes = mes + 1;
+    mes = adicionaZero(mes.toString());
+    var str_hora = hora + ':' + min + ':' + seg;
+    var str_data = dia + '-' + (mes) + '-' + ano4;
+    document.getElementById('data_cupom').innerHTML = "Data: " + str_data;
+    document.getElementById('hr_cupom').innerHTML = "Hora: " + str_hora;
 }

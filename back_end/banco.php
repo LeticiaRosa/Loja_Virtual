@@ -7,8 +7,10 @@ $nome = $_POST['nome'];
 $descricao= $_POST['descricao'];
 $id_categoria=$_POST['id_categoria'];  
 $id_sub_categoria=$_POST['id_sub_categoria'];  
-$preco_venda=$_POST['preco_venda']; 
-$preco_custo=$_POST['preco_custo'];
+$preco_venda = $_POST['preco_venda'];
+$VENDA=str_replace(',','.',str_replace('.','',$preco_venda));
+$preco_custo = $_POST['preco_custo'];
+$CUSTO=str_replace(',','.',str_replace('.','',$preco_custo));
 $quantidade=$_POST['quantidade'];
 $id_fornecedor=$_POST['id_fornecedor'];
 $marca=$_POST['marca'];
@@ -40,7 +42,7 @@ $cod_referencia = $_POST['cod_referencia'];
         $variavel_sub = "'{$variavel_2['id_sub_categoria']}'";
     }
 
-    $query_2 = "insert into produto (nome, descricao, id_categoria,id_sub_categoria, preco_venda, preco_custo,quantidade, id_fornecedor, marca, unidade_medida, valor_medida, observacao,id_usuario ,data_cadastro, id_empresa,CODIGO_REFERENCIA) values ('$nome', '$descricao', '{$variavel['id_categoria']}', $variavel_sub ,'$preco_venda','$preco_custo' ,'$quantidade', '{$variavel_1['id_fornecedor']}', '$marca', '$unidade_medida', '$valor_medida' ,'$observacao','$id_usuario', now(), '{$variavel_3['id_empresa']}','$cod_referencia')";
+    $query_2 = "insert into produto (nome, descricao, id_categoria,id_sub_categoria, preco_venda, preco_custo,quantidade, id_fornecedor, marca, unidade_medida, valor_medida, observacao,id_usuario ,data_cadastro, id_empresa,CODIGO_REFERENCIA) values ('$nome', '$descricao', '{$variavel['id_categoria']}', $variavel_sub ,'$VENDA','$CUSTO' ,'$quantidade', '{$variavel_1['id_fornecedor']}', '$marca', '$unidade_medida', '$valor_medida' ,'$observacao','$id_usuario', now(), '{$variavel_3['id_empresa']}','$cod_referencia')";
     //ECHO  $query_2 ;
     $produto= mysqli_query($conexao, $query_2);
     

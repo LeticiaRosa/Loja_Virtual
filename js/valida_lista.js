@@ -102,3 +102,48 @@ function gerar_cod() {
 function fechamodal_menu() {
     $('#conteiner-1').css("display", "none");
 }
+
+
+
+function custo(custo) {
+    document.getElementById('preco_custo').value = formatarMoeda(custo);
+
+}
+
+function venda(venda) {
+    document.getElementById('preco_venda').value = formatarMoeda(venda);
+
+}
+
+function formatarMoeda(moeda) {
+
+    var valor = moeda;
+
+    valor = valor + '';
+    valor = parseInt(valor.replace(/[\D]+/g, ''));
+    valor = valor + '';
+    valor = valor.replace(/([0-9]{2})$/g, ",$1");
+
+    if (valor.length > 6) {
+        valor = valor.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
+    }
+    return valor;
+
+}
+
+
+$(function() {
+    $.ajax({
+        url: "back_end/busca_autocomplete.php",
+        dataType: "json",
+        data: {
+            acao: 'buscar_cod',
+        },
+        success: function(data) {
+            cod = data.map(d => d.cod);
+            document.getElementById('cod_referencia').value = cod;
+
+        }
+    });
+
+});
