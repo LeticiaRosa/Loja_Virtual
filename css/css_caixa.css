@@ -745,6 +745,10 @@ section.cover-form-90 {
     border-right: 0.5px dashed black;
 }
 
+.troco_habilitar {
+    display: none;
+}
+
 @media print {
     .form-container-90 {
         margin-top: 15px;

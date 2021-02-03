@@ -209,6 +209,11 @@ $('#pagamento').on('change', function() {
         $('#forma_pagamento').attr("required", true);
         $('#col-5').css("display", "block");
 
+    } else if (tipo == "dinheiro") {
+        $('#col-5').prop("disabled", true);
+        $('#col-5').css("display", "none");
+        $('#troco_habilitar').css("display", "block");
+
     } else if (tipo != "credito") {
         $('#col-5').prop("disabled", true);
         $('#col-5').css("display", "none");
@@ -223,17 +228,45 @@ function chamda() {
 function cal() {
     valor_s_d = document.getElementById('Valor_total').value.replace(".", "");
     desconto = document.getElementById('desconto').value;
-
     procentagem = parseFloat(valor_s_d) * parseFloat(desconto) / 100;
-    console.log(procentagem);
+
     if (desconto == 0) {
         document.getElementById('tl_fim').value = formatarMoeda(valor_s_d)
     } else {
-        console.log(valor_s_d);
+
 
         total_desc = parseFloat(valor_s_d) - parseFloat(procentagem);
 
         document.getElementById('tl_fim').value = formatarMoeda(total_desc);
+    }
+};
+
+const round = (num, places) => {
+    if (!("" + num).includes("e")) {
+        return +(Math.round(num + "e+" + places) + "e-" + places);
+    } else {
+        let arr = ("" + num).split("e");
+        let sig = ""
+        if (+arr[1] + places > 0) {
+            sig = "+";
+        }
+
+        return +(Math.round(+arr[0] + "e" + sig + (+arr[1] + places)) + "e-" + places);
+    }
+}
+
+function chamda_troco() {
+    calcula_troco();
+};
+
+function calcula_troco() {
+    valor_final = document.getElementById('tl_fim').value.replace(",", ".");
+    dinheiro = document.getElementById('dinheiro_1').value;
+    troco = parseFloat(dinheiro - parseFloat(valor_final));
+    if (parseFloat(dinheiro) >= parseFloat(valor_final)) {
+        document.getElementById('troco').innerHTML = round(troco, 2);
+    } else {
+        document.getElementById('troco').innerHTML = "";
     }
 };
 
@@ -244,7 +277,6 @@ function fecha() {
     $('#openModal3').css("display", "none");
     $('#openModal4').css("display", "none");
     document.getElementById('codigo').focus();
-
 };
 
 function tiralinha() {
@@ -315,7 +347,7 @@ function confirma() {
     if (texto != "Deseja Cancelar Venda?") {
         fechamodal();
     } else if (texto == "Deseja Cancelar Venda?") {
-        console.log("entrou");
+
         document.location.reload();
         fechamdal();
     }
@@ -374,7 +406,7 @@ function imprimir_cupom() {
         cols += '<td>' + selecionado[3].innerHTML + '</td>';
         cols += '<td>' + selecionado[2].innerHTML + '</td>';
 
-        console.log(selecionado[1].innerHTML);
+
 
         newRow.append(cols);
         $("#products-table-90").append(newRow);
