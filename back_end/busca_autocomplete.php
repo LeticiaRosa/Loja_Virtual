@@ -437,7 +437,7 @@ endif;
 
 if ($acao == 'lista_movimento') :
 
-	$sql= "SELECT DATE_format(E.DATA_MOVIMENTO, '%d-%m-%Y') AS DATA_MOVIMENTO, E.ID_PRODUTO AS ID_PRODUTO , P.NOME AS NOME_PRODUTO, E.QTD AS QUANTIDADE, E.TIPO_MOVIMENTO AS TIPO_MOVI
+	$sql= "SELECT DATE_format(E.DATA_MOVIMENTO, '%d-%m-%Y') AS DATA_MOVIMENTO, E.ID_PRODUTO AS ID_PRODUTO , P.NOME AS NOME_PRODUTO, E.QTD AS QUANTIDADE, E.TIPO_MOVIMENTO AS TIPO_MOVI ,E.ORIGEM
 	FROM CONTRO_ESTOQUE AS E
 	INNER JOIN PRODUTO AS P
 	ON E.ID_PRODUTO = P.ID_PRODUTO 
@@ -452,3 +452,37 @@ if ($acao == 'lista_movimento') :
 
 	echo $json;
 endif;
+
+
+
+if ($acao == 'buscar_cod') :
+
+	$sql= "SELECT MAX(CODIGO_REFERENCIA) +1 as cod FROM PRODUTO ";
+	$stm = $conexao->prepare($sql);
+	$stm->execute();
+	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
+
+	$json = json_encode($dados);
+
+	echo $json;
+endif;
+
+
+if ($acao == 'busca_dados_cupom') :
+	$maquina = gethostbyaddr($_SERVER['REMOTE_ADDR']);
+	$sql= "SELECT CX.NOME as caixa,E.CNPJ,E.ENDERECO,e.nome as nome_empresa FROM VENDAS AS V
+	LEFT OUTER JOIN CAIXA AS CX
+	ON CX.ID_CAIXA=V.ID_CAIXA
+	LEFT OUTER JOIN EMPRESA AS E
+	ON E.ID_EMPRESA=CX.ID_EMPRESA
+	WHERE ID_VENDA=(SELECT MAX(ID_VENDA) FROM VENDAS) and e.id_empresa=? and cx.nome_maquina='$maquina'  ";
+	$stm = $conexao->prepare($sql);
+	$stm->bindValue(1, $parametro);
+	$stm->execute();
+	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
+
+	$json = json_encode($dados);
+
+	echo $json;
+endif;
+

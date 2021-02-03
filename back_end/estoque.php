@@ -20,7 +20,7 @@ for($i=0;$i<count($id);$i++){
     $quantidade=$quant[$i];
     $tipo_mov=$tipo_movimento[$i];
     
-    $INSERT_MOVIMENTO = "INSERT INTO CONTRO_ESTOQUE( ID_PRODUTO, QTD, TIPO_MOVIMENTO, DATA_MOVIMENTO, ID_USUARIO, DATA_CADASTRO) VALUES ('$id_produto', '$quantidade', '$tipo_mov', CURDATE(), '$id_usuario' , now()  )";
+    $INSERT_MOVIMENTO = "INSERT INTO CONTRO_ESTOQUE( ID_PRODUTO, QTD, TIPO_MOVIMENTO,origem, DATA_MOVIMENTO, ID_USUARIO, DATA_CADASTRO) VALUES ('$id_produto', '$quantidade', '$tipo_mov','Estoque', CURDATE(), '$id_usuario' , now()  )";
     $resultado=$resultado+mysqli_query($conexao, $INSERT_MOVIMENTO); 
   
     if ($tipo_mov == 'Entrada'){

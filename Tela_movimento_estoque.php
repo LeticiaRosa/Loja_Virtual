@@ -32,6 +32,7 @@
                                           <th>Nome Produto</th>
                                           <th>Quantidade</th>
                                           <th>Tipo Movimento</th>
+                                          <th>Origem</th>
                                       </tr>
                                   </thead>
 

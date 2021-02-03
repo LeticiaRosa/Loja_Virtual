@@ -78,6 +78,7 @@ $(async function() {
             TOTAL = data.map(d => d.TOTAL);
             QUANTIDADE = data.map(d => d.QUANTIDADE);
 
+
             for (i = 0; i < data.length; i++) {
                 total_f = formatarMoeda(TOTAL[i]);
                 var newRow = $('<tr class = "corpo selecionado" >');
@@ -116,7 +117,7 @@ $(async function() {
 
                 selecionado = selecionados[i];
                 selecionado = selecionado.getElementsByTagName("td");
-                console.log(selecionado[0].innerHTML);
+
                 if (selecionado[0].innerHTML == "Retiradas") {
                     selecionado[0].style.color = "red";
                     selecionado[1].style.color = "red";

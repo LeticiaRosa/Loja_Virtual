@@ -85,7 +85,8 @@ FROM CONTROLE_CAIXA AS AUX  WHERE AUX.ID_CAIXA=CAX.ID_CAIXA AND DATA_FECHAMENTO
                 $update_protudo="update produto set quantidade=quantidade-'$quantidade' where id_produto='$id_produto'";
                // echo  $update_protudo;
                 $resultado=$resultado+mysqli_query($conexao, $update_protudo);
-             
+                $INSERT_MOVIMENTO_s="INSERT INTO CONTRO_ESTOQUE (ID_PRODUTO,QTD,TIPO_MOVIMENTO,ORIGEM,DATA_MOVIMENTO,ID_USUARIO,DATA_CADASTRO)VALUES('$id_produto',' $quantidade','Saida','Caixa',CURDATE(),'$id_usuario',NOW())";
+                $resultado=$resultado+mysqli_query($conexao, $INSERT_MOVIMENTO_s);
                 
             };
             

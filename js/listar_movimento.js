@@ -16,6 +16,7 @@ $(async function() {
             NOME_PRODUTO = data.map(d => d.NOME_PRODUTO);
             QUANTIDADE = data.map(d => d.QUANTIDADE);
             TIPO_MOVI = data.map(d => d.TIPO_MOVI);
+            ORIGEM = data.map(d => d.ORIGEM);
 
             for (i = 0; i < data.length; i++) {
                 var newRow = $('<tr class = "corpo selecionado" >');
@@ -25,19 +26,17 @@ $(async function() {
                 cols += '<td>' + NOME_PRODUTO[i] + '</td>';
                 cols += '<td>' + QUANTIDADE[i] + '</td>';
                 cols += '<td>' + TIPO_MOVI[i] + '</td>';
-
+                cols += '<td>' + ORIGEM[i] + '</td>';
                 newRow.append(cols);
                 $("#products-table").append(newRow);
             }
 
             var tabela = document.getElementById("products-table");
             var selecionados = tabela.getElementsByClassName("selecionado");
-            console.log(selecionados);
             for (i = 0; i < selecionados.length; i++) {
 
                 selecionado = selecionados[i];
                 selecionado = selecionado.getElementsByTagName("td");
-                console.log(selecionado[4].innerHTML);
                 if (selecionado[4].innerHTML == "Saida") {
                     selecionado[0].style.color = "red";
                     //selecionado[0].style.backgroundColor = "white";
@@ -45,12 +44,14 @@ $(async function() {
                     selecionado[2].style.color = "red";
                     selecionado[3].style.color = "red";
                     selecionado[4].style.color = "red";
+                    selecionado[5].style.color = "red";
                 } else if (selecionado[4].innerHTML == "Entrada") {
                     selecionado[0].style.color = "green";
                     selecionado[1].style.color = "green";
                     selecionado[2].style.color = "green";
                     selecionado[3].style.color = "green";
                     selecionado[4].style.color = "green";
+                    selecionado[5].style.color = "green";
 
                 } else {
                     selecionado[0].style.color = "#ffb34f";
@@ -58,6 +59,7 @@ $(async function() {
                     selecionado[2].style.color = "#ffb34f";
                     selecionado[3].style.color = "#ffb34f";
                     selecionado[4].style.color = "#ffb34f";
+                    selecionado[5].style.color = "#ffb34f";
                 }
             }
 

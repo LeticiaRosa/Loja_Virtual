@@ -41,7 +41,7 @@
             </div>
             <div class="col">
               <p>Codigo Referencia</p>
-              <input type="text" name="cod_referencia" id="cod_referencia" required placeholder="Codigo Referencia" autocomplete="off">
+              <input type="text" name="cod_referencia" id="cod_referencia" readonly="readonly"placeholder="Codigo Referencia" autocomplete="off">
             </div>
           </div>
 
@@ -61,12 +61,12 @@
 
             <div class="col">
               <p>Preço de Venda:*</p>
-              <input type="text" name="preco_venda" id="preco_venda" required placeholder="Preço de Venda" autocomplete="off" maxlength="10">
+              <input type="text" name="preco_venda" id="preco_venda" required placeholder="Preço de Venda" onkeyup=" venda(this.value)" autocomplete="off" maxlength="10">
             </div>
 
             <div class="col">
               <p>Preço de Custo:*</p>
-              <input type="text" name="preco_custo" id="preco_custo" required placeholder="Preço de Custo" autocomplete="off" maxlength="10">
+              <input type="text" name="preco_custo" id="preco_custo" required placeholder="Preço de Custo" onkeyup="custo(this.value)" autocomplete="off" maxlength="10">
             </div>
 
             <div class="col">

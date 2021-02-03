@@ -201,7 +201,7 @@
             </p>
             <input type="submit" value="OK" id="OK" onclick="confirma()" />
             <p></p>
-            <input type="button" value="Gerar Cupom" id="" onclick=" imprimir_cupom()" />
+            <input type="button" value="Gerar Cupom" id="cupom" onclick=" imprimir_cupom(<?php echo $_SESSION['empresausuario']?>)" />
 
         </div>
     </div>
