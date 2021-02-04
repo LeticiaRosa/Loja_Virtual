@@ -86,11 +86,11 @@ $(async function() {
                 cols += '<td>' + TIPO_VENDA[i] + '</td>';
                 cols += '<td>' + 'R$' + total_f + '</td>';
                 cols += '<td>' + QUANTIDADE[i] + '</td>';
-
-
-
-                qtd_total = qtd_total + parseFloat(QUANTIDADE[i]);
-                venda_total = venda_total + parseFloat(TOTAL[i]);
+                console.log(TIPO_VENDA[i]);
+                if (TIPO_VENDA[i] != "Retiradas") {
+                    qtd_total = qtd_total + parseFloat(QUANTIDADE[i]);
+                    venda_total = venda_total + parseFloat(TOTAL[i]);
+                }
 
 
                 //console.log(parseFloat(QUANTIDADE[i]));
