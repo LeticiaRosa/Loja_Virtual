@@ -102,7 +102,7 @@ $(async function() {
 
             }
             v_inicial = document.getElementById("v_Caixa").value;
-            venda_total = venda_total - parseFloat(v_inicial);
+            venda_total = venda_total + parseFloat(v_inicial) - parseFloat(v_inicial);
             document.getElementById('qtd_vendas').value = qtd_total;
             document.getElementById('v_total').value = formatarMoeda(venda_total);
 
