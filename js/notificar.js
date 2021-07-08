@@ -7,6 +7,7 @@ $(async function BUSCA() {
             acao: 'contar_notificacao'
         },
         success: function(data) {
+            console.log(data);
             quant = data.map(d => d.quant);
             var cols = "";
             cols += '<li>' + '<a href="/loja_virtual/tela_vizualizar_trasferencia.php">' + 'Existe ' + quant + ' transferência pendete de aprovação' + '</a>' + '</li>';

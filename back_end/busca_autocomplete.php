@@ -4,8 +4,8 @@ include_once("sessao.php");
 //require_once ("conexao.php");
 // Dados da conexão com o banco de dados
 
-
-define("HOST", "25.107.219.2");
+//define("HOST","25.107.219.2"); banco com hamchi
+define("HOST", "192.168.1.100");
 define("USUARIO", "Gabriel");
 define("SENHA", "Gb@30173572");
 define("DB", "Loja");
@@ -17,7 +17,7 @@ $parametro = (isset($_GET['parametro'])) ? $_GET['parametro'] : '';
 // Configura uma conexão com o banco de dados
 $opcoes = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES UTF8');
 $conexao = new PDO("mysql:host=" . HOST . "; dbname=" . DB, USUARIO, SENHA, $opcoes);
-$empresa=(isset($_GET['sessao'])) ? $_GET['sessao'] : '';
+$empresa = (isset($_GET['sessao'])) ? $_GET['sessao'] : '';
 
 
 // Verifica se foi solicitado uma consulta para o autocomplete
@@ -79,7 +79,7 @@ if ($acao == 'codigo_barras') :
 
 	$sql = "SELECT P.ID_PRODUTO,UPPER(P.nome)AS nome,P.quantidade, P.PRECO_VENDA, cg.codigo_barras FROM produto as p left outer join CODIGO_BARRAS as cg on cg.id_produto =p.id_produto where P.id_produto=?";
 	$stm = $conexao->prepare($sql);
-	$stm->bindValue(1,$parametro);
+	$stm->bindValue(1, $parametro);
 	$stm->execute();
 	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
 
@@ -150,7 +150,7 @@ if ($acao == 'caixa_produto') :
 	echo $json;
 endif;
 if ($acao == 'busca') :
-	
+
 	$sql = "SELECT p.id_produto, p.nome, p.descricao, E.NOME AS empresa, C.NOME AS NOME_CATEGORIA, CASE WHEN SB.NOME IS NULL THEN '' ELSE SB.NOME END AS NOME_SUB_CATEGORIA ,p.preco_venda, p.preco_custo,p.quantidade, F.NOME AS FORNECEDOR, p.marca, p.unidade_medida, p.valor_medida, p.observacao,U.Nome_usuario AS USUARIO, DATE_format(p.data_cadastro, '%d-%m-%Y') as data_cadastro,B.codigo_barras from produto p left outer join fornecedor F ON P.ID_FORNECEDOR=F.ID_FORNECEDOR LEFT OUTER JOIN categoria C ON C.ID_CATEGORIA=P.ID_CATEGORIA LEFT OUTER JOIN usuario U ON U.ID_USUARIO=P.ID_USUARIO  LEFT OUTER JOIN SUB_CATEGORIA SB ON SB.ID_SUB_CATEGORIA=P.ID_SUB_CATEGORIA LEFT OUTER JOIN CODIGO_BARRAS B ON B.ID_produto=P.ID_produto LEFT OUTER JOIN EMPRESA E ON P.ID_EMPRESA = E.ID_EMPRESA where p.id_produto =?";
 	$stm = $conexao->prepare($sql);
 	$stm->bindValue(1, $parametro);
@@ -165,7 +165,7 @@ endif;
 
 
 if ($acao == 'lista_fornecedor') :
-	
+
 	$sql = "SELECT f.ID_FORNECEDOR,f.nome,f.RAZAO_SOCIAL,case when f.status='S' then'Disponível' ELSE 'Indisponível' END AS Status,f.contato,f.CNPJ,F.TEL_CEL AS CELULAR,f.TEL_FIXO as fixo,F.Endereco,F.CEP,F.E_MAIL,f.Observacao,U.Nome_usuario, DATE_format(F.data_cadastro, '%d-%m-%Y') as data_cadastro FROM  fornecedor F LEFT OUTER JOIN usuario U ON U.ID_USUARIO=f.ID_USUARIO";
 	$stm = $conexao->prepare($sql);
 	$stm->bindValue(1, $parametro);
@@ -179,7 +179,7 @@ if ($acao == 'lista_fornecedor') :
 endif;
 
 if ($acao == 'lista_empresa') :
-	
+
 	$sql = "SELECT  E.ID_EMPRESA,E.NOME,E.RAZAO_SOCIAL,E.DESCRICAO,case when E.status='S' then'Disponível' ELSE 'Indisponível' END AS STATUS,E.CNPJ,E.ENDERECO,E.OBSERVACAO,DATE_format(E.data_cadastro, '%d-%m-%Y') as data_cadastro,U.NOME_USUARIO FROM EMPRESA AS E LEFT OUTER JOIN USUARIO AS U ON U.ID_USUARIO=E.ID_USUARIO";
 	$stm = $conexao->prepare($sql);
 	$stm->execute();
@@ -326,9 +326,9 @@ if ($acao == 'PERMISSOES') :
 	$stm->execute();
 	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
 	$json = json_encode($dados);
-	
+
 	echo $json;
-  
+
 endif;
 
 
@@ -354,7 +354,7 @@ if ($acao == 'FECHA_CAIXA') :
 	AND  CX.DATA_FECHAMENTO IS NULL AND CX.id=(SELECT MAX(AUX.ID)
 	 FROM CONTROLE_CAIXA AS AUX  WHERE AUX.ID_CAIXA=CX.ID_CAIXA)";
 	$stm = $conexao->prepare($sql);
-	$stm->bindValue(1,  $parametro  );
+	$stm->bindValue(1,  $parametro);
 	$stm->execute();
 	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
 
@@ -375,7 +375,7 @@ if ($acao == 'lista_caixa') :
 	LEFT OUTER JOIN USUARIO  AS USF    ON USF.ID_USUARIO=CX.ID_USUARIO_FECHAMENTO 
 	WHERE CAX.ID_EMPRESA='$x'
     AND CX.ID>=(SELECT MAX(AUX.ID)
-	 FROM CONTROLE_CAIXA AS AUX  WHERE AUX.ID_CAIXA=CX.ID_CAIXA)";	
+	 FROM CONTROLE_CAIXA AS AUX  WHERE AUX.ID_CAIXA=CX.ID_CAIXA)";
 	$stm = $conexao->prepare($sql);
 	$stm->execute();
 	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
@@ -400,10 +400,10 @@ if ($acao == 'BUSCA_DADOS_FECHAMENTO') :
     WHERE RT.ID_CONTROL_CAIXA>=(SELECT MAX(AUX.ID)
 	 FROM CONTROLE_CAIXA AS AUX  WHERE AUX.ID_CAIXA=RT.ID_CAIXA AND DATA_FECHAMENTO 
 	 IS NULL )	AND CX.NOME_MAQUINA=?	GROUP BY TIPO_VENDA
-";	
+";
 	$stm = $conexao->prepare($sql);
-	$stm->bindValue(1,  $parametro  );
-	$stm->bindValue(2,  $parametro  );
+	$stm->bindValue(1,  $parametro);
+	$stm->bindValue(2,  $parametro);
 	$stm->execute();
 	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
 
@@ -416,19 +416,19 @@ endif;
 
 
 if ($acao == 'BUSCA_CAIXA_ABERTO') :
-$maquina = gethostbyaddr($_SERVER['REMOTE_ADDR']);
-//echo $maquina;
-$sql1 = "SELECT cx.id_caixa,cax.id as id_controle, cax.DATA_ABERTURA, cax.DATA_FECHAMENTO FROM CAIXA AS CX  
+	$maquina = gethostbyaddr($_SERVER['REMOTE_ADDR']);
+	//echo $maquina;
+	$sql1 = "SELECT cx.id_caixa,cax.id as id_controle, cax.DATA_ABERTURA, cax.DATA_FECHAMENTO FROM CAIXA AS CX  
 LEFT OUTER JOIN CONTROLE_CAIXA  AS CAX
 ON CX.ID_CAIXA=CAX.ID_CAIXA
 WHERE CAX.ID=(SELECT MAX(AUX.ID)
 FROM CONTROLE_CAIXA AS AUX  WHERE AUX.ID_CAIXA=CAX.ID_CAIXA ) AND CX.NOME_MAQUINA='$maquina' AND STATUS = 'Ativo' and cax.DATA_ABERTURA = CURDATE()";
 
-$stm1 = $conexao->prepare($sql1);
-$stm1->execute();
-$dados1 = $stm1->fetchAll(PDO::FETCH_OBJ);
+	$stm1 = $conexao->prepare($sql1);
+	$stm1->execute();
+	$dados1 = $stm1->fetchAll(PDO::FETCH_OBJ);
 
-$json = json_encode($dados1);
+	$json = json_encode($dados1);
 
 	echo $json;
 
@@ -437,7 +437,7 @@ endif;
 
 if ($acao == 'lista_movimento') :
 
-	$sql= "SELECT DATE_format(E.DATA_MOVIMENTO, '%d-%m-%Y') AS DATA_MOVIMENTO, E.ID_PRODUTO AS ID_PRODUTO , P.NOME AS NOME_PRODUTO, E.QTD AS QUANTIDADE, E.TIPO_MOVIMENTO AS TIPO_MOVI ,E.ORIGEM
+	$sql = "SELECT DATE_format(E.DATA_MOVIMENTO, '%d-%m-%Y') AS DATA_MOVIMENTO, E.ID_PRODUTO AS ID_PRODUTO , P.NOME AS NOME_PRODUTO, E.QTD AS QUANTIDADE, E.TIPO_MOVIMENTO AS TIPO_MOVI ,E.ORIGEM
 	FROM CONTRO_ESTOQUE AS E
 	INNER JOIN PRODUTO AS P
 	ON E.ID_PRODUTO = P.ID_PRODUTO 
@@ -457,7 +457,7 @@ endif;
 
 if ($acao == 'buscar_cod') :
 
-	$sql= "SELECT MAX(CODIGO_REFERENCIA) +1 as cod FROM PRODUTO ";
+	$sql = "SELECT MAX(CODIGO_REFERENCIA) +1 as cod FROM PRODUTO ";
 	$stm = $conexao->prepare($sql);
 	$stm->execute();
 	$dados = $stm->fetchAll(PDO::FETCH_OBJ);
@@ -470,7 +470,7 @@ endif;
 
 if ($acao == 'busca_dados_cupom') :
 	$maquina = gethostbyaddr($_SERVER['REMOTE_ADDR']);
-	$sql= "SELECT CX.NOME as caixa,E.CNPJ,E.ENDERECO,e.nome as nome_empresa FROM VENDAS AS V
+	$sql = "SELECT CX.NOME as caixa,E.CNPJ,E.ENDERECO,e.nome as nome_empresa FROM VENDAS AS V
 	LEFT OUTER JOIN CAIXA AS CX
 	ON CX.ID_CAIXA=V.ID_CAIXA
 	LEFT OUTER JOIN EMPRESA AS E
@@ -485,4 +485,3 @@ if ($acao == 'busca_dados_cupom') :
 
 	echo $json;
 endif;
-
